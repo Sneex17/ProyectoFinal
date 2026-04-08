@@ -1,0 +1,155 @@
+@{
+    ViewData["Title"] = "Nuevo Turno";
+}
+
+<div class="max-w-3xl mx-auto bg-surface-container-lowest rounded-2xl p-10 shadow-[0_12px_32px_-4px_rgba(3,63,99,0.04)] ring-1 ring-outline-variant/10">
+    <h2 class="font-headline text-3xl text-primary font-bold mb-8">Registrar Nuevo Turno</h2>
+
+    @if (ViewData["ModelError"] != null)
+    {
+        <div class="bg-error text-white p-4 rounded-xl mb-6 font-medium flex items-center gap-3">
+            <span>⚠️</span> @ViewData["ModelError"]
+        </div>
+    }
+
+    <form method="post" asp-action="Crear" asp-controller="Turnos" id="formularioCrearTurno" class="space-y-6">
+        @Html.AntiForgeryToken()
+
+        <div class="flex flex-col gap-2">
+            <label class="font-headline text-[0.95rem] font-bold text-on-surface" for="pacienteId">Paciente</label>
+            <select name="pacienteId" id="pacienteId" class="bg-surface-container-highest border border-outline-variant/20 rounded-xl px-4 py-3 font-body text-base text-on-surface outline-none focus:border-primary focus:bg-surface-container-lowest transition-colors" required>
+                <option value="">-- Seleccione un paciente --</option>
+                @if (ViewBag.Pacientes != null)
+                {
+                    foreach (var p in ViewBag.Pacientes)
+                    {
+                        <option value="@p.PacienteId">@p.NombreCompleto &mdash; @p.Cedula</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <label class="font-headline text-[0.95rem] font-bold text-on-surface" for="medicoId">Médico Asignado</label>
+            <select name="medicoId" id="medicoId" class="bg-surface-container-highest border border-outline-variant/20 rounded-xl px-4 py-3 font-body text-base text-on-surface outline-none focus:border-primary focus:bg-surface-container-lowest transition-colors" required>
+                <option value="">-- Seleccione un médico --</option>
+                @if (ViewBag.Medicos != null)
+                {
+                    foreach (var m in ViewBag.Medicos)
+                    {
+                        <option value="@m.MedicoId">@m.NombreCompleto</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <label class="font-headline text-[0.95rem] font-bold text-on-surface" for="asistenteId">Asistente (opcional)</label>
+            <select name="asistenteId" id="asistenteId" class="bg-surface-container-highest border border-outline-variant/20 rounded-xl px-4 py-3 font-body text-base text-on-surface outline-none focus:border-primary focus:bg-surface-container-lowest transition-colors">
+                <option value="">-- Ninguno --</option>
+                @if (ViewBag.Asistentes != null)
+                {
+                    foreach (var a in ViewBag.Asistentes)
+                    {
+                        <option value="@a.AsistenteId">@a.NombreCompleto</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <label class="font-headline text-[0.95rem] font-bold text-on-surface">Prioridad</label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                
+                <label id="lblCard1" class="priority-card relative border-2 border-surface-container-highest rounded-xl p-4 cursor-pointer transition-all text-center bg-surface group [&.selected]:border-[#7c9885] [&.selected]:bg-[#7c9885]/10">
+                    <input type="radio" name="prioridadId" value="1" checked class="absolute opacity-0 w-0 h-0" onchange="updatePreview()">
+                    <span class="block">
+                        <span class="font-headline font-bold text-lg block mb-1 group-[&.selected]:text-[#5a7563]">Normal</span>
+                        <span class="text-xs text-on-surface-variant">Evaluación regular</span>
+                    </span>
+                </label>
+                
+                <label id="lblCard2" class="priority-card relative border-2 border-surface-container-highest rounded-xl p-4 cursor-pointer transition-all text-center bg-surface group [&.selected]:border-[#d6b25a] [&.selected]:bg-[#fedc97]/20">
+                    <input type="radio" name="prioridadId" value="2" class="absolute opacity-0 w-0 h-0" onchange="updatePreview()">
+                    <span class="block">
+                        <span class="font-headline font-bold text-lg block mb-1 group-[&.selected]:text-[#a17c24]">Prioritario</span>
+                        <span class="text-xs text-on-surface-variant">Atención requerida</span>
+                    </span>
+                </label>
+
+                <label id="lblCard3" class="priority-card relative border-2 border-surface-container-highest rounded-xl p-4 cursor-pointer transition-all text-center bg-surface group [&.selected]:border-error [&.selected]:bg-error/10">
+                    <input type="radio" name="prioridadId" value="3" class="absolute opacity-0 w-0 h-0" onchange="updatePreview()">
+                    <span class="block">
+                        <span class="font-headline font-bold text-lg block mb-1 group-[&.selected]:text-error">Emergencia</span>
+                        <span class="text-xs text-on-surface-variant">Riesgo inminente</span>
+                    </span>
+                </label>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <label class="font-headline text-[0.95rem] font-bold text-on-surface" for="observaciones">Observaciones (opcional)</label>
+            <textarea name="observaciones" id="observaciones" rows="3" class="bg-surface-container-highest border border-outline-variant/20 rounded-xl px-4 py-3 font-body text-base text-on-surface outline-none focus:border-primary focus:bg-surface-container-lowest transition-colors" placeholder="Ingrese detalles o síntomas iniciales..."></textarea>
+        </div>
+
+        <div class="bg-gradient-to-br from-primary to-primary-container text-white p-6 rounded-xl mt-8 font-body flex flex-col sm:flex-row items-center gap-4 shadow-lg" id="livePreviewBox">
+            <span class="text-3xl text-primary-fixed">📋</span>
+            <span class="text-lg font-medium leading-relaxed">
+                Turno a registrar: <span class="font-headline font-extrabold text-white">T-NEXT</span> <span class="opacity-50 mx-2">|</span> 
+                Paciente: <span class="font-headline font-extrabold text-white" id="lblPreviewPaciente">No seleccionado</span> <span class="opacity-50 mx-2">|</span> 
+                Prioridad: <span class="font-headline font-extrabold text-white" id="lblPreviewPrioridad">Normal</span>
+            </span>
+        </div>
+
+        <div class="flex items-center justify-end gap-4 mt-10 pt-6 border-t border-surface-container-high">
+            <a href="/Turnos" class="font-headline font-bold text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface px-6 py-3 rounded-xl transition-colors">Cancelar</a>
+            <button type="submit" class="bg-gradient-to-r from-primary to-primary-container text-white border-none px-8 py-3 rounded-xl font-headline text-base font-extrabold cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-xl shadow-lg border border-transparent">
+                Registrar Turno
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        const radios = document.querySelectorAll('input[name="prioridadId"]');
+        const cards = document.querySelectorAll('.priority-card');
+
+        // Init the selected state
+        cards[0].classList.add('selected');
+
+        radios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                cards.forEach(c => c.classList.remove('selected'));
+                if(radio.checked) {
+                    radio.closest('.priority-card').classList.add('selected');
+                }
+            });
+        });
+
+        const selectPaciente = document.getElementById('pacienteId');
+        
+        function updatePreview() {
+            const previewPaciente = document.getElementById('lblPreviewPaciente');
+            const previewPrioridad = document.getElementById('lblPreviewPrioridad');
+            
+            if (selectPaciente.selectedIndex > 0) {
+                let pacText = selectPaciente.options[selectPaciente.selectedIndex].text;
+                let namePart = pacText.split("—")[0].trim();
+                previewPaciente.innerText = namePart;
+            } else {
+                previewPaciente.innerText = "No seleccionado";
+            }
+
+            const selectedRadio = document.querySelector('input[name="prioridadId"]:checked');
+            if (selectedRadio) {
+                if (selectedRadio.value === "1") previewPrioridad.innerText = "Normal";
+                else if (selectedRadio.value === "2") previewPrioridad.innerText = "Prioritario";
+                else if (selectedRadio.value === "3") previewPrioridad.innerText = "Emergencia";
+            }
+        }
+
+        selectPaciente.addEventListener('change', updatePreview);
+        updatePreview();
+    </script>
+}
