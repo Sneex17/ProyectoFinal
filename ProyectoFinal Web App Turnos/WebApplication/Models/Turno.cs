@@ -7,7 +7,7 @@ namespace HospitalTurnos.Models
         // FKs — IDs planos (como viene de BD)
         public int PacienteId { get; set; }
         public int MedicoId { get; set; }
-        public int? AsistenteId { get; set; }
+        public int? RecepcionistaId { get; set; }
         public int PrioridadId { get; set; }
         public int EstadoTurnoId { get; set; }
 
@@ -21,7 +21,7 @@ namespace HospitalTurnos.Models
         // Navegación — se poblan desde el servicio (equivalen a los JOINs de SQL)
         public Paciente Paciente { get; set; } = null!;
         public Medico Medico { get; set; } = null!;
-        public Asistente? Asistente { get; set; }
+        public Recepcionista? Recepcionista { get; set; }
         public Prioridad Prioridad { get; set; } = null!;
         public EstadoTurno EstadoTurno { get; set; } = null!;
     }

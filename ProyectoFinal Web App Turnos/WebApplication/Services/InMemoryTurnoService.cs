@@ -41,10 +41,10 @@ namespace HospitalTurnos.Services
             new() { MedicoId = 3, NLicencia = "MED-003", Nombre = "Ricardo", Apellido = "Figueroa", EspecialidadId = 1 }
         };
 
-        private readonly List<Asistente> _asistentes = new()
+        private readonly List<Recepcionista> _Recepcionistas = new()
         {
-            new() { AsistenteId = 1, Nombre = "Laura",  Apellido = "Torres",  AreaId = 1 },
-            new() { AsistenteId = 2, Nombre = "Miguel", Apellido = "Castillo", AreaId = 2 }
+            new() { RecepcionistaId = 1, Nombre = "Laura",  Apellido = "Torres",  AreaId = 1 },
+            new() { RecepcionistaId = 2, Nombre = "Miguel", Apellido = "Castillo", AreaId = 2 }
         };
 
         // Turnos en memoria
@@ -113,7 +113,7 @@ namespace HospitalTurnos.Services
             return turno is null ? null : MapToViewModel(turno);
         }
 
-        public Turno CrearTurno(int pacienteId, int medicoId, int? asistenteId, int prioridadId, string? observaciones)
+        public Turno CrearTurno(int pacienteId, int medicoId, int RecepcionistaId, int prioridadId, string? observaciones)
         {
             var turno = new Turno
             {
@@ -121,7 +121,7 @@ namespace HospitalTurnos.Services
                 NumeroTurno = _nextNumeroTurno++,
                 PacienteId = pacienteId,
                 MedicoId = medicoId,
-                AsistenteId = asistenteId,
+                RecepcionistaId = RecepcionistaId,
                 PrioridadId = prioridadId,
                 EstadoTurnoId = 1, // Creado
                 Observaciones = observaciones,
@@ -129,7 +129,7 @@ namespace HospitalTurnos.Services
                 // Relaciones de navegación
                 Paciente = _pacientes.First(p => p.PacienteId == pacienteId),
                 Medico = _medicos.First(m => m.MedicoId == medicoId),
-                Asistente = asistenteId.HasValue ? _asistentes.FirstOrDefault(a => a.AsistenteId == asistenteId) : null,
+                Recepcionista = _Recepcionistas.FirstOrDefault(a => a.RecepcionistaId == RecepcionistaId),
                 Prioridad = _prioridades.First(p => p.PrioridadId == prioridadId),
                 EstadoTurno = _estados.First(e => e.EstadoTurnoId == 1)
             };
@@ -167,7 +167,7 @@ namespace HospitalTurnos.Services
         // Catálogos
         public List<Paciente> ObtenerPacientes() => _pacientes;
         public List<Medico> ObtenerMedicos() => _medicos;
-        public List<Asistente> ObtenerAsistentes() => _asistentes;
+        public List<Recepcionista> ObtenerRecepcionistas() => _Recepcionistas;
         public List<Prioridad> ObtenerPrioridades() => _prioridades;
         public List<EstadoTurno> ObtenerEstados() => _estados;
 
@@ -197,10 +197,10 @@ namespace HospitalTurnos.Services
             {
                 new() {
                     TurnoId = _nextTurnoId++, NumeroTurno = _nextNumeroTurno++,
-                    PacienteId = 3, MedicoId = 1, AsistenteId = 1, PrioridadId = 3, EstadoTurnoId = 2,
+                    PacienteId = 3, MedicoId = 1, RecepcionistaId = 1, PrioridadId = 3, EstadoTurnoId = 2,
                     FechaHoraCreacion = ahora.AddMinutes(-30), FechaHoraInicio = ahora.AddMinutes(-5),
                     Observaciones = "Dolor torácico agudo",
-                    Paciente = _pacientes[2], Medico = _medicos[0], Asistente = _asistentes[0],
+                    Paciente = _pacientes[2], Medico = _medicos[0], Recepcionista = _Recepcionistas[0],
                     Prioridad = _prioridades[2], EstadoTurno = _estados[1]
                 },
                 new() {
@@ -213,10 +213,10 @@ namespace HospitalTurnos.Services
                 },
                 new() {
                     TurnoId = _nextTurnoId++, NumeroTurno = _nextNumeroTurno++,
-                    PacienteId = 2, MedicoId = 1, AsistenteId = 2, PrioridadId = 2, EstadoTurnoId = 1,
+                    PacienteId = 2, MedicoId = 1, RecepcionistaId = 2, PrioridadId = 2, EstadoTurnoId = 1,
                     FechaHoraCreacion = ahora.AddMinutes(-45),
                     Observaciones = "Adulto mayor, control presión",
-                    Paciente = _pacientes[1], Medico = _medicos[0], Asistente = _asistentes[1],
+                    Paciente = _pacientes[1], Medico = _medicos[0], Recepcionista = _Recepcionistas[1],
                     Prioridad = _prioridades[1], EstadoTurno = _estados[0]
                 },
                 new() {

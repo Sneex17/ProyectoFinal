@@ -1,17 +1,25 @@
-﻿using HospitalTurnos.Services;
+﻿using HospitalTurnos.Data;
+using HospitalTurnos.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Servicios
+// ─── Servicios ─────────────────────────────────────────────────────────────
 
 builder.Services.AddControllersWithViews();
 
-// Registro del servicio de turnos en memoria.
-// Cuando se tenga la BD: reemplaza InMemoryTurnoService por DbTurnoService
-// y cambia Singleton → Scoped (para que EF Core maneje el ciclo de vida).
-builder.Services.AddSingleton<ITurnoService, InMemoryTurnoService>();
+// DbContext — usa la cadena de conexión de appsettings.json
+builder.Services.AddDbContext<HospitalTurnosContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("HospitalTurnos")
+    )
+);
 
-// Pipeline
+// Servicio de turnos con BD real.
+// Scoped: una instancia por request HTTP (correcto para EF Core).
+builder.Services.AddScoped<ITurnoService, DbTurnoService>();
+
+// ─── Pipeline ──────────────────────────────────────────────────────────────
 
 var app = builder.Build();
 
@@ -26,7 +34,6 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
 
-// Ruta por defecto → TurnosController.Index
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Turnos}/{action=Index}/{id?}");
