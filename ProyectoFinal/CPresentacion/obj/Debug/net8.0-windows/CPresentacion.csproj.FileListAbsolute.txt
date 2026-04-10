@@ -6,7 +6,6 @@ C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPrese
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\bin\Debug\net8.0-windows\ReaLTaiizor.dll
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.csproj.AssemblyReference.cache
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.Form1.resources
-C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.FormAtencionPaciente.resources
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.csproj.GenerateResource.cache
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.AssemblyInfoInputs.cache
@@ -20,3 +19,10 @@ C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPrese
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.genruntimeconfig.cache
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\ref\CPresentacion.dll
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\bin\Debug\net8.0-windows\Krypton.Toolkit.dll
+C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\bin\Debug\net8.0-windows\FontAwesome.Sharp.dll
+C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.FormAtencion.resources
+C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.FormEstadisticas.resources
+C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.FormHistorialDePacientes.resources
+C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.FormRegistroEspecialidades.resources
+C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.FormRegistroMedico.resources
+C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.FormRegistroUsuario.resources
