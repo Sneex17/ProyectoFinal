@@ -11,14 +11,17 @@ namespace HospitalTurnos.Services
         // CRUD de turno
         List<TurnoViewModel> ObtenerTodos();
         TurnoViewModel? ObtenerPorId(int turnoId);
-        Turno CrearTurno(int pacienteId, int medicoId, int? asistenteId, int prioridadId, string? observaciones);
+
+        // RecepcionistaId es requerido en BD (NOT NULL)
+        Turno CrearTurno(int pacienteId, int medicoId, int recepcionistaId,
+                         int prioridadId, string? observaciones);
         bool CambiarEstado(int turnoId, int nuevoEstadoId);
         bool EliminarTurno(int turnoId);
 
-        // Catálogos (para llenar dropdowns en formularios futuros)
+        // Catálogos para dropdowns
         List<Paciente> ObtenerPacientes();
         List<Medico> ObtenerMedicos();
-        List<Asistente> ObtenerAsistentes();
+        List<Recepcionista> ObtenerRecepcionistas();   // ← era ObtenerAsistentes
         List<Prioridad> ObtenerPrioridades();
         List<EstadoTurno> ObtenerEstados();
     }

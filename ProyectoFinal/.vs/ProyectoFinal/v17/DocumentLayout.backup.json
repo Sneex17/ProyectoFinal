@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "S:\\xrami\\OneDrive - Universidad Central del Este\\Trabajos de Arquitectura de Software ISW-114-1\\Pr\u00E1cticas\\ProyectoFinal\\",
+  "WorkspaceRootPath": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|s:\\xrami\\onedrive - universidad central del este\\trabajos de arquitectura de software isw-114-1\\pr\u00E1cticas\\proyectofinal\\cpresentacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|c:\\users\\xrami\\onedrive\\documentos\\proyectofinal isw\u0027124\\proyectofinal\\proyectofinal\\cpresentacion\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +23,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "S:\\xrami\\OneDrive - Universidad Central del Este\\Trabajos de Arquitectura de Software ISW-114-1\\Pr\u00E1cticas\\ProyectoFinal\\CPresentacion\\Form1.cs",
-              "RelativeDocumentMoniker": "CPresentacion\\Form1.cs",
-              "ToolTip": "S:\\xrami\\OneDrive - Universidad Central del Este\\Trabajos de Arquitectura de Software ISW-114-1\\Pr\u00E1cticas\\ProyectoFinal\\CPresentacion\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CPresentacion\\Form1.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T18:42:47.552Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\appsettings.json",
+              "RelativeDocumentMoniker": "CPresentacion\\appsettings.json",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\appsettings.json",
+              "RelativeToolTip": "CPresentacion\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-10T21:20:48.48Z",
+              "EditorCaption": ""
             }
           ]
         }

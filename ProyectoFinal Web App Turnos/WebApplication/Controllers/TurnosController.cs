@@ -43,7 +43,7 @@ namespace HospitalTurnos.Controllers
             // Llenar dropdowns del formulario
             ViewBag.Pacientes = _turnoService.ObtenerPacientes();
             ViewBag.Medicos = _turnoService.ObtenerMedicos();
-            ViewBag.Asistentes = _turnoService.ObtenerAsistentes();
+            ViewBag.Recepcionistas = _turnoService.ObtenerRecepcionistas();
             ViewBag.Prioridades = _turnoService.ObtenerPrioridades();
             return View();
         }
@@ -51,7 +51,7 @@ namespace HospitalTurnos.Controllers
         // POST /Turnos/Crear
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Crear(int pacienteId, int medicoId, int? asistenteId,
+        public IActionResult Crear(int pacienteId, int medicoId, int RecepcionistaId,
                                    int prioridadId, string? observaciones)
         {
             if (pacienteId == 0 || medicoId == 0 || prioridadId == 0)
@@ -59,12 +59,12 @@ namespace HospitalTurnos.Controllers
                 ModelState.AddModelError("", "Paciente, Médico y Prioridad son requeridos.");
                 ViewBag.Pacientes = _turnoService.ObtenerPacientes();
                 ViewBag.Medicos = _turnoService.ObtenerMedicos();
-                ViewBag.Asistentes = _turnoService.ObtenerAsistentes();
+                ViewBag.Recepcionistas = _turnoService.ObtenerRecepcionistas();
                 ViewBag.Prioridades = _turnoService.ObtenerPrioridades();
                 return View();
             }
 
-            _turnoService.CrearTurno(pacienteId, medicoId, asistenteId, prioridadId, observaciones);
+            _turnoService.CrearTurno(pacienteId, medicoId, RecepcionistaId, prioridadId, observaciones);
             TempData["Mensaje"] = "Turno creado correctamente.";
             return RedirectToAction(nameof(Index));
         }
