@@ -1,0 +1,177 @@
+@using Microsoft.AspNetCore.Mvc.Rendering
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HospitalTurnos</title>
+    
+    <script src="~/js/tailwindcss.js"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#2e6b73",
+                        "on-secondary-fixed": "#001f23",
+                        "on-primary-fixed": "#001d32",
+                        "surface-bright": "#f8f9fa",
+                        "surface-variant": "#e1e3e4",
+                        "on-error": "#ffffff",
+                        "primary-container": "#033f63",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-background": "#191c1d",
+                        "secondary-fixed": "#b1edf6",
+                        "primary-fixed": "#cde5ff",
+                        "on-surface": "#191c1d",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-fixed-variant": "#044f56",
+                        "on-error-container": "#93000a",
+                        "outline": "#72787f",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#90ad99",
+                        "tertiary-container": "#284132",
+                        "inverse-surface": "#2e3132",
+                        "on-tertiary-fixed": "#062013",
+                        "tertiary-fixed": "#ccead4",
+                        "surface-tint": "#346288",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#b0ceb9",
+                        "surface-dim": "#d9dadb",
+                        "secondary-container": "#aeeaf3",
+                        "secondary-fixed-dim": "#95d0d9",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary": "#002842",
+                        "on-primary-fixed-variant": "#174a6f",
+                        "on-surface-variant": "#42474e",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f8f9fa",
+                        "on-tertiary-fixed-variant": "#334c3d",
+                        "surface-container-high": "#e7e8e9",
+                        "outline-variant": "#c2c7cf",
+                        "primary-fixed-dim": "#9ecbf6",
+                        "inverse-primary": "#9ecbf6",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container": "#edeeef",
+                        "secondary": "#29676f",
+                        "on-primary-container": "#7eabd4",
+                        "background": "#f8f9fa",
+                        "tertiary": "#112b1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["system-ui", "sans-serif"],
+                        "body": ["system-ui", "sans-serif"],
+                        "label": ["system-ui", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: system-ui, sans-serif; background-color: #f8f9fa; }
+        h1, h2, h3, .font-headline { font-family: system-ui, sans-serif; }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .emergency-tint { background-color: rgba(186, 26, 26, 0.05); }
+        .priority-tint { background-color: rgba(254, 220, 151, 0.15); }
+        
+        .toast-notification {
+            position: fixed; bottom: 32px; right: 32px; background-color: #28666e;
+            color: #ffffff; padding: 16px 24px; border-radius: 8px; font-weight: 600;
+            box-shadow: 0 12px 32px -4px rgba(3, 63, 99, 0.12); z-index: 9999;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .toast-notification.hide { opacity: 0; transform: translateY(10px); }
+    </style>
+</head>
+<body class="text-on-surface bg-surface">
+    <!-- SideNavBar Shell -->
+    <nav class="bg-[#002842] dark:bg-[#001d32] h-screen w-64 fixed left-0 top-0 overflow-y-auto flex flex-col py-8 shadow-[4px_0_24px_rgba(3,63,99,0.1)] z-50">
+        <div class="px-6 mb-10">
+            <h1 class="text-xl font-bold text-white tracking-tighter">HospitalTurnos</h1>
+            <p class="uppercase tracking-widest text-[10px] font-bold text-[#aeeaf3] mt-1">Clinical Sanctuary</p>
+        </div>
+        <div class="flex flex-col gap-2">
+            @{
+                var controller = ViewContext.RouteData.Values["Controller"]?.ToString();
+                var action = ViewContext.RouteData.Values["Action"]?.ToString();
+            }
+            
+            <!-- Cola de Turnos (Index) -->
+            <a asp-controller="Turnos" asp-action="Index" 
+               class="@(controller == "Turnos" && action == "Index" ? "bg-[#033f63] text-white rounded-r-full mr-4 px-6 py-3 transition-all flex items-center gap-3 scale-95 active:scale-100 duration-200" : "text-slate-400 hover:text-white px-6 py-3 transition-colors flex items-center gap-3 hover:bg-[#033f63]/50")">
+                <span style="font-size: 1.2rem;">📋</span>
+                <span class="font-medium">Cola</span>
+            </a>
+
+            <!-- Nuevo Turno (Crear) -->
+            <a asp-controller="Turnos" asp-action="Crear" 
+               class="@(controller == "Turnos" && action == "Crear" ? "bg-[#033f63] text-white rounded-r-full mr-4 px-6 py-3 transition-all flex items-center gap-3 scale-95 active:scale-100 duration-200" : "text-slate-400 hover:text-white px-6 py-3 transition-colors flex items-center gap-3 hover:bg-[#033f63]/50")">
+                <span style="font-size: 1.2rem;">➕</span>
+                <span class="font-medium">Crear Turno</span>
+            </a>
+        </div>
+        
+        <div class="mt-auto px-6 pt-10">
+            <div class="p-4 rounded-xl bg-[#033f63]/30 border border-white/5">
+                <p class="text-[10px] uppercase tracking-wider text-secondary-fixed-dim font-bold">Hora Servidor</p>
+                <p class="text-white text-2xl font-headline font-bold mt-1" id="realtime-clock">--:--</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Shell -->
+    <main class="ml-64 min-h-screen bg-surface">
+        <!-- TopAppBar -->
+        <header class="sticky top-0 z-40 w-full glass-header flex justify-between items-center px-10 py-6 border-b border-surface-container-high/50">
+            <div>
+                <h2 class="font-headline text-2xl font-light tracking-tight text-[#002842] dark:text-[#f8f9fa]">@ViewData["Title"]</h2>
+            </div>
+            
+            <div class="flex items-center gap-4">
+            </div>
+        </header>
+
+        <div class="px-10 py-8 space-y-8">
+            @RenderBody()
+        </div>
+    </main>
+
+    @if (TempData["Mensaje"] != null)
+    {
+        <div id="toast-message" class="toast-notification">
+            @TempData["Mensaje"]
+        </div>
+    }
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('realtime-clock').innerText = now.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        const toast = document.getElementById('toast-message');
+        if (toast) {
+            setTimeout(() => {
+                toast.classList.add('hide');
+                setTimeout(() => toast.remove(), 500);
+            }, 3000);
+        }
+    </script>
+    
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

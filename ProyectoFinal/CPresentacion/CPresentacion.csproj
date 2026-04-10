@@ -8,4 +8,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp" Version="6.6.0" />
+    <PackageReference Include="Krypton.Toolkit" Version="100.26.1.19" />
+    <PackageReference Include="ReaLTaiizor" Version="3.8.1.6" />
+  </ItemGroup>
+
 </Project>
