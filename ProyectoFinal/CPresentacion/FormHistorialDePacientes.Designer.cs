@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             label7 = new Label();
             label6 = new Label();
             foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
@@ -47,12 +44,12 @@
             label2 = new Label();
             label1 = new Label();
             dtpFechaConsulta = new ReaLTaiizor.Controls.PoisonDateTime();
-            dgvPacientes = new ReaLTaiizor.Controls.PoisonDataGridView();
             btnExportar = new Krypton.Toolkit.KryptonButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
+            dataGridView1 = new DataGridView();
             foreverGroupBox1.SuspendLayout();
             foreverGroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvPacientes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label7
@@ -285,50 +282,6 @@
             dtpFechaConsulta.Size = new Size(201, 35);
             dtpFechaConsulta.TabIndex = 29;
             // 
-            // dgvPacientes
-            // 
-            dgvPacientes.AllowUserToResizeRows = false;
-            dgvPacientes.BackgroundColor = Color.FromArgb(255, 255, 255);
-            dgvPacientes.BorderStyle = BorderStyle.None;
-            dgvPacientes.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dgvPacientes.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvPacientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            dgvPacientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            dgvPacientes.DefaultCellStyle = dataGridViewCellStyle5;
-            dgvPacientes.EnableHeadersVisualStyles = false;
-            dgvPacientes.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dgvPacientes.GridColor = Color.FromArgb(255, 255, 255);
-            dgvPacientes.Location = new Point(111, 517);
-            dgvPacientes.Name = "dgvPacientes";
-            dgvPacientes.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dgvPacientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            dgvPacientes.RowHeadersWidth = 62;
-            dgvPacientes.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dgvPacientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvPacientes.Size = new Size(997, 415);
-            dgvPacientes.TabIndex = 29;
-            // 
             // btnExportar
             // 
             btnExportar.Location = new Point(896, 121);
@@ -364,15 +317,25 @@
             iconButton2.TabIndex = 39;
             iconButton2.UseVisualStyleBackColor = false;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(110, 524);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(998, 402);
+            dataGridView1.TabIndex = 40;
+            // 
             // FormHistorialDePacientes
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(218, 248, 226);
             ClientSize = new Size(1205, 1050);
+            Controls.Add(dataGridView1);
             Controls.Add(iconButton2);
             Controls.Add(btnExportar);
-            Controls.Add(dgvPacientes);
             Controls.Add(foreverGroupBox1);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -382,7 +345,7 @@
             foreverGroupBox1.PerformLayout();
             foreverGroupBox2.ResumeLayout(false);
             foreverGroupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvPacientes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -405,8 +368,8 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private TextBox txtFiltro;
         private Krypton.Toolkit.KryptonButton btnFiltro;
-        private ReaLTaiizor.Controls.PoisonDataGridView dgvPacientes;
         private Krypton.Toolkit.KryptonButton btnExportar;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private DataGridView dataGridView1;
     }
 }

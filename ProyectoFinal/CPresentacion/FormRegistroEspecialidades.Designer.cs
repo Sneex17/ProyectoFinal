@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             label7 = new Label();
             label6 = new Label();
             kryptonButton3 = new Krypton.Toolkit.KryptonButton();
@@ -38,12 +35,12 @@
             kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
             parrotGroupBox3 = new ReaLTaiizor.Controls.ParrotGroupBox();
+            txtDescripcion = new TextBox();
             parrotGroupBox1 = new ReaLTaiizor.Controls.ParrotGroupBox();
+            txtNombreEspecialidad = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            txtNombreEspecialidad = new TextBox();
-            txtDescripcion = new TextBox();
-            dgvEspecialidades = new ReaLTaiizor.Controls.PoisonDataGridView();
+            dgvEspecialidades = new DataGridView();
             foreverGroupBox1.SuspendLayout();
             parrotGroupBox3.SuspendLayout();
             parrotGroupBox1.SuspendLayout();
@@ -164,6 +161,18 @@
             parrotGroupBox3.Text = "DESCRIPCIÓN";
             parrotGroupBox3.TextColor = Color.FromArgb(4, 79, 86);
             // 
+            // txtDescripcion
+            // 
+            txtDescripcion.BorderStyle = BorderStyle.None;
+            txtDescripcion.Font = new Font("Corbel", 12F);
+            txtDescripcion.ForeColor = Color.FromArgb(4, 79, 86);
+            txtDescripcion.Location = new Point(16, 28);
+            txtDescripcion.Multiline = true;
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.PlaceholderText = "Describa la especialidad médica";
+            txtDescripcion.Size = new Size(363, 396);
+            txtDescripcion.TabIndex = 40;
+            // 
             // parrotGroupBox1
             // 
             parrotGroupBox1.BorderColor = Color.FromArgb(4, 79, 86);
@@ -179,6 +188,17 @@
             parrotGroupBox1.TabStop = false;
             parrotGroupBox1.Text = "NOMBRE";
             parrotGroupBox1.TextColor = Color.FromArgb(4, 79, 86);
+            // 
+            // txtNombreEspecialidad
+            // 
+            txtNombreEspecialidad.BorderStyle = BorderStyle.None;
+            txtNombreEspecialidad.Font = new Font("Corbel", 12F);
+            txtNombreEspecialidad.ForeColor = Color.FromArgb(4, 79, 86);
+            txtNombreEspecialidad.Location = new Point(16, 28);
+            txtNombreEspecialidad.Name = "txtNombreEspecialidad";
+            txtNombreEspecialidad.PlaceholderText = "Ej: cardiología";
+            txtNombreEspecialidad.Size = new Size(363, 30);
+            txtNombreEspecialidad.TabIndex = 39;
             // 
             // label2
             // 
@@ -201,72 +221,15 @@
             label1.TabIndex = 2;
             label1.Text = "Detalles de Especialidad";
             // 
-            // txtNombreEspecialidad
-            // 
-            txtNombreEspecialidad.BorderStyle = BorderStyle.None;
-            txtNombreEspecialidad.Font = new Font("Corbel", 12F);
-            txtNombreEspecialidad.ForeColor = Color.FromArgb(4, 79, 86);
-            txtNombreEspecialidad.Location = new Point(16, 28);
-            txtNombreEspecialidad.Name = "txtNombreEspecialidad";
-            txtNombreEspecialidad.PlaceholderText = "Ej: cardiología";
-            txtNombreEspecialidad.Size = new Size(363, 30);
-            txtNombreEspecialidad.TabIndex = 39;
-            // 
-            // txtDescripcion
-            // 
-            txtDescripcion.BorderStyle = BorderStyle.None;
-            txtDescripcion.Font = new Font("Corbel", 12F);
-            txtDescripcion.ForeColor = Color.FromArgb(4, 79, 86);
-            txtDescripcion.Location = new Point(16, 28);
-            txtDescripcion.Multiline = true;
-            txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.PlaceholderText = "Describa la especialidad médica";
-            txtDescripcion.Size = new Size(363, 396);
-            txtDescripcion.TabIndex = 40;
-            // 
             // dgvEspecialidades
             // 
-            dgvEspecialidades.AllowUserToResizeRows = false;
-            dgvEspecialidades.BackgroundColor = Color.FromArgb(255, 255, 255);
-            dgvEspecialidades.BorderStyle = BorderStyle.None;
-            dgvEspecialidades.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dgvEspecialidades.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvEspecialidades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dgvEspecialidades.BackgroundColor = Color.White;
             dgvEspecialidades.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            dgvEspecialidades.DefaultCellStyle = dataGridViewCellStyle5;
-            dgvEspecialidades.EnableHeadersVisualStyles = false;
-            dgvEspecialidades.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dgvEspecialidades.GridColor = Color.FromArgb(255, 255, 255);
-            dgvEspecialidades.Location = new Point(652, 196);
+            dgvEspecialidades.Location = new Point(648, 196);
             dgvEspecialidades.Name = "dgvEspecialidades";
-            dgvEspecialidades.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dgvEspecialidades.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dgvEspecialidades.RowHeadersWidth = 62;
-            dgvEspecialidades.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dgvEspecialidades.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvEspecialidades.Size = new Size(507, 702);
-            dgvEspecialidades.TabIndex = 26;
+            dgvEspecialidades.Size = new Size(495, 702);
+            dgvEspecialidades.TabIndex = 41;
             // 
             // FormRegistroEspecialidades
             // 
@@ -298,7 +261,6 @@
 
         private Label label7;
         private Label label6;
-        private ReaLTaiizor.Controls.PoisonDataGridView dgvEspecialidades;
         private Krypton.Toolkit.KryptonButton kryptonButton3;
         private Krypton.Toolkit.KryptonButton kryptonButton2;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
@@ -318,5 +280,6 @@
         private Label label1;
         private TextBox txtDescripcion;
         private TextBox txtNombreEspecialidad;
+        private DataGridView dgvEspecialidades;
     }
 }
