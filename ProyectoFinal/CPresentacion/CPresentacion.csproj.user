@@ -19,7 +19,7 @@
     <Compile Update="FormRegistroMedico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormRegistroUsuario.cs">
+    <Compile Update="FormRegistroRecepcionista.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
