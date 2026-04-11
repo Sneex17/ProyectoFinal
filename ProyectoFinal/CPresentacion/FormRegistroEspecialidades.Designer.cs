@@ -52,9 +52,10 @@
             label7.AutoSize = true;
             label7.Font = new Font("Calibri", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.FromArgb(95, 154, 162);
-            label7.Location = new Point(77, 129);
+            label7.Location = new Point(54, 77);
+            label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(476, 27);
+            label7.Size = new Size(323, 18);
             label7.TabIndex = 24;
             label7.Text = "Registro y consulta de especialidades en el sistema";
             // 
@@ -63,17 +64,19 @@
             label6.AutoSize = true;
             label6.Font = new Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(0, 54, 60);
-            label6.Location = new Point(66, 61);
+            label6.Location = new Point(46, 37);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(550, 59);
+            label6.Size = new Size(367, 39);
             label6.TabIndex = 25;
             label6.Text = "Registro de Especialidades";
             // 
             // kryptonButton3
             // 
-            kryptonButton3.Location = new Point(77, 904);
+            kryptonButton3.Location = new Point(54, 542);
+            kryptonButton3.Margin = new Padding(2, 2, 2, 2);
             kryptonButton3.Name = "kryptonButton3";
-            kryptonButton3.Size = new Size(143, 85);
+            kryptonButton3.Size = new Size(100, 51);
             kryptonButton3.StateCommon.Back.Color1 = Color.IndianRed;
             kryptonButton3.StateCommon.Back.Color2 = Color.Brown;
             kryptonButton3.StateCommon.Back.ColorAngle = -2F;
@@ -90,9 +93,10 @@
             // 
             // kryptonButton2
             // 
-            kryptonButton2.Location = new Point(245, 904);
+            kryptonButton2.Location = new Point(172, 542);
+            kryptonButton2.Margin = new Padding(2, 2, 2, 2);
             kryptonButton2.Name = "kryptonButton2";
-            kryptonButton2.Size = new Size(143, 85);
+            kryptonButton2.Size = new Size(100, 51);
             kryptonButton2.StateCommon.Back.Color1 = Color.FromArgb(254, 219, 151);
             kryptonButton2.StateCommon.Back.Color2 = Color.FromArgb(254, 219, 151);
             kryptonButton2.StateCommon.Back.ColorAngle = -2F;
@@ -109,9 +113,10 @@
             // 
             // kryptonButton1
             // 
-            kryptonButton1.Location = new Point(413, 904);
+            kryptonButton1.Location = new Point(289, 542);
+            kryptonButton1.Margin = new Padding(2, 2, 2, 2);
             kryptonButton1.Name = "kryptonButton1";
-            kryptonButton1.Size = new Size(143, 85);
+            kryptonButton1.Size = new Size(100, 51);
             kryptonButton1.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
             kryptonButton1.StateCommon.Back.Color2 = Color.FromArgb(23, 74, 111);
             kryptonButton1.StateCommon.Back.ColorAngle = -2F;
@@ -137,11 +142,12 @@
             foreverGroupBox1.Controls.Add(label2);
             foreverGroupBox1.Controls.Add(label1);
             foreverGroupBox1.Font = new Font("Segoe UI", 10F);
-            foreverGroupBox1.Location = new Point(66, 196);
+            foreverGroupBox1.Location = new Point(46, 118);
+            foreverGroupBox1.Margin = new Padding(2, 2, 2, 2);
             foreverGroupBox1.Name = "foreverGroupBox1";
             foreverGroupBox1.ShowArrow = true;
             foreverGroupBox1.ShowText = true;
-            foreverGroupBox1.Size = new Size(509, 702);
+            foreverGroupBox1.Size = new Size(356, 421);
             foreverGroupBox1.TabIndex = 19;
             foreverGroupBox1.TextColor = Color.Transparent;
             // 
@@ -152,10 +158,12 @@
             parrotGroupBox3.Controls.Add(txtDescripcion);
             parrotGroupBox3.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             parrotGroupBox3.ForeColor = Color.FromArgb(4, 79, 86);
-            parrotGroupBox3.Location = new Point(56, 231);
+            parrotGroupBox3.Location = new Point(39, 139);
+            parrotGroupBox3.Margin = new Padding(2, 2, 2, 2);
             parrotGroupBox3.Name = "parrotGroupBox3";
+            parrotGroupBox3.Padding = new Padding(2, 2, 2, 2);
             parrotGroupBox3.ShowText = true;
-            parrotGroupBox3.Size = new Size(393, 440);
+            parrotGroupBox3.Size = new Size(275, 264);
             parrotGroupBox3.TabIndex = 10;
             parrotGroupBox3.TabStop = false;
             parrotGroupBox3.Text = "DESCRIPCIÓN";
@@ -166,11 +174,12 @@
             txtDescripcion.BorderStyle = BorderStyle.None;
             txtDescripcion.Font = new Font("Corbel", 12F);
             txtDescripcion.ForeColor = Color.FromArgb(4, 79, 86);
-            txtDescripcion.Location = new Point(16, 28);
+            txtDescripcion.Location = new Point(11, 17);
+            txtDescripcion.Margin = new Padding(2, 2, 2, 2);
             txtDescripcion.Multiline = true;
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.PlaceholderText = "Describa la especialidad médica";
-            txtDescripcion.Size = new Size(363, 396);
+            txtDescripcion.Size = new Size(254, 238);
             txtDescripcion.TabIndex = 40;
             // 
             // parrotGroupBox1
@@ -180,10 +189,12 @@
             parrotGroupBox1.Controls.Add(txtNombreEspecialidad);
             parrotGroupBox1.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             parrotGroupBox1.ForeColor = Color.FromArgb(4, 79, 86);
-            parrotGroupBox1.Location = new Point(56, 134);
+            parrotGroupBox1.Location = new Point(39, 80);
+            parrotGroupBox1.Margin = new Padding(2, 2, 2, 2);
             parrotGroupBox1.Name = "parrotGroupBox1";
+            parrotGroupBox1.Padding = new Padding(2, 2, 2, 2);
             parrotGroupBox1.ShowText = true;
-            parrotGroupBox1.Size = new Size(393, 68);
+            parrotGroupBox1.Size = new Size(275, 41);
             parrotGroupBox1.TabIndex = 1;
             parrotGroupBox1.TabStop = false;
             parrotGroupBox1.Text = "NOMBRE";
@@ -194,10 +205,11 @@
             txtNombreEspecialidad.BorderStyle = BorderStyle.None;
             txtNombreEspecialidad.Font = new Font("Corbel", 12F);
             txtNombreEspecialidad.ForeColor = Color.FromArgb(4, 79, 86);
-            txtNombreEspecialidad.Location = new Point(16, 28);
+            txtNombreEspecialidad.Location = new Point(11, 17);
+            txtNombreEspecialidad.Margin = new Padding(2, 2, 2, 2);
             txtNombreEspecialidad.Name = "txtNombreEspecialidad";
             txtNombreEspecialidad.PlaceholderText = "Ej: cardiología";
-            txtNombreEspecialidad.Size = new Size(363, 30);
+            txtNombreEspecialidad.Size = new Size(254, 20);
             txtNombreEspecialidad.TabIndex = 39;
             // 
             // label2
@@ -205,9 +217,10 @@
             label2.BackColor = Color.FromArgb(4, 79, 86);
             label2.Font = new Font("Calibri", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(4, 79, 86);
-            label2.Location = new Point(56, 52);
+            label2.Location = new Point(39, 31);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(10, 41);
+            label2.Size = new Size(7, 25);
             label2.TabIndex = 3;
             // 
             // label1
@@ -215,9 +228,10 @@
             label1.AutoSize = true;
             label1.Font = new Font("Calibri", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(4, 79, 86);
-            label1.Location = new Point(72, 52);
+            label1.Location = new Point(50, 31);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(337, 39);
+            label1.Size = new Size(232, 27);
             label1.TabIndex = 2;
             label1.Text = "Detalles de Especialidad";
             // 
@@ -225,18 +239,19 @@
             // 
             dgvEspecialidades.BackgroundColor = Color.White;
             dgvEspecialidades.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEspecialidades.Location = new Point(648, 196);
+            dgvEspecialidades.Location = new Point(454, 118);
+            dgvEspecialidades.Margin = new Padding(2, 2, 2, 2);
             dgvEspecialidades.Name = "dgvEspecialidades";
             dgvEspecialidades.RowHeadersWidth = 62;
-            dgvEspecialidades.Size = new Size(495, 702);
+            dgvEspecialidades.Size = new Size(346, 421);
             dgvEspecialidades.TabIndex = 41;
             // 
             // FormRegistroEspecialidades
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(218, 248, 226);
-            ClientSize = new Size(1205, 1050);
+            ClientSize = new Size(844, 624);
             Controls.Add(dgvEspecialidades);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -244,6 +259,7 @@
             Controls.Add(kryptonButton2);
             Controls.Add(kryptonButton1);
             Controls.Add(foreverGroupBox1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "FormRegistroEspecialidades";
             Text = "FormRegistroEspecialidades";
             foreverGroupBox1.ResumeLayout(false);

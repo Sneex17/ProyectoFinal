@@ -16,5 +16,10 @@ namespace CPresentacion
         {
             InitializeComponent();
         }
+
+        private void foreverGroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

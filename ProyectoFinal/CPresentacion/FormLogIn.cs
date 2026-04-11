@@ -16,5 +16,20 @@ namespace CPresentacion
         {
             InitializeComponent();
         }
+
+        private void foreverGroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void parrotGroupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

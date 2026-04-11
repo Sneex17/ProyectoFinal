@@ -16,5 +16,15 @@ namespace CPresentacion
         {
             InitializeComponent();
         }
+
+        private void cmbEspecialidades_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormHistorialDeTurno_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
