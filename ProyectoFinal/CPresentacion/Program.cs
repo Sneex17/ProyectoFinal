@@ -1,3 +1,7 @@
+using CEntidades.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using CAccesoDatos;
 namespace CPresentacion
 {
     internal static class Program
@@ -8,10 +12,17 @@ namespace CPresentacion
         [STAThread]
         static void Main()
         {
+            IConfiguration configuration = new ConfigurationBuilder()
+                .SetBasePath(AppContext.BaseDirectory)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .Build();
+            ConexionAppDB.Instanciar(configuration);
+
+
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormRegistroUsuario());
+            Application.Run(new FormRegistroMedico());
         }
     }
 }
