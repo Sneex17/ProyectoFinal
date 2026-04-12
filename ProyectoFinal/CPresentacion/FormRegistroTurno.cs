@@ -18,13 +18,35 @@ namespace CPresentacion
             InitializeComponent();
         }
 
+        private void CambiarColores ()
+        {
+            btnAlta.StateCommon.Back.Color1 = Color.White;
+            btnMedia.StateCommon.Back.Color1 = Color.White;
+            btnBaja.StateCommon.Back.Color1 = Color.White;
+            btnUrgente.StateCommon.Back.Color1 = Color.White;
+            switch (prioridadSeleccionada)
+            {
+                case 1:
+                    btnAlta.StateCommon.Back.Color1 = Color.FromArgb(255, 248, 234);
+                    break;
+                case 2:
+                    btnMedia.StateCommon.Back.Color1 = Color.Honeydew;
+                    break;
+                case 3:
+                    btnBaja.StateCommon.Back.Color1 = Color.WhiteSmoke;
+                    break;
+                case 4:
+                    btnUrgente.StateCommon.Back.Color1 = Color.FromArgb(248, 232, 232);
+                    break;
+            }
+        }
         private void btnNormal_Click(object sender, EventArgs e)
         {
-            // Se pinta background del botón y se cambia variable de prioridad seleccionada
+            // Se cambia variable de prioridad seleccionada
             try
             {
-                btnBaja.BackColor = Color.LightBlue;
                 prioridadSeleccionada = 3; // Prioridad baja
+                CambiarColores();
 
             }
             catch (Exception ex)
@@ -37,8 +59,9 @@ namespace CPresentacion
         {
             try
             {
-                btnMedia.BackColor = Color.LightGreen;
+
                 prioridadSeleccionada = 2; // Prioridad media
+                CambiarColores();
 
             }
             catch (Exception ex)
@@ -51,8 +74,9 @@ namespace CPresentacion
         {
             try
             {
-                btnAlta.BackColor = Color.LightYellow;
                 prioridadSeleccionada = 1; // Prioridad alta
+                CambiarColores();
+
 
             }
             catch (Exception ex)
@@ -65,8 +89,8 @@ namespace CPresentacion
         {
             try
             {
-                btnUrgente.BackColor = Color.LightPink;
                 prioridadSeleccionada = 4; // Prioridad urgente
+                CambiarColores();
 
             }
             catch (Exception ex)

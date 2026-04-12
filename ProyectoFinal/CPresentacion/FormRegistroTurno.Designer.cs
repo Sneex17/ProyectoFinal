@@ -40,11 +40,11 @@
             btnMedia = new Krypton.Toolkit.KryptonButton();
             btnBaja = new Krypton.Toolkit.KryptonButton();
             label6 = new Label();
-            poisonComboBox2 = new ReaLTaiizor.Controls.PoisonComboBox();
+            cmbRecepcionista = new ReaLTaiizor.Controls.PoisonComboBox();
             label5 = new Label();
-            poisonComboBox1 = new ReaLTaiizor.Controls.PoisonComboBox();
+            cmbMedico = new ReaLTaiizor.Controls.PoisonComboBox();
             label4 = new Label();
-            cmbEspecialidades = new ReaLTaiizor.Controls.PoisonComboBox();
+            cmbPaciente = new ReaLTaiizor.Controls.PoisonComboBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -56,6 +56,8 @@
             // 
             BuDesactivar.Location = new Point(485, 883);
             BuDesactivar.Name = "BuDesactivar";
+            BuDesactivar.OverrideDefault.Back.Color1 = Color.IndianRed;
+            BuDesactivar.OverrideDefault.Back.Color2 = Color.Brown;
             BuDesactivar.Size = new Size(143, 85);
             BuDesactivar.StateCommon.Back.Color1 = Color.IndianRed;
             BuDesactivar.StateCommon.Back.Color2 = Color.Brown;
@@ -75,6 +77,8 @@
             // 
             BuEditar.Location = new Point(645, 883);
             BuEditar.Name = "BuEditar";
+            BuEditar.OverrideDefault.Back.Color1 = Color.FromArgb(254, 219, 151);
+            BuEditar.OverrideDefault.Back.Color2 = Color.FromArgb(254, 219, 151);
             BuEditar.Size = new Size(143, 85);
             BuEditar.StateCommon.Back.Color1 = Color.FromArgb(254, 219, 151);
             BuEditar.StateCommon.Back.Color2 = Color.FromArgb(254, 219, 151);
@@ -94,6 +98,8 @@
             // 
             BuCrear.Location = new Point(806, 883);
             BuCrear.Name = "BuCrear";
+            BuCrear.OverrideDefault.Back.Color1 = Color.FromArgb(0, 51, 82);
+            BuCrear.OverrideDefault.Back.Color2 = Color.FromArgb(23, 74, 111);
             BuCrear.Size = new Size(143, 85);
             BuCrear.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
             BuCrear.StateCommon.Back.Color2 = Color.FromArgb(23, 74, 111);
@@ -113,7 +119,7 @@
             // 
             foreverGroupBox1.ArrowColorF = Color.Transparent;
             foreverGroupBox1.ArrowColorH = Color.Transparent;
-            foreverGroupBox1.BackColor = Color.Transparent;
+            foreverGroupBox1.BackColor = Color.White;
             foreverGroupBox1.BaseColor = Color.White;
             foreverGroupBox1.Controls.Add(btnUrgente);
             foreverGroupBox1.Controls.Add(parrotGroupBox3);
@@ -122,11 +128,11 @@
             foreverGroupBox1.Controls.Add(btnMedia);
             foreverGroupBox1.Controls.Add(btnBaja);
             foreverGroupBox1.Controls.Add(label6);
-            foreverGroupBox1.Controls.Add(poisonComboBox2);
+            foreverGroupBox1.Controls.Add(cmbRecepcionista);
             foreverGroupBox1.Controls.Add(label5);
-            foreverGroupBox1.Controls.Add(poisonComboBox1);
+            foreverGroupBox1.Controls.Add(cmbMedico);
             foreverGroupBox1.Controls.Add(label4);
-            foreverGroupBox1.Controls.Add(cmbEspecialidades);
+            foreverGroupBox1.Controls.Add(cmbPaciente);
             foreverGroupBox1.Controls.Add(label3);
             foreverGroupBox1.Controls.Add(label2);
             foreverGroupBox1.Controls.Add(label1);
@@ -143,6 +149,10 @@
             // 
             btnUrgente.Location = new Point(872, 584);
             btnUrgente.Name = "btnUrgente";
+            btnUrgente.OverrideDefault.Back.Color1 = Color.FromArgb(248, 232, 232);
+            btnUrgente.OverrideDefault.Back.Color2 = Color.FromArgb(248, 232, 232);
+            btnUrgente.OverrideFocus.Back.Color1 = Color.Transparent;
+            btnUrgente.OverrideFocus.Back.Color2 = Color.Transparent;
             btnUrgente.Size = new Size(261, 137);
             btnUrgente.StateCommon.Back.Color1 = Color.White;
             btnUrgente.StateCommon.Back.Color2 = Color.White;
@@ -154,6 +164,8 @@
             btnUrgente.StateCommon.Content.ShortText.Color1 = Color.FromArgb(192, 0, 0);
             btnUrgente.StateCommon.Content.ShortText.Color2 = Color.FromArgb(192, 0, 0);
             btnUrgente.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUrgente.StatePressed.Back.Color1 = Color.FromArgb(255, 192, 192);
+            btnUrgente.StatePressed.Back.Color2 = Color.FromArgb(255, 192, 192);
             btnUrgente.TabIndex = 25;
             btnUrgente.Values.DropDownArrowColor = Color.Empty;
             btnUrgente.Values.Text = "Urgente";
@@ -202,6 +214,10 @@
             // 
             btnAlta.Location = new Point(596, 584);
             btnAlta.Name = "btnAlta";
+            btnAlta.OverrideDefault.Back.Color1 = Color.FromArgb(255, 248, 234);
+            btnAlta.OverrideDefault.Back.Color2 = Color.FromArgb(255, 248, 234);
+            btnAlta.OverrideFocus.Back.Color1 = Color.Transparent;
+            btnAlta.OverrideFocus.Back.Color2 = Color.Transparent;
             btnAlta.Size = new Size(261, 137);
             btnAlta.StateCommon.Back.Color1 = Color.White;
             btnAlta.StateCommon.Back.Color2 = Color.White;
@@ -213,6 +229,8 @@
             btnAlta.StateCommon.Content.ShortText.Color1 = Color.Gold;
             btnAlta.StateCommon.Content.ShortText.Color2 = Color.Gold;
             btnAlta.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAlta.StatePressed.Back.Color1 = Color.FromArgb(255, 255, 192);
+            btnAlta.StatePressed.Back.Color2 = Color.FromArgb(255, 255, 192);
             btnAlta.TabIndex = 22;
             btnAlta.Values.DropDownArrowColor = Color.Empty;
             btnAlta.Values.Text = "Alta";
@@ -222,6 +240,10 @@
             // 
             btnMedia.Location = new Point(318, 584);
             btnMedia.Name = "btnMedia";
+            btnMedia.OverrideDefault.Back.Color1 = Color.Honeydew;
+            btnMedia.OverrideDefault.Back.Color2 = Color.Honeydew;
+            btnMedia.OverrideFocus.Back.Color1 = Color.Transparent;
+            btnMedia.OverrideFocus.Back.Color2 = Color.Transparent;
             btnMedia.Size = new Size(261, 137);
             btnMedia.StateCommon.Back.Color1 = Color.White;
             btnMedia.StateCommon.Back.Color2 = Color.White;
@@ -233,6 +255,8 @@
             btnMedia.StateCommon.Content.ShortText.Color1 = Color.Green;
             btnMedia.StateCommon.Content.ShortText.Color2 = Color.Green;
             btnMedia.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMedia.StatePressed.Back.Color1 = Color.FromArgb(192, 255, 192);
+            btnMedia.StatePressed.Back.Color2 = Color.FromArgb(192, 255, 192);
             btnMedia.TabIndex = 21;
             btnMedia.Values.DropDownArrowColor = Color.Empty;
             btnMedia.Values.Text = "Media";
@@ -242,6 +266,8 @@
             // 
             btnBaja.Location = new Point(42, 584);
             btnBaja.Name = "btnBaja";
+            btnBaja.OverrideDefault.Back.Color1 = Color.WhiteSmoke;
+            btnBaja.OverrideDefault.Back.Color2 = Color.WhiteSmoke;
             btnBaja.Size = new Size(261, 137);
             btnBaja.StateCommon.Back.Color1 = Color.White;
             btnBaja.StateCommon.Back.Color2 = Color.White;
@@ -253,6 +279,8 @@
             btnBaja.StateCommon.Content.ShortText.Color1 = Color.FromArgb(4, 79, 86);
             btnBaja.StateCommon.Content.ShortText.Color2 = Color.FromArgb(4, 79, 86);
             btnBaja.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBaja.StatePressed.Back.Color1 = Color.PaleTurquoise;
+            btnBaja.StatePressed.Back.Color2 = Color.PaleTurquoise;
             btnBaja.TabIndex = 20;
             btnBaja.Values.DropDownArrowColor = Color.Empty;
             btnBaja.Values.Text = "Baja";
@@ -269,21 +297,21 @@
             label6.TabIndex = 10;
             label6.Text = "PRIORIDAD";
             // 
-            // poisonComboBox2
+            // cmbRecepcionista
             // 
-            poisonComboBox2.BackColor = Color.FromArgb(218, 248, 226);
-            poisonComboBox2.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            poisonComboBox2.ForeColor = Color.Black;
-            poisonComboBox2.FormattingEnabled = true;
-            poisonComboBox2.ItemHeight = 31;
-            poisonComboBox2.Location = new Point(64, 401);
-            poisonComboBox2.Name = "poisonComboBox2";
-            poisonComboBox2.Size = new Size(405, 37);
-            poisonComboBox2.TabIndex = 9;
-            poisonComboBox2.UseCustomBackColor = true;
-            poisonComboBox2.UseCustomFont = true;
-            poisonComboBox2.UseCustomForeColor = true;
-            poisonComboBox2.UseSelectable = true;
+            cmbRecepcionista.BackColor = Color.FromArgb(218, 248, 226);
+            cmbRecepcionista.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbRecepcionista.ForeColor = Color.Black;
+            cmbRecepcionista.FormattingEnabled = true;
+            cmbRecepcionista.ItemHeight = 31;
+            cmbRecepcionista.Location = new Point(64, 401);
+            cmbRecepcionista.Name = "cmbRecepcionista";
+            cmbRecepcionista.Size = new Size(405, 37);
+            cmbRecepcionista.TabIndex = 9;
+            cmbRecepcionista.UseCustomBackColor = true;
+            cmbRecepcionista.UseCustomFont = true;
+            cmbRecepcionista.UseCustomForeColor = true;
+            cmbRecepcionista.UseSelectable = true;
             // 
             // label5
             // 
@@ -296,21 +324,21 @@
             label5.TabIndex = 8;
             label5.Text = "RECEPCIONISTA ASIGNADO";
             // 
-            // poisonComboBox1
+            // cmbMedico
             // 
-            poisonComboBox1.BackColor = Color.FromArgb(218, 248, 226);
-            poisonComboBox1.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            poisonComboBox1.ForeColor = Color.Black;
-            poisonComboBox1.FormattingEnabled = true;
-            poisonComboBox1.ItemHeight = 31;
-            poisonComboBox1.Location = new Point(64, 302);
-            poisonComboBox1.Name = "poisonComboBox1";
-            poisonComboBox1.Size = new Size(405, 37);
-            poisonComboBox1.TabIndex = 7;
-            poisonComboBox1.UseCustomBackColor = true;
-            poisonComboBox1.UseCustomFont = true;
-            poisonComboBox1.UseCustomForeColor = true;
-            poisonComboBox1.UseSelectable = true;
+            cmbMedico.BackColor = Color.FromArgb(218, 248, 226);
+            cmbMedico.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbMedico.ForeColor = Color.Black;
+            cmbMedico.FormattingEnabled = true;
+            cmbMedico.ItemHeight = 31;
+            cmbMedico.Location = new Point(64, 302);
+            cmbMedico.Name = "cmbMedico";
+            cmbMedico.Size = new Size(405, 37);
+            cmbMedico.TabIndex = 7;
+            cmbMedico.UseCustomBackColor = true;
+            cmbMedico.UseCustomFont = true;
+            cmbMedico.UseCustomForeColor = true;
+            cmbMedico.UseSelectable = true;
             // 
             // label4
             // 
@@ -323,21 +351,21 @@
             label4.TabIndex = 6;
             label4.Text = "MÉDICO ASIGNADO";
             // 
-            // cmbEspecialidades
+            // cmbPaciente
             // 
-            cmbEspecialidades.BackColor = Color.FromArgb(218, 248, 226);
-            cmbEspecialidades.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmbEspecialidades.ForeColor = Color.Black;
-            cmbEspecialidades.FormattingEnabled = true;
-            cmbEspecialidades.ItemHeight = 31;
-            cmbEspecialidades.Location = new Point(64, 204);
-            cmbEspecialidades.Name = "cmbEspecialidades";
-            cmbEspecialidades.Size = new Size(405, 37);
-            cmbEspecialidades.TabIndex = 5;
-            cmbEspecialidades.UseCustomBackColor = true;
-            cmbEspecialidades.UseCustomFont = true;
-            cmbEspecialidades.UseCustomForeColor = true;
-            cmbEspecialidades.UseSelectable = true;
+            cmbPaciente.BackColor = Color.FromArgb(218, 248, 226);
+            cmbPaciente.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbPaciente.ForeColor = Color.Black;
+            cmbPaciente.FormattingEnabled = true;
+            cmbPaciente.ItemHeight = 31;
+            cmbPaciente.Location = new Point(64, 204);
+            cmbPaciente.Name = "cmbPaciente";
+            cmbPaciente.Size = new Size(405, 37);
+            cmbPaciente.TabIndex = 5;
+            cmbPaciente.UseCustomBackColor = true;
+            cmbPaciente.UseCustomFont = true;
+            cmbPaciente.UseCustomForeColor = true;
+            cmbPaciente.UseSelectable = true;
             // 
             // label3
             // 
@@ -396,11 +424,11 @@
         private Krypton.Toolkit.KryptonButton BuEditar;
         private Krypton.Toolkit.KryptonButton BuCrear;
         private ReaLTaiizor.Controls.ForeverGroupBox foreverGroupBox1;
-        private ReaLTaiizor.Controls.PoisonComboBox poisonComboBox2;
+        private ReaLTaiizor.Controls.PoisonComboBox cmbRecepcionista;
         private Label label5;
-        private ReaLTaiizor.Controls.PoisonComboBox poisonComboBox1;
+        private ReaLTaiizor.Controls.PoisonComboBox cmbMedico;
         private Label label4;
-        private ReaLTaiizor.Controls.PoisonComboBox cmbEspecialidades;
+        private ReaLTaiizor.Controls.PoisonComboBox cmbPaciente;
         private Label label3;
         private Label label2;
         private Label label1;
