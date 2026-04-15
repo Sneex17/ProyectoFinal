@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             BuDesactivar = new Krypton.Toolkit.KryptonButton();
             BuEditar = new Krypton.Toolkit.KryptonButton();
             BuCrear = new Krypton.Toolkit.KryptonButton();
@@ -415,10 +416,23 @@
             foreverGroupBox1.PerformLayout();
             parrotGroupBox3.ResumeLayout(false);
             parrotGroupBox3.PerformLayout();
+=======
+            SuspendLayout();
+            // 
+            // FormRegistroTurno
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(218, 248, 226);
+            ClientSize = new Size(800, 450);
+            Name = "FormRegistroTurno";
+            Text = "FormRegistroTurno";
+>>>>>>> kimberly/ui
             ResumeLayout(false);
         }
 
         #endregion
+<<<<<<< HEAD
 
         private Krypton.Toolkit.KryptonButton BuDesactivar;
         private Krypton.Toolkit.KryptonButton BuEditar;
@@ -440,5 +454,7 @@
         private ReaLTaiizor.Controls.ParrotGroupBox parrotGroupBox3;
         private TextBox txtDescripcion;
         private Krypton.Toolkit.KryptonButton btnUrgente;
+=======
+>>>>>>> kimberly/ui
     }
 }

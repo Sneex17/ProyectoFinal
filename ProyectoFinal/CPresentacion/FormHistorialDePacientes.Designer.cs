@@ -57,9 +57,10 @@
             label7.AutoSize = true;
             label7.Font = new Font("Calibri", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.FromArgb(95, 154, 162);
-            label7.Location = new Point(73, 121);
+            label7.Location = new Point(51, 73);
+            label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(421, 27);
+            label7.Size = new Size(286, 18);
             label7.TabIndex = 26;
             label7.Text = "Gestión y visualización de la actividad clínica ";
             // 
@@ -68,9 +69,10 @@
             label6.AutoSize = true;
             label6.Font = new Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(0, 54, 60);
-            label6.Location = new Point(62, 53);
+            label6.Location = new Point(43, 32);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(602, 59);
+            label6.Size = new Size(399, 39);
             label6.TabIndex = 27;
             label6.Text = "Historial de pacientes del día";
             // 
@@ -92,19 +94,21 @@
             foreverGroupBox1.Controls.Add(label1);
             foreverGroupBox1.Controls.Add(dtpFechaConsulta);
             foreverGroupBox1.Font = new Font("Segoe UI", 10F);
-            foreverGroupBox1.Location = new Point(101, 184);
+            foreverGroupBox1.Location = new Point(71, 110);
+            foreverGroupBox1.Margin = new Padding(2, 2, 2, 2);
             foreverGroupBox1.Name = "foreverGroupBox1";
             foreverGroupBox1.ShowArrow = true;
             foreverGroupBox1.ShowText = true;
-            foreverGroupBox1.Size = new Size(1020, 308);
+            foreverGroupBox1.Size = new Size(714, 185);
             foreverGroupBox1.TabIndex = 28;
             foreverGroupBox1.TextColor = Color.Transparent;
             // 
             // btnFiltro
             // 
-            btnFiltro.Location = new Point(795, 195);
+            btnFiltro.Location = new Point(556, 117);
+            btnFiltro.Margin = new Padding(2, 2, 2, 2);
             btnFiltro.Name = "btnFiltro";
-            btnFiltro.Size = new Size(165, 48);
+            btnFiltro.Size = new Size(116, 29);
             btnFiltro.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
             btnFiltro.StateCommon.Back.Color2 = Color.FromArgb(0, 54, 60);
             btnFiltro.StateCommon.Back.ColorAngle = -2F;
@@ -128,11 +132,12 @@
             foreverGroupBox2.Controls.Add(txtFiltro);
             foreverGroupBox2.Controls.Add(iconButton1);
             foreverGroupBox2.Font = new Font("Segoe UI", 10F);
-            foreverGroupBox2.Location = new Point(60, 186);
+            foreverGroupBox2.Location = new Point(42, 112);
+            foreverGroupBox2.Margin = new Padding(2, 2, 2, 2);
             foreverGroupBox2.Name = "foreverGroupBox2";
             foreverGroupBox2.ShowArrow = true;
             foreverGroupBox2.ShowText = true;
-            foreverGroupBox2.Size = new Size(729, 68);
+            foreverGroupBox2.Size = new Size(510, 41);
             foreverGroupBox2.TabIndex = 29;
             foreverGroupBox2.TextColor = Color.Transparent;
             // 
@@ -141,10 +146,11 @@
             txtFiltro.BorderStyle = BorderStyle.None;
             txtFiltro.Font = new Font("Corbel", 12F);
             txtFiltro.ForeColor = Color.FromArgb(4, 79, 86);
-            txtFiltro.Location = new Point(56, 17);
+            txtFiltro.Location = new Point(39, 10);
+            txtFiltro.Margin = new Padding(2, 2, 2, 2);
             txtFiltro.Name = "txtFiltro";
             txtFiltro.PlaceholderText = "Nombre, apellido...";
-            txtFiltro.Size = new Size(650, 30);
+            txtFiltro.Size = new Size(455, 20);
             txtFiltro.TabIndex = 38;
             // 
             // iconButton1
@@ -156,9 +162,10 @@
             iconButton1.IconColor = Color.FromArgb(95, 154, 162);
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton1.IconSize = 28;
-            iconButton1.Location = new Point(14, 17);
+            iconButton1.Location = new Point(10, 10);
+            iconButton1.Margin = new Padding(2, 2, 2, 2);
             iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(36, 36);
+            iconButton1.Size = new Size(25, 22);
             iconButton1.TabIndex = 0;
             iconButton1.UseVisualStyleBackColor = true;
             // 
@@ -167,9 +174,10 @@
             label5.AutoSize = true;
             label5.Font = new Font("Calibri", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.FromArgb(95, 154, 162);
-            label5.Location = new Point(60, 164);
+            label5.Location = new Point(42, 98);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(165, 19);
+            label5.Size = new Size(110, 13);
             label5.TabIndex = 37;
             label5.Text = "BUSCAR POR PACIENTE";
             // 
@@ -178,9 +186,10 @@
             label4.AutoSize = true;
             label4.Font = new Font("Calibri", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(95, 154, 162);
-            label4.Location = new Point(773, 69);
+            label4.Location = new Point(541, 41);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(166, 19);
+            label4.Size = new Size(111, 13);
             label4.TabIndex = 36;
             label4.Text = "MÉDICO RESPONSABLE";
             // 
@@ -190,11 +199,12 @@
             cmbMedico.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbMedico.ForeColor = Color.Black;
             cmbMedico.FormattingEnabled = true;
-            cmbMedico.ItemHeight = 31;
+            cmbMedico.ItemHeight = 22;
             cmbMedico.Items.AddRange(new object[] { "Activo", "Inactivo", "Suspendido" });
-            cmbMedico.Location = new Point(773, 97);
+            cmbMedico.Location = new Point(541, 58);
+            cmbMedico.Margin = new Padding(2, 2, 2, 2);
             cmbMedico.Name = "cmbMedico";
-            cmbMedico.Size = new Size(187, 37);
+            cmbMedico.Size = new Size(132, 28);
             cmbMedico.TabIndex = 35;
             cmbMedico.UseCustomBackColor = true;
             cmbMedico.UseCustomFont = true;
@@ -206,9 +216,10 @@
             label3.AutoSize = true;
             label3.Font = new Font("Calibri", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(95, 154, 162);
-            label3.Location = new Point(551, 69);
+            label3.Location = new Point(386, 41);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(105, 19);
+            label3.Size = new Size(73, 13);
             label3.TabIndex = 34;
             label3.Text = "ESPECIALIDAD";
             // 
@@ -218,11 +229,12 @@
             cmbEspecialidades.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbEspecialidades.ForeColor = Color.Black;
             cmbEspecialidades.FormattingEnabled = true;
-            cmbEspecialidades.ItemHeight = 31;
+            cmbEspecialidades.ItemHeight = 22;
             cmbEspecialidades.Items.AddRange(new object[] { "Activo", "Inactivo", "Suspendido" });
-            cmbEspecialidades.Location = new Point(551, 97);
+            cmbEspecialidades.Location = new Point(386, 58);
+            cmbEspecialidades.Margin = new Padding(2, 2, 2, 2);
             cmbEspecialidades.Name = "cmbEspecialidades";
-            cmbEspecialidades.Size = new Size(187, 37);
+            cmbEspecialidades.Size = new Size(132, 28);
             cmbEspecialidades.TabIndex = 33;
             cmbEspecialidades.UseCustomBackColor = true;
             cmbEspecialidades.UseCustomFont = true;
@@ -235,11 +247,12 @@
             cmbEstadoTurno.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbEstadoTurno.ForeColor = Color.Black;
             cmbEstadoTurno.FormattingEnabled = true;
-            cmbEstadoTurno.ItemHeight = 31;
+            cmbEstadoTurno.ItemHeight = 22;
             cmbEstadoTurno.Items.AddRange(new object[] { "Activo", "Inactivo", "Suspendido" });
-            cmbEstadoTurno.Location = new Point(321, 99);
+            cmbEstadoTurno.Location = new Point(225, 59);
+            cmbEstadoTurno.Margin = new Padding(2, 2, 2, 2);
             cmbEstadoTurno.Name = "cmbEstadoTurno";
-            cmbEstadoTurno.Size = new Size(187, 37);
+            cmbEstadoTurno.Size = new Size(132, 28);
             cmbEstadoTurno.TabIndex = 32;
             cmbEstadoTurno.UseCustomBackColor = true;
             cmbEstadoTurno.UseCustomFont = true;
@@ -251,9 +264,10 @@
             label2.AutoSize = true;
             label2.Font = new Font("Calibri", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(95, 154, 162);
-            label2.Location = new Point(321, 69);
+            label2.Location = new Point(225, 41);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(139, 19);
+            label2.Size = new Size(92, 13);
             label2.TabIndex = 31;
             label2.Text = "ESTADO DE LA CITA";
             // 
@@ -262,9 +276,10 @@
             label1.AutoSize = true;
             label1.Font = new Font("Calibri", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(95, 154, 162);
-            label1.Location = new Point(60, 69);
+            label1.Location = new Point(42, 41);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(149, 19);
+            label1.Size = new Size(100, 13);
             label1.TabIndex = 30;
             label1.Text = "FECHA DE CONSULTA";
             // 
@@ -275,18 +290,20 @@
             dtpFechaConsulta.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Pixel);
             dtpFechaConsulta.FontSize = ReaLTaiizor.Extension.Poison.PoisonDateTimeSize.Tall;
             dtpFechaConsulta.Format = DateTimePickerFormat.Short;
-            dtpFechaConsulta.Location = new Point(60, 99);
+            dtpFechaConsulta.Location = new Point(42, 59);
+            dtpFechaConsulta.Margin = new Padding(2, 2, 2, 2);
             dtpFechaConsulta.MinimumSize = new Size(0, 35);
             dtpFechaConsulta.Name = "dtpFechaConsulta";
             dtpFechaConsulta.RightToLeft = RightToLeft.No;
-            dtpFechaConsulta.Size = new Size(201, 35);
+            dtpFechaConsulta.Size = new Size(142, 35);
             dtpFechaConsulta.TabIndex = 29;
             // 
             // btnExportar
             // 
-            btnExportar.Location = new Point(896, 121);
+            btnExportar.Location = new Point(627, 60);
+            btnExportar.Margin = new Padding(2, 2, 2, 2);
             btnExportar.Name = "btnExportar";
-            btnExportar.Size = new Size(212, 57);
+            btnExportar.Size = new Size(148, 47);
             btnExportar.StateCommon.Back.Color1 = Color.FromArgb(204, 234, 212);
             btnExportar.StateCommon.Back.Color2 = Color.FromArgb(204, 234, 212);
             btnExportar.StateCommon.Back.ColorAngle = -2F;
@@ -311,9 +328,10 @@
             iconButton2.IconColor = Color.FromArgb(0, 54, 60);
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 26;
-            iconButton2.Location = new Point(925, 130);
+            iconButton2.Location = new Point(647, 73);
+            iconButton2.Margin = new Padding(2, 2, 2, 2);
             iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(36, 32);
+            iconButton2.Size = new Size(25, 19);
             iconButton2.TabIndex = 39;
             iconButton2.UseVisualStyleBackColor = false;
             // 
@@ -321,24 +339,26 @@
             // 
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(110, 524);
+            dataGridView1.Location = new Point(77, 314);
+            dataGridView1.Margin = new Padding(2, 2, 2, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(998, 402);
+            dataGridView1.Size = new Size(699, 241);
             dataGridView1.TabIndex = 40;
             // 
             // FormHistorialDePacientes
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(218, 248, 226);
-            ClientSize = new Size(1205, 1050);
+            ClientSize = new Size(844, 630);
             Controls.Add(dataGridView1);
             Controls.Add(iconButton2);
             Controls.Add(btnExportar);
             Controls.Add(foreverGroupBox1);
             Controls.Add(label7);
             Controls.Add(label6);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "FormHistorialDePacientes";
             Text = "FormHistorialDePacientes";
             foreverGroupBox1.ResumeLayout(false);

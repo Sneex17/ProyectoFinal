@@ -12,11 +12,15 @@ namespace CPresentacion
 {
     public partial class FormRegistroTurno : Form
     {
+<<<<<<< HEAD
         private int prioridadSeleccionada = 0; // Variable para almacenar la prioridad seleccionada, cambia con el click en un botón
+=======
+>>>>>>> kimberly/ui
         public FormRegistroTurno()
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
 
         private void CambiarColores ()
         {
@@ -98,5 +102,7 @@ namespace CPresentacion
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+=======
+>>>>>>> kimberly/ui
     }
 }
