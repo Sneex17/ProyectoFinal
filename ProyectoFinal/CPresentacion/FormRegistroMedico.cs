@@ -29,6 +29,11 @@ namespace CPresentacion
             cmbEspecialidades.DataSource = repositoryEspecialidades.Listar();
             cmbEspecialidades.ValueMember = "EspecialidadId";
             cmbEspecialidades.DisplayMember = "Nombre";
+
+            var repositoryUsuarios = new UsuariosRepositoty();
+            cmbEspecialidades.DataSource = repositoryEspecialidades.Listar();
+            cmbUsuarios.ValueMember = "UsuarioId";
+            cmbUsuarios.DisplayMember = "Usuario";
         }
 
         private void BuCrear_Click(object sender, EventArgs e)
@@ -41,9 +46,7 @@ namespace CPresentacion
                 Apellido = txtApellido.Text,
                 EspecialidadId = Convert.ToInt32(cmbEspecialidades.SelectedValue),
                 UsuarioId = Convert.ToInt32(cmbUsuarios.SelectedValue)
-
             };
-
         }
     }
 }
