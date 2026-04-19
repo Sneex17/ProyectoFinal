@@ -12,6 +12,7 @@
           "CEntidades": "1.0.0",
           "FontAwesome.Sharp": "6.6.0",
           "Krypton.Toolkit": "100.26.1.19",
+          "Microsoft.Extensions.Configuration": "9.0.0",
           "Microsoft.Extensions.Configuration.Json": "9.0.0",
           "ReaLTaiizor": "3.8.1.6"
         },
@@ -569,7 +570,11 @@
       },
       "CAccesoDatos/1.0.0": {
         "dependencies": {
-          "CEntidades": "1.0.0"
+          "CEntidades": "1.0.0",
+          "Microsoft.Data.SqlClient": "5.1.6",
+          "Microsoft.EntityFrameworkCore": "9.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
+          "Microsoft.Extensions.Configuration": "9.0.0"
         },
         "runtime": {
           "CAccesoDatos.dll": {

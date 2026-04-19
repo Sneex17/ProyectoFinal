@@ -43,8 +43,9 @@ namespace CPresentacion
             menuStrip1.Items.AddRange(new ToolStripItem[] { menuRegistrarTurno, menuRegistrarMedico, menuRegistrarEspecialidades, menuRegistroRecepcionista, menuEstadisticas, menuHistorialTurno, menuHistorialPacientes, menuColaTurnos, menuAtencion, menuGestionPacientes, menuCerrarSesion });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new Padding(4, 1, 0, 1);
             menuStrip1.RenderMode = ToolStripRenderMode.System;
-            menuStrip1.Size = new Size(252, 1050);
+            menuStrip1.Size = new Size(169, 630);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -56,7 +57,7 @@ namespace CPresentacion
             menuRegistrarTurno.IconColor = Color.Black;
             menuRegistrarTurno.IconFont = FontAwesome.Sharp.IconFont.Auto;
             menuRegistrarTurno.Name = "menuRegistrarTurno";
-            menuRegistrarTurno.Size = new Size(239, 32);
+            menuRegistrarTurno.Size = new Size(160, 28);
             menuRegistrarTurno.Text = "Registrar Turno";
             menuRegistrarTurno.Click += menuRegistrarTurno_Click;
             // 
@@ -68,7 +69,7 @@ namespace CPresentacion
             menuRegistrarMedico.IconColor = Color.Black;
             menuRegistrarMedico.IconFont = FontAwesome.Sharp.IconFont.Auto;
             menuRegistrarMedico.Name = "menuRegistrarMedico";
-            menuRegistrarMedico.Size = new Size(239, 29);
+            menuRegistrarMedico.Size = new Size(160, 28);
             menuRegistrarMedico.Text = "Registrar Medico";
             menuRegistrarMedico.Click += menuRegistrarMedico_Click;
             // 
@@ -80,7 +81,7 @@ namespace CPresentacion
             menuRegistrarEspecialidades.IconColor = Color.Black;
             menuRegistrarEspecialidades.IconFont = FontAwesome.Sharp.IconFont.Auto;
             menuRegistrarEspecialidades.Name = "menuRegistrarEspecialidades";
-            menuRegistrarEspecialidades.Size = new Size(239, 29);
+            menuRegistrarEspecialidades.Size = new Size(160, 28);
             menuRegistrarEspecialidades.Text = "Registrar Especialidad";
             menuRegistrarEspecialidades.Click += menuRegistrarEspecialidades_Click;
             // 
@@ -92,7 +93,7 @@ namespace CPresentacion
             menuRegistroRecepcionista.IconColor = Color.Black;
             menuRegistroRecepcionista.IconFont = FontAwesome.Sharp.IconFont.Auto;
             menuRegistroRecepcionista.Name = "menuRegistroRecepcionista";
-            menuRegistroRecepcionista.Size = new Size(239, 29);
+            menuRegistroRecepcionista.Size = new Size(160, 28);
             menuRegistroRecepcionista.Text = "Registrar Recepcionista";
             menuRegistroRecepcionista.Click += menuRegistroRecepcionista_Click;
             // 
@@ -104,7 +105,7 @@ namespace CPresentacion
             menuEstadisticas.IconColor = Color.Black;
             menuEstadisticas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             menuEstadisticas.Name = "menuEstadisticas";
-            menuEstadisticas.Size = new Size(239, 29);
+            menuEstadisticas.Size = new Size(160, 28);
             menuEstadisticas.Text = "Estadísticas";
             menuEstadisticas.Click += menuEstadisticas_Click;
             // 
@@ -116,7 +117,7 @@ namespace CPresentacion
             menuHistorialTurno.IconColor = Color.Black;
             menuHistorialTurno.IconFont = FontAwesome.Sharp.IconFont.Auto;
             menuHistorialTurno.Name = "menuHistorialTurno";
-            menuHistorialTurno.Size = new Size(239, 29);
+            menuHistorialTurno.Size = new Size(160, 28);
             menuHistorialTurno.Text = "Historial de Turno";
             menuHistorialTurno.Click += menuHistorialTurno_Click;
             // 
@@ -128,7 +129,7 @@ namespace CPresentacion
             menuHistorialPacientes.IconColor = Color.Black;
             menuHistorialPacientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             menuHistorialPacientes.Name = "menuHistorialPacientes";
-            menuHistorialPacientes.Size = new Size(239, 29);
+            menuHistorialPacientes.Size = new Size(160, 28);
             menuHistorialPacientes.Text = "Historial Pacientes";
             menuHistorialPacientes.Click += menuHistorialPacientes_Click;
             // 
@@ -140,7 +141,7 @@ namespace CPresentacion
             menuColaTurnos.IconColor = Color.Black;
             menuColaTurnos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             menuColaTurnos.Name = "menuColaTurnos";
-            menuColaTurnos.Size = new Size(239, 29);
+            menuColaTurnos.Size = new Size(160, 28);
             menuColaTurnos.Text = "Cola de Turnos";
             menuColaTurnos.Click += menuColaTurnos_Click;
             // 
@@ -152,7 +153,7 @@ namespace CPresentacion
             menuAtencion.IconColor = Color.Black;
             menuAtencion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             menuAtencion.Name = "menuAtencion";
-            menuAtencion.Size = new Size(239, 29);
+            menuAtencion.Size = new Size(160, 28);
             menuAtencion.Text = "Atención";
             menuAtencion.Click += menuAtencion_Click;
             // 
@@ -164,7 +165,7 @@ namespace CPresentacion
             menuGestionPacientes.IconColor = Color.Black;
             menuGestionPacientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             menuGestionPacientes.Name = "menuGestionPacientes";
-            menuGestionPacientes.Size = new Size(239, 29);
+            menuGestionPacientes.Size = new Size(160, 28);
             menuGestionPacientes.Text = "Gestión Pacientes";
             menuGestionPacientes.Click += menuGestionPacientes_Click;
             // 
@@ -176,7 +177,7 @@ namespace CPresentacion
             menuCerrarSesion.IconColor = Color.Black;
             menuCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             menuCerrarSesion.Name = "menuCerrarSesion";
-            menuCerrarSesion.Size = new Size(239, 29);
+            menuCerrarSesion.Size = new Size(160, 28);
             menuCerrarSesion.Text = "Cerrar Sesión";
             menuCerrarSesion.Click += menuCerrarSesion_Click;
             // 
@@ -185,29 +186,33 @@ namespace CPresentacion
             lblBienvenido.AutoSize = true;
             lblBienvenido.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblBienvenido.ForeColor = Color.FromArgb(0, 54, 60);
-            lblBienvenido.Location = new Point(270, 20);
+            lblBienvenido.Location = new Point(189, 12);
+            lblBienvenido.Margin = new Padding(2, 0, 2, 0);
             lblBienvenido.Name = "lblBienvenido";
-            lblBienvenido.Size = new Size(0, 32);
+            lblBienvenido.Size = new Size(0, 21);
             lblBienvenido.TabIndex = 2;
             // 
             // panel1
             // 
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(252, 0);
+            panel1.Location = new Point(169, 0);
+            panel1.Margin = new Padding(2, 2, 2, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1151, 1050);
+            panel1.Size = new Size(1019, 630);
             panel1.TabIndex = 1;
             // 
             // FormMenuPrincipal
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1403, 1050);
+            ClientSize = new Size(1188, 630);
             Controls.Add(lblBienvenido);
             Controls.Add(panel1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "FormMenuPrincipal";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormMenuPrincipal";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

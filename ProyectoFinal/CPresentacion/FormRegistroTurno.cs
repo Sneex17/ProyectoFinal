@@ -27,7 +27,7 @@ namespace CPresentacion
             BuCrear.Click += btnAceptar_Click;
         }
 
-private void InicializarPorRol()
+        private void InicializarPorRol()
         {
             if (SesionUsuario.EsPaciente && SesionUsuario.IdRelacionado.HasValue)
             {
@@ -193,7 +193,7 @@ private void InicializarPorRol()
                     return;
                 }
 
-int pacienteId = _pacienteIdSeleccionado.Value;
+                int pacienteId = _pacienteIdSeleccionado.Value;
                 int medicoId = (int)cmbMedico.SelectedValue;
                 
                 int recepcionistaId;
