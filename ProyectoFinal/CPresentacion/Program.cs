@@ -1,14 +1,11 @@
-using CEntidades.Models;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using CAccesoDatos;
+using CEntidades.Models;
+
 namespace CPresentacion
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
@@ -18,11 +15,14 @@ namespace CPresentacion
                 .Build();
             ConexionAppDB.Instanciar(configuration);
 
-
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormRegistroMedico());
+
+            Application.Run(new FormLogIn());
+
+            if (SesionUsuario.EstaLogueado)
+            {
+                Application.Run(new FormMenuPrincipal());
+            }
         }
     }
 }

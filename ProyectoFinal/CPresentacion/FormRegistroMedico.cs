@@ -33,17 +33,15 @@ namespace CPresentacion
 
         private void BuCrear_Click(object sender, EventArgs e)
         {
-            var repository = new MedicoRepository();
-            var medico = new Medico()
-            {
-                Nlicencia = txtNLicencia.Text,
-                Nombre = txtNombre.Text,
-                Apellido = txtApellido.Text,
-                EspecialidadId = Convert.ToInt32(cmbEspecialidades.SelectedValue),
-                UsuarioId = Convert.ToInt32(cmbUsuarios.SelectedValue)
-
-            };
-
+            //var repository = new MedicoRepository();
+            //var medico = new Medico()
+            //{
+            //    Nlicencia = txtNLicencia.Text,
+            //    Nombre = txtNombre.Text,
+            //    Apellido = txtApellido.Text,
+            //    EspecialidadId = Convert.ToInt32(cmbEspecialidades.SelectedValue),
+            //    UsuarioId = Convert.ToInt32(cmbUsuarios.SelectedValue)
+            //};
         }
     }
 }

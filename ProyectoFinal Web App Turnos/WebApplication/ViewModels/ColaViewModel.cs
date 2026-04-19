@@ -8,8 +8,7 @@
         // Turno actualmente en atención (si existe)
         public TurnoViewModel? TurnoEnAtencion { get; set; }
 
-        // Cola ordenada: Emergencia → Prioritario → Normal, luego por FechaHoraCreacion ASC
-        // Solo incluye turnos con Estado "Creado"
+        // Cola ordenada jerárquicamente
         public List<TurnoViewModel> ColaEspera { get; set; } = new();
 
         // Histórico del día (Atendido + Cancelado)
@@ -17,12 +16,13 @@
 
         // Resumen para tarjetas del dashboard
         public int TotalCreados { get; set; }
-        public int TotalEmergencias { get; set; }
-        public int TotalPrioritarios { get; set; }
-        public int TotalNormales { get; set; }
+        public int TotalUrgentes { get; set; }
+        public int TotalAltas { get; set; }
+        public int TotalMedias { get; set; }
+        public int TotalBajas { get; set; }
         public int TotalAtendidos { get; set; }
 
-        // Filtros aplicados actualmente (para mantener estado en la vista)
+        // Filtros aplicados actualmente
         public string? FiltroEstado { get; set; }
         public string? FiltroPrioridad { get; set; }
     }

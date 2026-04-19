@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CEntidades")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b16b4305008ee3770e7411783f6187d1f2685295")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+508e01f0290a8193d8748cc88c5170efb4fe8eaa")]
 [assembly: System.Reflection.AssemblyProductAttribute("CEntidades")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CEntidades")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
