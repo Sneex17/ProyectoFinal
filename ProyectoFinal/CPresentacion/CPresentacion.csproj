@@ -19,6 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CAccesoDatos\CAccesoDatos.csproj" />
     <ProjectReference Include="..\CEntidades\CEntidades.csproj" />
+    <ProjectReference Include="..\CNegocio\CNegocio.csproj" />
   </ItemGroup>
 
   <ItemGroup>

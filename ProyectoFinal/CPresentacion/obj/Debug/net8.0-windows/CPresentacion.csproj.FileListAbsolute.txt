@@ -118,3 +118,8 @@ C:\Users\xrami\OneDrive\Documentos\ProyectoFinal ISW'124\ProyectoFinal\ProyectoF
 C:\Users\xrami\OneDrive\Documentos\ProyectoFinal ISW'124\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.FormMenuPrincipal.resources
 C:\Users\xrami\OneDrive\Documentos\ProyectoFinal ISW'124\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.FormRegistroRecepcionista.resources
 C:\Users\xrami\OneDrive\Documentos\ProyectoFinal ISW'124\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.FormRegistroTurno.resources
+C:\Users\xrami\OneDrive\Documentos\ProyectoFinal ISW'124\ProyectoFinal\ProyectoFinal\CPresentacion\bin\Debug\net8.0-windows\FluentValidation.dll
+C:\Users\xrami\OneDrive\Documentos\ProyectoFinal ISW'124\ProyectoFinal\ProyectoFinal\CPresentacion\bin\Debug\net8.0-windows\CInfraestructura.dll
+C:\Users\xrami\OneDrive\Documentos\ProyectoFinal ISW'124\ProyectoFinal\ProyectoFinal\CPresentacion\bin\Debug\net8.0-windows\CNegocio.dll
+C:\Users\xrami\OneDrive\Documentos\ProyectoFinal ISW'124\ProyectoFinal\ProyectoFinal\CPresentacion\bin\Debug\net8.0-windows\CNegocio.pdb
+C:\Users\xrami\OneDrive\Documentos\ProyectoFinal ISW'124\ProyectoFinal\ProyectoFinal\CPresentacion\bin\Debug\net8.0-windows\CInfraestructura.pdb

@@ -10,6 +10,7 @@
         "dependencies": {
           "CAccesoDatos": "1.0.0",
           "CEntidades": "1.0.0",
+          "CNegocio": "1.0.0",
           "FontAwesome.Sharp": "6.6.0",
           "Krypton.Toolkit": "100.26.1.19",
           "Microsoft.Extensions.Configuration": "9.0.0",
@@ -47,6 +48,14 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.11.4.0",
             "fileVersion": "1.1100.424.31005"
+          }
+        }
+      },
+      "FluentValidation/12.1.1": {
+        "runtime": {
+          "lib/net8.0/FluentValidation.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.1.1.0"
           }
         }
       },
@@ -594,6 +603,28 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "CInfraestructura/1.0.0": {
+        "runtime": {
+          "CInfraestructura.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CNegocio/1.0.0": {
+        "dependencies": {
+          "CAccesoDatos": "1.0.0",
+          "CEntidades": "1.0.0",
+          "CInfraestructura": "1.0.0",
+          "FluentValidation": "12.1.1"
+        },
+        "runtime": {
+          "CNegocio.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -616,6 +647,13 @@
       "sha512": "sha512-Sf4BoE6Q3jTgFkgBkx7qztYOFELBCo+wQgpYDwal/qJ1unBH73ywPztIJKXBXORRzAeNijsuxhk94h0TIMvfYg==",
       "path": "azure.identity/1.11.4",
       "hashPath": "azure.identity.1.11.4.nupkg.sha512"
+    },
+    "FluentValidation/12.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EPpkIe1yh1a0OXyC100oOA8WMbZvqUu5plwhvYcb7oSELfyUZzfxV48BLhvs3kKo4NwG7MGLNgy1RJiYtT8Dpw==",
+      "path": "fluentvalidation/12.1.1",
+      "hashPath": "fluentvalidation.12.1.1.nupkg.sha512"
     },
     "FontAwesome.Sharp/6.6.0": {
       "type": "package",
@@ -924,6 +962,16 @@
       "sha512": ""
     },
     "CEntidades/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CInfraestructura/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CNegocio/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

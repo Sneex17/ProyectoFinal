@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Cgi5NP3RppA=",
+  "dgSpecHash": "uwu27KBPw1g=",
   "success": true,
   "projectFilePath": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW'124\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\CPresentacion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xrami\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\xrami\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\xrami\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
     "C:\\Users\\xrami\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512",
     "C:\\Users\\xrami\\.nuget\\packages\\krypton.toolkit\\100.26.1.19\\krypton.toolkit.100.26.1.19.nupkg.sha512",
     "C:\\Users\\xrami\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
