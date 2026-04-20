@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 bin/
 obj/
 .vs/
 *.user
 *.suo
-=======
-.vs/
-bin/
-obj/
-*.user
-*.suo 
->>>>>>> kimberly/ui
+
