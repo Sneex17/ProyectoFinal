@@ -26,9 +26,9 @@ namespace CPresentacion
 
         private void CargarEventos()
         {
-            BnCrear.Click += btnRegistrar_Click;
-            BnEditar.Click += btnActualizar_Click;
-            BnEliminar.Click += btnEliminar_Click;
+            btnCrear.Click += btnRegistrar_Click;
+            btnEditar.Click += btnActualizar_Click;
+            btnEliminar.Click += btnEliminar_Click;
             dgvEspecialidades.CellDoubleClick += DgvEspecialidades_CellDoubleClick;
         }
         private void CargarDatos()

@@ -30,9 +30,9 @@
         {
             label7 = new Label();
             label6 = new Label();
-            BnEliminar = new Krypton.Toolkit.KryptonButton();
-            BnEditar = new Krypton.Toolkit.KryptonButton();
-            BnCrear = new Krypton.Toolkit.KryptonButton();
+            btnEliminar = new Krypton.Toolkit.KryptonButton();
+            btnEditar = new Krypton.Toolkit.KryptonButton();
+            btnCrear = new Krypton.Toolkit.KryptonButton();
             foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
             parrotGroupBox3 = new ReaLTaiizor.Controls.ParrotGroupBox();
             txtDescripcion = new TextBox();
@@ -74,65 +74,65 @@
             label6.TabIndex = 25;
             label6.Text = "Registro de Especialidades";
             // 
-            // BnEliminar
+            // btnEliminar
             // 
-            BnEliminar.Location = new Point(54, 542);
-            BnEliminar.Margin = new Padding(2);
-            BnEliminar.Name = "BnEliminar";
-            BnEliminar.Size = new Size(100, 51);
-            BnEliminar.StateCommon.Back.Color1 = Color.IndianRed;
-            BnEliminar.StateCommon.Back.Color2 = Color.Brown;
-            BnEliminar.StateCommon.Back.ColorAngle = -2F;
-            BnEliminar.StateCommon.Border.Color1 = Color.Transparent;
-            BnEliminar.StateCommon.Border.Color2 = Color.Transparent;
-            BnEliminar.StateCommon.Border.Rounding = 40F;
-            BnEliminar.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BnEliminar.StateCommon.Content.ShortText.Color1 = Color.White;
-            BnEliminar.StateCommon.Content.ShortText.Color2 = Color.White;
-            BnEliminar.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BnEliminar.TabIndex = 22;
-            BnEliminar.Values.DropDownArrowColor = Color.Empty;
-            BnEliminar.Values.Text = "Desactivar";
+            btnEliminar.Location = new Point(54, 542);
+            btnEliminar.Margin = new Padding(2);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(100, 51);
+            btnEliminar.StateCommon.Back.Color1 = Color.IndianRed;
+            btnEliminar.StateCommon.Back.Color2 = Color.Brown;
+            btnEliminar.StateCommon.Back.ColorAngle = -2F;
+            btnEliminar.StateCommon.Border.Color1 = Color.Transparent;
+            btnEliminar.StateCommon.Border.Color2 = Color.Transparent;
+            btnEliminar.StateCommon.Border.Rounding = 40F;
+            btnEliminar.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEliminar.StateCommon.Content.ShortText.Color1 = Color.White;
+            btnEliminar.StateCommon.Content.ShortText.Color2 = Color.White;
+            btnEliminar.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEliminar.TabIndex = 22;
+            btnEliminar.Values.DropDownArrowColor = Color.Empty;
+            btnEliminar.Values.Text = "Desactivar";
             // 
-            // BnEditar
+            // btnEditar
             // 
-            BnEditar.Location = new Point(172, 542);
-            BnEditar.Margin = new Padding(2);
-            BnEditar.Name = "BnEditar";
-            BnEditar.Size = new Size(100, 51);
-            BnEditar.StateCommon.Back.Color1 = Color.FromArgb(254, 219, 151);
-            BnEditar.StateCommon.Back.Color2 = Color.FromArgb(254, 219, 151);
-            BnEditar.StateCommon.Back.ColorAngle = -2F;
-            BnEditar.StateCommon.Border.Color1 = Color.Transparent;
-            BnEditar.StateCommon.Border.Color2 = Color.Transparent;
-            BnEditar.StateCommon.Border.Rounding = 40F;
-            BnEditar.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BnEditar.StateCommon.Content.ShortText.Color1 = Color.White;
-            BnEditar.StateCommon.Content.ShortText.Color2 = Color.White;
-            BnEditar.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BnEditar.TabIndex = 21;
-            BnEditar.Values.DropDownArrowColor = Color.Empty;
-            BnEditar.Values.Text = "Editar";
+            btnEditar.Location = new Point(172, 542);
+            btnEditar.Margin = new Padding(2);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(100, 51);
+            btnEditar.StateCommon.Back.Color1 = Color.FromArgb(254, 219, 151);
+            btnEditar.StateCommon.Back.Color2 = Color.FromArgb(254, 219, 151);
+            btnEditar.StateCommon.Back.ColorAngle = -2F;
+            btnEditar.StateCommon.Border.Color1 = Color.Transparent;
+            btnEditar.StateCommon.Border.Color2 = Color.Transparent;
+            btnEditar.StateCommon.Border.Rounding = 40F;
+            btnEditar.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEditar.StateCommon.Content.ShortText.Color1 = Color.White;
+            btnEditar.StateCommon.Content.ShortText.Color2 = Color.White;
+            btnEditar.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEditar.TabIndex = 21;
+            btnEditar.Values.DropDownArrowColor = Color.Empty;
+            btnEditar.Values.Text = "Editar";
             // 
-            // BnCrear
+            // btnCrear
             // 
-            BnCrear.Location = new Point(289, 542);
-            BnCrear.Margin = new Padding(2);
-            BnCrear.Name = "BnCrear";
-            BnCrear.Size = new Size(100, 51);
-            BnCrear.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
-            BnCrear.StateCommon.Back.Color2 = Color.FromArgb(23, 74, 111);
-            BnCrear.StateCommon.Back.ColorAngle = -2F;
-            BnCrear.StateCommon.Border.Color1 = Color.Transparent;
-            BnCrear.StateCommon.Border.Color2 = Color.Transparent;
-            BnCrear.StateCommon.Border.Rounding = 40F;
-            BnCrear.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BnCrear.StateCommon.Content.ShortText.Color1 = Color.White;
-            BnCrear.StateCommon.Content.ShortText.Color2 = Color.White;
-            BnCrear.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BnCrear.TabIndex = 20;
-            BnCrear.Values.DropDownArrowColor = Color.Empty;
-            BnCrear.Values.Text = "Crear";
+            btnCrear.Location = new Point(289, 542);
+            btnCrear.Margin = new Padding(2);
+            btnCrear.Name = "btnCrear";
+            btnCrear.Size = new Size(100, 51);
+            btnCrear.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
+            btnCrear.StateCommon.Back.Color2 = Color.FromArgb(23, 74, 111);
+            btnCrear.StateCommon.Back.ColorAngle = -2F;
+            btnCrear.StateCommon.Border.Color1 = Color.Transparent;
+            btnCrear.StateCommon.Border.Color2 = Color.Transparent;
+            btnCrear.StateCommon.Border.Rounding = 40F;
+            btnCrear.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCrear.StateCommon.Content.ShortText.Color1 = Color.White;
+            btnCrear.StateCommon.Content.ShortText.Color2 = Color.White;
+            btnCrear.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCrear.TabIndex = 20;
+            btnCrear.Values.DropDownArrowColor = Color.Empty;
+            btnCrear.Values.Text = "Crear";
             // 
             // foreverGroupBox1
             // 
@@ -274,9 +274,9 @@
             Controls.Add(dgvEspecialidades);
             Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(BnEliminar);
-            Controls.Add(BnEditar);
-            Controls.Add(BnCrear);
+            Controls.Add(btnEliminar);
+            Controls.Add(btnEditar);
+            Controls.Add(btnCrear);
             Controls.Add(foreverGroupBox1);
             Margin = new Padding(2);
             Name = "FormRegistroEspecialidades";
@@ -296,9 +296,9 @@
 
         private Label label7;
         private Label label6;
-        private Krypton.Toolkit.KryptonButton BnEliminar;
-        private Krypton.Toolkit.KryptonButton BnEditar;
-        private Krypton.Toolkit.KryptonButton BnCrear;
+        private Krypton.Toolkit.KryptonButton btnEliminar;
+        private Krypton.Toolkit.KryptonButton btnEditar;
+        private Krypton.Toolkit.KryptonButton btnCrear;
         private ReaLTaiizor.Controls.ForeverGroupBox foreverGroupBox1;
         private ReaLTaiizor.Controls.ParrotGroupBox parrotGroupBox4;
         private TextBox txtApellido;
