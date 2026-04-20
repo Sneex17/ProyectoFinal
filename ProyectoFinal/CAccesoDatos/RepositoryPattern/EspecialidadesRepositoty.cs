@@ -14,17 +14,20 @@ namespace CAccesoDatos.RepositoryPattern
         }
         public void Actualizar(Especialidade tabla)
         {
-            throw new NotImplementedException();
+            _context.Especialidades.Update(tabla);
+            _context.SaveChanges();
         }
 
         public void Agregar(Especialidade tabla)
         {
-            throw new NotImplementedException();
+            _context.Especialidades.Add(tabla);
+            _context.SaveChanges();
         }
 
         public void Eliminar(Especialidade tabla)
         {
-            throw new NotImplementedException();
+            _context.Especialidades.Remove(tabla);
+            _context.SaveChanges();
         }
 
         public IList<Especialidade> Listar()

@@ -25,10 +25,7 @@ namespace CPresentacion
             var repositoryMedico = new MedicoRepository();
             dgvMedicos.DataSource = repositoryMedico.Listar();
 
-            var repositoryEspecialidades = new EspecialidadesRepositoty();
-            cmbEspecialidades.DataSource = repositoryEspecialidades.Listar();
-            cmbEspecialidades.ValueMember = "EspecialidadId";
-            cmbEspecialidades.DisplayMember = "Nombre";
+          
         }
 
         private void BuCrear_Click(object sender, EventArgs e)
@@ -42,6 +39,11 @@ namespace CPresentacion
             //    EspecialidadId = Convert.ToInt32(cmbEspecialidades.SelectedValue),
             //    UsuarioId = Convert.ToInt32(cmbUsuarios.SelectedValue)
             //};
+        }
+
+        private void BuDesactivar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
