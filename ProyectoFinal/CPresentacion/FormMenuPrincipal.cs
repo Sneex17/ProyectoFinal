@@ -188,7 +188,7 @@ namespace CPresentacion
             if (result == DialogResult.Yes)
             {
                 SesionUsuario.CerrarSesion();
-                this.Close();
+                this.Hide();
                 Application.Restart();
             }
         }

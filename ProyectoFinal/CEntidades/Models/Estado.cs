@@ -11,5 +11,9 @@ public partial class Estado
 
     public string? Descripcion { get; set; }
 
+    public virtual ICollection<Medico> Medicos { get; set; } = new List<Medico>();
+
+    public virtual ICollection<Recepcionista> Recepcionista { get; set; } = new List<Recepcionista>();
+
     public virtual ICollection<Usuario> Usuarios { get; set; } = new List<Usuario>();
 }

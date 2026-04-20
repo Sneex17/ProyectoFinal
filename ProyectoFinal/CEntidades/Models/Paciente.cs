@@ -24,6 +24,5 @@ public partial class Paciente
     public string? Correo { get; set; }
 
     public virtual ICollection<Turno> Turnos { get; set; } = new List<Turno>();
-
     public string NombreCompleto => $"{Nombre} {Apellido}";
 }

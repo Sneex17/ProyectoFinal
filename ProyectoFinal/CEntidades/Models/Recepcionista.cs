@@ -15,7 +15,11 @@ public partial class Recepcionista
 
     public int UsuarioId { get; set; }
 
+    public int EstadoId { get; set; }
+
     public virtual Area Area { get; set; } = null!;
+
+    public virtual Estado Estado { get; set; } = null!;
 
     public virtual ICollection<Turno> Turnos { get; set; } = new List<Turno>();
 
