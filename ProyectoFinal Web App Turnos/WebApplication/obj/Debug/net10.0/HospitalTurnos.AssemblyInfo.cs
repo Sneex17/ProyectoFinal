@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HospitalTurnos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d57bf64f217b22daa8e30708177f58bd93930ea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72c78c9e0003abf9c8730c725c753a21af0e3e0a")]
 [assembly: System.Reflection.AssemblyProductAttribute("HospitalTurnos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HospitalTurnos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

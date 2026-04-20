@@ -141,3 +141,10 @@ C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web Ap
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\obj\Debug\net10.0\compressed\svhd6zn4a7-{0}-jjsuc0puko-jjsuc0puko.gz
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\obj\Debug\net10.0\compressed\t86ywyipoy-{0}-9vr69e8ynj-9vr69e8ynj.gz
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\obj\Debug\net10.0\Hospital.4033A673.Up2Date
+C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\bin\Debug\net10.0\TableDependency.SqlClient.dll
+C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\bin\Debug\net10.0\System.Data.SqlClient.dll
+C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\bin\Debug\net10.0\runtimes\win-arm64\native\sni.dll
+C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\bin\Debug\net10.0\runtimes\win-x64\native\sni.dll
+C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\bin\Debug\net10.0\runtimes\win-x86\native\sni.dll
+C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\bin\Debug\net10.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\bin\Debug\net10.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

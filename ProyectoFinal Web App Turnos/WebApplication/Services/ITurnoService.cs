@@ -1,4 +1,4 @@
-﻿using HospitalTurnos.Models;
+using HospitalTurnos.Models;
 using HospitalTurnos.ViewModels;
 
 namespace HospitalTurnos.Services
@@ -12,16 +12,19 @@ namespace HospitalTurnos.Services
         List<TurnoViewModel> ObtenerTodos();
         TurnoViewModel? ObtenerPorId(int turnoId);
 
-        // RecepcionistaId es requerido en BD (NOT NULL)
-        Turno CrearTurno(int pacienteId, int medicoId, int recepcionistaId,
+        // RecepcionistaId es opcional
+        Turno CrearTurno(int pacienteId, int medicoId, int? recepcionistaId,
                          int prioridadId, string? observaciones);
         bool CambiarEstado(int turnoId, int nuevoEstadoId);
         bool EliminarTurno(int turnoId);
 
-        // Catálogos para dropdowns
+        // Catálogos para dropdowns y validación
+        Paciente? ObtenerPacientePorCedula(string cedula);
+        List<Especialidad> ObtenerEspecialidades();
+        List<Medico> ObtenerMedicosPorEspecialidad(int especialidadId);
         List<Paciente> ObtenerPacientes();
         List<Medico> ObtenerMedicos();
-        List<Recepcionista> ObtenerRecepcionistas();   // ← era ObtenerAsistentes
+        List<Recepcionista> ObtenerRecepcionistas();
         List<Prioridad> ObtenerPrioridades();
         List<EstadoTurno> ObtenerEstados();
     }

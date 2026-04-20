@@ -1,4 +1,4 @@
-﻿using HospitalTurnos.Data;
+using HospitalTurnos.Data;
 using HospitalTurnos.Models;
 using HospitalTurnos.ViewModels;
 using Microsoft.EntityFrameworkCore;
@@ -107,7 +107,7 @@ namespace HospitalTurnos.Services
             return turno is null ? null : MapToViewModel(turno);
         }
 
-        public Turno CrearTurno(int pacienteId, int medicoId, int recepcionistaId,
+        public Turno CrearTurno(int pacienteId, int medicoId, int? recepcionistaId,
                                 int prioridadId, string? observaciones)
         {
             var hoy = DateTime.Today;
@@ -134,7 +134,8 @@ namespace HospitalTurnos.Services
 
             _db.Entry(turno).Reference(t => t.Paciente).Load();
             _db.Entry(turno).Reference(t => t.Medico).Load();
-            _db.Entry(turno).Reference(t => t.Recepcionista).Load();
+            if (recepcionistaId.HasValue)
+                _db.Entry(turno).Reference(t => t.Recepcionista).Load();
             _db.Entry(turno).Reference(t => t.Prioridad).Load();
             _db.Entry(turno).Reference(t => t.EstadoTurno).Load();
 
@@ -172,6 +173,17 @@ namespace HospitalTurnos.Services
 
         public List<Paciente> ObtenerPacientes() =>
             _db.Pacientes.OrderBy(p => p.Apellido).ThenBy(p => p.Nombre).ToList();
+
+        public Paciente? ObtenerPacientePorCedula(string cedula) =>
+            _db.Pacientes.FirstOrDefault(p => p.Cedula == cedula);
+
+        public List<Especialidad> ObtenerEspecialidades() =>
+            _db.Especialidades.OrderBy(e => e.Nombre).ToList();
+
+        public List<Medico> ObtenerMedicosPorEspecialidad(int especialidadId) =>
+            _db.Medicos.Where(m => m.EspecialidadId == especialidadId)
+                       .OrderBy(m => m.Apellido)
+                       .ToList();
 
         public List<Medico> ObtenerMedicos() =>
             _db.Medicos.OrderBy(m => m.Apellido).ToList();

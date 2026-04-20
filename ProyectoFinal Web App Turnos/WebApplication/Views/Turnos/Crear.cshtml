@@ -1,9 +1,13 @@
-﻿@{
+@{
     ViewData["Title"] = "Nuevo Turno";
 }
 
-<div class="max-w-3xl mx-auto bg-surface-container-lowest rounded-2xl p-10 shadow-[0_12px_32px_-4px_rgba(3,63,99,0.04)] ring-1 ring-outline-variant/10">
-    <h2 class="font-headline text-3xl text-primary font-bold mb-8">Registrar Nuevo Turno</h2>
+<div class="max-w-2xl mx-auto">
+    <!-- Encabezado de la Tarjeta -->
+    <div class="bg-surface-container-lowest rounded-2xl p-8 mb-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-outline-variant/10">
+        <h2 class="font-headline text-2xl text-primary font-bold mb-2">Solicitar Turno Médico</h2>
+        <p class="text-on-surface-variant text-sm">Siga los pasos para registrar su turno en nuestra cola de atención.</p>
+    </div>
 
     @if (ViewData["ModelError"] != null)
     {
@@ -12,160 +16,187 @@
         </div>
     }
 
-    <form method="post" asp-action="Crear" asp-controller="Turnos" id="formularioCrearTurno" class="space-y-6">
-        @Html.AntiForgeryToken()
-
-        <div class="flex flex-col gap-2">
-            <label class="font-headline text-[0.95rem] font-bold text-on-surface" for="pacienteId">Paciente</label>
-            <select name="pacienteId" id="pacienteId" class="bg-surface-container-highest border border-outline-variant/20 rounded-xl px-4 py-3 font-body text-base text-on-surface outline-none focus:border-primary focus:bg-surface-container-lowest transition-colors" required>
-                <option value="">-- Seleccione un paciente --</option>
-                @if (ViewBag.Pacientes != null)
-                {
-                    foreach (var p in ViewBag.Pacientes)
-                    {
-                        <option value="@p.PacienteId">@p.NombreCompleto &mdash; @p.Cedula</option>
-                    }
-                }
-            </select>
+    <!-- PASO 1: Verificación de Identidad -->
+    <div id="step-1" class="bg-surface-container-lowest rounded-2xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-outline-variant/10 transition-all duration-500">
+        <div class="flex items-center gap-4 mb-6">
+            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">1</div>
+            <h3 class="font-headline text-lg font-bold text-on-surface">Verificación de Identidad</h3>
         </div>
 
-        <div class="flex flex-col gap-2">
-            <label class="font-headline text-[0.95rem] font-bold text-on-surface" for="medicoId">Médico Asignado</label>
-            <select name="medicoId" id="medicoId" class="bg-surface-container-highest border border-outline-variant/20 rounded-xl px-4 py-3 font-body text-base text-on-surface outline-none focus:border-primary focus:bg-surface-container-lowest transition-colors" required>
-                <option value="">-- Seleccione un médico --</option>
-                @if (ViewBag.Medicos != null)
-                {
-                    foreach (var m in ViewBag.Medicos)
-                    {
-                        <option value="@m.MedicoId">@m.NombreCompleto</option>
-                    }
-                }
-            </select>
-        </div>
-
-        <div class="flex flex-col gap-2">
-            <label class="font-headline text-[0.95rem] font-bold text-on-surface" for="recepcionistaId">Recepcionista</label>
-            <select name="recepcionistaId" id="recepcionistaId" class="bg-surface-container-highest border border-outline-variant/20 rounded-xl px-4 py-3 font-body text-base text-on-surface outline-none focus:border-primary focus:bg-surface-container-lowest transition-colors" required>
-                <option value="">-- Seleccione recepcionista --</option>
-                @if (ViewBag.recepcionistas != null)
-                {
-                    foreach (var a in ViewBag.recepcionistas)
-                    {
-                        <option value="@a.RecepcionistaId">@a.NombreCompleto</option>
-                    }
-                }
-            </select>
-        </div>
-
-        <div class="flex flex-col gap-2">
-            <label class="font-headline text-[0.95rem] font-bold text-on-surface">Prioridad</label>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                
-                <!-- Baja -->
-                <label class="priority-card relative border-2 border-surface-container-highest rounded-xl p-4 cursor-pointer transition-all text-center bg-surface group [&.selected]:border-outline-variant [&.selected]:bg-surface-container-low">
-                    <input type="radio" name="prioridadId" value="3" class="absolute opacity-0 w-0 h-0" onchange="updatePreview()">
-                    <span class="block">
-                        <span class="font-headline font-bold text-lg block mb-1">Baja</span>
-                        <span class="text-xs text-on-surface-variant">No Urgente</span>
-                    </span>
-                </label>
-
-                <!-- Media -->
-                <label class="priority-card relative border-2 border-surface-container-highest rounded-xl p-4 cursor-pointer transition-all text-center bg-surface group [&.selected]:border-primary/70 [&.selected]:bg-primary/5">
-                    <input type="radio" name="prioridadId" value="2" class="absolute opacity-0 w-0 h-0" onchange="updatePreview()">
-                    <span class="block">
-                        <span class="font-headline font-bold text-lg block mb-1">Media</span>
-                        <span class="text-xs text-on-surface-variant">Prioridad Estándar</span>
-                    </span>
-                </label>
-
-                <!-- Alta -->
-                <label class="priority-card relative border-2 border-surface-container-highest rounded-xl p-4 cursor-pointer transition-all text-center bg-surface group [&.selected]:border-primary [&.selected]:bg-primary/5">
-                    <input type="radio" name="prioridadId" value="1" checked class="absolute opacity-0 w-0 h-0" onchange="updatePreview()">
-                    <span class="block">
-                        <span class="font-headline font-bold text-lg block mb-1 group-[&.selected]:text-primary">Alta</span>
-                        <span class="text-xs text-on-surface-variant">Prioridad Elevada</span>
-                    </span>
-                </label>
-                
-                <!-- Urgente -->
-                <label class="priority-card relative border-2 border-surface-container-highest rounded-xl p-4 cursor-pointer transition-all text-center bg-surface group [&.selected]:border-error [&.selected]:bg-error/10">
-                    <input type="radio" name="prioridadId" value="4" class="absolute opacity-0 w-0 h-0" onchange="updatePreview()">
-                    <span class="block">
-                        <span class="font-headline font-bold text-lg block mb-1 group-[&.selected]:text-error">Urgente</span>
-                        <span class="text-xs text-on-surface-variant">Emergencia Real</span>
-                    </span>
-                </label>
+        <div class="space-y-4">
+            <label class="block font-headline text-sm font-bold text-on-surface-variant" for="cedulaInput">
+                Ingrese su cédula / acta de nacimiento
+            </label>
+            <div class="flex gap-3">
+                <input type="text" id="cedulaInput" placeholder="000-0000000-0" autocomplete="off"
+                       class="flex-1 bg-surface-container-low border border-outline-variant/30 rounded-xl px-4 py-3 font-body text-base outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                <button type="button" id="btnVerificar" 
+                        class="bg-primary text-white px-6 py-3 rounded-xl font-headline font-bold hover:bg-primary-container transition-colors shadow-sm disabled:opacity-50">
+                    Verificar
+                </button>
+            </div>
+            <div id="cedulaError" class="hidden text-error text-sm font-medium mt-2 flex items-center gap-2">
+                <span>⚠️</span> <span id="errorMsg">Cédula no encontrada. Por favor contacte a un recepcionista.</span>
             </div>
         </div>
+    </div>
 
-        <div class="flex flex-col gap-2">
-            <label class="font-headline text-[0.95rem] font-bold text-on-surface" for="observaciones">Observaciones (opcional)</label>
-            <textarea name="observaciones" id="observaciones" rows="3" class="bg-surface-container-highest border border-outline-variant/20 rounded-xl px-4 py-3 font-body text-base text-on-surface outline-none focus:border-primary focus:bg-surface-container-lowest transition-colors" placeholder="Ingrese detalles o síntomas iniciales..."></textarea>
+    <!-- PASO 2: Detalles del Turno (Oculto Inicialmente) -->
+    <div id="step-2" class="hidden opacity-0 translate-y-4 bg-surface-container-lowest rounded-2xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-outline-variant/10 transition-all duration-500 mt-6">
+        <div class="flex items-center gap-4 mb-8">
+            <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">2</div>
+            <h3 class="font-headline text-lg font-bold text-on-surface">Detalles de la Cita</h3>
         </div>
 
-        <div class="bg-gradient-to-br from-primary to-primary-container text-white p-6 rounded-xl mt-8 font-body flex flex-col sm:flex-row items-center gap-4 shadow-lg" id="livePreviewBox">
-            <span class="text-3xl text-primary-fixed">📋</span>
-            <span class="text-lg font-medium leading-relaxed">
-                Turno a registrar: <span class="font-headline font-extrabold text-white">T-SIGUIENTE</span> <span class="opacity-50 mx-2">|</span> 
-                Paciente: <span class="font-headline font-extrabold text-white" id="lblPreviewPaciente">No seleccionado</span> <span class="opacity-50 mx-2">|</span> 
-                Prioridad: <span class="font-headline font-extrabold text-white" id="lblPreviewPrioridad">Alta</span>
-            </span>
-        </div>
+        <form method="post" asp-action="Crear" id="formCrear" class="space-y-6">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="pacienteId" id="hiddenPacienteId" />
+            <input type="hidden" name="prioridadId" value="3" /> <!-- Prioridad Baja por defecto -->
 
-        <div class="flex items-center justify-end gap-4 mt-10 pt-6 border-t border-surface-container-high">
-            <a href="/Turnos" class="font-headline font-bold text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface px-6 py-3 rounded-xl transition-colors">Cancelar</a>
-            <button type="submit" class="bg-gradient-to-r from-primary to-primary-container text-white border-none px-8 py-3 rounded-xl font-headline text-base font-extrabold cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-xl shadow-lg border border-transparent">
-                Registrar Turno
-            </button>
-        </div>
-    </form>
+            <!-- Nombre del Paciente (Readonly) -->
+            <div class="space-y-2">
+                <label class="block font-headline text-sm font-bold text-on-surface-variant">Paciente</label>
+                <input type="text" id="pacienteNombre" readonly 
+                       class="w-full bg-surface-container-highest/30 border border-outline-variant/20 rounded-xl px-4 py-3 font-body text-on-surface-variant outline-none cursor-default">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Selector de Especialidad -->
+                <div class="space-y-2">
+                    <label class="block font-headline text-sm font-bold text-on-surface-variant" for="especialidadId">Especialidad</label>
+                    <select id="especialidadId" class="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-4 py-3 font-body outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer" required>
+                        <option value="">-- Seleccione --</option>
+                        @if (ViewBag.Especialidades != null)
+                        {
+                            foreach (var e in ViewBag.Especialidades)
+                            {
+                                <option value="@e.EspecialidadId">@e.Nombre</option>
+                            }
+                        }
+                    </select>
+                </div>
+
+                <!-- Selector de Médico (Dinámico) -->
+                <div class="space-y-2">
+                    <label class="block font-headline text-sm font-bold text-on-surface-variant" for="medicoId">Médico</label>
+                    <select name="medicoId" id="medicoId" disabled 
+                            class="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-4 py-3 font-body outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer disabled:bg-surface-container-highest/50 disabled:cursor-not-allowed" required>
+                        <option value="">Seleccione especialidad...</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Observaciones -->
+            <div class="space-y-2">
+                <label class="block font-headline text-sm font-bold text-on-surface-variant" for="observaciones">Observaciones adicionales (Opcional)</label>
+                <textarea name="observaciones" id="observaciones" rows="3" 
+                          class="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-4 py-3 font-body outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none" 
+                          placeholder="Síntomas o motivos de la consulta..."></textarea>
+            </div>
+
+            <!-- Botones -->
+            <div class="flex items-center justify-end gap-4 pt-6 border-t border-outline-variant/10">
+                <button type="button" id="btnBack" class="px-6 py-3 font-headline font-bold text-on-surface-variant hover:text-primary transition-colors">Atrás</button>
+                <button type="submit" class="bg-primary text-white px-8 py-3 rounded-xl font-headline font-bold hover:translate-y-[-2px] transition-all shadow-md active:translate-y-0">
+                    Confirmar Turno
+                </button>
+            </div>
+        </form>
+    </div>
 </div>
 
 @section Scripts {
     <script>
-        const radios = document.querySelectorAll('input[name="prioridadId"]');
-        const cards = document.querySelectorAll('.priority-card');
+        const step1 = document.getElementById('step-1');
+        const step2 = document.getElementById('step-2');
+        const btnVerificar = document.getElementById('btnVerificar');
+        const cedulaInput = document.getElementById('cedulaInput');
+        const cedulaError = document.getElementById('cedulaError');
+        
+        const hiddenPacienteId = document.getElementById('hiddenPacienteId');
+        const pacienteNombre = document.getElementById('pacienteNombre');
+        const especialidadSelect = document.getElementById('especialidadId');
+        const medicoSelect = document.getElementById('medicoId');
 
-        function updateSelection() {
-            cards.forEach(card => card.classList.remove('selected'));
-            const checked = document.querySelector('input[name="prioridadId"]:checked');
-            if (checked) {
-                checked.closest('.priority-card').classList.add('selected');
+        // Paso 1: Verificación de Cédula
+        btnVerificar.addEventListener('click', async () => {
+            const cedula = cedulaInput.value.trim();
+            if (!cedula) return;
+
+            btnVerificar.disabled = true;
+            btnVerificar.innerText = 'Buscando...';
+            cedulaError.classList.add('hidden');
+
+            try {
+                const response = await fetch(`/Turnos/GetPacienteByCedula?cedula=${encodeURIComponent(cedula)}`);
+                if (response.ok) {
+                    const data = await response.json();
+                    
+                    // Llenar datos en Paso 2
+                    hiddenPacienteId.value = data.pacienteId;
+                    pacienteNombre.value = data.nombreCompleto;
+
+                    // Transición a Paso 2
+                    showStep2();
+                } else {
+                    cedulaError.classList.remove('hidden');
+                }
+            } catch (error) {
+                console.error("Error al verificar paciente:", error);
+                alert("Ocurrió un error al procesar la solicitud.");
+            } finally {
+                btnVerificar.disabled = false;
+                btnVerificar.innerText = 'Verificar';
             }
-        }
-
-        radios.forEach(radio => {
-            radio.addEventListener('change', () => {
-                updateSelection();
-                updatePreview();
-            });
         });
-        
-        updateSelection();
 
-        const selectPaciente = document.getElementById('pacienteId');
-        
-        function updatePreview() {
-            const previewPaciente = document.getElementById('lblPreviewPaciente');
-            const previewPrioridad = document.getElementById('lblPreviewPrioridad');
-            
-            if (selectPaciente.selectedIndex > 0) {
-                let pacText = selectPaciente.options[selectPaciente.selectedIndex].text;
-                let namePart = pacText.split("—")[0].trim();
-                previewPaciente.innerText = namePart;
-            } else {
-                previewPaciente.innerText = "No seleccionado";
-            }
-
-            const selectedRadio = document.querySelector('input[name="prioridadId"]:checked');
-            if (selectedRadio) {
-                const labels = { "1": "Alta", "2": "Media", "3": "Baja", "4": "Urgente" };
-                previewPrioridad.innerText = labels[selectedRadio.value] || "---";
-            }
+        function showStep2() {
+            step1.classList.add('opacity-0', '-translate-y-4');
+            setTimeout(() => {
+                step1.classList.add('hidden');
+                step2.classList.remove('hidden');
+                setTimeout(() => {
+                    step2.classList.remove('opacity-0', 'translate-y-4');
+                    step2.classList.add('opacity-100', 'translate-y-0');
+                }, 50);
+            }, 300);
         }
 
-        selectPaciente.addEventListener('change', updatePreview);
-        updatePreview();
+        document.getElementById('btnBack').addEventListener('click', () => {
+            step2.classList.add('opacity-0', 'translate-y-4');
+            setTimeout(() => {
+                step2.classList.add('hidden');
+                step1.classList.remove('hidden');
+                setTimeout(() => {
+                    step1.classList.remove('opacity-0', '-translate-y-4');
+                    step1.classList.add('opacity-100', 'translate-y-0');
+                }, 50);
+            }, 300);
+        });
+
+        // Filtrado Dinámico de Médicos
+        especialidadSelect.addEventListener('change', async () => {
+            const espId = especialidadSelect.value;
+            medicoSelect.innerHTML = '<option value="">Seleccione especialidad...</option>';
+            medicoSelect.disabled = true;
+
+            if (!espId) return;
+
+            try {
+                const response = await fetch(`/Turnos/GetMedicosByEspecialidad?especialidadId=${espId}`);
+                const medicos = await response.json();
+
+                medicoSelect.innerHTML = '<option value="">-- Seleccione un médico --</option>';
+                medicos.forEach(m => {
+                    const opt = document.createElement('option');
+                    opt.value = m.medicoId;
+                    opt.textContent = m.nombreCompleto;
+                    medicoSelect.appendChild(opt);
+                });
+                medicoSelect.disabled = false;
+            } catch (error) {
+                console.error("Error al cargar médicos:", error);
+            }
+        });
     </script>
 }

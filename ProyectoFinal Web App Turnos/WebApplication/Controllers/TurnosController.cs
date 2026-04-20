@@ -1,4 +1,4 @@
-﻿using HospitalTurnos.Models;
+using HospitalTurnos.Models;
 using HospitalTurnos.Services;
 using HospitalTurnos.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -28,16 +28,36 @@ namespace HospitalTurnos.Controllers
         // GET /Turnos/Crear
         public IActionResult Crear()
         {
-            ViewBag.Pacientes = _turnoService.ObtenerPacientes();
-            ViewBag.Medicos = _turnoService.ObtenerMedicos();
-            ViewBag.recepcionistas = _turnoService.ObtenerRecepcionistas();
+            ViewBag.Especialidades = _turnoService.ObtenerEspecialidades();
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult GetPacienteByCedula(string cedula)
+        {
+            var paciente = _turnoService.ObtenerPacientePorCedula(cedula);
+            if (paciente == null) return NotFound();
+
+            return Json(new { 
+                pacienteId = paciente.PacienteId, 
+                nombreCompleto = paciente.NombreCompleto 
+            });
+        }
+
+        [HttpGet]
+        public IActionResult GetMedicosByEspecialidad(int especialidadId)
+        {
+            var medicos = _turnoService.ObtenerMedicosPorEspecialidad(especialidadId);
+            return Json(medicos.Select(m => new { 
+                medicoId = m.MedicoId, 
+                nombreCompleto = m.NombreCompleto 
+            }));
         }
 
         // POST /Turnos/Crear
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Crear(int pacienteId, int medicoId, int recepcionistaId, 
+        public IActionResult Crear(int pacienteId, int medicoId, int? recepcionistaId, 
                                   int prioridadId, string? observaciones)
         {
             try 
@@ -48,9 +68,7 @@ namespace HospitalTurnos.Controllers
             catch (Exception ex)
             {
                 ViewData["ModelError"] = "Error al crear el turno: " + ex.Message;
-                ViewBag.Pacientes = _turnoService.ObtenerPacientes();
-                ViewBag.Medicos = _turnoService.ObtenerMedicos();
-                ViewBag.recepcionistas = _turnoService.ObtenerRecepcionistas();
+                ViewBag.Especialidades = _turnoService.ObtenerEspecialidades();
                 return View();
             }
         }
