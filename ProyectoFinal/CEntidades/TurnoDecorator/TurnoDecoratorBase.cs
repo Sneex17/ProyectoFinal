@@ -115,6 +115,7 @@ namespace CEntidades.TurnoDecorator
         public virtual string GetEtiqueta() => _turno.GetEtiqueta();
         public virtual string GetColorFila() => _turno.GetColorFila();
         public virtual string GetDescripcion() => _turno.GetDescripcion();
+        public virtual System.Drawing.Color GetColor() => _turno.GetColor();
 
         public override string ToString() => _turno.ToString();
     }

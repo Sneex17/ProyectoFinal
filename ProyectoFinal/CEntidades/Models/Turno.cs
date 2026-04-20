@@ -36,6 +36,9 @@ public partial class Turno : ITurno
     public virtual string GetColorFila()
         => "White";
 
+    public virtual System.Drawing.Color GetColor()
+        => System.Drawing.Color.White;
+
     public virtual string GetDescripcion()
         => $"Turno {NumeroTurno} — {Paciente.NombreCompleto} | {EstadoTurno.Nombre}";
 

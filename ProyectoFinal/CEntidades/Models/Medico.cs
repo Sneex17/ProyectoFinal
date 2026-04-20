@@ -22,4 +22,6 @@ public partial class Medico
     public virtual ICollection<Turno> Turnos { get; set; } = new List<Turno>();
 
     public virtual Usuario Usuario { get; set; } = null!;
+
+    public string NombreCompleto => $"{Nombre} {Apellido}";
 }

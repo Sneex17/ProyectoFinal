@@ -1,4 +1,4 @@
-@{
+﻿@{
     ViewData["Title"] = "Nuevo Turno";
 }
 
@@ -44,9 +44,9 @@
         </div>
 
         <div class="flex flex-col gap-2">
-            <label class="font-headline text-[0.95rem] font-bold text-on-surface" for="recepcionistaId">recepcionista (opcional)</label>
-            <select name="recepcionistaId" id="recepcionistaId" class="bg-surface-container-highest border border-outline-variant/20 rounded-xl px-4 py-3 font-body text-base text-on-surface outline-none focus:border-primary focus:bg-surface-container-lowest transition-colors">
-                <option value="">-- Ninguno --</option>
+            <label class="font-headline text-[0.95rem] font-bold text-on-surface" for="recepcionistaId">Recepcionista</label>
+            <select name="recepcionistaId" id="recepcionistaId" class="bg-surface-container-highest border border-outline-variant/20 rounded-xl px-4 py-3 font-body text-base text-on-surface outline-none focus:border-primary focus:bg-surface-container-lowest transition-colors" required>
+                <option value="">-- Seleccione recepcionista --</option>
                 @if (ViewBag.recepcionistas != null)
                 {
                     foreach (var a in ViewBag.recepcionistas)
@@ -59,29 +59,41 @@
 
         <div class="flex flex-col gap-2">
             <label class="font-headline text-[0.95rem] font-bold text-on-surface">Prioridad</label>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 
-                <label id="lblCard1" class="priority-card relative border-2 border-surface-container-highest rounded-xl p-4 cursor-pointer transition-all text-center bg-surface group [&.selected]:border-[#7c9885] [&.selected]:bg-[#7c9885]/10">
-                    <input type="radio" name="prioridadId" value="1" checked class="absolute opacity-0 w-0 h-0" onchange="updatePreview()">
+                <!-- Baja -->
+                <label class="priority-card relative border-2 border-surface-container-highest rounded-xl p-4 cursor-pointer transition-all text-center bg-surface group [&.selected]:border-outline-variant [&.selected]:bg-surface-container-low">
+                    <input type="radio" name="prioridadId" value="3" class="absolute opacity-0 w-0 h-0" onchange="updatePreview()">
                     <span class="block">
-                        <span class="font-headline font-bold text-lg block mb-1 group-[&.selected]:text-[#5a7563]">Normal</span>
-                        <span class="text-xs text-on-surface-variant">Evaluación regular</span>
-                    </span>
-                </label>
-                
-                <label id="lblCard2" class="priority-card relative border-2 border-surface-container-highest rounded-xl p-4 cursor-pointer transition-all text-center bg-surface group [&.selected]:border-[#d6b25a] [&.selected]:bg-[#fedc97]/20">
-                    <input type="radio" name="prioridadId" value="2" class="absolute opacity-0 w-0 h-0" onchange="updatePreview()">
-                    <span class="block">
-                        <span class="font-headline font-bold text-lg block mb-1 group-[&.selected]:text-[#a17c24]">Prioritario</span>
-                        <span class="text-xs text-on-surface-variant">Atención requerida</span>
+                        <span class="font-headline font-bold text-lg block mb-1">Baja</span>
+                        <span class="text-xs text-on-surface-variant">No Urgente</span>
                     </span>
                 </label>
 
-                <label id="lblCard3" class="priority-card relative border-2 border-surface-container-highest rounded-xl p-4 cursor-pointer transition-all text-center bg-surface group [&.selected]:border-error [&.selected]:bg-error/10">
-                    <input type="radio" name="prioridadId" value="3" class="absolute opacity-0 w-0 h-0" onchange="updatePreview()">
+                <!-- Media -->
+                <label class="priority-card relative border-2 border-surface-container-highest rounded-xl p-4 cursor-pointer transition-all text-center bg-surface group [&.selected]:border-primary/70 [&.selected]:bg-primary/5">
+                    <input type="radio" name="prioridadId" value="2" class="absolute opacity-0 w-0 h-0" onchange="updatePreview()">
                     <span class="block">
-                        <span class="font-headline font-bold text-lg block mb-1 group-[&.selected]:text-error">Emergencia</span>
-                        <span class="text-xs text-on-surface-variant">Riesgo inminente</span>
+                        <span class="font-headline font-bold text-lg block mb-1">Media</span>
+                        <span class="text-xs text-on-surface-variant">Prioridad Estándar</span>
+                    </span>
+                </label>
+
+                <!-- Alta -->
+                <label class="priority-card relative border-2 border-surface-container-highest rounded-xl p-4 cursor-pointer transition-all text-center bg-surface group [&.selected]:border-primary [&.selected]:bg-primary/5">
+                    <input type="radio" name="prioridadId" value="1" checked class="absolute opacity-0 w-0 h-0" onchange="updatePreview()">
+                    <span class="block">
+                        <span class="font-headline font-bold text-lg block mb-1 group-[&.selected]:text-primary">Alta</span>
+                        <span class="text-xs text-on-surface-variant">Prioridad Elevada</span>
+                    </span>
+                </label>
+                
+                <!-- Urgente -->
+                <label class="priority-card relative border-2 border-surface-container-highest rounded-xl p-4 cursor-pointer transition-all text-center bg-surface group [&.selected]:border-error [&.selected]:bg-error/10">
+                    <input type="radio" name="prioridadId" value="4" class="absolute opacity-0 w-0 h-0" onchange="updatePreview()">
+                    <span class="block">
+                        <span class="font-headline font-bold text-lg block mb-1 group-[&.selected]:text-error">Urgente</span>
+                        <span class="text-xs text-on-surface-variant">Emergencia Real</span>
                     </span>
                 </label>
             </div>
@@ -95,9 +107,9 @@
         <div class="bg-gradient-to-br from-primary to-primary-container text-white p-6 rounded-xl mt-8 font-body flex flex-col sm:flex-row items-center gap-4 shadow-lg" id="livePreviewBox">
             <span class="text-3xl text-primary-fixed">📋</span>
             <span class="text-lg font-medium leading-relaxed">
-                Turno a registrar: <span class="font-headline font-extrabold text-white">T-NEXT</span> <span class="opacity-50 mx-2">|</span> 
+                Turno a registrar: <span class="font-headline font-extrabold text-white">T-SIGUIENTE</span> <span class="opacity-50 mx-2">|</span> 
                 Paciente: <span class="font-headline font-extrabold text-white" id="lblPreviewPaciente">No seleccionado</span> <span class="opacity-50 mx-2">|</span> 
-                Prioridad: <span class="font-headline font-extrabold text-white" id="lblPreviewPrioridad">Normal</span>
+                Prioridad: <span class="font-headline font-extrabold text-white" id="lblPreviewPrioridad">Alta</span>
             </span>
         </div>
 
@@ -115,17 +127,22 @@
         const radios = document.querySelectorAll('input[name="prioridadId"]');
         const cards = document.querySelectorAll('.priority-card');
 
-        // Init the selected state
-        cards[0].classList.add('selected');
+        function updateSelection() {
+            cards.forEach(card => card.classList.remove('selected'));
+            const checked = document.querySelector('input[name="prioridadId"]:checked');
+            if (checked) {
+                checked.closest('.priority-card').classList.add('selected');
+            }
+        }
 
         radios.forEach(radio => {
             radio.addEventListener('change', () => {
-                cards.forEach(c => c.classList.remove('selected'));
-                if(radio.checked) {
-                    radio.closest('.priority-card').classList.add('selected');
-                }
+                updateSelection();
+                updatePreview();
             });
         });
+        
+        updateSelection();
 
         const selectPaciente = document.getElementById('pacienteId');
         
@@ -143,9 +160,8 @@
 
             const selectedRadio = document.querySelector('input[name="prioridadId"]:checked');
             if (selectedRadio) {
-                if (selectedRadio.value === "1") previewPrioridad.innerText = "Normal";
-                else if (selectedRadio.value === "2") previewPrioridad.innerText = "Prioritario";
-                else if (selectedRadio.value === "3") previewPrioridad.innerText = "Emergencia";
+                const labels = { "1": "Alta", "2": "Media", "3": "Baja", "4": "Urgente" };
+                previewPrioridad.innerText = labels[selectedRadio.value] || "---";
             }
         }
 

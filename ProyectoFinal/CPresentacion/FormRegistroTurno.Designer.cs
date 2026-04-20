@@ -1,16 +1,9 @@
-﻿namespace CPresentacion
+namespace CPresentacion
 {
     partial class FormRegistroTurno
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,17 +15,15 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-
             BuDesactivar = new Krypton.Toolkit.KryptonButton();
             BuEditar = new Krypton.Toolkit.KryptonButton();
             BuCrear = new Krypton.Toolkit.KryptonButton();
             foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
+            parrotGroupBox1 = new ReaLTaiizor.Controls.ParrotGroupBox();
+            txtNombrePaciente = new TextBox();
+            btnBuscar = new Krypton.Toolkit.KryptonButton();
             btnUrgente = new Krypton.Toolkit.KryptonButton();
             parrotGroupBox3 = new ReaLTaiizor.Controls.ParrotGroupBox();
             txtDescripcion = new TextBox();
@@ -45,11 +36,11 @@
             label5 = new Label();
             cmbMedico = new ReaLTaiizor.Controls.PoisonComboBox();
             label4 = new Label();
-            cmbPaciente = new ReaLTaiizor.Controls.PoisonComboBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             foreverGroupBox1.SuspendLayout();
+            parrotGroupBox1.SuspendLayout();
             parrotGroupBox3.SuspendLayout();
             SuspendLayout();
             // 
@@ -122,6 +113,8 @@
             foreverGroupBox1.ArrowColorH = Color.Transparent;
             foreverGroupBox1.BackColor = Color.White;
             foreverGroupBox1.BaseColor = Color.White;
+            foreverGroupBox1.Controls.Add(parrotGroupBox1);
+            foreverGroupBox1.Controls.Add(btnBuscar);
             foreverGroupBox1.Controls.Add(btnUrgente);
             foreverGroupBox1.Controls.Add(parrotGroupBox3);
             foreverGroupBox1.Controls.Add(label7);
@@ -133,7 +126,6 @@
             foreverGroupBox1.Controls.Add(label5);
             foreverGroupBox1.Controls.Add(cmbMedico);
             foreverGroupBox1.Controls.Add(label4);
-            foreverGroupBox1.Controls.Add(cmbPaciente);
             foreverGroupBox1.Controls.Add(label3);
             foreverGroupBox1.Controls.Add(label2);
             foreverGroupBox1.Controls.Add(label1);
@@ -145,6 +137,53 @@
             foreverGroupBox1.Size = new Size(1187, 768);
             foreverGroupBox1.TabIndex = 16;
             foreverGroupBox1.TextColor = Color.Transparent;
+            // 
+            // parrotGroupBox1
+            // 
+            parrotGroupBox1.BorderColor = Color.FromArgb(4, 79, 86);
+            parrotGroupBox1.BorderWidth = 3;
+            parrotGroupBox1.Controls.Add(txtNombrePaciente);
+            parrotGroupBox1.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            parrotGroupBox1.ForeColor = Color.FromArgb(4, 79, 86);
+            parrotGroupBox1.Location = new Point(64, 189);
+            parrotGroupBox1.Name = "parrotGroupBox1";
+            parrotGroupBox1.ShowText = true;
+            parrotGroupBox1.Size = new Size(302, 58);
+            parrotGroupBox1.TabIndex = 31;
+            parrotGroupBox1.TabStop = false;
+            parrotGroupBox1.Text = "NOMBRE";
+            parrotGroupBox1.TextColor = Color.FromArgb(4, 79, 86);
+            // 
+            // txtNombrePaciente
+            // 
+            txtNombrePaciente.BorderStyle = BorderStyle.None;
+            txtNombrePaciente.Font = new Font("Corbel", 12F);
+            txtNombrePaciente.ForeColor = Color.FromArgb(4, 79, 86);
+            txtNombrePaciente.Location = new Point(7, 22);
+            txtNombrePaciente.Name = "txtNombrePaciente";
+            txtNombrePaciente.PlaceholderText = "Ej: Manuel Ozuna";
+            txtNombrePaciente.Size = new Size(289, 30);
+            txtNombrePaciente.TabIndex = 39;
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.Location = new Point(372, 189);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(129, 58);
+            btnBuscar.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
+            btnBuscar.StateCommon.Back.Color2 = Color.FromArgb(0, 54, 60);
+            btnBuscar.StateCommon.Back.ColorAngle = -2F;
+            btnBuscar.StateCommon.Border.Color1 = Color.Transparent;
+            btnBuscar.StateCommon.Border.Color2 = Color.Transparent;
+            btnBuscar.StateCommon.Border.Rounding = 20F;
+            btnBuscar.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBuscar.StateCommon.Content.ShortText.Color1 = Color.White;
+            btnBuscar.StateCommon.Content.ShortText.Color2 = Color.White;
+            btnBuscar.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBuscar.TabIndex = 30;
+            btnBuscar.Values.DropDownArrowColor = Color.Empty;
+            btnBuscar.Values.Text = "Buscar";
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // btnUrgente
             // 
@@ -292,7 +331,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Calibri", 11F, FontStyle.Bold);
             label6.ForeColor = Color.FromArgb(4, 79, 86);
-            label6.Location = new Point(64, 502);
+            label6.Location = new Point(64, 520);
             label6.Name = "label6";
             label6.Size = new Size(115, 27);
             label6.TabIndex = 10;
@@ -352,22 +391,6 @@
             label4.TabIndex = 6;
             label4.Text = "MÉDICO ASIGNADO";
             // 
-            // cmbPaciente
-            // 
-            cmbPaciente.BackColor = Color.FromArgb(218, 248, 226);
-            cmbPaciente.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmbPaciente.ForeColor = Color.Black;
-            cmbPaciente.FormattingEnabled = true;
-            cmbPaciente.ItemHeight = 31;
-            cmbPaciente.Location = new Point(64, 204);
-            cmbPaciente.Name = "cmbPaciente";
-            cmbPaciente.Size = new Size(405, 37);
-            cmbPaciente.TabIndex = 5;
-            cmbPaciente.UseCustomBackColor = true;
-            cmbPaciente.UseCustomFont = true;
-            cmbPaciente.UseCustomForeColor = true;
-            cmbPaciente.UseSelectable = true;
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -414,25 +437,14 @@
             Text = "FormRegistroTurno";
             foreverGroupBox1.ResumeLayout(false);
             foreverGroupBox1.PerformLayout();
+            parrotGroupBox1.ResumeLayout(false);
+            parrotGroupBox1.PerformLayout();
             parrotGroupBox3.ResumeLayout(false);
             parrotGroupBox3.PerformLayout();
-
-            SuspendLayout();
-            // 
-            // FormRegistroTurno
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(218, 248, 226);
-            ClientSize = new Size(800, 450);
-            Name = "FormRegistroTurno";
-            Text = "FormRegistroTurno";
-
             ResumeLayout(false);
         }
 
         #endregion
-
 
         private Krypton.Toolkit.KryptonButton BuDesactivar;
         private Krypton.Toolkit.KryptonButton BuEditar;
@@ -442,7 +454,6 @@
         private Label label5;
         private ReaLTaiizor.Controls.PoisonComboBox cmbMedico;
         private Label label4;
-        private ReaLTaiizor.Controls.PoisonComboBox cmbPaciente;
         private Label label3;
         private Label label2;
         private Label label1;
@@ -454,6 +465,8 @@
         private ReaLTaiizor.Controls.ParrotGroupBox parrotGroupBox3;
         private TextBox txtDescripcion;
         private Krypton.Toolkit.KryptonButton btnUrgente;
-
+        private Krypton.Toolkit.KryptonButton btnBuscar;
+        private ReaLTaiizor.Controls.ParrotGroupBox parrotGroupBox1;
+        private TextBox txtNombrePaciente;
     }
 }

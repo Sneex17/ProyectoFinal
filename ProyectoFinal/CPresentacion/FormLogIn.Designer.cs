@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             grpbLogIn = new ReaLTaiizor.Controls.ForeverGroupBox();
-            label11 = new Label();
-            label6 = new Label();
-            parrotGroupBox3 = new ReaLTaiizor.Controls.ParrotGroupBox();
-            txtDescripcion = new TextBox();
+            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             parrotGroupBox1 = new ReaLTaiizor.Controls.ParrotGroupBox();
             txtNombreEspecialidad = new TextBox();
-            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
+            parrotGroupBox3 = new ReaLTaiizor.Controls.ParrotGroupBox();
+            txtDescripcion = new TextBox();
+            label11 = new Label();
+            label6 = new Label();
             foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
             grpbLogIn.SuspendLayout();
-            parrotGroupBox3.SuspendLayout();
             parrotGroupBox1.SuspendLayout();
+            parrotGroupBox3.SuspendLayout();
             foreverGroupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,62 +63,25 @@
             grpbLogIn.TabIndex = 49;
             grpbLogIn.TextColor = Color.Transparent;
             // 
-            // label11
+            // kryptonButton1
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.FromArgb(95, 154, 162);
-            label11.Location = new Point(156, 23);
-            label11.Margin = new Padding(2, 0, 2, 0);
-            label11.Name = "label11";
-            label11.Size = new Size(109, 39);
-            label11.TabIndex = 30;
-            label11.Text = "LOG IN";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.FromArgb(0, 54, 60);
-            label6.Location = new Point(168, 22);
-            label6.Margin = new Padding(2, 0, 2, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(201, 39);
-            label6.TabIndex = 50;
-            label6.Text = "UCE MEDICAL";
-            label6.Click += label6_Click;
-            // 
-            // parrotGroupBox3
-            // 
-            parrotGroupBox3.BorderColor = Color.FromArgb(4, 79, 86);
-            parrotGroupBox3.BorderWidth = 3;
-            parrotGroupBox3.Controls.Add(txtDescripcion);
-            parrotGroupBox3.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            parrotGroupBox3.ForeColor = Color.FromArgb(4, 79, 86);
-            parrotGroupBox3.Location = new Point(85, 130);
-            parrotGroupBox3.Margin = new Padding(2);
-            parrotGroupBox3.Name = "parrotGroupBox3";
-            parrotGroupBox3.Padding = new Padding(2);
-            parrotGroupBox3.ShowText = true;
-            parrotGroupBox3.Size = new Size(275, 45);
-            parrotGroupBox3.TabIndex = 52;
-            parrotGroupBox3.TabStop = false;
-            parrotGroupBox3.Text = "CONTRASEÑA";
-            parrotGroupBox3.TextColor = Color.FromArgb(4, 79, 86);
-            // 
-            // txtDescripcion
-            // 
-            txtDescripcion.BorderStyle = BorderStyle.None;
-            txtDescripcion.Font = new Font("Corbel", 12F);
-            txtDescripcion.ForeColor = Color.FromArgb(4, 79, 86);
-            txtDescripcion.Location = new Point(11, 17);
-            txtDescripcion.Margin = new Padding(2);
-            txtDescripcion.Multiline = true;
-            txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.PlaceholderText = "Ej:MscaMoscaMickeyMouse123";
-            txtDescripcion.Size = new Size(254, 24);
-            txtDescripcion.TabIndex = 40;
-            txtDescripcion.UseSystemPasswordChar = true;
+            kryptonButton1.Location = new Point(165, 198);
+            kryptonButton1.Margin = new Padding(2);
+            kryptonButton1.Name = "kryptonButton1";
+            kryptonButton1.Size = new Size(100, 51);
+            kryptonButton1.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
+            kryptonButton1.StateCommon.Back.Color2 = Color.FromArgb(23, 74, 111);
+            kryptonButton1.StateCommon.Back.ColorAngle = -2F;
+            kryptonButton1.StateCommon.Border.Color1 = Color.Transparent;
+            kryptonButton1.StateCommon.Border.Color2 = Color.Transparent;
+            kryptonButton1.StateCommon.Border.Rounding = 40F;
+            kryptonButton1.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            kryptonButton1.StateCommon.Content.ShortText.Color1 = Color.White;
+            kryptonButton1.StateCommon.Content.ShortText.Color2 = Color.White;
+            kryptonButton1.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            kryptonButton1.TabIndex = 53;
+            kryptonButton1.Values.DropDownArrowColor = Color.Empty;
+            kryptonButton1.Values.Text = "Ingresar";
             // 
             // parrotGroupBox1
             // 
@@ -152,25 +115,62 @@
             txtNombreEspecialidad.Size = new Size(254, 20);
             txtNombreEspecialidad.TabIndex = 39;
             // 
-            // kryptonButton1
+            // parrotGroupBox3
             // 
-            kryptonButton1.Location = new Point(165, 198);
-            kryptonButton1.Margin = new Padding(2);
-            kryptonButton1.Name = "kryptonButton1";
-            kryptonButton1.Size = new Size(100, 51);
-            kryptonButton1.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
-            kryptonButton1.StateCommon.Back.Color2 = Color.FromArgb(23, 74, 111);
-            kryptonButton1.StateCommon.Back.ColorAngle = -2F;
-            kryptonButton1.StateCommon.Border.Color1 = Color.Transparent;
-            kryptonButton1.StateCommon.Border.Color2 = Color.Transparent;
-            kryptonButton1.StateCommon.Border.Rounding = 40F;
-            kryptonButton1.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            kryptonButton1.StateCommon.Content.ShortText.Color1 = Color.White;
-            kryptonButton1.StateCommon.Content.ShortText.Color2 = Color.White;
-            kryptonButton1.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            kryptonButton1.TabIndex = 53;
-            kryptonButton1.Values.DropDownArrowColor = Color.Empty;
-            kryptonButton1.Values.Text = "Ingresar";
+            parrotGroupBox3.BorderColor = Color.FromArgb(4, 79, 86);
+            parrotGroupBox3.BorderWidth = 3;
+            parrotGroupBox3.Controls.Add(txtDescripcion);
+            parrotGroupBox3.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            parrotGroupBox3.ForeColor = Color.FromArgb(4, 79, 86);
+            parrotGroupBox3.Location = new Point(85, 130);
+            parrotGroupBox3.Margin = new Padding(2);
+            parrotGroupBox3.Name = "parrotGroupBox3";
+            parrotGroupBox3.Padding = new Padding(2);
+            parrotGroupBox3.ShowText = true;
+            parrotGroupBox3.Size = new Size(275, 45);
+            parrotGroupBox3.TabIndex = 52;
+            parrotGroupBox3.TabStop = false;
+            parrotGroupBox3.Text = "CONTRASEÑA";
+            parrotGroupBox3.TextColor = Color.FromArgb(4, 79, 86);
+            // 
+            // txtDescripcion
+            // 
+            txtDescripcion.BorderStyle = BorderStyle.None;
+            txtDescripcion.Font = new Font("Corbel", 12F);
+            txtDescripcion.ForeColor = Color.FromArgb(4, 79, 86);
+            txtDescripcion.Location = new Point(11, 17);
+            txtDescripcion.Margin = new Padding(2);
+            txtDescripcion.Multiline = true;
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.PlaceholderText = "Ej:MscaMoscaMickeyMouse123";
+            txtDescripcion.Size = new Size(254, 24);
+            txtDescripcion.TabIndex = 40;
+            txtDescripcion.UseSystemPasswordChar = true;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.FromArgb(95, 154, 162);
+            label11.Location = new Point(156, 23);
+            label11.Margin = new Padding(2, 0, 2, 0);
+            label11.Name = "label11";
+            label11.Size = new Size(109, 39);
+            label11.TabIndex = 30;
+            label11.Text = "LOG IN";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.FromArgb(0, 54, 60);
+            label6.Location = new Point(168, 22);
+            label6.Margin = new Padding(2, 0, 2, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(201, 39);
+            label6.TabIndex = 50;
+            label6.Text = "UCE MEDICAL";
+            label6.Click += label6_Click;
             // 
             // foreverGroupBox1
             // 
@@ -198,13 +198,14 @@
             ClientSize = new Size(800, 450);
             Controls.Add(foreverGroupBox1);
             Name = "FormLogIn";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormLogIn";
             grpbLogIn.ResumeLayout(false);
             grpbLogIn.PerformLayout();
-            parrotGroupBox3.ResumeLayout(false);
-            parrotGroupBox3.PerformLayout();
             parrotGroupBox1.ResumeLayout(false);
             parrotGroupBox1.PerformLayout();
+            parrotGroupBox3.ResumeLayout(false);
+            parrotGroupBox3.PerformLayout();
             foreverGroupBox1.ResumeLayout(false);
             foreverGroupBox1.PerformLayout();
             ResumeLayout(false);
