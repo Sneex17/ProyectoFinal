@@ -62,8 +62,6 @@ namespace CPresentacion
                     cmbEstados.SelectedValue = medico.EstadoId;
                     cmbRol.SelectedValue = medico.Usuario.RolId;
                     txtUsuario.Text = medico.Usuario.Usuario1;
-                    txtContrasena.Text = medico.Usuario.Contrasena;
-                    txtConfirmarPass.Text = medico.Usuario.Contrasena;
                 }
             }
         }

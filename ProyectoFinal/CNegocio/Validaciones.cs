@@ -30,4 +30,13 @@ namespace CNegocio
             RuleFor(L => L.Contrasena).NotEmpty().WithMessage("La contraseña del médico es obligatorio.");
         }
     }
+
+    public class ValidacionRecepcionista : AbstractValidator<Recepcionista>
+    {
+        public ValidacionRecepcionista()
+        {
+            RuleFor(L => L.Nombre).NotEmpty().WithMessage("El nombre del recepcionista es obligatorio.");
+            RuleFor(L => L.Apellido).NotEmpty().WithMessage("El apellido del recepcionista es obligatorio.");
+        }
+    }
 }
