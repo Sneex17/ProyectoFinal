@@ -1,4 +1,4 @@
-@{
+﻿@{
     ViewData["Title"] = "Nuevo Turno";
 }
 
@@ -23,6 +23,7 @@
             <h3 class="font-headline text-lg font-bold text-on-surface">Verificación de Identidad</h3>
         </div>
 
+<<<<<<< HEAD
         <div class="space-y-4">
             <label class="block font-headline text-sm font-bold text-on-surface-variant" for="cedulaInput">
                 Ingrese su cédula / acta de nacimiento
@@ -37,6 +38,75 @@
             </div>
             <div id="cedulaError" class="hidden text-error text-sm font-medium mt-2 flex items-center gap-2">
                 <span>⚠️</span> <span id="errorMsg">Cédula no encontrada. Por favor contacte a un recepcionista.</span>
+=======
+        <div class="flex flex-col gap-2">
+            <label class="font-headline text-[0.95rem] font-bold text-on-surface" for="medicoId">Médico Asignado</label>
+            <select name="medicoId" id="medicoId" class="bg-surface-container-highest border border-outline-variant/20 rounded-xl px-4 py-3 font-body text-base text-on-surface outline-none focus:border-primary focus:bg-surface-container-lowest transition-colors" required>
+                <option value="">-- Seleccione un médico --</option>
+                @if (ViewBag.Medicos != null)
+                {
+                    foreach (var m in ViewBag.Medicos)
+                    {
+                        <option value="@m.MedicoId">@m.NombreCompleto</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <label class="font-headline text-[0.95rem] font-bold text-on-surface" for="recepcionistaId">Recepcionista</label>
+            <select name="recepcionistaId" id="recepcionistaId" class="bg-surface-container-highest border border-outline-variant/20 rounded-xl px-4 py-3 font-body text-base text-on-surface outline-none focus:border-primary focus:bg-surface-container-lowest transition-colors" required>
+                <option value="">-- Seleccione recepcionista --</option>
+                @if (ViewBag.recepcionistas != null)
+                {
+                    foreach (var a in ViewBag.recepcionistas)
+                    {
+                        <option value="@a.RecepcionistaId">@a.NombreCompleto</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <label class="font-headline text-[0.95rem] font-bold text-on-surface">Prioridad</label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <!-- Baja -->
+                <label class="priority-card relative border-2 border-surface-container-highest rounded-xl p-4 cursor-pointer transition-all text-center bg-surface group [&.selected]:border-outline-variant [&.selected]:bg-surface-container-low">
+                    <input type="radio" name="prioridadId" value="3" class="absolute opacity-0 w-0 h-0" onchange="updatePreview()">
+                    <span class="block">
+                        <span class="font-headline font-bold text-lg block mb-1">Baja</span>
+                        <span class="text-xs text-on-surface-variant">No Urgente</span>
+                    </span>
+                </label>
+
+                <!-- Media -->
+                <label class="priority-card relative border-2 border-surface-container-highest rounded-xl p-4 cursor-pointer transition-all text-center bg-surface group [&.selected]:border-primary/70 [&.selected]:bg-primary/5">
+                    <input type="radio" name="prioridadId" value="2" class="absolute opacity-0 w-0 h-0" onchange="updatePreview()">
+                    <span class="block">
+                        <span class="font-headline font-bold text-lg block mb-1">Media</span>
+                        <span class="text-xs text-on-surface-variant">Prioridad Estándar</span>
+                    </span>
+                </label>
+
+                <!-- Alta -->
+                <label class="priority-card relative border-2 border-surface-container-highest rounded-xl p-4 cursor-pointer transition-all text-center bg-surface group [&.selected]:border-primary [&.selected]:bg-primary/5">
+                    <input type="radio" name="prioridadId" value="1" checked class="absolute opacity-0 w-0 h-0" onchange="updatePreview()">
+                    <span class="block">
+                        <span class="font-headline font-bold text-lg block mb-1 group-[&.selected]:text-primary">Alta</span>
+                        <span class="text-xs text-on-surface-variant">Prioridad Elevada</span>
+                    </span>
+                </label>
+                
+                <!-- Urgente -->
+                <label class="priority-card relative border-2 border-surface-container-highest rounded-xl p-4 cursor-pointer transition-all text-center bg-surface group [&.selected]:border-error [&.selected]:bg-error/10">
+                    <input type="radio" name="prioridadId" value="4" class="absolute opacity-0 w-0 h-0" onchange="updatePreview()">
+                    <span class="block">
+                        <span class="font-headline font-bold text-lg block mb-1 group-[&.selected]:text-error">Urgente</span>
+                        <span class="text-xs text-on-surface-variant">Emergencia Real</span>
+                    </span>
+                </label>
+>>>>>>> Halveys/Backend
             </div>
         </div>
     </div>
@@ -48,10 +118,21 @@
             <h3 class="font-headline text-lg font-bold text-on-surface">Detalles de la Cita</h3>
         </div>
 
+<<<<<<< HEAD
         <form method="post" asp-action="Crear" id="formCrear" class="space-y-6">
             @Html.AntiForgeryToken()
             <input type="hidden" name="pacienteId" id="hiddenPacienteId" />
             <input type="hidden" name="prioridadId" value="3" /> <!-- Prioridad Baja por defecto -->
+=======
+        <div class="bg-gradient-to-br from-primary to-primary-container text-white p-6 rounded-xl mt-8 font-body flex flex-col sm:flex-row items-center gap-4 shadow-lg" id="livePreviewBox">
+            <span class="text-3xl text-primary-fixed">📋</span>
+            <span class="text-lg font-medium leading-relaxed">
+                Turno a registrar: <span class="font-headline font-extrabold text-white">T-SIGUIENTE</span> <span class="opacity-50 mx-2">|</span> 
+                Paciente: <span class="font-headline font-extrabold text-white" id="lblPreviewPaciente">No seleccionado</span> <span class="opacity-50 mx-2">|</span> 
+                Prioridad: <span class="font-headline font-extrabold text-white" id="lblPreviewPrioridad">Alta</span>
+            </span>
+        </div>
+>>>>>>> Halveys/Backend
 
             <!-- Nombre del Paciente (Readonly) -->
             <div class="space-y-2">
@@ -118,6 +199,7 @@
         const especialidadSelect = document.getElementById('especialidadId');
         const medicoSelect = document.getElementById('medicoId');
 
+<<<<<<< HEAD
         // Paso 1: Verificación de Cédula
         btnVerificar.addEventListener('click', async () => {
             const cedula = cedulaInput.value.trim();
@@ -148,8 +230,26 @@
                 btnVerificar.disabled = false;
                 btnVerificar.innerText = 'Verificar';
             }
-        });
+=======
+        function updateSelection() {
+            cards.forEach(card => card.classList.remove('selected'));
+            const checked = document.querySelector('input[name="prioridadId"]:checked');
+            if (checked) {
+                checked.closest('.priority-card').classList.add('selected');
+            }
+        }
 
+        radios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                updateSelection();
+                updatePreview();
+            });
+>>>>>>> Halveys/Backend
+        });
+        
+        updateSelection();
+
+<<<<<<< HEAD
         function showStep2() {
             step1.classList.add('opacity-0', '-translate-y-4');
             setTimeout(() => {
@@ -160,6 +260,27 @@
                     step2.classList.add('opacity-100', 'translate-y-0');
                 }, 50);
             }, 300);
+=======
+        const selectPaciente = document.getElementById('pacienteId');
+        
+        function updatePreview() {
+            const previewPaciente = document.getElementById('lblPreviewPaciente');
+            const previewPrioridad = document.getElementById('lblPreviewPrioridad');
+            
+            if (selectPaciente.selectedIndex > 0) {
+                let pacText = selectPaciente.options[selectPaciente.selectedIndex].text;
+                let namePart = pacText.split("—")[0].trim();
+                previewPaciente.innerText = namePart;
+            } else {
+                previewPaciente.innerText = "No seleccionado";
+            }
+
+            const selectedRadio = document.querySelector('input[name="prioridadId"]:checked');
+            if (selectedRadio) {
+                const labels = { "1": "Alta", "2": "Media", "3": "Baja", "4": "Urgente" };
+                previewPrioridad.innerText = labels[selectedRadio.value] || "---";
+            }
+>>>>>>> Halveys/Backend
         }
 
         document.getElementById('btnBack').addEventListener('click', () => {

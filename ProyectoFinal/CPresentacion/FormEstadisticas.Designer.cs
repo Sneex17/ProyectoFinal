@@ -89,11 +89,12 @@
             foreverGroupBox1.Controls.Add(label1);
             foreverGroupBox1.Controls.Add(dtpDesde);
             foreverGroupBox1.Font = new Font("Segoe UI", 10F);
-            foreverGroupBox1.Location = new Point(79, 205);
+            foreverGroupBox1.Location = new Point(55, 123);
+            foreverGroupBox1.Margin = new Padding(2, 2, 2, 2);
             foreverGroupBox1.Name = "foreverGroupBox1";
             foreverGroupBox1.ShowArrow = true;
             foreverGroupBox1.ShowText = true;
-            foreverGroupBox1.Size = new Size(1020, 217);
+            foreverGroupBox1.Size = new Size(714, 130);
             foreverGroupBox1.TabIndex = 29;
             foreverGroupBox1.TextColor = Color.Transparent;
             // 
@@ -102,9 +103,14 @@
             label3.AutoSize = true;
             label3.Font = new Font("Calibri", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(95, 154, 162);
+<<<<<<< HEAD
             label3.Location = new Point(556, 68);
+=======
+            label3.Location = new Point(389, 41);
+            label3.Margin = new Padding(2, 0, 2, 0);
+>>>>>>> Halveys/Backend
             label3.Name = "label3";
-            label3.Size = new Size(105, 19);
+            label3.Size = new Size(73, 13);
             label3.TabIndex = 36;
             label3.Text = "ESPECIALIDAD";
             // 
@@ -114,11 +120,12 @@
             cmbEspecialidades.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbEspecialidades.ForeColor = Color.Black;
             cmbEspecialidades.FormattingEnabled = true;
-            cmbEspecialidades.ItemHeight = 31;
+            cmbEspecialidades.ItemHeight = 22;
             cmbEspecialidades.Items.AddRange(new object[] { "Activo", "Inactivo", "Suspendido" });
-            cmbEspecialidades.Location = new Point(556, 97);
+            cmbEspecialidades.Location = new Point(389, 58);
+            cmbEspecialidades.Margin = new Padding(2, 2, 2, 2);
             cmbEspecialidades.Name = "cmbEspecialidades";
-            cmbEspecialidades.Size = new Size(187, 37);
+            cmbEspecialidades.Size = new Size(132, 28);
             cmbEspecialidades.TabIndex = 35;
             cmbEspecialidades.UseCustomBackColor = true;
             cmbEspecialidades.UseCustomFont = true;
@@ -132,18 +139,30 @@
             dtpHasta.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Pixel);
             dtpHasta.FontSize = ReaLTaiizor.Extension.Poison.PoisonDateTimeSize.Tall;
             dtpHasta.Format = DateTimePickerFormat.Short;
+<<<<<<< HEAD
             dtpHasta.Location = new Point(320, 98);
+=======
+            dtpHasta.Location = new Point(224, 59);
+            dtpHasta.Margin = new Padding(2, 2, 2, 2);
+>>>>>>> Halveys/Backend
             dtpHasta.MinimumSize = new Size(0, 35);
             dtpHasta.Name = "dtpHasta";
             dtpHasta.RightToLeft = RightToLeft.No;
-            dtpHasta.Size = new Size(201, 35);
+            dtpHasta.Size = new Size(142, 35);
             dtpHasta.TabIndex = 38;
             // 
             // btnFiltro
             // 
+<<<<<<< HEAD
             btnFiltro.Location = new Point(779, 87);
             btnFiltro.Name = "btnFiltro";
             btnFiltro.Size = new Size(166, 48);
+=======
+            btnFiltro.Location = new Point(545, 52);
+            btnFiltro.Margin = new Padding(2, 2, 2, 2);
+            btnFiltro.Name = "btnFiltro";
+            btnFiltro.Size = new Size(116, 29);
+>>>>>>> Halveys/Backend
             btnFiltro.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
             btnFiltro.StateCommon.Back.Color2 = Color.FromArgb(0, 54, 60);
             btnFiltro.StateCommon.Back.ColorAngle = -2F;
@@ -163,9 +182,14 @@
             label1.AutoSize = true;
             label1.Font = new Font("Calibri", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(95, 154, 162);
+<<<<<<< HEAD
             label1.Location = new Point(99, 68);
+=======
+            label1.Location = new Point(69, 41);
+            label1.Margin = new Padding(2, 0, 2, 0);
+>>>>>>> Halveys/Backend
             label1.Name = "label1";
-            label1.Size = new Size(129, 19);
+            label1.Size = new Size(88, 13);
             label1.TabIndex = 30;
             label1.Text = "FECHA DE FECHAS";
             // 
@@ -176,11 +200,16 @@
             dtpDesde.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Pixel);
             dtpDesde.FontSize = ReaLTaiizor.Extension.Poison.PoisonDateTimeSize.Tall;
             dtpDesde.Format = DateTimePickerFormat.Short;
+<<<<<<< HEAD
             dtpDesde.Location = new Point(99, 98);
+=======
+            dtpDesde.Location = new Point(69, 59);
+            dtpDesde.Margin = new Padding(2, 2, 2, 2);
+>>>>>>> Halveys/Backend
             dtpDesde.MinimumSize = new Size(0, 35);
             dtpDesde.Name = "dtpDesde";
             dtpDesde.RightToLeft = RightToLeft.No;
-            dtpDesde.Size = new Size(201, 35);
+            dtpDesde.Size = new Size(142, 35);
             dtpDesde.TabIndex = 29;
             // 
             // foreverGroupBox2
@@ -191,11 +220,16 @@
             foreverGroupBox2.BaseColor = Color.FromArgb(41, 103, 111);
             foreverGroupBox2.Controls.Add(foreverGroupBox3);
             foreverGroupBox2.Font = new Font("Segoe UI", 10F);
+<<<<<<< HEAD
             foreverGroupBox2.Location = new Point(12, 428);
+=======
+            foreverGroupBox2.Location = new Point(93, 257);
+            foreverGroupBox2.Margin = new Padding(2, 2, 2, 2);
+>>>>>>> Halveys/Backend
             foreverGroupBox2.Name = "foreverGroupBox2";
             foreverGroupBox2.ShowArrow = true;
             foreverGroupBox2.ShowText = true;
-            foreverGroupBox2.Size = new Size(227, 148);
+            foreverGroupBox2.Size = new Size(159, 89);
             foreverGroupBox2.TabIndex = 39;
             foreverGroupBox2.TextColor = Color.Transparent;
             // 
@@ -208,11 +242,20 @@
             foreverGroupBox3.Controls.Add(lblPacientes);
             foreverGroupBox3.Controls.Add(label2);
             foreverGroupBox3.Font = new Font("Segoe UI", 10F);
+<<<<<<< HEAD
             foreverGroupBox3.Location = new Point(14, 0);
             foreverGroupBox3.Name = "foreverGroupBox3";
             foreverGroupBox3.ShowArrow = true;
             foreverGroupBox3.ShowText = true;
             foreverGroupBox3.Size = new Size(213, 148);
+=======
+            foreverGroupBox3.Location = new Point(10, 0);
+            foreverGroupBox3.Margin = new Padding(2, 2, 2, 2);
+            foreverGroupBox3.Name = "foreverGroupBox3";
+            foreverGroupBox3.ShowArrow = true;
+            foreverGroupBox3.ShowText = true;
+            foreverGroupBox3.Size = new Size(148, 89);
+>>>>>>> Halveys/Backend
             foreverGroupBox3.TabIndex = 40;
             foreverGroupBox3.TextColor = Color.Transparent;
             // 
@@ -221,9 +264,14 @@
             lblPacientes.AutoSize = true;
             lblPacientes.Font = new Font("Calibri", 28F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPacientes.ForeColor = Color.FromArgb(0, 51, 82);
+<<<<<<< HEAD
             lblPacientes.Location = new Point(34, 62);
+=======
+            lblPacientes.Location = new Point(24, 37);
+            lblPacientes.Margin = new Padding(2, 0, 2, 0);
+>>>>>>> Halveys/Backend
             lblPacientes.Name = "lblPacientes";
-            lblPacientes.Size = new Size(57, 68);
+            lblPacientes.Size = new Size(39, 46);
             lblPacientes.TabIndex = 40;
             lblPacientes.Text = "0";
             // 
@@ -232,9 +280,10 @@
             label2.AutoSize = true;
             label2.Font = new Font("Calibri", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Silver;
-            label2.Location = new Point(34, 25);
+            label2.Location = new Point(24, 15);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(105, 24);
+            label2.Size = new Size(73, 17);
             label2.TabIndex = 39;
             label2.Text = "PACIENTES ";
             // 
@@ -246,11 +295,16 @@
             foreverGroupBox4.BaseColor = Color.FromArgb(68, 128, 136);
             foreverGroupBox4.Controls.Add(foreverGroupBox5);
             foreverGroupBox4.Font = new Font("Segoe UI", 10F);
+<<<<<<< HEAD
             foreverGroupBox4.Location = new Point(245, 428);
+=======
+            foreverGroupBox4.Location = new Point(256, 257);
+            foreverGroupBox4.Margin = new Padding(2, 2, 2, 2);
+>>>>>>> Halveys/Backend
             foreverGroupBox4.Name = "foreverGroupBox4";
             foreverGroupBox4.ShowArrow = true;
             foreverGroupBox4.ShowText = true;
-            foreverGroupBox4.Size = new Size(227, 148);
+            foreverGroupBox4.Size = new Size(159, 89);
             foreverGroupBox4.TabIndex = 40;
             foreverGroupBox4.TextColor = Color.Transparent;
             // 
@@ -263,11 +317,20 @@
             foreverGroupBox5.Controls.Add(lblEnEspera);
             foreverGroupBox5.Controls.Add(label6);
             foreverGroupBox5.Font = new Font("Segoe UI", 10F);
+<<<<<<< HEAD
             foreverGroupBox5.Location = new Point(14, 0);
             foreverGroupBox5.Name = "foreverGroupBox5";
             foreverGroupBox5.ShowArrow = true;
             foreverGroupBox5.ShowText = true;
             foreverGroupBox5.Size = new Size(220, 148);
+=======
+            foreverGroupBox5.Location = new Point(10, 0);
+            foreverGroupBox5.Margin = new Padding(2, 2, 2, 2);
+            foreverGroupBox5.Name = "foreverGroupBox5";
+            foreverGroupBox5.ShowArrow = true;
+            foreverGroupBox5.ShowText = true;
+            foreverGroupBox5.Size = new Size(148, 89);
+>>>>>>> Halveys/Backend
             foreverGroupBox5.TabIndex = 40;
             foreverGroupBox5.TextColor = Color.Transparent;
             // 
@@ -276,9 +339,14 @@
             lblEnEspera.AutoSize = true;
             lblEnEspera.Font = new Font("Calibri", 28F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblEnEspera.ForeColor = Color.FromArgb(0, 51, 82);
+<<<<<<< HEAD
             lblEnEspera.Location = new Point(34, 62);
+=======
+            lblEnEspera.Location = new Point(24, 37);
+            lblEnEspera.Margin = new Padding(2, 0, 2, 0);
+>>>>>>> Halveys/Backend
             lblEnEspera.Name = "lblEnEspera";
-            lblEnEspera.Size = new Size(57, 68);
+            lblEnEspera.Size = new Size(39, 46);
             lblEnEspera.TabIndex = 40;
             lblEnEspera.Text = "0";
             // 
@@ -287,9 +355,10 @@
             label6.AutoSize = true;
             label6.Font = new Font("Calibri", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Silver;
-            label6.Location = new Point(34, 25);
+            label6.Location = new Point(24, 15);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(101, 24);
+            label6.Size = new Size(71, 17);
             label6.TabIndex = 39;
             label6.Text = "EN ESPERA";
             // 
@@ -301,11 +370,16 @@
             foreverGroupBox6.BaseColor = Color.FromArgb(149, 208, 217);
             foreverGroupBox6.Controls.Add(foreverGroupBox7);
             foreverGroupBox6.Font = new Font("Segoe UI", 10F);
+<<<<<<< HEAD
             foreverGroupBox6.Location = new Point(478, 428);
+=======
+            foreverGroupBox6.Location = new Point(419, 257);
+            foreverGroupBox6.Margin = new Padding(2, 2, 2, 2);
+>>>>>>> Halveys/Backend
             foreverGroupBox6.Name = "foreverGroupBox6";
             foreverGroupBox6.ShowArrow = true;
             foreverGroupBox6.ShowText = true;
-            foreverGroupBox6.Size = new Size(227, 148);
+            foreverGroupBox6.Size = new Size(159, 89);
             foreverGroupBox6.TabIndex = 41;
             foreverGroupBox6.TextColor = Color.Transparent;
             // 
@@ -318,11 +392,20 @@
             foreverGroupBox7.Controls.Add(lblEnAtencion);
             foreverGroupBox7.Controls.Add(label8);
             foreverGroupBox7.Font = new Font("Segoe UI", 10F);
+<<<<<<< HEAD
             foreverGroupBox7.Location = new Point(14, 0);
             foreverGroupBox7.Name = "foreverGroupBox7";
             foreverGroupBox7.ShowArrow = true;
             foreverGroupBox7.ShowText = true;
             foreverGroupBox7.Size = new Size(213, 148);
+=======
+            foreverGroupBox7.Location = new Point(10, 0);
+            foreverGroupBox7.Margin = new Padding(2, 2, 2, 2);
+            foreverGroupBox7.Name = "foreverGroupBox7";
+            foreverGroupBox7.ShowArrow = true;
+            foreverGroupBox7.ShowText = true;
+            foreverGroupBox7.Size = new Size(148, 89);
+>>>>>>> Halveys/Backend
             foreverGroupBox7.TabIndex = 40;
             foreverGroupBox7.TextColor = Color.Transparent;
             // 
@@ -331,9 +414,14 @@
             lblEnAtencion.AutoSize = true;
             lblEnAtencion.Font = new Font("Calibri", 28F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblEnAtencion.ForeColor = Color.FromArgb(0, 51, 82);
+<<<<<<< HEAD
             lblEnAtencion.Location = new Point(34, 62);
+=======
+            lblEnAtencion.Location = new Point(24, 37);
+            lblEnAtencion.Margin = new Padding(2, 0, 2, 0);
+>>>>>>> Halveys/Backend
             lblEnAtencion.Name = "lblEnAtencion";
-            lblEnAtencion.Size = new Size(57, 68);
+            lblEnAtencion.Size = new Size(39, 46);
             lblEnAtencion.TabIndex = 40;
             lblEnAtencion.Text = "0";
             // 
@@ -342,10 +430,11 @@
             label8.AutoSize = true;
             label8.Font = new Font("Calibri", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.Silver;
-            label8.Location = new Point(34, 25);
+            label8.Location = new Point(24, 15);
+            label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
             label8.RightToLeft = RightToLeft.No;
-            label8.Size = new Size(124, 24);
+            label8.Size = new Size(86, 17);
             label8.TabIndex = 39;
             label8.Text = "EN ATENCIÓN";
             // 
@@ -357,11 +446,16 @@
             foreverGroupBox8.BaseColor = Color.FromArgb(255, 192, 192);
             foreverGroupBox8.Controls.Add(foreverGroupBox9);
             foreverGroupBox8.Font = new Font("Segoe UI", 10F);
+<<<<<<< HEAD
             foreverGroupBox8.Location = new Point(710, 428);
+=======
+            foreverGroupBox8.Location = new Point(582, 257);
+            foreverGroupBox8.Margin = new Padding(2, 2, 2, 2);
+>>>>>>> Halveys/Backend
             foreverGroupBox8.Name = "foreverGroupBox8";
             foreverGroupBox8.ShowArrow = true;
             foreverGroupBox8.ShowText = true;
-            foreverGroupBox8.Size = new Size(227, 148);
+            foreverGroupBox8.Size = new Size(159, 89);
             foreverGroupBox8.TabIndex = 42;
             foreverGroupBox8.TextColor = Color.Transparent;
             // 
@@ -374,11 +468,20 @@
             foreverGroupBox9.Controls.Add(lblCanceladas);
             foreverGroupBox9.Controls.Add(label10);
             foreverGroupBox9.Font = new Font("Segoe UI", 10F);
+<<<<<<< HEAD
             foreverGroupBox9.Location = new Point(14, 0);
             foreverGroupBox9.Name = "foreverGroupBox9";
             foreverGroupBox9.ShowArrow = true;
             foreverGroupBox9.ShowText = true;
             foreverGroupBox9.Size = new Size(217, 148);
+=======
+            foreverGroupBox9.Location = new Point(10, 0);
+            foreverGroupBox9.Margin = new Padding(2, 2, 2, 2);
+            foreverGroupBox9.Name = "foreverGroupBox9";
+            foreverGroupBox9.ShowArrow = true;
+            foreverGroupBox9.ShowText = true;
+            foreverGroupBox9.Size = new Size(148, 89);
+>>>>>>> Halveys/Backend
             foreverGroupBox9.TabIndex = 40;
             foreverGroupBox9.TextColor = Color.Transparent;
             // 
@@ -387,9 +490,14 @@
             lblCanceladas.AutoSize = true;
             lblCanceladas.Font = new Font("Calibri", 28F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblCanceladas.ForeColor = Color.FromArgb(0, 51, 82);
+<<<<<<< HEAD
             lblCanceladas.Location = new Point(34, 62);
+=======
+            lblCanceladas.Location = new Point(24, 37);
+            lblCanceladas.Margin = new Padding(2, 0, 2, 0);
+>>>>>>> Halveys/Backend
             lblCanceladas.Name = "lblCanceladas";
-            lblCanceladas.Size = new Size(57, 68);
+            lblCanceladas.Size = new Size(39, 46);
             lblCanceladas.TabIndex = 40;
             lblCanceladas.Text = "0";
             // 
@@ -398,10 +506,11 @@
             label10.AutoSize = true;
             label10.Font = new Font("Calibri", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.Silver;
-            label10.Location = new Point(34, 25);
+            label10.Location = new Point(24, 15);
+            label10.Margin = new Padding(2, 0, 2, 0);
             label10.Name = "label10";
             label10.RightToLeft = RightToLeft.No;
-            label10.Size = new Size(121, 24);
+            label10.Size = new Size(84, 17);
             label10.TabIndex = 39;
             label10.Text = "CANCELADAS";
             // 
@@ -410,9 +519,14 @@
             label7.AutoSize = true;
             label7.Font = new Font("Calibri", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.FromArgb(95, 154, 162);
+<<<<<<< HEAD
             label7.Location = new Point(61, 147);
+=======
+            label7.Location = new Point(43, 88);
+            label7.Margin = new Padding(2, 0, 2, 0);
+>>>>>>> Halveys/Backend
             label7.Name = "label7";
-            label7.Size = new Size(701, 27);
+            label7.Size = new Size(471, 18);
             label7.TabIndex = 43;
             label7.Text = "Vea las métricas del sistema importantes con filtros de fecha y especialidad";
             // 
@@ -421,9 +535,10 @@
             label4.AutoSize = true;
             label4.Font = new Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(0, 54, 60);
-            label4.Location = new Point(50, 78);
+            label4.Location = new Point(35, 47);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(494, 59);
+            label4.Size = new Size(332, 39);
             label4.TabIndex = 44;
             label4.Text = "Estadísticas del Sistema";
             // 
@@ -553,12 +668,16 @@
             // 
             // FormEstadisticas
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(218, 248, 226);
+<<<<<<< HEAD
             ClientSize = new Size(1206, 1050);
             Controls.Add(iconButton2);
             Controls.Add(foreverGroupBox12);
+=======
+            ClientSize = new Size(844, 449);
+>>>>>>> Halveys/Backend
             Controls.Add(label7);
             Controls.Add(btnExportar);
             Controls.Add(label4);
@@ -568,6 +687,7 @@
             Controls.Add(foreverGroupBox4);
             Controls.Add(foreverGroupBox2);
             Controls.Add(foreverGroupBox1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "FormEstadisticas";
             Text = "FormEstadisticas";
             foreverGroupBox1.ResumeLayout(false);

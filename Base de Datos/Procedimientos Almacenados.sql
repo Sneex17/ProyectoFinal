@@ -606,10 +606,17 @@ GO
 -- =============================================
 -- ESTADÍSTICAS Y REPORTES
 -- =============================================
+<<<<<<< HEAD
 CREATE OR ALTER PROCEDURE sp_EstadisticasGenerales
     @FechaDesde DATE = NULL,
     @FechaHasta DATE = NULL,
     @EspecialidadId INT = NULL
+=======
+
+CREATE OR ALTER PROCEDURE sp_EstadisticasGenerales
+    @FechaDesde DATE = NULL,
+    @FechaHasta DATE = NULL
+>>>>>>> Halveys/Backend
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -617,22 +624,32 @@ BEGIN
     SET @FechaDesde = ISNULL(@FechaDesde, CAST(DATEADD(DAY, -30, GETDATE()) AS DATE));
     SET @FechaHasta = ISNULL(@FechaHasta, CAST(GETDATE() AS DATE));
     
+<<<<<<< HEAD
     -- 1. Conteo por estado
+=======
+>>>>>>> Halveys/Backend
     SELECT 
         et.Nombre AS Estado,
         COUNT(t.TurnoId) AS Cantidad
     FROM Turnos t
     INNER JOIN EstadoTurnos et ON t.EstadoTurnoId = et.EstadoTurnoId
+<<<<<<< HEAD
     LEFT JOIN Medicos m ON t.MedicoId = m.MedicoId
     WHERE CAST(t.FechaHoraCreacion AS DATE) BETWEEN @FechaDesde AND @FechaHasta
         AND (@EspecialidadId IS NULL OR m.EspecialidadId = @EspecialidadId)
     GROUP BY et.Nombre;
     
     -- 2. Turnos por fecha
+=======
+    WHERE CAST(t.FechaHoraCreacion AS DATE) BETWEEN @FechaDesde AND @FechaHasta
+    GROUP BY et.Nombre;
+    
+>>>>>>> Halveys/Backend
     SELECT 
         CAST(t.FechaHoraCreacion AS DATE) AS Fecha,
         COUNT(*) AS Cantidad
     FROM Turnos t
+<<<<<<< HEAD
     LEFT JOIN Medicos m ON t.MedicoId = m.MedicoId
     WHERE CAST(t.FechaHoraCreacion AS DATE) BETWEEN @FechaDesde AND @FechaHasta
         AND (@EspecialidadId IS NULL OR m.EspecialidadId = @EspecialidadId)
@@ -643,10 +660,20 @@ BEGIN
     SELECT TOP 5
         m.Nombre + ' ' + m.Apellido AS Medico,
         COUNT(t.turnoId) AS TurnosAtendidos
+=======
+    WHERE CAST(t.FechaHoraCreacion AS DATE) BETWEEN @FechaDesde AND @FechaHasta
+    GROUP BY CAST(t.FechaHoraCreacion AS DATE)
+    ORDER BY Fecha;
+    
+    SELECT TOP 5
+        m.Nombre + ' ' + m.Apellido AS Medico,
+        COUNT(t.TurnoId) AS TurnosAtendidos
+>>>>>>> Halveys/Backend
     FROM Turnos t
     INNER JOIN Medicos m ON t.MedicoId = m.MedicoId
     WHERE t.EstadoTurnoId = 3
         AND CAST(t.FechaHoraCreacion AS DATE) BETWEEN @FechaDesde AND @FechaHasta
+<<<<<<< HEAD
         AND (@EspecialidadId IS NULL OR m.EspecialidadId = @EspecialidadId)
     GROUP BY m.Nombre + ' ' + m.Apellido
     ORDER BY TurnosAtendidos DESC;
@@ -657,6 +684,10 @@ BEGIN
     LEFT JOIN Medicos m ON t.MedicoId = m.MedicoId
     WHERE CAST(t.FechaHoraCreacion AS DATE) BETWEEN @FechaDesde AND @FechaHasta
         AND (@EspecialidadId IS NULL OR m.EspecialidadId = @EspecialidadId);
+=======
+    GROUP BY m.Nombre + ' ' + m.Apellido
+    ORDER BY TurnosAtendidos DESC;
+>>>>>>> Halveys/Backend
 END
 GO
 

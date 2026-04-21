@@ -37,6 +37,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "ClosedXML/0.102.3": {
         "dependencies": {
           "DocumentFormat.OpenXml": "2.16.0",
@@ -73,6 +74,8 @@
           }
         }
       },
+=======
+>>>>>>> Halveys/Backend
       "FluentValidation/12.1.1": {
         "runtime": {
           "lib/net8.0/FluentValidation.dll": {
@@ -1388,6 +1391,7 @@
       "path": "azure.identity/1.11.4",
       "hashPath": "azure.identity.1.11.4.nupkg.sha512"
     },
+<<<<<<< HEAD
     "ClosedXML/0.102.3": {
       "type": "package",
       "serviceable": true,
@@ -1409,6 +1413,8 @@
       "path": "excelnumberformat/1.1.0",
       "hashPath": "excelnumberformat.1.1.0.nupkg.sha512"
     },
+=======
+>>>>>>> Halveys/Backend
     "FluentValidation/12.1.1": {
       "type": "package",
       "serviceable": true,

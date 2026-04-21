@@ -64,5 +64,53 @@ namespace CAccesoDatos.RepositoryPattern
             }
             return null;
         }
+<<<<<<< HEAD
+=======
+
+
+        public static int AgregarUsuario(Usuario usuario)
+        {
+            using var connection = new SqlConnection(ConexionAppDB.ConnectionString);
+            using var command = new SqlCommand("sp_AgregarUsuario", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@Usuario", usuario.Usuario1);
+            command.Parameters.AddWithValue("@Contrasena", usuario.Contrasena);
+            command.Parameters.AddWithValue("@FechaCreacion", usuario.FechaCreacion);
+            command.Parameters.AddWithValue("@RolId", usuario.RolId);
+            command.Parameters.AddWithValue("@EstadoId", usuario.EstadoId);
+            connection.Open();
+
+            int result = (int)command.ExecuteScalar();
+            return result;
+        }
+
+
+        public static void ActualizarUsuario(Usuario usuario)
+        {
+            using var connection = new SqlConnection(ConexionAppDB.ConnectionString);
+            using var command = new SqlCommand("sp_ActualizarUsuario", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@UsuarioId", usuario.UsuarioId);
+            command.Parameters.AddWithValue("@Usuario", usuario.Usuario1);
+            command.Parameters.AddWithValue("@Contrasena", usuario.Contrasena);
+            command.Parameters.AddWithValue("@RolId", usuario.RolId);
+            command.Parameters.AddWithValue("@EstadoId", usuario.EstadoId);
+            connection.Open();
+
+            int result = command.ExecuteNonQuery();
+        }
+
+        public static void DesactivarUsuario(Usuario usuario)
+        {
+            using var connection = new SqlConnection(ConexionAppDB.ConnectionString);
+            using var command = new SqlCommand("sp_DesactivarUsuario", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@UsuarioId", usuario.UsuarioId);
+            command.Parameters.AddWithValue("@EstadoId", usuario.EstadoId);
+            connection.Open();
+
+            int result = command.ExecuteNonQuery();
+        }
+>>>>>>> Halveys/Backend
     }
 }

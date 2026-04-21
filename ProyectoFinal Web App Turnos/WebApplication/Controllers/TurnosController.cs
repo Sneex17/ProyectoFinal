@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 using HospitalTurnos.Models;
+=======
+﻿using HospitalTurnos.Models;
+>>>>>>> Halveys/Backend
 using HospitalTurnos.Services;
 using HospitalTurnos.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -28,7 +32,13 @@ namespace HospitalTurnos.Controllers
         // GET /Turnos/Crear
         public IActionResult Crear()
         {
+<<<<<<< HEAD
             ViewBag.Especialidades = _turnoService.ObtenerEspecialidades();
+=======
+            ViewBag.Pacientes = _turnoService.ObtenerPacientes();
+            ViewBag.Medicos = _turnoService.ObtenerMedicos();
+            ViewBag.recepcionistas = _turnoService.ObtenerRecepcionistas();
+>>>>>>> Halveys/Backend
             return View();
         }
 
@@ -57,7 +67,11 @@ namespace HospitalTurnos.Controllers
         // POST /Turnos/Crear
         [HttpPost]
         [ValidateAntiForgeryToken]
+<<<<<<< HEAD
         public IActionResult Crear(int pacienteId, int medicoId, int? recepcionistaId, 
+=======
+        public IActionResult Crear(int pacienteId, int medicoId, int recepcionistaId, 
+>>>>>>> Halveys/Backend
                                   int prioridadId, string? observaciones)
         {
             try 
@@ -68,7 +82,13 @@ namespace HospitalTurnos.Controllers
             catch (Exception ex)
             {
                 ViewData["ModelError"] = "Error al crear el turno: " + ex.Message;
+<<<<<<< HEAD
                 ViewBag.Especialidades = _turnoService.ObtenerEspecialidades();
+=======
+                ViewBag.Pacientes = _turnoService.ObtenerPacientes();
+                ViewBag.Medicos = _turnoService.ObtenerMedicos();
+                ViewBag.recepcionistas = _turnoService.ObtenerRecepcionistas();
+>>>>>>> Halveys/Backend
                 return View();
             }
         }

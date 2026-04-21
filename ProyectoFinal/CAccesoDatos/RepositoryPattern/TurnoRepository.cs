@@ -254,6 +254,7 @@ namespace CAccesoDatos.RepositoryPattern
 
             return turnos;
         }
+<<<<<<< HEAD
 
         public (int Total, int Creado, int EnAtencion, int Atendido, int Cancelado, int Postergado) ObtenerEstadisticas(DateTime? fechaDesde, DateTime? fechaHasta, int? especialidadId = null)
         {
@@ -424,5 +425,7 @@ namespace CAccesoDatos.RepositoryPattern
             
             return dataTable;
         }
+=======
+>>>>>>> Halveys/Backend
     }
 }

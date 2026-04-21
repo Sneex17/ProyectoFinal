@@ -22,6 +22,7 @@ namespace HospitalTurnos.Services
             new() { EstadoTurnoId = 2, Nombre = "En Atencion" },
             new() { EstadoTurnoId = 3, Nombre = "Atendido" },
             new() { EstadoTurnoId = 4, Nombre = "Cancelado" }
+<<<<<<< HEAD
         };
 
         private readonly List<Especialidad> _especialidades = new()
@@ -29,6 +30,8 @@ namespace HospitalTurnos.Services
             new() { EspecialidadId = 1, Nombre = "Medicina General" },
             new() { EspecialidadId = 2, Nombre = "Pediatría" },
             new() { EspecialidadId = 3, Nombre = "Cardiología" }
+=======
+>>>>>>> Halveys/Backend
         };
 
         private readonly List<Paciente> _pacientes = new()
@@ -113,7 +116,11 @@ namespace HospitalTurnos.Services
             return t != null ? MapToViewModel(t) : null;
         }
 
+<<<<<<< HEAD
         public Turno CrearTurno(int pacienteId, int medicoId, int? recepcionistaId, int prioridadId, string? observaciones)
+=======
+        public Turno CrearTurno(int pacienteId, int medicoId, int recepcionistaId, int prioridadId, string? observaciones)
+>>>>>>> Halveys/Backend
         {
             var t = new Turno
             {

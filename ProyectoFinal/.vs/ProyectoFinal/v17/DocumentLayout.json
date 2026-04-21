@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|c:\\users\\xrami\\onedrive\\documentos\\proyectofinal isw\u0027124\\proyectofinal\\proyectofinal\\cpresentacion\\formregistromedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formregistromedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45EA65C8-A62A-436A-A71F-A2A92EF0AD6B}|CAccesoDatos\\CAccesoDatos.csproj|c:\\users\\xrami\\onedrive\\documentos\\proyectofinal isw\u0027124\\proyectofinal\\proyectofinal\\caccesodatos\\repositorypattern\\medicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45EA65C8-A62A-436A-A71F-A2A92EF0AD6B}|CAccesoDatos\\CAccesoDatos.csproj|solutionrelative:caccesodatos\\repositorypattern\\medicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45EA65C8-A62A-436A-A71F-A2A92EF0AD6B}|CAccesoDatos\\CAccesoDatos.csproj|c:\\users\\xrami\\onedrive\\documentos\\proyectofinal isw\u0027124\\proyectofinal\\proyectofinal\\caccesodatos\\repositorypattern\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45EA65C8-A62A-436A-A71F-A2A92EF0AD6B}|CAccesoDatos\\CAccesoDatos.csproj|solutionrelative:caccesodatos\\repositorypattern\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|c:\\users\\xrami\\onedrive\\documentos\\proyectofinal isw\u0027124\\proyectofinal\\proyectofinal\\cpresentacion\\formregistromedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formregistromedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB785D5F-9C9B-493C-B7C9-282E1535BF3C}|CNegocio\\CNegocio.csproj|c:\\users\\xrami\\onedrive\\documentos\\proyectofinal isw\u0027124\\proyectofinal\\proyectofinal\\cnegocio\\validaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB785D5F-9C9B-493C-B7C9-282E1535BF3C}|CNegocio\\CNegocio.csproj|solutionrelative:cnegocio\\validaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E49DAC32-550C-45B6-B472-26549EEFE769}|CEntidades\\CEntidades.csproj|c:\\users\\xrami\\onedrive\\documentos\\proyectofinal isw\u0027124\\proyectofinal\\proyectofinal\\centidades\\models\\gestionturnoshospitaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E49DAC32-550C-45B6-B472-26549EEFE769}|CEntidades\\CEntidades.csproj|solutionrelative:centidades\\models\\gestionturnoshospitaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E49DAC32-550C-45B6-B472-26549EEFE769}|CEntidades\\CEntidades.csproj|c:\\users\\xrami\\onedrive\\documentos\\proyectofinal isw\u0027124\\proyectofinal\\proyectofinal\\centidades\\models\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E49DAC32-550C-45B6-B472-26549EEFE769}|CEntidades\\CEntidades.csproj|solutionrelative:centidades\\models\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|c:\\users\\xrami\\onedrive\\documentos\\proyectofinal isw\u0027124\\proyectofinal\\proyectofinal\\cpresentacion\\formregistroespecialidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formregistroespecialidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CAccesoDatos\\RepositoryPattern\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "CAccesoDatos\\RepositoryPattern\\UsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CAccesoDatos\\RepositoryPattern\\UsuarioRepository.cs",
+              "RelativeToolTip": "CAccesoDatos\\RepositoryPattern\\UsuarioRepository.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAIwGIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T00:45:51.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GestionTurnosHospitalDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CEntidades\\Models\\GestionTurnosHospitalDbContext.cs",
+              "RelativeDocumentMoniker": "CEntidades\\Models\\GestionTurnosHospitalDbContext.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CEntidades\\Models\\GestionTurnosHospitalDbContext.cs",
+              "RelativeToolTip": "CEntidades\\Models\\GestionTurnosHospitalDbContext.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAuwGQAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T00:23:56.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Medico.cs",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CEntidades\\Models\\Medico.cs",
+              "RelativeDocumentMoniker": "CEntidades\\Models\\Medico.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CEntidades\\Models\\Medico.cs",
+              "RelativeToolTip": "CEntidades\\Models\\Medico.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA3wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T00:13:25.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormRegistroEspecialidades.cs",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroEspecialidades.cs",
+              "RelativeDocumentMoniker": "CPresentacion\\FormRegistroEspecialidades.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroEspecialidades.cs",
+              "RelativeToolTip": "CPresentacion\\FormRegistroEspecialidades.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T21:42:52.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Validaciones.cs",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CNegocio\\Validaciones.cs",
+              "RelativeDocumentMoniker": "CNegocio\\Validaciones.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CNegocio\\Validaciones.cs",
+              "RelativeToolTip": "CNegocio\\Validaciones.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwB0AAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T21:36:48.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MedicoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CAccesoDatos\\RepositoryPattern\\MedicoRepository.cs",
+              "RelativeDocumentMoniker": "CAccesoDatos\\RepositoryPattern\\MedicoRepository.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CAccesoDatos\\RepositoryPattern\\MedicoRepository.cs",
+              "RelativeToolTip": "CAccesoDatos\\RepositoryPattern\\MedicoRepository.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowCsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T20:46:05.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormRegistroMedico.cs",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroMedico.cs",
+              "RelativeDocumentMoniker": "CPresentacion\\FormRegistroMedico.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroMedico.cs",
+              "RelativeToolTip": "CPresentacion\\FormRegistroMedico.cs",
+              "ViewState": "AgIAAMEAAAAAAAAAAADwv9UAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T20:39:06.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormRegistroMedico.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroMedico.cs",
+              "RelativeDocumentMoniker": "CPresentacion\\FormRegistroMedico.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroMedico.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CPresentacion\\FormRegistroMedico.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T20:38:19.504Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
