@@ -1,32 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|c:\\users\\xrami\\onedrive\\documentos\\proyectofinal isw\u0027124\\proyectofinal\\proyectofinal\\cpresentacion\\formregistromedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formregistromedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45EA65C8-A62A-436A-A71F-A2A92EF0AD6B}|CAccesoDatos\\CAccesoDatos.csproj|c:\\users\\xrami\\onedrive\\documentos\\proyectofinal isw\u0027124\\proyectofinal\\proyectofinal\\caccesodatos\\repositorypattern\\medicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45EA65C8-A62A-436A-A71F-A2A92EF0AD6B}|CAccesoDatos\\CAccesoDatos.csproj|solutionrelative:caccesodatos\\repositorypattern\\medicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45EA65C8-A62A-436A-A71F-A2A92EF0AD6B}|CAccesoDatos\\CAccesoDatos.csproj|c:\\users\\xrami\\onedrive\\documentos\\proyectofinal isw\u0027124\\proyectofinal\\proyectofinal\\caccesodatos\\repositorypattern\\recepcionistarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45EA65C8-A62A-436A-A71F-A2A92EF0AD6B}|CAccesoDatos\\CAccesoDatos.csproj|solutionrelative:caccesodatos\\repositorypattern\\recepcionistarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|c:\\users\\xrami\\onedrive\\documentos\\proyectofinal isw\u0027124\\proyectofinal\\proyectofinal\\cpresentacion\\formregistrorecepcionista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formregistrorecepcionista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\cpresentacion\\formregistrorecepcionista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formregistrorecepcionista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D666EAE0-913D-44B4-AF83-D9F333C7616C}|CInfraestructura\\CInfraestructura.csproj|c:\\users\\xrami\\onedrive\\documentos\\proyectofinal isw\u0027124\\proyectofinal\\proyectofinal\\cinfraestructura\\hast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D666EAE0-913D-44B4-AF83-D9F333C7616C}|CInfraestructura\\CInfraestructura.csproj|solutionrelative:cinfraestructura\\hast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,88 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MedicoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CAccesoDatos\\RepositoryPattern\\MedicoRepository.cs",
-              "RelativeDocumentMoniker": "CAccesoDatos\\RepositoryPattern\\MedicoRepository.cs",
-              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CAccesoDatos\\RepositoryPattern\\MedicoRepository.cs",
-              "RelativeToolTip": "CAccesoDatos\\RepositoryPattern\\MedicoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T13:43:10.409Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Hast.cs",
-              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CInfraestructura\\Hast.cs",
-              "RelativeDocumentMoniker": "CInfraestructura\\Hast.cs",
-              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CInfraestructura\\Hast.cs",
-              "RelativeToolTip": "CInfraestructura\\Hast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T13:27:35.064Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormRegistroMedico.cs",
-              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroMedico.cs",
-              "RelativeDocumentMoniker": "CPresentacion\\FormRegistroMedico.cs",
-              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroMedico.cs",
-              "RelativeToolTip": "CPresentacion\\FormRegistroMedico.cs",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAswKoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T02:21:49.786Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RecepcionistaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CAccesoDatos\\RepositoryPattern\\RecepcionistaRepository.cs",
-              "RelativeDocumentMoniker": "CAccesoDatos\\RepositoryPattern\\RecepcionistaRepository.cs",
-              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CAccesoDatos\\RepositoryPattern\\RecepcionistaRepository.cs",
-              "RelativeToolTip": "CAccesoDatos\\RepositoryPattern\\RecepcionistaRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T02:10:25.824Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormRegistroRecepcionista.cs",
-              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroRecepcionista.cs",
-              "RelativeDocumentMoniker": "CPresentacion\\FormRegistroRecepcionista.cs",
-              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroRecepcionista.cs",
-              "RelativeToolTip": "CPresentacion\\FormRegistroRecepcionista.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAvwDUAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T02:10:00.192Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormRegistroRecepcionista.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroRecepcionista.cs",
-              "RelativeDocumentMoniker": "CPresentacion\\FormRegistroRecepcionista.cs",
-              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Documentos\\ProyectoFinal ISW\u0027124\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroRecepcionista.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CPresentacion\\FormRegistroRecepcionista.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T02:07:11.134Z",
-              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

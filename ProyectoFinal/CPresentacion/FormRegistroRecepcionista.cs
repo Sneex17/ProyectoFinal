@@ -26,9 +26,8 @@ namespace CPresentacion
         }
         private void DatosGridView()
         {
-            var repositoryRecepcionista = new RecepcionistaRepository();
             dgvRecepcionistas.Rows.Clear();
-            foreach (var recepcionista in repositoryRecepcionista.Listar())
+            foreach (var recepcionista in ServicioRecepcionista.ListarRecepcionistas())
             {
                 dgvRecepcionistas.Rows.Add(new object[] { recepcionista.RecepcionistaId,
                     recepcionista.Nombre, recepcionista.Apellido, recepcionista.Area.Nombre,
@@ -86,7 +85,6 @@ namespace CPresentacion
         {
             try
             {
-                var repository = new RecepcionistaRepository();
                 var recepcionista = new Recepcionista()
                 {
                     Nombre = txtNombre.Text,
@@ -109,7 +107,7 @@ namespace CPresentacion
 
                 if (mensajes == DialogResult.Yes)
                 {
-                    repository.Agregar(recepcionista);
+                    ServicioRecepcionista.AgregarRecepcionista(recepcionista);
 
                     MessageBox.Show("Recepcionista registrado exitosamente.", "Éxito",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -166,7 +164,6 @@ namespace CPresentacion
                     throw new ControlExcepciones("Seleccione un médico para editar.");
                 }
 
-                var repository = new RecepcionistaRepository();
                 var recepcionista = new Recepcionista()
                 {
                     RecepcionistaId = idRecepcionista,
@@ -189,7 +186,7 @@ namespace CPresentacion
 
                 if (mensajes == DialogResult.Yes)
                 {
-                    repository.Actualizar(recepcionista);
+                    ServicioRecepcionista.ActualizarRecepcionista(recepcionista);
 
                     MessageBox.Show("Recepcionista actualizado exitosamente.", "Éxito",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -219,7 +216,6 @@ namespace CPresentacion
                     throw new ControlExcepciones("Seleccione un recepcionista para desactivar.");
                 }
 
-                var repository = new RecepcionistaRepository();
                 var recepcionista = new Recepcionista()
                 {
                     RecepcionistaId = idRecepcionista,
@@ -231,7 +227,7 @@ namespace CPresentacion
 
                 if (mensajes == DialogResult.Yes)
                 {
-                    repository.Eliminar(recepcionista);
+                    ServicioRecepcionista.EliminarRecepcionista(recepcionista);
 
                     MessageBox.Show("Recepcionista desactivado exitosamente.", "Éxito",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);

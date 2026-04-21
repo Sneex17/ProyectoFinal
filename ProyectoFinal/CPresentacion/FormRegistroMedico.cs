@@ -27,9 +27,8 @@ namespace CPresentacion
         }
         private void DatosGridView()
         {
-            var repositoryMedico = new MedicoRepository();
             dgvMedicos.Rows.Clear();
-            foreach (var medico in repositoryMedico.Listar())
+            foreach (var medico in ServiciosMedicos.ListarMedicos())
             {
                 dgvMedicos.Rows.Add(new object[] { medico.MedicoId, medico.Nlicencia, medico.Nombre, medico.Apellido,
                     medico.Especialidad.Nombre, medico.UsuarioId, medico.Estado.Nombre });
@@ -88,7 +87,6 @@ namespace CPresentacion
         {
             try
             {
-                var repository = new MedicoRepository();
                 var medico = new Medico()
                 {
                     Nlicencia = txtNLicencia.Text,
@@ -112,7 +110,7 @@ namespace CPresentacion
 
                 if (mensajes == DialogResult.Yes)
                 {
-                    repository.Agregar(medico);
+                    ServiciosMedicos.AgregarMedico(medico);
 
                     MessageBox.Show("Médico registrado exitosamente.", "Éxito",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -142,7 +140,6 @@ namespace CPresentacion
                     throw new ControlExcepciones("Seleccione un médico para editar.");
                 }
 
-                var repository = new MedicoRepository();
                 var medico = new Medico()
                 {
                     MedicoId = idMedico,
@@ -167,7 +164,7 @@ namespace CPresentacion
 
                 if (mensajes == DialogResult.Yes)
                 {
-                    repository.Actualizar(medico);
+                    ServiciosMedicos.ActualizarMedico(medico);
 
                     MessageBox.Show("Médico actualizado exitosamente.", "Éxito",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -225,7 +222,6 @@ namespace CPresentacion
                     throw new ControlExcepciones("Seleccione un médico para desactivar.");
                 }
 
-                var repository = new MedicoRepository();
                 var medico = new Medico()
                 {
                     MedicoId = idMedico,
@@ -237,7 +233,7 @@ namespace CPresentacion
 
                 if (mensajes == DialogResult.Yes)
                 {
-                    repository.Eliminar(medico);
+                    ServiciosMedicos.EliminarMedico(medico);
 
                     MessageBox.Show("Médico desactivado exitosamente.", "Éxito",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);

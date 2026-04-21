@@ -1,6 +1,7 @@
 using CAccesoDatos.RepositoryPattern;
 using CEntidades.Models;
 using CEntidades.TurnoDecorator;
+using CNegocio;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -11,14 +12,12 @@ namespace CPresentacion
 {
     public partial class FormColaTurno : Form
     {
-        private readonly TurnoRepository _turnoRepo;
         private readonly MedicoRepository _medicoRepo;
         private List<Turno> _turnos;
 
         public FormColaTurno()
         {
             InitializeComponent();
-            _turnoRepo = new TurnoRepository();
             _medicoRepo = new MedicoRepository();
             _turnos = new List<Turno>();
 
@@ -67,7 +66,7 @@ namespace CPresentacion
                     especialidadId = (int)cmbEspecialidades.SelectedValue;
                 }
 
-                _turnos = _turnoRepo.ObtenerColaTurnos(medicoId, especialidadId);
+                _turnos = ServiciosTurnos.ColaDeTurnos(medicoId, especialidadId);
 
                 dgvTurnos.DataSource = null;
                 dgvTurnos.Columns.Clear();
