@@ -154,6 +154,25 @@ namespace CAccesoDatos.RepositoryPattern
             return ("Desconocido", DateTime.Now);
         }
 
+        public bool CambiarPrioridadTurno(int turnoId, int nuevaPrioridadId)
+        {
+            using var connection = new SqlConnection(_connectionString);
+            using var command = new SqlCommand("sp_CambiarPrioridadTurno", connection);
+            command.CommandType = CommandType.StoredProcedure;
+
+            command.Parameters.AddWithValue("@TurnoId", turnoId);
+            command.Parameters.AddWithValue("@NuevaPrioridadId", nuevaPrioridadId);
+
+            var mensajeParam = command.Parameters.Add("@Mensaje", SqlDbType.NVarChar, 255);
+            mensajeParam.Direction = ParameterDirection.Output;
+
+            connection.Open();
+            command.ExecuteNonQuery();
+
+            string mensaje = mensajeParam.Value?.ToString() ?? "";
+            return mensaje.Contains("actualizada");
+        }
+
         public bool ValidarMedicoOcupado(int medicoId)
         {
             using var connection = new SqlConnection(_connectionString);

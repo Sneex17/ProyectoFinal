@@ -25,12 +25,104 @@ namespace CPresentacion
             Load += FormColaTurno_Load;
             btnBuscar.Click += btnBuscar_Click;
             btnLimpiar.Click += btnLimpiar_Click;
+            dgvTurnos.SelectionChanged += dgvTurnos_SelectionChanged;
+            btnCambiarPrioridad.Click += btnCambiarPrioridad_Click;
         }
 
         private void FormColaTurno_Load(object sender, EventArgs e)
         {
             CargarEspecialidades();
+            CargarPrioridades();
+            MostrarPanelPrioridad();
             CargarColaTurnos();
+        }
+
+        private void MostrarPanelPrioridad()
+        {
+            if (SesionUsuario.EsRecepcionista || SesionUsuario.EsAdmin)
+            {
+                grpCambiarPrioridad.Visible = true;
+                cmbNuevaPrioridad.Enabled = false;
+                btnCambiarPrioridad.Enabled = false;
+            }
+        }
+
+        private void CargarPrioridades()
+        {
+            var prioridades = new List<KeyValuePair<int, string>>
+            {
+                new KeyValuePair<int, string>(4, "Urgente"),
+                new KeyValuePair<int, string>(1, "Alta"),
+                new KeyValuePair<int, string>(2, "Media"),
+                new KeyValuePair<int, string>(3, "Baja")
+            };
+            cmbNuevaPrioridad.DataSource = prioridades;
+            cmbNuevaPrioridad.DisplayMember = "Value";
+            cmbNuevaPrioridad.ValueMember = "Key";
+        }
+
+        private int? _turnoIdSeleccionado;
+
+        private void dgvTurnos_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvTurnos.SelectedRows.Count > 0 && grpCambiarPrioridad.Visible)
+            {
+                var fila = dgvTurnos.SelectedRows[0];
+                _turnoIdSeleccionado = _turnos[fila.Index].TurnoId;
+                cmbNuevaPrioridad.Enabled = true;
+                btnCambiarPrioridad.Enabled = true;
+            }
+            else
+            {
+                _turnoIdSeleccionado = null;
+                if (grpCambiarPrioridad.Visible)
+                {
+                    cmbNuevaPrioridad.Enabled = false;
+                    btnCambiarPrioridad.Enabled = false;
+                }
+            }
+        }
+
+        private void btnCambiarPrioridad_Click(object sender, EventArgs e)
+        {
+            if (!_turnoIdSeleccionado.HasValue)
+            {
+                MessageBox.Show("Seleccione un turno primero.", "Advertencia",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (cmbNuevaPrioridad.SelectedValue == null)
+            {
+                MessageBox.Show("Seleccione una prioridad.", "Advertencia",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                int nuevaPrioridadId = (int)cmbNuevaPrioridad.SelectedValue;
+                bool resultado = _turnoRepo.CambiarPrioridadTurno(_turnoIdSeleccionado.Value, nuevaPrioridadId);
+
+                if (resultado)
+                {
+                    MessageBox.Show("Prioridad actualizada correctamente.", "Éxito",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarColaTurnos();
+                    cmbNuevaPrioridad.Enabled = false;
+                    btnCambiarPrioridad.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Error al actualizar la prioridad.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void CargarEspecialidades()
@@ -117,7 +209,6 @@ namespace CPresentacion
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             cmbEspecialidades.SelectedIndex = -1;
-            txtFiltro.Clear();
             CargarColaTurnos();
         }
 

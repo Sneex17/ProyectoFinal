@@ -776,3 +776,43 @@ BEGIN
         );
 END
 GO
+
+-- =============================================
+-- CAMBIAR PRIORIDAD DE TURNO
+-- =============================================
+
+CREATE OR ALTER PROCEDURE sp_CambiarPrioridadTurno
+    @TurnoId INT,
+    @NuevaPrioridadId INT,
+    @Mensaje NVARCHAR(255) OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    IF NOT EXISTS (SELECT 1 FROM Turnos WHERE TurnoId = @TurnoId)
+    BEGIN
+        SET @Mensaje = 'El turno no existe';
+        RAISERROR(@Mensaje, 16, 1);
+        RETURN -1;
+    END
+    
+    IF NOT EXISTS (SELECT 1 FROM Prioridades WHERE PrioridadId = @NuevaPrioridadId)
+    BEGIN
+        SET @Mensaje = 'La prioridad especificada no es válida';
+        RAISERROR(@Mensaje, 16, 1);
+        RETURN -1;
+    END
+    
+    UPDATE Turnos
+    SET PrioridadId = @NuevaPrioridadId
+    WHERE TurnoId = @TurnoId;
+    
+    SET @Mensaje = 'Prioridad actualizada exitosamente';
+    
+    SELECT 
+        p.Nombre AS PrioridadActualizada,
+        GETDATE() AS FechaCambio
+    FROM Prioridades p
+    WHERE p.PrioridadId = @NuevaPrioridadId;
+END
+GO
