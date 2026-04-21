@@ -30,6 +30,7 @@ namespace CEntidades.TurnoDecorator
         string GetEtiqueta();
         string GetColorFila();
         string GetDescripcion();
+        System.Drawing.Color GetColor();
 
     }
 }

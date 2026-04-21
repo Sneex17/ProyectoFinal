@@ -1,23 +1,24 @@
-namespace HospitalTurnos.Models
+﻿namespace HospitalTurnos.Models
 {
-    // <summary>
-    /// Valores esperados: 1-Normal | 2-Prioritario | 3-Emergencia
-    /// El orden de atenci�n se basa en PrioridadId DESC, luego FechaHoraCreacion ASC
+    /// <summary>
+    /// Valores esperados: 1-Alta | 2-Media | 3-Baja | 4-Urgente
+    /// El orden de atención se basa en una jerarquía personalizada.
     /// </summary>
     public class Prioridad
     {
         public int PrioridadId { get; set; }
-        public string Nombre { get; set; } = string.Empty;          // "Normal" | "Prioritario" | "Emergencia"
+        public string Nombre { get; set; } = string.Empty;          
         public string Descripcion { get; set; } = string.Empty;
 
         /// <summary>
         /// Clase CSS asociada para colorear la fila en el frontend.
-        /// El HTML simplemente usa: class="prioridad-@turno.Prioridad.CssClass"
         /// </summary>
         public string CssClass => Nombre.ToLower() switch
         {
-            "emergencia" => "emergencia",
-            "prioritario" => "prioritario",
+            "urgente" => "emergencia",
+            "alta" => "prioritario",
+            "media" => "media",
+            "baja" => "baja",
             _ => "normal"
         };
     }

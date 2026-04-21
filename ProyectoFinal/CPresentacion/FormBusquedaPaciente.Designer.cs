@@ -36,6 +36,8 @@
             txtFiltro = new TextBox();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             label4 = new Label();
+            btnSeleccionar = new Krypton.Toolkit.KryptonButton();
+            btnCancelar = new Krypton.Toolkit.KryptonButton();
             label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvPacientes).BeginInit();
             foreverGroupBox1.SuspendLayout();
@@ -47,10 +49,9 @@
             label7.AutoSize = true;
             label7.Font = new Font("Calibri", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.FromArgb(95, 154, 162);
-            label7.Location = new Point(37, 68);
-            label7.Margin = new Padding(2, 0, 2, 0);
+            label7.Location = new Point(53, 113);
             label7.Name = "label7";
-            label7.Size = new Size(243, 18);
+            label7.Size = new Size(359, 27);
             label7.TabIndex = 53;
             label7.Text = "Visualización de pacientes registrados";
             // 
@@ -58,11 +59,10 @@
             // 
             dgvPacientes.BackgroundColor = Color.White;
             dgvPacientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPacientes.Location = new Point(37, 173);
-            dgvPacientes.Margin = new Padding(2);
+            dgvPacientes.Location = new Point(53, 288);
             dgvPacientes.Name = "dgvPacientes";
             dgvPacientes.RowHeadersWidth = 62;
-            dgvPacientes.Size = new Size(639, 241);
+            dgvPacientes.Size = new Size(913, 402);
             dgvPacientes.TabIndex = 52;
             // 
             // foreverGroupBox1
@@ -75,21 +75,19 @@
             foreverGroupBox1.Controls.Add(foreverGroupBox2);
             foreverGroupBox1.Controls.Add(label4);
             foreverGroupBox1.Font = new Font("Segoe UI", 10F);
-            foreverGroupBox1.Location = new Point(24, 103);
-            foreverGroupBox1.Margin = new Padding(2);
+            foreverGroupBox1.Location = new Point(34, 172);
             foreverGroupBox1.Name = "foreverGroupBox1";
             foreverGroupBox1.ShowArrow = true;
             foreverGroupBox1.ShowText = true;
-            foreverGroupBox1.Size = new Size(652, 66);
+            foreverGroupBox1.Size = new Size(931, 110);
             foreverGroupBox1.TabIndex = 49;
             foreverGroupBox1.TextColor = Color.Transparent;
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(527, 17);
-            btnBuscar.Margin = new Padding(2);
+            btnBuscar.Location = new Point(753, 28);
             btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(108, 30);
+            btnBuscar.Size = new Size(154, 50);
             btnBuscar.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
             btnBuscar.StateCommon.Back.Color2 = Color.FromArgb(0, 54, 60);
             btnBuscar.StateCommon.Back.ColorAngle = -2F;
@@ -113,12 +111,11 @@
             foreverGroupBox2.Controls.Add(txtFiltro);
             foreverGroupBox2.Controls.Add(iconButton1);
             foreverGroupBox2.Font = new Font("Segoe UI", 10F);
-            foreverGroupBox2.Location = new Point(13, 15);
-            foreverGroupBox2.Margin = new Padding(2);
+            foreverGroupBox2.Location = new Point(19, 25);
             foreverGroupBox2.Name = "foreverGroupBox2";
             foreverGroupBox2.ShowArrow = true;
             foreverGroupBox2.ShowText = true;
-            foreverGroupBox2.Size = new Size(510, 41);
+            foreverGroupBox2.Size = new Size(729, 68);
             foreverGroupBox2.TabIndex = 29;
             foreverGroupBox2.TextColor = Color.Transparent;
             // 
@@ -127,11 +124,10 @@
             txtFiltro.BorderStyle = BorderStyle.None;
             txtFiltro.Font = new Font("Corbel", 12F);
             txtFiltro.ForeColor = Color.FromArgb(4, 79, 86);
-            txtFiltro.Location = new Point(36, 10);
-            txtFiltro.Margin = new Padding(2);
+            txtFiltro.Location = new Point(51, 17);
             txtFiltro.Name = "txtFiltro";
             txtFiltro.PlaceholderText = "Nombre, apellido...";
-            txtFiltro.Size = new Size(455, 20);
+            txtFiltro.Size = new Size(650, 30);
             txtFiltro.TabIndex = 38;
             // 
             // iconButton1
@@ -143,10 +139,9 @@
             iconButton1.IconColor = Color.FromArgb(95, 154, 162);
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton1.IconSize = 28;
-            iconButton1.Location = new Point(10, 10);
-            iconButton1.Margin = new Padding(2);
+            iconButton1.Location = new Point(14, 17);
             iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(25, 22);
+            iconButton1.Size = new Size(36, 37);
             iconButton1.TabIndex = 0;
             iconButton1.UseVisualStyleBackColor = true;
             // 
@@ -155,36 +150,69 @@
             label4.AutoSize = true;
             label4.Font = new Font("Calibri", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(95, 154, 162);
-            label4.Location = new Point(49, 15);
-            label4.Margin = new Padding(2, 0, 2, 0);
+            label4.Location = new Point(70, 25);
             label4.Name = "label4";
-            label4.Size = new Size(0, 13);
+            label4.Size = new Size(0, 19);
             label4.TabIndex = 36;
+            // 
+            // btnSeleccionar
+            // 
+            btnSeleccionar.Location = new Point(53, 700);
+            btnSeleccionar.Margin = new Padding(4, 5, 4, 5);
+            btnSeleccionar.Name = "btnSeleccionar";
+            btnSeleccionar.Size = new Size(214, 75);
+            btnSeleccionar.StateCommon.Back.Color1 = Color.FromArgb(23, 74, 111);
+            btnSeleccionar.StateCommon.Back.Color2 = Color.FromArgb(23, 74, 111);
+            btnSeleccionar.StateCommon.Content.ShortText.Color1 = Color.White;
+            btnSeleccionar.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold);
+            btnSeleccionar.TabIndex = 54;
+            btnSeleccionar.Values.DropDownArrowColor = Color.Empty;
+            btnSeleccionar.Values.Text = "Seleccionar";
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(286, 700);
+            btnCancelar.Margin = new Padding(4, 5, 4, 5);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(214, 75);
+            btnCancelar.StateCommon.Back.Color1 = Color.Brown;
+            btnCancelar.StateCommon.Back.Color2 = Color.Brown;
+            btnCancelar.StateCommon.Content.ShortText.Color1 = Color.White;
+            btnCancelar.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold);
+            btnCancelar.TabIndex = 55;
+            btnCancelar.Values.DropDownArrowColor = Color.Empty;
+            btnCancelar.Values.Text = "Cancelar";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(0, 54, 60);
-            label6.Location = new Point(24, 29);
-            label6.Margin = new Padding(2, 0, 2, 0);
+            label6.Location = new Point(34, 48);
             label6.Name = "label6";
-            label6.Size = new Size(321, 39);
+            label6.Size = new Size(485, 59);
             label6.TabIndex = 48;
             label6.Text = "Busqueda de Pacientes";
             // 
             // FormBusquedaPaciente
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(218, 248, 226);
-            ClientSize = new Size(711, 452);
+            ClientSize = new Size(1016, 833);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnSeleccionar);
             Controls.Add(label7);
             Controls.Add(dgvPacientes);
             Controls.Add(foreverGroupBox1);
             Controls.Add(label6);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormBusquedaPaciente";
-            Text = "FormBusquedaPaciente";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Buscar Paciente";
             ((System.ComponentModel.ISupportInitialize)dgvPacientes).EndInit();
             foreverGroupBox1.ResumeLayout(false);
             foreverGroupBox1.PerformLayout();
@@ -201,6 +229,8 @@
         private ReaLTaiizor.Controls.ForeverGroupBox foreverGroupBox1;
         private TextBox txtFiltro;
         private Krypton.Toolkit.KryptonButton btnBuscar;
+        private Krypton.Toolkit.KryptonButton btnSeleccionar;
+        private Krypton.Toolkit.KryptonButton btnCancelar;
         private ReaLTaiizor.Controls.ForeverGroupBox foreverGroupBox2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private Label label4;

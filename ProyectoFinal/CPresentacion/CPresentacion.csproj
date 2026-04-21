@@ -9,8 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.102.3" />
     <PackageReference Include="FontAwesome.Sharp" Version="6.6.0" />
     <PackageReference Include="Krypton.Toolkit" Version="100.26.1.19" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.0" />
     <PackageReference Include="ReaLTaiizor" Version="3.8.1.6" />
   </ItemGroup>
@@ -18,6 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CAccesoDatos\CAccesoDatos.csproj" />
     <ProjectReference Include="..\CEntidades\CEntidades.csproj" />
+    <ProjectReference Include="..\CNegocio\CNegocio.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -3,101 +3,12 @@
     ViewData["Title"] = "Cola de Turnos";
 }
 
-<!-- A) SUMMARY CARDS ROW -->
-<section class="grid grid-cols-1 md:grid-cols-4 gap-6">
-    <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border-l-4 border-primary">
-        <div class="flex justify-between items-start">
-            <span style="font-size: 1.5rem;" class="text-primary">👥</span>
-            <span class="text-xs font-bold text-on-surface-variant tracking-wider uppercase">En Espera</span>
-        </div>
-        <div class="mt-4">
-            <h3 class="text-4xl font-headline font-extrabold text-primary" id="val-en-espera">@Model.TotalCreados</h3>
-            <p class="text-xs text-on-surface-variant mt-1">Total pacientes</p>
-        </div>
-    </div>
-    
-    <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border-l-4 border-error">
-        <div class="flex justify-between items-start">
-            <span style="font-size: 1.5rem;" class="text-error">🚨</span>
-            <span class="text-xs font-bold text-on-surface-variant tracking-wider uppercase">Emergencias</span>
-        </div>
-        <div class="mt-4">
-            <h3 class="text-4xl font-headline font-extrabold text-error" id="val-emergencias">@Model.TotalEmergencias</h3>
-            <p class="text-xs text-error font-medium mt-1 italic underline">Atención Inmediata</p>
-        </div>
-    </div>
-    
-    <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border-l-4 border-[#fedc97]">
-        <div class="flex justify-between items-start">
-            <span style="font-size: 1.5rem;">⚠️</span>
-            <span class="text-xs font-bold text-on-surface-variant tracking-wider uppercase">Prioritarios</span>
-        </div>
-        <div class="mt-4">
-            <h3 class="text-4xl font-headline font-extrabold text-[#9e7611]" id="val-prioritarios">@Model.TotalPrioritarios</h3>
-            <p class="text-xs text-on-surface-variant mt-1">Tiempo prom. 15 min</p>
-        </div>
-    </div>
-    
-    <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border-l-4 border-[#7c9885]">
-        <div class="flex justify-between items-start">
-            <span style="font-size: 1.5rem;" class="text-[#7c9885]">✅</span>
-            <span class="text-xs font-bold text-on-surface-variant tracking-wider uppercase">Atendidos Hoy</span>
-        </div>
-        <div class="mt-4">
-            <h3 class="text-4xl font-headline font-extrabold text-[#7c9885]" id="val-atendidos">@Model.TotalAtendidos</h3>
-            <p class="text-xs text-on-surface-variant mt-1">Completados</p>
-        </div>
-    </div>
-</section>
-
-<!-- B) FILTER BAR -->
-<form method="get" action="/Turnos" class="flex gap-4 items-center bg-surface-container-low p-4 rounded-xl shadow-sm mt-8 border border-white/50">
-    <span class="font-headline font-bold text-[#002842] mr-4">Filtros:</span>
-    <select name="filtroEstado" class="bg-surface-container-highest border-none rounded-full px-4 py-2 text-sm text-on-surface-variant focus:ring-2 focus:ring-primary" onchange="this.form.submit()">
-        <option value="">Estado: Todos</option>
-        @if (ViewBag.Estados != null)
-        {
-            foreach (var est in ViewBag.Estados)
-            {
-                if (Model.FiltroEstado == est.Nombre)
-                {
-                    <option value="@est.Nombre" selected>@est.Nombre</option>
-                }
-                else
-                {
-                    <option value="@est.Nombre">@est.Nombre</option>
-                }
-            }
-        }
-    </select>
-    <select name="filtroPrioridad" class="bg-surface-container-highest border-none rounded-full px-4 py-2 text-sm text-on-surface-variant focus:ring-2 focus:ring-primary" onchange="this.form.submit()">
-        <option value="">Prioridad: Todas</option>
-        @if (ViewBag.Prioridades != null)
-        {
-            foreach (var prio in ViewBag.Prioridades)
-            {
-                if (Model.FiltroPrioridad == prio.Nombre)
-                {
-                    <option value="@prio.Nombre" selected>@prio.Nombre</option>
-                }
-                else
-                {
-                    <option value="@prio.Nombre">@prio.Nombre</option>
-                }
-            }
-        }
-    </select>
-    <div class="h-8 w-[1px] bg-outline-variant/30 mx-2"></div>
-    <a href="/Turnos" class="text-primary hover:text-[#033f63] font-bold text-sm underline transition-colors">Limpiar filtros</a>
-</form>
-
-
-<!-- D) QUEUE TABLE -->
+ <!-- D) QUEUE TABLE -->
 <section class="bg-surface-container-lowest rounded-3xl shadow-sm overflow-hidden mt-8 border border-outline-variant/10">
     <div class="px-8 py-6 border-b border-surface-container-high flex justify-between items-center bg-white">
         <h3 class="text-xl font-headline font-bold text-primary">Próximos en Cola</h3>
         <div class="flex items-center gap-2 text-on-surface-variant text-sm">
-            <span>ℹ️ Los turnos se ordenan por prioridad.</span>
+            <span>ℹ️ Los turnos se ordenan por prioridad jerárquica.</span>
         </div>
     </div>
     
@@ -106,13 +17,10 @@
             <thead>
                 <tr class="bg-surface-container-low text-on-surface-variant text-[11px] uppercase tracking-widest font-bold">
                     <th class="px-8 py-4"># Turno</th>
-                    <th class="px-6 py-4">Paciente</th>
                     <th class="px-6 py-4">Médico</th>
                     <th class="px-6 py-4">Prioridad</th>
-                    <th class="px-6 py-4">Estado</th>
                     <th class="px-6 py-4">Espera</th>
                     <th class="px-6 py-4">Hora</th>
-                    <th class="px-8 py-4 text-right">Acciones</th>
                 </tr>
             </thead>
             <tbody class="divide-y divide-surface-container-high/50 bg-white">
@@ -120,19 +28,14 @@
                 {
                     string rowTintClass = "";
                     string badgeClass = "";
-                    string btnAtenderClass = "text-primary hover:bg-primary/5 px-4 py-2 rounded-lg text-xs font-bold transition-colors";
-                    string btnAtenderText = "ATENDER";
 
                     if (turno.PrioridadCss == "emergencia") { 
                         rowTintClass = "bg-error/5 hover:bg-error/10 transition-colors"; 
                         badgeClass = "bg-error text-white font-bold";
-                        btnAtenderClass = "bg-error text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-error/90 shadow-md";
-                        btnAtenderText = "LLAMAR / ATENDER";
                     }
                     else if (turno.PrioridadCss == "prioritario") { 
                         rowTintClass = "bg-[#fedc97]/15 hover:bg-[#fedc97]/30 transition-colors"; 
                         badgeClass = "bg-[#fedc97] text-[#9e7611] font-bold";
-                        btnAtenderClass = "bg-primary text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-primary/90 shadow-md";
                     }
                     else { 
                         rowTintClass = "bg-white hover:bg-surface-container-low transition-colors"; 
@@ -141,43 +44,19 @@
 
                     <tr class="@rowTintClass">
                         <td class="px-8 py-6 font-headline font-extrabold text-lg @(turno.PrioridadCss == "emergencia" ? "text-error" : "text-primary")">T-@turno.NumeroTurno</td>
-                        <td class="px-6 py-6 font-bold text-on-surface">@turno.PacienteNombre</td>
                         <td class="px-6 py-6 text-on-surface-variant">Dra(o). @turno.MedicoNombre</td>
                         <td class="px-6 py-6">
                             <span class="@badgeClass text-[10px] px-2 py-1 rounded">@turno.PrioridadNombre</span>
                         </td>
-                        <td class="px-6 py-6 text-xs text-on-surface-variant flex items-center gap-1.5 mt-2">
-                            <div class="w-1.5 h-1.5 rounded-full @(turno.PrioridadCss == "emergencia" ? "bg-error" : "bg-primary")"></div>
-                            @turno.EstadoNombre
-                        </td>
                         <td class="px-6 py-6 @(turno.PrioridadCss == "emergencia" ? "text-error" : "text-on-surface-variant") text-sm font-bold">@turno.TiempoEspera.ToString(@"mm\:ss") min</td>
                         <td class="px-6 py-6 text-on-surface-variant text-xs font-medium">@turno.FechaHoraCreacion.ToString("HH:mm")</td>
-                        <td class="px-8 py-6 text-right">
-                            <div class="flex justify-end gap-2">
-                                <form method="post" asp-controller="Turnos" asp-action="CambiarEstado">
-                                    @Html.AntiForgeryToken()
-                                    <input type="hidden" name="turnoId" value="@turno.TurnoId" />
-                                    <!-- Si esta en espera (1), pasarlo a Atendiendo (3) [Oh well, or 2 Llamado, let's stick to 3 Atender to save space] -->
-                                    <input type="hidden" name="nuevoEstadoId" value="3" />
-                                    <button type="submit" class="@btnAtenderClass">@btnAtenderText</button>
-                                </form>
-                                <form method="post" asp-controller="Turnos" asp-action="CambiarEstado" onsubmit="return confirm('¿Está seguro que desea cancelar el turno T-@turno.NumeroTurno?');">
-                                    @Html.AntiForgeryToken()
-                                    <input type="hidden" name="turnoId" value="@turno.TurnoId" />
-                                    <input type="hidden" name="nuevoEstadoId" value="4" />
-                                    <button type="submit" class="p-2 text-on-surface-variant hover:bg-surface-container-highest rounded-full transition-colors" title="Cancelar">
-                                        ❌
-                                    </button>
-                                </form>
-                            </div>
-                        </td>
                     </tr>
                 }
                 
                 @if (!Model.ColaEspera.Any())
                 {
                     <tr>
-                        <td colspan="8" class="text-center py-12 text-on-surface-variant">No hay pacientes esperando en la cola actualmente.</td>
+                        <td colspan="5" class="text-center py-12 text-on-surface-variant">No hay pacientes esperando en la cola actualmente.</td>
                     </tr>
                 }
             </tbody>
@@ -185,56 +64,28 @@
     </div>
 </section>
 
-<!-- E) HISTORIAL SECTION -->
-<details class="bg-surface-container-low rounded-3xl border border-outline-variant/20 overflow-hidden mt-8 group">
-    <summary class="w-full px-8 py-6 flex justify-between items-center hover:bg-surface-container-high transition-colors cursor-pointer outline-none list-none">
-        <div class="flex items-center gap-4">
-            <div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center text-primary text-xl">
-                ⏳
-            </div>
-            <div class="text-left">
-                <h4 class="font-bold text-primary">Historial del Día</h4>
-                <p class="text-xs text-on-surface-variant mt-1">@Model.Historial.Count pacientes procesados hoy</p>
-            </div>
-        </div>
-        <div class="text-primary font-bold opacity-70 group-open:rotate-180 transition-transform">▼</div>
-    </summary>
-    
-    <div class="px-8 pb-8 pt-2">
-        <table class="w-full text-left border-collapse mt-4">
-            <thead>
-                <tr class="text-on-surface-variant text-[11px] uppercase tracking-widest font-bold border-b border-surface-container-high">
-                    <th class="py-3 px-4">Turno</th>
-                    <th class="py-3 px-4">Paciente</th>
-                    <th class="py-3 px-4">Prioridad</th>
-                    <th class="py-3 px-4">Estado</th>
-                    <th class="py-3 px-4">Creación</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var turno in Model.Historial)
-                {
-                    <tr class="border-b border-surface-container-high/50 hover:bg-surface-container-highest/20 transition-colors">
-                        <td class="py-3 px-4 font-bold text-on-surface-variant">T-@turno.NumeroTurno</td>
-                        <td class="py-3 px-4 text-on-surface">@turno.PacienteNombre</td>
-                        <td class="py-3 px-4">@turno.PrioridadNombre</td>
-                        <td class="py-3 px-4">
-                            <span class="@(turno.EstadoCss == "cancelado" ? "text-error" : "text-[#7c9885]") font-bold text-xs uppercase tracking-wider">
-                                @turno.EstadoNombre
-                            </span>
-                        </td>
-                        <td class="py-3 px-4 text-on-surface-variant text-sm">@turno.FechaHoraCreacion.ToString("HH:mm")</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-</details>
+
 
 <div class="text-xs text-right text-outline-variant mt-4" id="last-update-indicator"></div>
 
 @section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.0/signalr.min.js"></script>
     <script>
+        // Configurar conexión a SignalR
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/turnoHub")
+            .withAutomaticReconnect()
+            .build();
+
+        // Escuchar el evento de actualización
+        connection.on("UpdateQueue", () => {
+            console.log("Cola actualizada en servidor. Recargando...");
+            window.location.reload();
+        });
+
+        // Iniciar conexión
+        connection.start().catch(err => console.error("Error conectando a SignalR:", err));
+
         function updateLiveTimer() {
             const timerEl = document.getElementById('live-timer');
             if (timerEl) {
@@ -256,30 +107,6 @@
         setInterval(updateLiveTimer, 1000);
         updateLiveTimer();
 
-        function fetchQueueUpdates() {
-            fetch('/Turnos/Api/Cola')
-                .then(response => {
-                    if (!response.ok) throw new Error('Network response non-ok');
-                    return response.json();
-                })
-                .then(data => {
-                    const getVal = (prop) => data[prop] !== undefined ? data[prop] : (data[prop.toLowerCase()] !== undefined ? data[prop.toLowerCase()] : null);
-                    
-                    if(getVal('TotalCreados') !== null) document.getElementById('val-en-espera').innerText = getVal('TotalCreados');
-                    if(getVal('TotalEmergencias') !== null) document.getElementById('val-emergencias').innerText = getVal('TotalEmergencias');
-                    if(getVal('TotalPrioritarios') !== null) document.getElementById('val-prioritarios').innerText = getVal('TotalPrioritarios');
-                    if(getVal('TotalAtendidos') !== null) document.getElementById('val-atendidos').innerText = getVal('TotalAtendidos');
-
-                    const now = new Date();
-                    document.getElementById('last-update-indicator').innerText = 'Última actualización (API real-time): ' + now.toLocaleTimeString('es-ES');
-                })
-                .catch(err => {
-                    console.log('Error refreshing queue API:', err);
-                });
-        }
-        
-        setInterval(fetchQueueUpdates, 30000);
-        
         const initNow = new Date();
         document.getElementById('last-update-indicator').innerText = 'Última actualización: ' + initNow.toLocaleTimeString('es-ES');
     </script>

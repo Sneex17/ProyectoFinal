@@ -30,9 +30,9 @@
         {
             label7 = new Label();
             label6 = new Label();
-            kryptonButton3 = new Krypton.Toolkit.KryptonButton();
-            kryptonButton2 = new Krypton.Toolkit.KryptonButton();
-            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
+            btnEliminar = new Krypton.Toolkit.KryptonButton();
+            btnEditar = new Krypton.Toolkit.KryptonButton();
+            btnCrear = new Krypton.Toolkit.KryptonButton();
             foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
             parrotGroupBox3 = new ReaLTaiizor.Controls.ParrotGroupBox();
             txtDescripcion = new TextBox();
@@ -41,6 +41,9 @@
             label2 = new Label();
             label1 = new Label();
             dgvEspecialidades = new DataGridView();
+            EspecialidadId = new DataGridViewTextBoxColumn();
+            Especialidad = new DataGridViewTextBoxColumn();
+            Descripcion = new DataGridViewTextBoxColumn();
             foreverGroupBox1.SuspendLayout();
             parrotGroupBox3.SuspendLayout();
             parrotGroupBox1.SuspendLayout();
@@ -71,65 +74,65 @@
             label6.TabIndex = 25;
             label6.Text = "Registro de Especialidades";
             // 
-            // kryptonButton3
+            // btnEliminar
             // 
-            kryptonButton3.Location = new Point(54, 542);
-            kryptonButton3.Margin = new Padding(2, 2, 2, 2);
-            kryptonButton3.Name = "kryptonButton3";
-            kryptonButton3.Size = new Size(100, 51);
-            kryptonButton3.StateCommon.Back.Color1 = Color.IndianRed;
-            kryptonButton3.StateCommon.Back.Color2 = Color.Brown;
-            kryptonButton3.StateCommon.Back.ColorAngle = -2F;
-            kryptonButton3.StateCommon.Border.Color1 = Color.Transparent;
-            kryptonButton3.StateCommon.Border.Color2 = Color.Transparent;
-            kryptonButton3.StateCommon.Border.Rounding = 40F;
-            kryptonButton3.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            kryptonButton3.StateCommon.Content.ShortText.Color1 = Color.White;
-            kryptonButton3.StateCommon.Content.ShortText.Color2 = Color.White;
-            kryptonButton3.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            kryptonButton3.TabIndex = 22;
-            kryptonButton3.Values.DropDownArrowColor = Color.Empty;
-            kryptonButton3.Values.Text = "Desactivar";
+            btnEliminar.Location = new Point(54, 542);
+            btnEliminar.Margin = new Padding(2);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(100, 51);
+            btnEliminar.StateCommon.Back.Color1 = Color.IndianRed;
+            btnEliminar.StateCommon.Back.Color2 = Color.Brown;
+            btnEliminar.StateCommon.Back.ColorAngle = -2F;
+            btnEliminar.StateCommon.Border.Color1 = Color.Transparent;
+            btnEliminar.StateCommon.Border.Color2 = Color.Transparent;
+            btnEliminar.StateCommon.Border.Rounding = 40F;
+            btnEliminar.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEliminar.StateCommon.Content.ShortText.Color1 = Color.White;
+            btnEliminar.StateCommon.Content.ShortText.Color2 = Color.White;
+            btnEliminar.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEliminar.TabIndex = 22;
+            btnEliminar.Values.DropDownArrowColor = Color.Empty;
+            btnEliminar.Values.Text = "Desactivar";
             // 
-            // kryptonButton2
+            // btnEditar
             // 
-            kryptonButton2.Location = new Point(172, 542);
-            kryptonButton2.Margin = new Padding(2, 2, 2, 2);
-            kryptonButton2.Name = "kryptonButton2";
-            kryptonButton2.Size = new Size(100, 51);
-            kryptonButton2.StateCommon.Back.Color1 = Color.FromArgb(254, 219, 151);
-            kryptonButton2.StateCommon.Back.Color2 = Color.FromArgb(254, 219, 151);
-            kryptonButton2.StateCommon.Back.ColorAngle = -2F;
-            kryptonButton2.StateCommon.Border.Color1 = Color.Transparent;
-            kryptonButton2.StateCommon.Border.Color2 = Color.Transparent;
-            kryptonButton2.StateCommon.Border.Rounding = 40F;
-            kryptonButton2.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            kryptonButton2.StateCommon.Content.ShortText.Color1 = Color.White;
-            kryptonButton2.StateCommon.Content.ShortText.Color2 = Color.White;
-            kryptonButton2.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            kryptonButton2.TabIndex = 21;
-            kryptonButton2.Values.DropDownArrowColor = Color.Empty;
-            kryptonButton2.Values.Text = "Editar";
+            btnEditar.Location = new Point(172, 542);
+            btnEditar.Margin = new Padding(2);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(100, 51);
+            btnEditar.StateCommon.Back.Color1 = Color.FromArgb(254, 219, 151);
+            btnEditar.StateCommon.Back.Color2 = Color.FromArgb(254, 219, 151);
+            btnEditar.StateCommon.Back.ColorAngle = -2F;
+            btnEditar.StateCommon.Border.Color1 = Color.Transparent;
+            btnEditar.StateCommon.Border.Color2 = Color.Transparent;
+            btnEditar.StateCommon.Border.Rounding = 40F;
+            btnEditar.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEditar.StateCommon.Content.ShortText.Color1 = Color.White;
+            btnEditar.StateCommon.Content.ShortText.Color2 = Color.White;
+            btnEditar.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEditar.TabIndex = 21;
+            btnEditar.Values.DropDownArrowColor = Color.Empty;
+            btnEditar.Values.Text = "Editar";
             // 
-            // kryptonButton1
+            // btnCrear
             // 
-            kryptonButton1.Location = new Point(289, 542);
-            kryptonButton1.Margin = new Padding(2, 2, 2, 2);
-            kryptonButton1.Name = "kryptonButton1";
-            kryptonButton1.Size = new Size(100, 51);
-            kryptonButton1.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
-            kryptonButton1.StateCommon.Back.Color2 = Color.FromArgb(23, 74, 111);
-            kryptonButton1.StateCommon.Back.ColorAngle = -2F;
-            kryptonButton1.StateCommon.Border.Color1 = Color.Transparent;
-            kryptonButton1.StateCommon.Border.Color2 = Color.Transparent;
-            kryptonButton1.StateCommon.Border.Rounding = 40F;
-            kryptonButton1.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            kryptonButton1.StateCommon.Content.ShortText.Color1 = Color.White;
-            kryptonButton1.StateCommon.Content.ShortText.Color2 = Color.White;
-            kryptonButton1.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            kryptonButton1.TabIndex = 20;
-            kryptonButton1.Values.DropDownArrowColor = Color.Empty;
-            kryptonButton1.Values.Text = "Crear";
+            btnCrear.Location = new Point(289, 542);
+            btnCrear.Margin = new Padding(2);
+            btnCrear.Name = "btnCrear";
+            btnCrear.Size = new Size(100, 51);
+            btnCrear.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
+            btnCrear.StateCommon.Back.Color2 = Color.FromArgb(23, 74, 111);
+            btnCrear.StateCommon.Back.ColorAngle = -2F;
+            btnCrear.StateCommon.Border.Color1 = Color.Transparent;
+            btnCrear.StateCommon.Border.Color2 = Color.Transparent;
+            btnCrear.StateCommon.Border.Rounding = 40F;
+            btnCrear.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCrear.StateCommon.Content.ShortText.Color1 = Color.White;
+            btnCrear.StateCommon.Content.ShortText.Color2 = Color.White;
+            btnCrear.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCrear.TabIndex = 20;
+            btnCrear.Values.DropDownArrowColor = Color.Empty;
+            btnCrear.Values.Text = "Crear";
             // 
             // foreverGroupBox1
             // 
@@ -143,7 +146,7 @@
             foreverGroupBox1.Controls.Add(label1);
             foreverGroupBox1.Font = new Font("Segoe UI", 10F);
             foreverGroupBox1.Location = new Point(46, 118);
-            foreverGroupBox1.Margin = new Padding(2, 2, 2, 2);
+            foreverGroupBox1.Margin = new Padding(2);
             foreverGroupBox1.Name = "foreverGroupBox1";
             foreverGroupBox1.ShowArrow = true;
             foreverGroupBox1.ShowText = true;
@@ -159,9 +162,9 @@
             parrotGroupBox3.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             parrotGroupBox3.ForeColor = Color.FromArgb(4, 79, 86);
             parrotGroupBox3.Location = new Point(39, 139);
-            parrotGroupBox3.Margin = new Padding(2, 2, 2, 2);
+            parrotGroupBox3.Margin = new Padding(2);
             parrotGroupBox3.Name = "parrotGroupBox3";
-            parrotGroupBox3.Padding = new Padding(2, 2, 2, 2);
+            parrotGroupBox3.Padding = new Padding(2);
             parrotGroupBox3.ShowText = true;
             parrotGroupBox3.Size = new Size(275, 264);
             parrotGroupBox3.TabIndex = 10;
@@ -175,7 +178,7 @@
             txtDescripcion.Font = new Font("Corbel", 12F);
             txtDescripcion.ForeColor = Color.FromArgb(4, 79, 86);
             txtDescripcion.Location = new Point(11, 17);
-            txtDescripcion.Margin = new Padding(2, 2, 2, 2);
+            txtDescripcion.Margin = new Padding(2);
             txtDescripcion.Multiline = true;
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.PlaceholderText = "Describa la especialidad médica";
@@ -190,9 +193,9 @@
             parrotGroupBox1.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             parrotGroupBox1.ForeColor = Color.FromArgb(4, 79, 86);
             parrotGroupBox1.Location = new Point(39, 80);
-            parrotGroupBox1.Margin = new Padding(2, 2, 2, 2);
+            parrotGroupBox1.Margin = new Padding(2);
             parrotGroupBox1.Name = "parrotGroupBox1";
-            parrotGroupBox1.Padding = new Padding(2, 2, 2, 2);
+            parrotGroupBox1.Padding = new Padding(2);
             parrotGroupBox1.ShowText = true;
             parrotGroupBox1.Size = new Size(275, 41);
             parrotGroupBox1.TabIndex = 1;
@@ -206,7 +209,7 @@
             txtNombreEspecialidad.Font = new Font("Corbel", 12F);
             txtNombreEspecialidad.ForeColor = Color.FromArgb(4, 79, 86);
             txtNombreEspecialidad.Location = new Point(11, 17);
-            txtNombreEspecialidad.Margin = new Padding(2, 2, 2, 2);
+            txtNombreEspecialidad.Margin = new Padding(2);
             txtNombreEspecialidad.Name = "txtNombreEspecialidad";
             txtNombreEspecialidad.PlaceholderText = "Ej: cardiología";
             txtNombreEspecialidad.Size = new Size(254, 20);
@@ -239,12 +242,28 @@
             // 
             dgvEspecialidades.BackgroundColor = Color.White;
             dgvEspecialidades.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvEspecialidades.Columns.AddRange(new DataGridViewColumn[] { EspecialidadId, Especialidad, Descripcion });
             dgvEspecialidades.Location = new Point(454, 118);
-            dgvEspecialidades.Margin = new Padding(2, 2, 2, 2);
+            dgvEspecialidades.Margin = new Padding(2);
             dgvEspecialidades.Name = "dgvEspecialidades";
             dgvEspecialidades.RowHeadersWidth = 62;
             dgvEspecialidades.Size = new Size(346, 421);
             dgvEspecialidades.TabIndex = 41;
+            // 
+            // EspecialidadId
+            // 
+            EspecialidadId.HeaderText = "EspecialidadId";
+            EspecialidadId.Name = "EspecialidadId";
+            // 
+            // Especialidad
+            // 
+            Especialidad.HeaderText = "Especialidad";
+            Especialidad.Name = "Especialidad";
+            // 
+            // Descripcion
+            // 
+            Descripcion.HeaderText = "Descripcion";
+            Descripcion.Name = "Descripcion";
             // 
             // FormRegistroEspecialidades
             // 
@@ -255,11 +274,11 @@
             Controls.Add(dgvEspecialidades);
             Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(kryptonButton3);
-            Controls.Add(kryptonButton2);
-            Controls.Add(kryptonButton1);
+            Controls.Add(btnEliminar);
+            Controls.Add(btnEditar);
+            Controls.Add(btnCrear);
             Controls.Add(foreverGroupBox1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "FormRegistroEspecialidades";
             Text = "FormRegistroEspecialidades";
             foreverGroupBox1.ResumeLayout(false);
@@ -277,9 +296,9 @@
 
         private Label label7;
         private Label label6;
-        private Krypton.Toolkit.KryptonButton kryptonButton3;
-        private Krypton.Toolkit.KryptonButton kryptonButton2;
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
+        private Krypton.Toolkit.KryptonButton btnEliminar;
+        private Krypton.Toolkit.KryptonButton btnEditar;
+        private Krypton.Toolkit.KryptonButton btnCrear;
         private ReaLTaiizor.Controls.ForeverGroupBox foreverGroupBox1;
         private ReaLTaiizor.Controls.ParrotGroupBox parrotGroupBox4;
         private TextBox txtApellido;
@@ -297,5 +316,8 @@
         private TextBox txtDescripcion;
         private TextBox txtNombreEspecialidad;
         private DataGridView dgvEspecialidades;
+        private DataGridViewTextBoxColumn EspecialidadId;
+        private DataGridViewTextBoxColumn Especialidad;
+        private DataGridViewTextBoxColumn Descripcion;
     }
 }

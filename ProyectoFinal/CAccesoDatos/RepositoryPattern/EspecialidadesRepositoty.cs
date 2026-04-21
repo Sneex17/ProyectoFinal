@@ -1,5 +1,7 @@
 ﻿using CEntidades.Models;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 namespace CAccesoDatos.RepositoryPattern
 {
     public class EspecialidadesRepositoty : IRepositoryGeneral<Especialidade>
@@ -14,12 +16,18 @@ namespace CAccesoDatos.RepositoryPattern
         }
         public void Actualizar(Especialidade tabla)
         {
-            throw new NotImplementedException();
+            var especialidad = _context.Especialidades.Find(tabla.EspecialidadId);
+
+            especialidad.Nombre = tabla.Nombre;
+            especialidad.Descripcion = tabla.Descripcion;
+
+            _context.SaveChanges();
         }
 
         public void Agregar(Especialidade tabla)
         {
-            throw new NotImplementedException();
+            _context.Especialidades.Add(tabla);
+            _context.SaveChanges();
         }
 
         public void Eliminar(Especialidade tabla)

@@ -6,7 +6,9 @@
 
         public override string GetEtiqueta() => "Baja";
 
-        public override string GetColorFila() => "PaleGreen";
+        public override string GetColorFila() => "#DCFFDC";
+
+        public override System.Drawing.Color GetColor() => System.Drawing.Color.FromArgb(200, 230, 255);
 
         public override string GetDescripcion()
             => $"{base.GetDescripcion()} | Prioridad: Baja";
