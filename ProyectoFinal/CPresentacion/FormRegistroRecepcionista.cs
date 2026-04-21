@@ -16,7 +16,6 @@ namespace CPresentacion
         {
             InitializeComponent();
             cmbRol.SelectedIndex = 0;
-
         }
     }
 }

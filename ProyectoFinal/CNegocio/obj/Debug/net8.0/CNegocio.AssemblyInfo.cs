@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CNegocio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3aafb727a0c1191e6dd1fe76885e283efd11dc3b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb463875015e763e814b1a2a17f32af3606e0007")]
 [assembly: System.Reflection.AssemblyProductAttribute("CNegocio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CNegocio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
