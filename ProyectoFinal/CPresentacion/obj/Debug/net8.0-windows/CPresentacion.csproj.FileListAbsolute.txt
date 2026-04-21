@@ -198,3 +198,4 @@ C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPrese
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\bin\Debug\net8.0-windows\Irony.dll
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\bin\Debug\net8.0-windows\XLParser.dll
+C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.FormObservacion.resources
