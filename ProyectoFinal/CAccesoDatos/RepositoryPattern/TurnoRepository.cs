@@ -254,5 +254,175 @@ namespace CAccesoDatos.RepositoryPattern
 
             return turnos;
         }
+
+        public (int Total, int Creado, int EnAtencion, int Atendido, int Cancelado, int Postergado) ObtenerEstadisticas(DateTime? fechaDesde, DateTime? fechaHasta, int? especialidadId = null)
+        {
+            using var connection = new SqlConnection(_connectionString);
+            
+            fechaDesde = fechaDesde ?? DateTime.Today.AddDays(-30);
+            fechaHasta = fechaHasta ?? DateTime.Today;
+
+            string query = @"
+                SELECT 
+                    et.Nombre AS Estado,
+                    COUNT(t.TurnoId) AS Cantidad
+                FROM Turnos t
+                INNER JOIN EstadoTurnos et ON t.EstadoTurnoId = et.EstadoTurnoId
+                LEFT JOIN Medicos m ON t.MedicoId = m.MedicoId
+                WHERE CAST(t.FechaHoraCreacion AS DATE) BETWEEN @FechaDesde AND @FechaHasta
+                    AND (@EspecialidadId IS NULL OR m.EspecialidadId = @EspecialidadId)
+                GROUP BY et.Nombre";
+
+            using var command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@FechaDesde", fechaDesde);
+            command.Parameters.AddWithValue("@FechaHasta", fechaHasta);
+            command.Parameters.AddWithValue("@EspecialidadId", especialidadId ?? (object)DBNull.Value);
+
+            connection.Open();
+            using var reader = command.ExecuteReader();
+
+            int creado = 0, enAtencion = 0, atendido = 0, cancelado = 0, postergado = 0;
+            int total = 0;
+
+            while (reader.Read())
+            {
+                var estadoObj = reader["Estado"];
+                var cantidadObj = reader["Cantidad"];
+                
+                if (estadoObj == null || cantidadObj == null || estadoObj == DBNull.Value || cantidadObj == DBNull.Value) continue;
+                
+                string estado = estadoObj.ToString() ?? "";
+                int cantidad = 0;
+                int.TryParse(cantidadObj.ToString(), out cantidad);
+                total += cantidad;
+
+                switch (estado.Trim())
+                {
+                    case "Creado": creado = cantidad; break;
+                    case "EnAtención": enAtencion = cantidad; break;
+                    case "Atendido": atendido = cantidad; break;
+                    case "Cancelado": cancelado = cantidad; break;
+                    case "Postergado": postergado = cantidad; break;
+                }
+            }
+
+            return (total, creado, enAtencion, atendido, cancelado, postergado);
+        }
+
+        public List<(string Medico, int TurnosAtendidos)> ObtenerTopMedicos(DateTime? fechaDesde, DateTime? fechaHasta, int? especialidadId = null, int top = 5)
+        {
+            using var connection = new SqlConnection(_connectionString);
+            
+            fechaDesde = fechaDesde ?? DateTime.Today.AddDays(-30);
+            fechaHasta = fechaHasta ?? DateTime.Today;
+
+            string query = $@"
+                SELECT TOP {top}
+                    m.Nombre + ' ' + m.Apellido AS Medico,
+                    COUNT(t.TurnoId) AS TurnosAtendidos
+                FROM Turnos t
+                INNER JOIN Medicos m ON t.MedicoId = m.MedicoId
+                WHERE t.EstadoTurnoId = 3
+                    AND CAST(t.FechaHoraCreacion AS DATE) BETWEEN @FechaDesde AND @FechaHasta
+                    AND (@EspecialidadId IS NULL OR m.EspecialidadId = @EspecialidadId)
+                GROUP BY m.Nombre + ' ' + m.Apellido
+                ORDER BY TurnosAtendidos DESC";
+
+            using var command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@FechaDesde", fechaDesde);
+            command.Parameters.AddWithValue("@FechaHasta", fechaHasta);
+            command.Parameters.AddWithValue("@EspecialidadId", especialidadId ?? (object)DBNull.Value);
+
+            connection.Open();
+            using var reader = command.ExecuteReader();
+
+            var medicos = new List<(string, int)>();
+
+            while (reader.Read())
+            {
+                var medicoObj = reader["Medico"];
+                var turnosObj = reader["TurnosAtendidos"];
+                
+                if (medicoObj == null || medicoObj == DBNull.Value) continue;
+                
+                string medico = medicoObj.ToString() ?? "";
+                int turnos = 0;
+                if (turnosObj != null && turnosObj != DBNull.Value)
+                    int.TryParse(turnosObj.ToString(), out turnos);
+                
+                medicos.Add((medico, turnos));
+            }
+
+            return medicos;
+        }
+
+        public int ObtenerTotalPacientes(DateTime? fechaDesde, DateTime? fechaHasta, int? especialidadId = null)
+        {
+            using var connection = new SqlConnection(_connectionString);
+            
+            fechaDesde = fechaDesde ?? DateTime.Today.AddDays(-30);
+            fechaHasta = fechaHasta ?? DateTime.Today;
+
+            string query = @"
+                SELECT COUNT(DISTINCT t.PacienteId) AS TotalPacientes
+                FROM Turnos t
+                LEFT JOIN Medicos m ON t.MedicoId = m.MedicoId
+                WHERE CAST(t.FechaHoraCreacion AS DATE) BETWEEN @FechaDesde AND @FechaHasta
+                    AND (@EspecialidadId IS NULL OR m.EspecialidadId = @EspecialidadId)";
+
+            using var command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@FechaDesde", fechaDesde);
+            command.Parameters.AddWithValue("@FechaHasta", fechaHasta);
+            command.Parameters.AddWithValue("@EspecialidadId", especialidadId ?? (object)DBNull.Value);
+
+            connection.Open();
+            var result = command.ExecuteScalar();
+            if (result == null || result == DBNull.Value) return 0;
+            
+            int valor = 0;
+            int.TryParse(result.ToString(), out valor);
+            return valor;
+        }
+
+        public DataTable ObtenerTurnosDetallados(DateTime? fechaDesde, DateTime? fechaHasta, int? especialidadId = null)
+        {
+            using var connection = new SqlConnection(_connectionString);
+            
+            fechaDesde = fechaDesde ?? DateTime.Today.AddDays(-30);
+            fechaHasta = fechaHasta ?? DateTime.Today;
+
+            string query = @"
+                SELECT 
+                    t.TurnoId AS [N° Turno],
+                    t.NumeroTurno AS [Número],
+                    CAST(t.FechaHoraCreacion AS DATE) AS [Fecha],
+                    et.Nombre AS [Estado],
+                    pr.Nombre AS [Prioridad],
+                    p.Cedula AS [Cédula Paciente],
+                    p.Nombre + ' ' + p.Apellido AS [Paciente],
+                    m.Nombre + ' ' + m.Apellido AS [Médico],
+                    e.Nombre AS [Especialidad],
+                    ISNULL(t.Observaciones, '') AS [Observaciones]
+                FROM Turnos t
+                INNER JOIN EstadoTurnos et ON t.EstadoTurnoId = et.EstadoTurnoId
+                INNER JOIN Prioridades pr ON t.PrioridadId = pr.PrioridadId
+                INNER JOIN Pacientes p ON t.PacienteId = p.PacienteId
+                INNER JOIN Medicos m ON t.MedicoId = m.MedicoId
+                INNER JOIN Especialidades e ON m.EspecialidadId = e.EspecialidadId
+                WHERE CAST(t.FechaHoraCreacion AS DATE) BETWEEN @FechaDesde AND @FechaHasta
+                    AND (@EspecialidadId IS NULL OR e.EspecialidadId = @EspecialidadId)
+                ORDER BY t.FechaHoraCreacion DESC";
+
+            using var command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@FechaDesde", fechaDesde);
+            command.Parameters.AddWithValue("@FechaHasta", fechaHasta);
+            command.Parameters.AddWithValue("@EspecialidadId", especialidadId ?? (object)DBNull.Value);
+
+            var dataTable = new DataTable("Estadisticas");
+            using var adapter = new SqlDataAdapter(command);
+            adapter.Fill(dataTable);
+            
+            return dataTable;
+        }
     }
 }
