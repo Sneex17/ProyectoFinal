@@ -2,6 +2,7 @@ using System;
 using System.Windows.Forms;
 using CAccesoDatos.RepositoryPattern;
 using CEntidades.Models;
+using CNegocio;
 
 namespace CPresentacion
 {
@@ -76,7 +77,7 @@ namespace CPresentacion
             {
                 try
                 {
-                    _pacienteRepo.Insertar(
+                    ServiciosPacientes.InsertarPaciente(
                         form.Cedula,
                         form.Nombre,
                         form.Apellido,
@@ -114,7 +115,7 @@ namespace CPresentacion
             {
                 try
                 {
-                    _pacienteRepo.Actualizar(
+                    ServiciosPacientes.Actualizar(
                         paciente.PacienteId,
                         form.Nombre,
                         form.Apellido,
@@ -153,7 +154,7 @@ namespace CPresentacion
                 var paciente = (Paciente)dataGridView1.SelectedRows[0].DataBoundItem;
                 try
                 {
-                    var (success, mensaje) = _pacienteRepo.Eliminar(paciente.PacienteId);
+                    var (success, mensaje) = ServiciosPacientes.Eliminar(paciente.PacienteId);
                     MessageBox.Show(mensaje, success ? "Éxito" : "Error",
                         MessageBoxButtons.OK, success ? MessageBoxIcon.Information : MessageBoxIcon.Error);
                     CargarPacientes();

@@ -5,7 +5,6 @@ C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPrese
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\bin\Debug\net8.0-windows\CPresentacion.pdb
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\bin\Debug\net8.0-windows\ReaLTaiizor.dll
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.csproj.AssemblyReference.cache
-C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.Form1.resources
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.csproj.GenerateResource.cache
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.AssemblyInfoInputs.cache
@@ -188,7 +187,6 @@ C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPrese
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.FormGestionPacientes.resources
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.FormHistorialDeTurno.resources
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.FormLogIn.resources
-C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.FormMenu.resources
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.FormMenuPrincipal.resources
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.FormRegistroRecepcionista.resources
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal\CPresentacion\obj\Debug\net8.0-windows\CPresentacion.FormRegistroTurno.resources

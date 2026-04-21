@@ -6,14 +6,14 @@ namespace CAccesoDatos.RepositoryPattern
 {
     public class PacienteRepository
     {
-        private readonly string _connectionString;
+        private static readonly string _connectionString;
 
-        public PacienteRepository()
+        static PacienteRepository()
         {
             _connectionString = ConexionAppDB.ConnectionString;
         }
 
-        public int Insertar(string cedula, string nombre, string apellido, DateOnly fechaNacimiento, 
+        public static int Insertar(string cedula, string nombre, string apellido, DateOnly fechaNacimiento, 
             string sexo, string? direccion, string? seguro, string? correo)
         {
             using var connection = new SqlConnection(_connectionString);
@@ -37,7 +37,7 @@ namespace CAccesoDatos.RepositoryPattern
             return (int)pacienteIdParam.Value;
         }
 
-        public void Actualizar(int pacienteId, string nombre, string apellido, DateOnly fechaNacimiento,
+        public static void Actualizar(int pacienteId, string nombre, string apellido, DateOnly fechaNacimiento,
             string sexo, string? direccion, string? seguro, string? correo)
         {
             using var connection = new SqlConnection(_connectionString);
@@ -56,7 +56,7 @@ namespace CAccesoDatos.RepositoryPattern
             command.ExecuteNonQuery();
         }
 
-        public (bool Success, string Mensaje) Eliminar(int pacienteId)
+        public static (bool Success, string Mensaje) Eliminar(int pacienteId)
         {
             using var connection = new SqlConnection(_connectionString);
             using var command = new SqlCommand("sp_EliminarPaciente", connection);
