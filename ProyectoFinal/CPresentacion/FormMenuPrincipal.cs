@@ -47,7 +47,7 @@ namespace CPresentacion
             menuRegistroRecepcionista.Visible = true;
             menuEstadisticas.Visible = true;
             menuHistorialTurno.Visible = true;
-            menuHistorialPacientes.Visible = true;
+            menuHistorialPacientes.Visible = false;
             menuColaTurnos.Visible = true;
             menuAtencion.Visible = true;
             menuGestionPacientes.Visible = true;
@@ -61,8 +61,8 @@ namespace CPresentacion
             menuRegistrarEspecialidades.Visible = false;
             menuRegistroRecepcionista.Visible = false;
             menuEstadisticas.Visible = false;
-            menuHistorialTurno.Visible = true;
-            menuHistorialPacientes.Visible = false;
+            menuHistorialTurno.Visible = false;
+            menuHistorialPacientes.Visible = true;
             menuColaTurnos.Visible = true;
             menuAtencion.Visible = true;
             menuGestionPacientes.Visible = false;
@@ -76,8 +76,8 @@ namespace CPresentacion
             menuRegistrarEspecialidades.Visible = false;
             menuRegistroRecepcionista.Visible = false;
             menuEstadisticas.Visible = false;
-            menuHistorialTurno.Visible = true;
-            menuHistorialPacientes.Visible = true;
+            menuHistorialTurno.Visible = false;
+            menuHistorialPacientes.Visible = false;
             menuColaTurnos.Visible = true;
             menuAtencion.Visible = false;
             menuGestionPacientes.Visible = true;
@@ -177,7 +177,9 @@ namespace CPresentacion
 
         private void menuHistorialTurno_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(menuHistorialTurno, new FormHistorialDeTurno());
+
+            AbrirFormulario(menuHistorialPacientes, new FormHistorialDePacientes());
+
         }
 
         private void menuCerrarSesion_Click(object sender, EventArgs e)

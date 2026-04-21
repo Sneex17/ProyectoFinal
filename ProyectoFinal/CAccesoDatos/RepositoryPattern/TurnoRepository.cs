@@ -1,16 +1,29 @@
-using Microsoft.Data.SqlClient;
-using System.Data;
 using CEntidades.Models;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using System.Globalization;
+using Microsoft.Extensions.Options;
+using System.Data;
 
 namespace CAccesoDatos.RepositoryPattern
 {
     public class TurnoRepository
     {
         private readonly string _connectionString;
+        private readonly GestionTurnosHospitalDbContext _context;
+        
 
-        public TurnoRepository()
+
+
+    public TurnoRepository()
         {
+
             _connectionString = ConexionAppDB.ConnectionString;
+            var options = new DbContextOptionsBuilder<GestionTurnosHospitalDbContext>()
+           .UseSqlServer(ConexionAppDB.ConnectionString)
+           .Options;
+            _context = new GestionTurnosHospitalDbContext(options);
+
         }
 
         public (int TurnoId, int NumeroTurno, string Mensaje) CrearTurno(
@@ -254,5 +267,56 @@ namespace CAccesoDatos.RepositoryPattern
 
             return turnos;
         }
+
+        public List<TurnoHistorialDto> FiltrarHistorial(string? pacienteNombre, string? medicoNombre, DateTime? fechaInicio, int? especialidadId, int? estadoTurnoId, int? medicoIdLogin)
+        {
+            var historial = new List<TurnoHistorialDto>();
+
+            using var connection = new SqlConnection(_connectionString);
+            using var command = new SqlCommand("sp_FiltrarHistorialTurnos", connection);
+            command.CommandType = CommandType.StoredProcedure;
+
+            command.Parameters.AddWithValue("@PacienteNombre", (object?)pacienteNombre ?? DBNull.Value);
+            command.Parameters.AddWithValue("@MedicoNombre", (object?)medicoNombre ?? DBNull.Value);
+            command.Parameters.AddWithValue("@FechaInicio", (object?)fechaInicio ?? DBNull.Value);
+            command.Parameters.AddWithValue("@EspecialidadId", (object?)especialidadId ?? DBNull.Value);
+            command.Parameters.AddWithValue("@EstadoTurnoId", (object?)estadoTurnoId ?? DBNull.Value);
+            command.Parameters.AddWithValue("@MedicoIdLogin", (object?)medicoIdLogin ?? DBNull.Value);
+
+            connection.Open();
+            using var reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                var item = new TurnoHistorialDto
+                {
+                    TurnoId = reader.GetInt32(reader.GetOrdinal("TurnoId")),
+                    NumeroTurno = reader.GetInt32(reader.GetOrdinal("NumeroTurno")),
+                    Paciente = reader.GetString(reader.GetOrdinal("Paciente")),
+                    Medico = reader.GetString(reader.GetOrdinal("Medico")),
+                    Especialidad = reader.GetString(reader.GetOrdinal("Especialidad")),
+                    Estado = reader.GetString(reader.GetOrdinal("Estado")),
+                    Prioridad = reader.GetString(reader.GetOrdinal("Prioridad")),
+                    FechaHoraCreacion = reader.IsDBNull(reader.GetOrdinal("FechaHoraCreacion")) ? null : reader.GetDateTime(reader.GetOrdinal("FechaHoraCreacion")),
+                    FechaHoraInicio = reader.IsDBNull(reader.GetOrdinal("FechaHoraInicio")) ? null : reader.GetDateTime(reader.GetOrdinal("FechaHoraInicio")),
+                    FechaHoraFin = reader.IsDBNull(reader.GetOrdinal("FechaHoraFin")) ? null : reader.GetDateTime(reader.GetOrdinal("FechaHoraFin")),
+                    Observaciones = reader.IsDBNull(reader.GetOrdinal("Observaciones")) ? string.Empty : reader.GetString(reader.GetOrdinal("Observaciones")),
+                    PacienteId = reader.GetInt32(reader.GetOrdinal("PacienteId"))
+                };
+                historial.Add(item);
+            }
+
+            return historial;
+        }
+
+     
+        public List<EstadoTurno> ListarEstadosTurno()
+        {
+           
+            return _context.EstadoTurnos.AsNoTracking().ToList();
+        }
+
+
+
     }
 }

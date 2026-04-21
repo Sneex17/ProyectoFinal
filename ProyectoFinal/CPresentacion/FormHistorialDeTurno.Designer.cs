@@ -32,20 +32,14 @@
             iconButton2 = new FontAwesome.Sharp.IconButton();
             btnExportar = new Krypton.Toolkit.KryptonButton();
             foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
+            btnLimpiar = new Krypton.Toolkit.KryptonButton();
             btnBuscar = new Krypton.Toolkit.KryptonButton();
             foreverGroupBox2 = new ReaLTaiizor.Controls.ForeverGroupBox();
             txtFiltro = new TextBox();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             label4 = new Label();
-            label3 = new Label();
-            cmbEspecialidades = new ReaLTaiizor.Controls.PoisonComboBox();
-            label1 = new Label();
-            dtpFechaConsulta = new ReaLTaiizor.Controls.PoisonDateTime();
             label6 = new Label();
             label7 = new Label();
-            label2 = new Label();
-            iconButton3 = new FontAwesome.Sharp.IconButton();
-            btnLimpiar = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)dgvTurnos).BeginInit();
             foreverGroupBox1.SuspendLayout();
             foreverGroupBox2.SuspendLayout();
@@ -106,15 +100,9 @@
             foreverGroupBox1.BackColor = Color.Transparent;
             foreverGroupBox1.BaseColor = Color.FromArgb(204, 234, 212);
             foreverGroupBox1.Controls.Add(btnLimpiar);
-            foreverGroupBox1.Controls.Add(iconButton3);
             foreverGroupBox1.Controls.Add(btnBuscar);
             foreverGroupBox1.Controls.Add(foreverGroupBox2);
             foreverGroupBox1.Controls.Add(label4);
-            foreverGroupBox1.Controls.Add(label3);
-            foreverGroupBox1.Controls.Add(cmbEspecialidades);
-            foreverGroupBox1.Controls.Add(label2);
-            foreverGroupBox1.Controls.Add(label1);
-            foreverGroupBox1.Controls.Add(dtpFechaConsulta);
             foreverGroupBox1.Font = new Font("Segoe UI", 10F);
             foreverGroupBox1.Location = new Point(42, 91);
             foreverGroupBox1.Margin = new Padding(2);
@@ -124,6 +112,26 @@
             foreverGroupBox1.Size = new Size(714, 185);
             foreverGroupBox1.TabIndex = 43;
             foreverGroupBox1.TextColor = Color.Transparent;
+            // 
+            // btnLimpiar
+            // 
+            btnLimpiar.Location = new Point(436, 49);
+            btnLimpiar.Margin = new Padding(2);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(116, 34);
+            btnLimpiar.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
+            btnLimpiar.StateCommon.Back.Color2 = Color.FromArgb(0, 54, 60);
+            btnLimpiar.StateCommon.Back.ColorAngle = -2F;
+            btnLimpiar.StateCommon.Border.Color1 = Color.Transparent;
+            btnLimpiar.StateCommon.Border.Color2 = Color.Transparent;
+            btnLimpiar.StateCommon.Border.Rounding = 20F;
+            btnLimpiar.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLimpiar.StateCommon.Content.ShortText.Color1 = Color.White;
+            btnLimpiar.StateCommon.Content.ShortText.Color2 = Color.White;
+            btnLimpiar.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLimpiar.TabIndex = 48;
+            btnLimpiar.Values.DropDownArrowColor = Color.Empty;
+            btnLimpiar.Values.Text = "Limpiar";
             // 
             // btnBuscar
             // 
@@ -199,67 +207,9 @@
             label4.Location = new Point(52, 97);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(105, 13);
+            label4.Size = new Size(159, 13);
             label4.TabIndex = 36;
-            label4.Text = "BUSCAR POR MEDICO";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Calibri", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(95, 154, 162);
-            label3.Location = new Point(266, 32);
-            label3.Margin = new Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(73, 13);
-            label3.TabIndex = 34;
-            label3.Text = "ESPECIALIDAD";
-            // 
-            // cmbEspecialidades
-            // 
-            cmbEspecialidades.BackColor = Color.White;
-            cmbEspecialidades.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmbEspecialidades.ForeColor = Color.Black;
-            cmbEspecialidades.FormattingEnabled = true;
-            cmbEspecialidades.ItemHeight = 22;
-            cmbEspecialidades.Items.AddRange(new object[] { "Activo", "Inactivo", "Suspendido" });
-            cmbEspecialidades.Location = new Point(266, 49);
-            cmbEspecialidades.Margin = new Padding(2);
-            cmbEspecialidades.Name = "cmbEspecialidades";
-            cmbEspecialidades.Size = new Size(132, 28);
-            cmbEspecialidades.TabIndex = 33;
-            cmbEspecialidades.UseCustomBackColor = true;
-            cmbEspecialidades.UseCustomFont = true;
-            cmbEspecialidades.UseCustomForeColor = true;
-            cmbEspecialidades.UseSelectable = true;
-            cmbEspecialidades.SelectedIndexChanged += cmbEspecialidades_SelectedIndexChanged;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Calibri", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(95, 154, 162);
-            label1.Location = new Point(107, 31);
-            label1.Margin = new Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(100, 13);
-            label1.TabIndex = 30;
-            label1.Text = "FECHA DE CONSULTA";
-            // 
-            // dtpFechaConsulta
-            // 
-            dtpFechaConsulta.CalendarFont = new Font("Corbel", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dtpFechaConsulta.CalendarForeColor = Color.FromArgb(4, 79, 86);
-            dtpFechaConsulta.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dtpFechaConsulta.FontSize = ReaLTaiizor.Extension.Poison.PoisonDateTimeSize.Tall;
-            dtpFechaConsulta.Format = DateTimePickerFormat.Short;
-            dtpFechaConsulta.Location = new Point(107, 49);
-            dtpFechaConsulta.Margin = new Padding(2);
-            dtpFechaConsulta.MinimumSize = new Size(0, 35);
-            dtpFechaConsulta.Name = "dtpFechaConsulta";
-            dtpFechaConsulta.RightToLeft = RightToLeft.No;
-            dtpFechaConsulta.Size = new Size(142, 35);
-            dtpFechaConsulta.TabIndex = 29;
+            label4.Text = "BUSCAR POR MEDICO O PACIENTE";
             // 
             // label6
             // 
@@ -281,58 +231,9 @@
             label7.Location = new Point(42, 56);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(284, 18);
+            label7.Size = new Size(204, 18);
             label7.TabIndex = 47;
-            label7.Text = "Visualización de turnos pasados del paciente";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Calibri", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(95, 154, 162);
-            label2.Location = new Point(61, 56);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(42, 13);
-            label2.TabIndex = 30;
-            label2.Text = "FILTRO: ";
-            // 
-            // iconButton3
-            // 
-            iconButton3.BackColor = Color.FromArgb(204, 234, 212);
-            iconButton3.Enabled = false;
-            iconButton3.FlatAppearance.BorderSize = 0;
-            iconButton3.FlatStyle = FlatStyle.Flat;
-            iconButton3.IconChar = FontAwesome.Sharp.IconChar.Filter;
-            iconButton3.IconColor = Color.FromArgb(0, 54, 60);
-            iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton3.IconSize = 26;
-            iconButton3.Location = new Point(40, 56);
-            iconButton3.Margin = new Padding(2);
-            iconButton3.Name = "iconButton3";
-            iconButton3.Size = new Size(25, 13);
-            iconButton3.TabIndex = 48;
-            iconButton3.UseVisualStyleBackColor = false;
-            // 
-            // btnLimpiar
-            // 
-            btnLimpiar.Location = new Point(436, 49);
-            btnLimpiar.Margin = new Padding(2);
-            btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(116, 34);
-            btnLimpiar.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
-            btnLimpiar.StateCommon.Back.Color2 = Color.FromArgb(0, 54, 60);
-            btnLimpiar.StateCommon.Back.ColorAngle = -2F;
-            btnLimpiar.StateCommon.Border.Color1 = Color.Transparent;
-            btnLimpiar.StateCommon.Border.Color2 = Color.Transparent;
-            btnLimpiar.StateCommon.Border.Rounding = 20F;
-            btnLimpiar.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLimpiar.StateCommon.Content.ShortText.Color1 = Color.White;
-            btnLimpiar.StateCommon.Content.ShortText.Color2 = Color.White;
-            btnLimpiar.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLimpiar.TabIndex = 48;
-            btnLimpiar.Values.DropDownArrowColor = Color.Empty;
-            btnLimpiar.Values.Text = "Limpiar";
+            label7.Text = "Visualización de turnos pasados";
             // 
             // FormHistorialDeTurno
             // 
@@ -369,14 +270,8 @@
         private TextBox txtFiltro;
         private FontAwesome.Sharp.IconButton iconButton1;
         private Label label4;
-        private Label label3;
-        private ReaLTaiizor.Controls.PoisonComboBox cmbEspecialidades;
-        private Label label1;
-        private ReaLTaiizor.Controls.PoisonDateTime dtpFechaConsulta;
         private Label label6;
         private Label label7;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private Label label2;
         private Krypton.Toolkit.KryptonButton btnLimpiar;
     }
 }
