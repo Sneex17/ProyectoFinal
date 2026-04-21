@@ -19,7 +19,10 @@ namespace CAccesoDatos.RepositoryPattern
                 .FirstOrDefault(m => m.MedicoId == tabla.MedicoId);
             if (medicoExistente != null)
             {
-                UsuarioRepository.ActualizarUsuario(medicoExistente.Usuario);
+                if(string.IsNullOrWhiteSpace(medicoExistente.Usuario.Contrasena))
+                {
+                    UsuarioRepository.ActualizarUsuario(medicoExistente.Usuario);
+                }
 
                 medicoExistente.Nlicencia = tabla.Nlicencia;
                 medicoExistente.Nombre = tabla.Nombre;
