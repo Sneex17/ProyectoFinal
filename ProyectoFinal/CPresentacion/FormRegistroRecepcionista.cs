@@ -20,6 +20,7 @@ namespace CPresentacion
         public FormRegistroRecepcionista()
         {
             InitializeComponent();
+            cmbRol.SelectedIndex = 0;
             Load += (s, e) => CargarDatos();
             Load += (s, e) => DatosGridView();
             dgvRecepcionistas.CellDoubleClick += CellRecepcionistas_CellDoubleClick;

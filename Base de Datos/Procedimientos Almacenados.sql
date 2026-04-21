@@ -606,10 +606,10 @@ GO
 -- =============================================
 -- ESTADÍSTICAS Y REPORTES
 -- =============================================
-
 CREATE OR ALTER PROCEDURE sp_EstadisticasGenerales
     @FechaDesde DATE = NULL,
-    @FechaHasta DATE = NULL
+    @FechaHasta DATE = NULL,
+    @EspecialidadId INT = NULL
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -617,31 +617,46 @@ BEGIN
     SET @FechaDesde = ISNULL(@FechaDesde, CAST(DATEADD(DAY, -30, GETDATE()) AS DATE));
     SET @FechaHasta = ISNULL(@FechaHasta, CAST(GETDATE() AS DATE));
     
+    -- 1. Conteo por estado
     SELECT 
         et.Nombre AS Estado,
         COUNT(t.TurnoId) AS Cantidad
     FROM Turnos t
     INNER JOIN EstadoTurnos et ON t.EstadoTurnoId = et.EstadoTurnoId
+    LEFT JOIN Medicos m ON t.MedicoId = m.MedicoId
     WHERE CAST(t.FechaHoraCreacion AS DATE) BETWEEN @FechaDesde AND @FechaHasta
+        AND (@EspecialidadId IS NULL OR m.EspecialidadId = @EspecialidadId)
     GROUP BY et.Nombre;
     
+    -- 2. Turnos por fecha
     SELECT 
         CAST(t.FechaHoraCreacion AS DATE) AS Fecha,
         COUNT(*) AS Cantidad
     FROM Turnos t
+    LEFT JOIN Medicos m ON t.MedicoId = m.MedicoId
     WHERE CAST(t.FechaHoraCreacion AS DATE) BETWEEN @FechaDesde AND @FechaHasta
+        AND (@EspecialidadId IS NULL OR m.EspecialidadId = @EspecialidadId)
     GROUP BY CAST(t.FechaHoraCreacion AS DATE)
     ORDER BY Fecha;
     
+    -- 3. Top 5 médicos
     SELECT TOP 5
         m.Nombre + ' ' + m.Apellido AS Medico,
-        COUNT(t.TurnoId) AS TurnosAtendidos
+        COUNT(t.turnoId) AS TurnosAtendidos
     FROM Turnos t
     INNER JOIN Medicos m ON t.MedicoId = m.MedicoId
     WHERE t.EstadoTurnoId = 3
         AND CAST(t.FechaHoraCreacion AS DATE) BETWEEN @FechaDesde AND @FechaHasta
+        AND (@EspecialidadId IS NULL OR m.EspecialidadId = @EspecialidadId)
     GROUP BY m.Nombre + ' ' + m.Apellido
     ORDER BY TurnosAtendidos DESC;
+    
+    -- 4. Pacientes únicos
+    SELECT COUNT(DISTINCT t.PacienteId) AS TotalPacientes
+    FROM Turnos t
+    LEFT JOIN Medicos m ON t.MedicoId = m.MedicoId
+    WHERE CAST(t.FechaHoraCreacion AS DATE) BETWEEN @FechaDesde AND @FechaHasta
+        AND (@EspecialidadId IS NULL OR m.EspecialidadId = @EspecialidadId);
 END
 GO
 

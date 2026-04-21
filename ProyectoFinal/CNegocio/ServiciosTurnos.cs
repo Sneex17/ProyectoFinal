@@ -23,5 +23,9 @@ namespace CNegocio
         {
             return _turnoRepo.HistorialPaciente(pacienteid);
         }
+        public bool CambiarPrioridadTurno(int turnoId, int nuevaPrioridad)
+        {
+            return _turnoRepo.CambiarPrioridadTurno(turnoId, nuevaPrioridad);
+        }
     }
 }
