@@ -3,6 +3,12 @@ using System.Collections.Generic;
 
 namespace CEntidades.Models;
 
+/// <summary>
+/// Representa un usuario dentro del sistema.
+/// Contiene las credenciales de acceso, rol, estado
+/// y las relaciones con médicos y recepcionistas.
+/// </summary>
+
 public partial class Usuario
 {
     public int UsuarioId { get; set; }

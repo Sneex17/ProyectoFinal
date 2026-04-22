@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace CEntidades.StatePattern
 {
+    /// <summary>
+    /// Representa el estado "Atendido" de un turno dentro del sistema.
+    /// Forma parte del patrón de diseño State para gestionar los cambios de estado de un turno.
+    /// </summary>
     public class EstadoAtendido:IEstadoTurno
     {
         public int EstadoTurnoId => 3;

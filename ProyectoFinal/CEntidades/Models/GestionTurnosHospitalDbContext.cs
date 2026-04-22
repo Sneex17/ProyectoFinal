@@ -4,41 +4,71 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CEntidades.Models;
 
+/// <summary>
+/// Representa el contexto de base de datos para la gestión de turnos hospitalarios.
+/// Proporciona acceso a las tablas mediante DbSet y gestiona la conexión con la base de datos.
+/// </summary>
 public partial class GestionTurnosHospitalDbContext : DbContext
 {
+    /// <summary>
+    /// Inicializa una nueva instancia del contexto de base de datos.
+    /// </summary>
     public GestionTurnosHospitalDbContext()
     {
+        // Constructor vacío para permitir la creación del contexto sin parámetros. 
     }
 
     public GestionTurnosHospitalDbContext(DbContextOptions<GestionTurnosHospitalDbContext> options)
         : base(options)
     {
+        // Constructor que acepta opciones de configuración para la conexión a la base de datos.
     }
 
     public virtual DbSet<Area> Areas { get; set; }
 
+    // DbSet que representa la tabla de especialidades médicas en la base de datos.
+
     public virtual DbSet<Especialidade> Especialidades { get; set; }
+
+    // DbSet que representa la tabla de estados de usuario en la base de datos.
 
     public virtual DbSet<Estado> Estados { get; set; }
 
+    // DbSet que representa la tabla de estados de turno en la base de datos.
+
     public virtual DbSet<EstadoTurno> EstadoTurnos { get; set; }
 
+    // DbSet que representa la tabla de médicos en la base de datos.
     public virtual DbSet<Medico> Medicos { get; set; }
 
+    // DbSet que representa la tabla de pacientes en la base de datos.  
     public virtual DbSet<Paciente> Pacientes { get; set; }
-
+    
+    // DbSet que representa la tabla de prioridades en la base de datos.
     public virtual DbSet<Prioridade> Prioridades { get; set; }
+    // DbSet que representa la tabla de recepcionistas en la base de datos.
 
     public virtual DbSet<Recepcionista> Recepcionistas { get; set; }
+    // DbSet que representa la tabla de roles de usuario en la base de datos.
 
     public virtual DbSet<Role> Roles { get; set; }
+    // DbSet que representa la tabla de turnos en la base de datos.
 
     public virtual DbSet<Turno> Turnos { get; set; }
+    // DbSet que representa la tabla de usuarios en la base de datos.
 
     public virtual DbSet<Usuario> Usuarios { get; set; }
 
+    /// <summary>
+    /// Configura el modelo de datos mediante Fluent API.
+    /// Define las claves primarias, propiedades (longitudes, tipos),
+    /// índices únicos y relaciones entre las entidades del sistema.
+    /// </summary>
+    /// <param name="modelBuilder">Constructor utilizado para configurar las entidades.</param>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        // Configuración de la entidad Area, incluyendo clave primaria, propiedades y relaciones.
+
         modelBuilder.Entity<Area>(entity =>
         {
             entity.HasKey(e => e.AreaId).HasName("PK__Areas__70B820481AA6A0C0");
@@ -46,6 +76,8 @@ public partial class GestionTurnosHospitalDbContext : DbContext
             entity.Property(e => e.Descripcion).HasMaxLength(255);
             entity.Property(e => e.Nombre).HasMaxLength(100);
         });
+
+        // Configuración de la entidad Especialidade, incluyendo clave primaria, propiedades y relaciones.
 
         modelBuilder.Entity<Especialidade>(entity =>
         {
@@ -55,6 +87,8 @@ public partial class GestionTurnosHospitalDbContext : DbContext
             entity.Property(e => e.Nombre).HasMaxLength(100);
         });
 
+        // Configuración de la entidad Estado, incluyendo clave primaria, propiedades y relaciones.
+
         modelBuilder.Entity<Estado>(entity =>
         {
             entity.HasKey(e => e.EstadoId).HasName("PK__Estados__FEF86B0034C18108");
@@ -63,6 +97,8 @@ public partial class GestionTurnosHospitalDbContext : DbContext
             entity.Property(e => e.Nombre).HasMaxLength(50);
         });
 
+        // Configuración de la entidad EstadoTurno, incluyendo clave primaria, propiedades y relaciones.
+
         modelBuilder.Entity<EstadoTurno>(entity =>
         {
             entity.HasKey(e => e.EstadoTurnoId).HasName("PK__EstadoTu__10C65F0614C4B6BF");
@@ -70,6 +106,8 @@ public partial class GestionTurnosHospitalDbContext : DbContext
             entity.Property(e => e.Descripcion).HasMaxLength(255);
             entity.Property(e => e.Nombre).HasMaxLength(50);
         });
+
+        // Configuración de la entidad Medico, incluyendo clave primaria, propiedades, índices únicos y relaciones.
 
         modelBuilder.Entity<Medico>(entity =>
         {
@@ -93,6 +131,7 @@ public partial class GestionTurnosHospitalDbContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Medicos_Usuarios");
         });
+        // Configuración de la entidad Paciente, incluyendo clave primaria, propiedades, índices únicos y relaciones.
 
         modelBuilder.Entity<Paciente>(entity =>
         {
@@ -111,6 +150,7 @@ public partial class GestionTurnosHospitalDbContext : DbContext
                 .IsUnicode(false)
                 .IsFixedLength();
         });
+        // Configuración de la entidad Prioridade, incluyendo clave primaria, propiedades y relaciones.
 
         modelBuilder.Entity<Prioridade>(entity =>
         {
@@ -120,6 +160,7 @@ public partial class GestionTurnosHospitalDbContext : DbContext
             entity.Property(e => e.Nombre).HasMaxLength(50);
         });
 
+        // Configuración de la entidad Recepcionista, incluyendo clave primaria, propiedades, índices únicos y relaciones.
         modelBuilder.Entity<Recepcionista>(entity =>
         {
             entity.HasKey(e => e.RecepcionistaId).HasName("PK__Recepcio__C76F4478922D5C0D");
@@ -138,6 +179,8 @@ public partial class GestionTurnosHospitalDbContext : DbContext
                 .HasConstraintName("FK_Recepcionistas_Usuarios");
         });
 
+        // Configuración de la entidad Role, incluyendo clave primaria, propiedades y relaciones.
+
         modelBuilder.Entity<Role>(entity =>
         {
             entity.HasKey(e => e.RolId).HasName("PK__Roles__F92302F1FE4BA9F5");
@@ -145,6 +188,8 @@ public partial class GestionTurnosHospitalDbContext : DbContext
             entity.Property(e => e.Descripcion).HasMaxLength(255);
             entity.Property(e => e.Nombre).HasMaxLength(50);
         });
+
+        // Configuración de la entidad Turno, incluyendo clave primaria, propiedades, tipos de datos y relaciones.
 
         modelBuilder.Entity<Turno>(entity =>
         {
@@ -181,6 +226,7 @@ public partial class GestionTurnosHospitalDbContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Turnos_Recepcionistas");
         });
+        // Configuración de la entidad Usuario, incluyendo clave primaria, propiedades, índices únicos y relaciones.
 
         modelBuilder.Entity<Usuario>(entity =>
         {
@@ -208,8 +254,11 @@ public partial class GestionTurnosHospitalDbContext : DbContext
                 .HasConstraintName("FK_Usuarios_Roles");
         });
 
+        // Permite extender la configuración del modelo en una clase parcial sin modificar el código generado.
+
         OnModelCreatingPartial(modelBuilder);
     }
 
+    // Método parcial para permitir la extensión de la configuración del modelo en una clase parcial sin modificar el código generado.
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

@@ -7,6 +7,11 @@ using System.Threading.Tasks;
 
 namespace CEntidades.StatePattern
 {
+    /// <summary>
+    /// Representa el estado "Cancelado" de un turno dentro del sistema.
+    /// Forma parte del patrón de diseño State para controlar
+    /// el comportamiento según el estado del turno.
+    /// </summary>
     public class EstadoCancelado: IEstadoTurno
     {
         public int EstadoTurnoId => 4;
