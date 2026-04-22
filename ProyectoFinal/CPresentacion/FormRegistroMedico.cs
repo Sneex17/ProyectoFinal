@@ -18,6 +18,7 @@ namespace CPresentacion
     public partial class FormRegistroMedico : Form
     {
         int idMedico;
+        int idUsuario;
         public FormRegistroMedico()
         {
             InitializeComponent();
@@ -61,6 +62,7 @@ namespace CPresentacion
                     cmbEstados.SelectedValue = medico.EstadoId;
                     cmbRol.SelectedValue = medico.Usuario.RolId;
                     txtUsuario.Text = medico.Usuario.Usuario1;
+                    idUsuario = medico.UsuarioId;
                 }
             }
         }
@@ -139,6 +141,13 @@ namespace CPresentacion
                 {
                     throw new ControlExcepciones("Seleccione un médico para editar.");
                 }
+                if(!string.IsNullOrWhiteSpace(txtContrasena.Text) && !string.IsNullOrWhiteSpace(txtConfirmarPass.Text))
+                {
+                    if(txtContrasena.Text != txtConfirmarPass.Text)
+                    {
+                        throw new ControlExcepciones("Las contraseñas no coinciden.");
+                    }
+                }
 
                 var medico = new Medico()
                 {
@@ -149,13 +158,13 @@ namespace CPresentacion
                     EspecialidadId = Convert.ToInt32(cmbEspecialidades.SelectedValue),
                     Usuario = new Usuario()
                     {
+                        UsuarioId = idUsuario,
                         Usuario1 = txtUsuario.Text,
                         Contrasena = Hast.HashPassword(txtContrasena.Text),
-                        FechaCreacion = DateTime.Now,
-                        EstadoId = Convert.ToInt32(cmbEstados.SelectedValue),
-                        RolId = Convert.ToInt32(cmbRol.SelectedValue)
-                    },
+                        RolId = Convert.ToInt32(cmbEstados.SelectedValue),
+                        EstadoId = Convert.ToInt32(cmbEstados.SelectedValue)
 
+                    },
                     EstadoId = Convert.ToInt32(cmbEstados.SelectedValue)
                 };
 

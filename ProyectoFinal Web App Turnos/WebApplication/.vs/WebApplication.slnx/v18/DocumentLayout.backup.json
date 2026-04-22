@@ -98,18 +98,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "InMemoryTurnoService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal Web App Turnos\\WebApplication\\Services\\InMemoryTurnoService.cs",
-              "RelativeDocumentMoniker": "Services\\InMemoryTurnoService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal Web App Turnos\\WebApplication\\Services\\InMemoryTurnoService.cs",
-              "RelativeToolTip": "Services\\InMemoryTurnoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T15:38:36.136Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal Web App Turnos\\WebApplication\\appsettings.json",
@@ -131,6 +119,18 @@
               "ViewState": "AgIAAK4AAAAAAAAAAAAuwKsCAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2026-04-20T22:29:39.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InMemoryTurnoService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal Web App Turnos\\WebApplication\\Services\\InMemoryTurnoService.cs",
+              "RelativeDocumentMoniker": "Services\\InMemoryTurnoService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal Web App Turnos\\WebApplication\\Services\\InMemoryTurnoService.cs",
+              "RelativeToolTip": "Services\\InMemoryTurnoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T15:38:36.136Z"
             },
             {
               "$type": "Document",

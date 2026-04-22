@@ -17,6 +17,7 @@ namespace CPresentacion
     public partial class FormRegistroRecepcionista : Form
     {
         int idRecepcionista;
+        int idUsuario;
         public FormRegistroRecepcionista()
         {
             InitializeComponent();
@@ -52,6 +53,7 @@ namespace CPresentacion
                     cmbEstados.SelectedValue = recepcionista.EstadoId;
                     cmbRol.SelectedValue = recepcionista.Usuario.RolId;
                     txtUsuario.Text = recepcionista.Usuario.Usuario1;
+                    idUsuario = recepcionista.UsuarioId;
                 }
             }
         }
@@ -164,6 +166,13 @@ namespace CPresentacion
                 {
                     throw new ControlExcepciones("Seleccione un médico para editar.");
                 }
+                if (!string.IsNullOrWhiteSpace(txtContrasena.Text) && !string.IsNullOrWhiteSpace(txtConfirmarPass.Text))
+                {
+                    if (txtContrasena.Text != txtConfirmarPass.Text)
+                    {
+                        throw new ControlExcepciones("Las contraseñas no coinciden.");
+                    }
+                }
 
                 var recepcionista = new Recepcionista()
                 {
@@ -171,6 +180,15 @@ namespace CPresentacion
                     Nombre = txtNombre.Text,
                     Apellido = txtApellido.Text,
                     AreaId =  Convert.ToInt32(cmbArea.SelectedValue),
+                    Usuario = new Usuario()
+                    {
+                        UsuarioId = idUsuario,
+                        Usuario1 = txtUsuario.Text,
+                        Contrasena = Hast.HashPassword(txtContrasena.Text),
+                        RolId = Convert.ToInt32(cmbEstados.SelectedValue),
+                        EstadoId = Convert.ToInt32(cmbEstados.SelectedValue)
+
+                    },
                     EstadoId = Convert.ToInt32(cmbEstados.SelectedValue)
                 };
 

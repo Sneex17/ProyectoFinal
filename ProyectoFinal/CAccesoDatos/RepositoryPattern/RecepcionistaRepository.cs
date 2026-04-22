@@ -24,8 +24,13 @@ namespace CAccesoDatos.RepositoryPattern
                 .FirstOrDefault(m => m.RecepcionistaId == tabla.RecepcionistaId);
             if (recepcionistaExistente != null)
             {
-                if(string.IsNullOrWhiteSpace(recepcionistaExistente.Usuario.Contrasena))
+                if (!string.IsNullOrWhiteSpace(recepcionistaExistente.Usuario.Contrasena))
                 {
+                    recepcionistaExistente.Usuario.Usuario1 = tabla.Usuario.Usuario1;
+                    recepcionistaExistente.Usuario.Contrasena = tabla.Usuario.Contrasena;
+                    recepcionistaExistente.Usuario.RolId = tabla.Usuario.RolId;
+                    recepcionistaExistente.Usuario.EstadoId = tabla.Usuario.EstadoId;
+                    recepcionistaExistente.Usuario.UsuarioId = tabla.Usuario.UsuarioId;
                     UsuarioRepository.ActualizarUsuario(recepcionistaExistente.Usuario);
                 }
 

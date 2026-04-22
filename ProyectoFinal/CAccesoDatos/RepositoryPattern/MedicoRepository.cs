@@ -22,10 +22,17 @@ namespace CAccesoDatos.RepositoryPattern
             if (tabla != null)
             {
             var medicoExistente = _context.Medicos.Include(u => u.Usuario)
-                        .FirstOrDefault(m => m.MedicoId == tabla.MedicoId);
-                if (!string.IsNullOrWhiteSpace(tabla.Usuario.Contrasena))
+                .FirstOrDefault(m => m.MedicoId == tabla.MedicoId);
+            if (medicoExistente != null)
+            {
+                if(!string.IsNullOrWhiteSpace(medicoExistente.Usuario.Contrasena))
                 {
-                    UsuarioRepository.ActualizarUsuario(tabla.Usuario);
+                    medicoExistente.Usuario.Usuario1 = tabla.Usuario.Usuario1;
+                    medicoExistente.Usuario.Contrasena = tabla.Usuario.Contrasena;
+                    medicoExistente.Usuario.RolId = tabla.Usuario.RolId;
+                    medicoExistente.Usuario.EstadoId = tabla.Usuario.EstadoId;
+                    medicoExistente.Usuario.UsuarioId = tabla.Usuario.UsuarioId;
+                    UsuarioRepository.ActualizarUsuario(medicoExistente.Usuario);
                 }
 
                 medicoExistente.Nlicencia = tabla.Nlicencia;
