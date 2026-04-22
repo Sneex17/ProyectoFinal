@@ -22,7 +22,7 @@ namespace CPresentacion
 
                 if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contrasena))
                 {
-                    MessageBox.Show("Por favor ingrese usuario y contraseña", "Validación", 
+                    MessageBox.Show("Por favor ingrese usuario y contraseña", "Validación",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
@@ -81,6 +81,11 @@ namespace CPresentacion
 
         private void parrotGroupBox1_Enter(object sender, EventArgs e)
         {
+        }
+
+        private void FormLogIn_Load(object sender, EventArgs e)
+        {
+         
         }
     }
 }

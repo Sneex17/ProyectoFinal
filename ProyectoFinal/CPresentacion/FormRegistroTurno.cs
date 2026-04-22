@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using CAccesoDatos.RepositoryPattern;
 using CEntidades.Models;
+using CNegocio;
 
 namespace CPresentacion
 {
@@ -208,7 +209,7 @@ namespace CPresentacion
                 
                 string? observaciones = string.IsNullOrWhiteSpace(txtDescripcion.Text) ? null : txtDescripcion.Text;
 
-                var (turnoId, numeroTurno, mensaje) = _turnoRepo.CrearTurno(
+                var (turnoId, numeroTurno, mensaje) = ServiciosTurnos.CrearTunos(
                     pacienteId, medicoId, recepcionistaId, prioridadSeleccionada, observaciones);
 
                 if (turnoId > 0)

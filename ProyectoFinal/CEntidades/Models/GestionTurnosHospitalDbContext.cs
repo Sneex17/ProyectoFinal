@@ -37,6 +37,9 @@ public partial class GestionTurnosHospitalDbContext : DbContext
 
     public virtual DbSet<Usuario> Usuarios { get; set; }
 
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) { }
+
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Area>(entity =>
@@ -88,6 +91,11 @@ public partial class GestionTurnosHospitalDbContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Medicos_Especialidades");
 
+            entity.HasOne(d => d.Estado).WithMany(p => p.Medicos)
+                .HasForeignKey(d => d.EstadoId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Medicos_Estados");
+
             entity.HasOne(d => d.Usuario).WithMany(p => p.Medicos)
                 .HasForeignKey(d => d.UsuarioId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
@@ -131,6 +139,11 @@ public partial class GestionTurnosHospitalDbContext : DbContext
                 .HasForeignKey(d => d.AreaId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Recepcionistas_Areas");
+
+            entity.HasOne(d => d.Estado).WithMany(p => p.Recepcionista)
+                .HasForeignKey(d => d.EstadoId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Recepcionistas_Estados");
 
             entity.HasOne(d => d.Usuario).WithMany(p => p.Recepcionista)
                 .HasForeignKey(d => d.UsuarioId)

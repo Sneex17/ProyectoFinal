@@ -17,11 +17,14 @@ public partial class Medico
 
     public int UsuarioId { get; set; }
 
+    public int EstadoId { get; set; }
+
     public virtual Especialidade Especialidad { get; set; } = null!;
+
+    public virtual Estado Estado { get; set; } = null!;
 
     public virtual ICollection<Turno> Turnos { get; set; } = new List<Turno>();
 
     public virtual Usuario Usuario { get; set; } = null!;
-
     public string NombreCompleto => $"{Nombre} {Apellido}";
 }

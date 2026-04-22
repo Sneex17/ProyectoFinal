@@ -15,8 +15,24 @@ namespace CAccesoDatos.RepositoryPattern
 
         public void Actualizar(Medico tabla)
         {
-            _context.Medicos.Update(tabla);
-            _context.SaveChanges();
+            if (tabla != null)
+            {
+            var medicoExistente = _context.Medicos.Include(u => u.Usuario)
+                        .FirstOrDefault(m => m.MedicoId == tabla.MedicoId);
+                if (!string.IsNullOrWhiteSpace(tabla.Usuario.Contrasena))
+                {
+                    UsuarioRepository.ActualizarUsuario(tabla.Usuario);
+                }
+
+                medicoExistente.Nlicencia = tabla.Nlicencia;
+                medicoExistente.Nombre = tabla.Nombre;
+                medicoExistente.Apellido = tabla.Apellido;
+                medicoExistente.EspecialidadId = tabla.EspecialidadId;
+                medicoExistente.EstadoId = tabla.EstadoId;
+                medicoExistente.Usuario = tabla.Usuario;
+                
+                _context.SaveChanges();
+            }
         }
 
         public void Agregar(Medico tabla)
@@ -27,13 +43,24 @@ namespace CAccesoDatos.RepositoryPattern
 
         public void Eliminar(Medico tabla)
         {
-            _context.Medicos.Remove(tabla);
-            _context.SaveChanges();
+            var medicoExistente = _context.Medicos.Include(u => u.Usuario)
+                .FirstOrDefault(m => m.MedicoId == tabla.MedicoId);
+            if (medicoExistente != null)
+            {
+                medicoExistente.Usuario.EstadoId = 3;
+                UsuarioRepository.DesactivarUsuario(medicoExistente.Usuario);
+
+                medicoExistente.EstadoId = tabla.EstadoId;
+                _context.SaveChanges();
+            }
         }
 
         public IList<Medico> Listar()
         {
-            return _context.Medicos.ToList();
+            return _context.Medicos
+                .Include(m => m.Usuario)
+                .Include(e => e.Especialidad)
+                .Include(e => e.Estado).ToList();
         }
     }
 }

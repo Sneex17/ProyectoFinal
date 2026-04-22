@@ -1,4 +1,4 @@
-﻿using HospitalTurnos.Models;
+using HospitalTurnos.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace HospitalTurnos.Data
@@ -22,7 +22,7 @@ namespace HospitalTurnos.Data
             // ── Turnos ────────────────────────────────────────────────────
             modelBuilder.Entity<Turno>(entity =>
             {
-                entity.ToTable("Turnos");
+                entity.ToTable("Turnos", tb => tb.HasTrigger("SqlTableDependencyTrigger"));
                 entity.HasKey(t => t.TurnoId);
 
                 entity.Property(t => t.Observaciones).HasColumnType("nvarchar(max)");

@@ -1,4 +1,4 @@
-﻿using HospitalTurnos.Models;
+using HospitalTurnos.Models;
 using HospitalTurnos.ViewModels;
 
 namespace HospitalTurnos.Services
@@ -22,6 +22,13 @@ namespace HospitalTurnos.Services
             new() { EstadoTurnoId = 2, Nombre = "En Atencion" },
             new() { EstadoTurnoId = 3, Nombre = "Atendido" },
             new() { EstadoTurnoId = 4, Nombre = "Cancelado" }
+        };
+
+        private readonly List<Especialidad> _especialidades = new()
+        {
+            new() { EspecialidadId = 1, Nombre = "Medicina General" },
+            new() { EspecialidadId = 2, Nombre = "Pediatría" },
+            new() { EspecialidadId = 3, Nombre = "Cardiología" }
         };
 
         private readonly List<Paciente> _pacientes = new()
@@ -106,7 +113,7 @@ namespace HospitalTurnos.Services
             return t != null ? MapToViewModel(t) : null;
         }
 
-        public Turno CrearTurno(int pacienteId, int medicoId, int recepcionistaId, int prioridadId, string? observaciones)
+        public Turno CrearTurno(int pacienteId, int medicoId, int? recepcionistaId, int prioridadId, string? observaciones)
         {
             var t = new Turno
             {
@@ -122,7 +129,8 @@ namespace HospitalTurnos.Services
                 Paciente = _pacientes.First(p => p.PacienteId == pacienteId),
                 Medico = _medicos.First(m => m.MedicoId == medicoId),
                 Prioridad = _prioridades.First(p => p.PrioridadId == prioridadId),
-                EstadoTurno = _estados.First(e => e.EstadoTurnoId == 1)
+                EstadoTurno = _estados.First(e => e.EstadoTurnoId == 1),
+                Recepcionista = recepcionistaId.HasValue ? _Recepcionistas.FirstOrDefault(r => r.RecepcionistaId == recepcionistaId) : null
             };
             _turnos.Add(t);
             return t;
@@ -142,6 +150,15 @@ namespace HospitalTurnos.Services
         public bool EliminarTurno(int turnoId) => _turnos.RemoveAll(x => x.TurnoId == turnoId) > 0;
 
         public List<Paciente> ObtenerPacientes() => _pacientes;
+
+        public Paciente? ObtenerPacientePorCedula(string cedula) =>
+            _pacientes.FirstOrDefault(p => p.Cedula == cedula);
+
+        public List<Especialidad> ObtenerEspecialidades() => _especialidades;
+
+        public List<Medico> ObtenerMedicosPorEspecialidad(int especialidadId) =>
+            _medicos.Where(m => m.EspecialidadId == especialidadId).ToList();
+
         public List<Medico> ObtenerMedicos() => _medicos;
         public List<Recepcionista> ObtenerRecepcionistas() => _Recepcionistas;
         public List<Prioridad> ObtenerPrioridades() => _prioridades;

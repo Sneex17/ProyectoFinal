@@ -35,8 +35,8 @@
             BuCrear = new Krypton.Toolkit.KryptonButton();
             foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
             parrotGroupBox5 = new ReaLTaiizor.Controls.ParrotGroupBox();
-            textBox2 = new TextBox();
-            poisonComboBox1 = new ReaLTaiizor.Controls.PoisonComboBox();
+            txtConfirmarPass = new TextBox();
+            cmbEstados = new ReaLTaiizor.Controls.PoisonComboBox();
             label4 = new Label();
             cmbRol = new ReaLTaiizor.Controls.PoisonComboBox();
             label5 = new Label();
@@ -55,6 +55,12 @@
             label2 = new Label();
             label1 = new Label();
             dgvRecepcionistas = new DataGridView();
+            RecepcionistaId = new DataGridViewTextBoxColumn();
+            Nombre = new DataGridViewTextBoxColumn();
+            Apellido = new DataGridViewTextBoxColumn();
+            Area = new DataGridViewTextBoxColumn();
+            UsuarioId = new DataGridViewTextBoxColumn();
+            Estado = new DataGridViewTextBoxColumn();
             foreverGroupBox1.SuspendLayout();
             parrotGroupBox5.SuspendLayout();
             parrotGroupBox6.SuspendLayout();
@@ -69,9 +75,10 @@
             label6.AutoSize = true;
             label6.Font = new Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(0, 54, 60);
-            label6.Location = new Point(77, 36);
+            label6.Location = new Point(54, 22);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(534, 59);
+            label6.Size = new Size(356, 39);
             label6.TabIndex = 11;
             label6.Text = "Registro de Recepcionista";
             // 
@@ -80,17 +87,19 @@
             label7.AutoSize = true;
             label7.Font = new Font("Calibri", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.FromArgb(95, 154, 162);
-            label7.Location = new Point(88, 104);
+            label7.Location = new Point(62, 62);
+            label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(474, 27);
+            label7.Size = new Size(320, 18);
             label7.TabIndex = 11;
             label7.Text = "Registro y consulta de recepcionistas en el sistema";
             // 
             // BuDesactivar
             // 
-            BuDesactivar.Location = new Point(238, 782);
+            BuDesactivar.Location = new Point(167, 469);
+            BuDesactivar.Margin = new Padding(2);
             BuDesactivar.Name = "BuDesactivar";
-            BuDesactivar.Size = new Size(143, 85);
+            BuDesactivar.Size = new Size(100, 51);
             BuDesactivar.StateCommon.Back.Color1 = Color.IndianRed;
             BuDesactivar.StateCommon.Back.Color2 = Color.Brown;
             BuDesactivar.StateCommon.Back.ColorAngle = -2F;
@@ -104,12 +113,14 @@
             BuDesactivar.TabIndex = 20;
             BuDesactivar.Values.DropDownArrowColor = Color.Empty;
             BuDesactivar.Values.Text = "Desactivar";
+            BuDesactivar.Click += BuDesactivar_Click;
             // 
             // BuEditar
             // 
-            BuEditar.Location = new Point(398, 782);
+            BuEditar.Location = new Point(279, 469);
+            BuEditar.Margin = new Padding(2);
             BuEditar.Name = "BuEditar";
-            BuEditar.Size = new Size(143, 85);
+            BuEditar.Size = new Size(100, 51);
             BuEditar.StateCommon.Back.Color1 = Color.FromArgb(254, 219, 151);
             BuEditar.StateCommon.Back.Color2 = Color.FromArgb(254, 219, 151);
             BuEditar.StateCommon.Back.ColorAngle = -2F;
@@ -123,12 +134,14 @@
             BuEditar.TabIndex = 19;
             BuEditar.Values.DropDownArrowColor = Color.Empty;
             BuEditar.Values.Text = "Editar";
+            BuEditar.Click += BuEditar_Click;
             // 
             // BuCrear
             // 
-            BuCrear.Location = new Point(559, 782);
+            BuCrear.Location = new Point(391, 469);
+            BuCrear.Margin = new Padding(2);
             BuCrear.Name = "BuCrear";
-            BuCrear.Size = new Size(143, 85);
+            BuCrear.Size = new Size(100, 51);
             BuCrear.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
             BuCrear.StateCommon.Back.Color2 = Color.FromArgb(23, 74, 111);
             BuCrear.StateCommon.Back.ColorAngle = -2F;
@@ -142,6 +155,7 @@
             BuCrear.TabIndex = 18;
             BuCrear.Values.DropDownArrowColor = Color.Empty;
             BuCrear.Values.Text = "Crear";
+            BuCrear.Click += BuCrear_Click;
             // 
             // foreverGroupBox1
             // 
@@ -150,7 +164,7 @@
             foreverGroupBox1.BackColor = Color.Transparent;
             foreverGroupBox1.BaseColor = Color.White;
             foreverGroupBox1.Controls.Add(parrotGroupBox5);
-            foreverGroupBox1.Controls.Add(poisonComboBox1);
+            foreverGroupBox1.Controls.Add(cmbEstados);
             foreverGroupBox1.Controls.Add(label4);
             foreverGroupBox1.Controls.Add(cmbRol);
             foreverGroupBox1.Controls.Add(label5);
@@ -165,11 +179,12 @@
             foreverGroupBox1.Controls.Add(label2);
             foreverGroupBox1.Controls.Add(label1);
             foreverGroupBox1.Font = new Font("Segoe UI", 10F);
-            foreverGroupBox1.Location = new Point(39, 174);
+            foreverGroupBox1.Location = new Point(27, 104);
+            foreverGroupBox1.Margin = new Padding(2);
             foreverGroupBox1.Name = "foreverGroupBox1";
             foreverGroupBox1.ShowArrow = true;
             foreverGroupBox1.ShowText = true;
-            foreverGroupBox1.Size = new Size(885, 602);
+            foreverGroupBox1.Size = new Size(620, 361);
             foreverGroupBox1.TabIndex = 17;
             foreverGroupBox1.TextColor = Color.Transparent;
             // 
@@ -177,54 +192,59 @@
             // 
             parrotGroupBox5.BorderColor = Color.FromArgb(4, 79, 86);
             parrotGroupBox5.BorderWidth = 3;
-            parrotGroupBox5.Controls.Add(textBox2);
+            parrotGroupBox5.Controls.Add(txtConfirmarPass);
             parrotGroupBox5.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             parrotGroupBox5.ForeColor = Color.FromArgb(4, 79, 86);
-            parrotGroupBox5.Location = new Point(475, 333);
+            parrotGroupBox5.Location = new Point(332, 200);
+            parrotGroupBox5.Margin = new Padding(2);
             parrotGroupBox5.Name = "parrotGroupBox5";
+            parrotGroupBox5.Padding = new Padding(2);
             parrotGroupBox5.ShowText = true;
-            parrotGroupBox5.Size = new Size(352, 68);
+            parrotGroupBox5.Size = new Size(246, 41);
             parrotGroupBox5.TabIndex = 19;
             parrotGroupBox5.TabStop = false;
             parrotGroupBox5.Text = "CONTRASEÑA";
             parrotGroupBox5.TextColor = Color.FromArgb(4, 79, 86);
             // 
-            // textBox2
+            // txtConfirmarPass
             // 
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Corbel", 12F);
-            textBox2.ForeColor = Color.FromArgb(4, 79, 86);
-            textBox2.Location = new Point(12, 28);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Confirmar contraseña";
-            textBox2.Size = new Size(334, 30);
-            textBox2.TabIndex = 1;
+            txtConfirmarPass.BorderStyle = BorderStyle.None;
+            txtConfirmarPass.Font = new Font("Corbel", 12F);
+            txtConfirmarPass.ForeColor = Color.FromArgb(4, 79, 86);
+            txtConfirmarPass.Location = new Point(8, 17);
+            txtConfirmarPass.Margin = new Padding(2);
+            txtConfirmarPass.Name = "txtConfirmarPass";
+            txtConfirmarPass.PlaceholderText = "Confirmar contraseña";
+            txtConfirmarPass.Size = new Size(234, 20);
+            txtConfirmarPass.TabIndex = 1;
             // 
-            // poisonComboBox1
+            // cmbEstados
             // 
-            poisonComboBox1.BackColor = Color.FromArgb(218, 248, 226);
-            poisonComboBox1.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            poisonComboBox1.ForeColor = Color.Black;
-            poisonComboBox1.FormattingEnabled = true;
-            poisonComboBox1.ItemHeight = 31;
-            poisonComboBox1.Items.AddRange(new object[] { "Activo", "Inactivo", "Suspendido" });
-            poisonComboBox1.Location = new Point(658, 485);
-            poisonComboBox1.Name = "poisonComboBox1";
-            poisonComboBox1.Size = new Size(163, 37);
-            poisonComboBox1.TabIndex = 18;
-            poisonComboBox1.UseCustomBackColor = true;
-            poisonComboBox1.UseCustomFont = true;
-            poisonComboBox1.UseCustomForeColor = true;
-            poisonComboBox1.UseSelectable = true;
+            cmbEstados.BackColor = Color.FromArgb(218, 248, 226);
+            cmbEstados.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbEstados.ForeColor = Color.Black;
+            cmbEstados.FormattingEnabled = true;
+            cmbEstados.ItemHeight = 22;
+            cmbEstados.Items.AddRange(new object[] { "Activo", "Inactivo", "Suspendido" });
+            cmbEstados.Location = new Point(461, 291);
+            cmbEstados.Margin = new Padding(2);
+            cmbEstados.Name = "cmbEstados";
+            cmbEstados.Size = new Size(115, 28);
+            cmbEstados.TabIndex = 18;
+            cmbEstados.UseCustomBackColor = true;
+            cmbEstados.UseCustomFont = true;
+            cmbEstados.UseCustomForeColor = true;
+            cmbEstados.UseSelectable = true;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Calibri", 11F, FontStyle.Bold);
             label4.ForeColor = Color.FromArgb(4, 79, 86);
-            label4.Location = new Point(658, 433);
+            label4.Location = new Point(461, 260);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(84, 27);
+            label4.Size = new Size(56, 18);
             label4.TabIndex = 17;
             label4.Text = "ESTADO";
             // 
@@ -234,11 +254,12 @@
             cmbRol.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbRol.ForeColor = Color.Black;
             cmbRol.FormattingEnabled = true;
-            cmbRol.ItemHeight = 31;
+            cmbRol.ItemHeight = 22;
             cmbRol.Items.AddRange(new object[] { "Administrador", "Medico", "Recepcionista" });
-            cmbRol.Location = new Point(475, 485);
+            cmbRol.Location = new Point(332, 291);
+            cmbRol.Margin = new Padding(2);
             cmbRol.Name = "cmbRol";
-            cmbRol.Size = new Size(163, 37);
+            cmbRol.Size = new Size(115, 28);
             cmbRol.TabIndex = 16;
             cmbRol.UseCustomBackColor = true;
             cmbRol.UseCustomFont = true;
@@ -250,9 +271,10 @@
             label5.AutoSize = true;
             label5.Font = new Font("Calibri", 11F, FontStyle.Bold);
             label5.ForeColor = Color.FromArgb(4, 79, 86);
-            label5.Location = new Point(475, 433);
+            label5.Location = new Point(332, 260);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(48, 27);
+            label5.Size = new Size(32, 18);
             label5.TabIndex = 15;
             label5.Text = "ROL";
             // 
@@ -263,10 +285,12 @@
             parrotGroupBox6.Controls.Add(txtContrasena);
             parrotGroupBox6.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             parrotGroupBox6.ForeColor = Color.FromArgb(4, 79, 86);
-            parrotGroupBox6.Location = new Point(475, 236);
+            parrotGroupBox6.Location = new Point(332, 142);
+            parrotGroupBox6.Margin = new Padding(2);
             parrotGroupBox6.Name = "parrotGroupBox6";
+            parrotGroupBox6.Padding = new Padding(2);
             parrotGroupBox6.ShowText = true;
-            parrotGroupBox6.Size = new Size(352, 68);
+            parrotGroupBox6.Size = new Size(246, 41);
             parrotGroupBox6.TabIndex = 12;
             parrotGroupBox6.TabStop = false;
             parrotGroupBox6.Text = "CONTRASEÑA";
@@ -277,9 +301,10 @@
             txtContrasena.BorderStyle = BorderStyle.None;
             txtContrasena.Font = new Font("Corbel", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtContrasena.ForeColor = Color.FromArgb(4, 79, 86);
-            txtContrasena.Location = new Point(16, 28);
+            txtContrasena.Location = new Point(11, 17);
+            txtContrasena.Margin = new Padding(2);
             txtContrasena.Name = "txtContrasena";
-            txtContrasena.Size = new Size(330, 30);
+            txtContrasena.Size = new Size(231, 20);
             txtContrasena.TabIndex = 1;
             // 
             // parrotGroupBox7
@@ -289,10 +314,12 @@
             parrotGroupBox7.Controls.Add(txtUsuario);
             parrotGroupBox7.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             parrotGroupBox7.ForeColor = Color.FromArgb(4, 79, 86);
-            parrotGroupBox7.Location = new Point(475, 134);
+            parrotGroupBox7.Location = new Point(332, 80);
+            parrotGroupBox7.Margin = new Padding(2);
             parrotGroupBox7.Name = "parrotGroupBox7";
+            parrotGroupBox7.Padding = new Padding(2);
             parrotGroupBox7.ShowText = true;
-            parrotGroupBox7.Size = new Size(352, 68);
+            parrotGroupBox7.Size = new Size(246, 41);
             parrotGroupBox7.TabIndex = 11;
             parrotGroupBox7.TabStop = false;
             parrotGroupBox7.Text = "USUARIO";
@@ -303,10 +330,11 @@
             txtUsuario.BorderStyle = BorderStyle.None;
             txtUsuario.Font = new Font("Corbel", 12F);
             txtUsuario.ForeColor = Color.FromArgb(4, 79, 86);
-            txtUsuario.Location = new Point(16, 28);
+            txtUsuario.Location = new Point(11, 17);
+            txtUsuario.Margin = new Padding(2);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.PlaceholderText = "Ej: username";
-            txtUsuario.Size = new Size(269, 30);
+            txtUsuario.Size = new Size(188, 20);
             txtUsuario.TabIndex = 1;
             // 
             // label8
@@ -314,9 +342,10 @@
             label8.BackColor = Color.FromArgb(4, 79, 86);
             label8.Font = new Font("Calibri", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.FromArgb(4, 79, 86);
-            label8.Location = new Point(475, 52);
+            label8.Location = new Point(332, 31);
+            label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
-            label8.Size = new Size(10, 41);
+            label8.Size = new Size(7, 25);
             label8.TabIndex = 14;
             // 
             // label9
@@ -324,9 +353,10 @@
             label9.AutoSize = true;
             label9.Font = new Font("Calibri", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.FromArgb(4, 79, 86);
-            label9.Location = new Point(491, 52);
+            label9.Location = new Point(344, 31);
+            label9.Margin = new Padding(2, 0, 2, 0);
             label9.Name = "label9";
-            label9.Size = new Size(275, 39);
+            label9.Size = new Size(190, 27);
             label9.TabIndex = 13;
             label9.Text = "Detalles de Usuario";
             // 
@@ -337,10 +367,12 @@
             parrotGroupBox4.Controls.Add(txtApellido);
             parrotGroupBox4.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             parrotGroupBox4.ForeColor = Color.FromArgb(4, 79, 86);
-            parrotGroupBox4.Location = new Point(56, 230);
+            parrotGroupBox4.Location = new Point(39, 138);
+            parrotGroupBox4.Margin = new Padding(2);
             parrotGroupBox4.Name = "parrotGroupBox4";
+            parrotGroupBox4.Padding = new Padding(2);
             parrotGroupBox4.ShowText = true;
-            parrotGroupBox4.Size = new Size(346, 68);
+            parrotGroupBox4.Size = new Size(242, 41);
             parrotGroupBox4.TabIndex = 3;
             parrotGroupBox4.TabStop = false;
             parrotGroupBox4.Text = "APELLIDO";
@@ -351,9 +383,10 @@
             txtApellido.BorderStyle = BorderStyle.None;
             txtApellido.Font = new Font("Corbel", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtApellido.ForeColor = Color.FromArgb(4, 79, 86);
-            txtApellido.Location = new Point(16, 28);
+            txtApellido.Location = new Point(11, 17);
+            txtApellido.Margin = new Padding(2);
             txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(324, 30);
+            txtApellido.Size = new Size(227, 20);
             txtApellido.TabIndex = 1;
             // 
             // cmbArea
@@ -362,10 +395,11 @@
             cmbArea.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbArea.ForeColor = Color.Black;
             cmbArea.FormattingEnabled = true;
-            cmbArea.ItemHeight = 31;
-            cmbArea.Location = new Point(56, 367);
+            cmbArea.ItemHeight = 22;
+            cmbArea.Location = new Point(39, 220);
+            cmbArea.Margin = new Padding(2);
             cmbArea.Name = "cmbArea";
-            cmbArea.Size = new Size(346, 37);
+            cmbArea.Size = new Size(243, 28);
             cmbArea.TabIndex = 5;
             cmbArea.UseCustomBackColor = true;
             cmbArea.UseCustomFont = true;
@@ -377,9 +411,10 @@
             label3.AutoSize = true;
             label3.Font = new Font("Calibri", 11F, FontStyle.Bold);
             label3.ForeColor = Color.FromArgb(4, 79, 86);
-            label3.Location = new Point(49, 322);
+            label3.Location = new Point(34, 193);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(61, 27);
+            label3.Size = new Size(41, 18);
             label3.TabIndex = 4;
             label3.Text = "ÁREA";
             // 
@@ -390,10 +425,12 @@
             parrotGroupBox2.Controls.Add(txtNombre);
             parrotGroupBox2.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             parrotGroupBox2.ForeColor = Color.FromArgb(4, 79, 86);
-            parrotGroupBox2.Location = new Point(56, 134);
+            parrotGroupBox2.Location = new Point(39, 80);
+            parrotGroupBox2.Margin = new Padding(2);
             parrotGroupBox2.Name = "parrotGroupBox2";
+            parrotGroupBox2.Padding = new Padding(2);
             parrotGroupBox2.ShowText = true;
-            parrotGroupBox2.Size = new Size(346, 68);
+            parrotGroupBox2.Size = new Size(242, 41);
             parrotGroupBox2.TabIndex = 2;
             parrotGroupBox2.TabStop = false;
             parrotGroupBox2.Text = "NOMBRE";
@@ -404,9 +441,10 @@
             txtNombre.BorderStyle = BorderStyle.None;
             txtNombre.Font = new Font("Corbel", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNombre.ForeColor = Color.FromArgb(4, 79, 86);
-            txtNombre.Location = new Point(16, 28);
+            txtNombre.Location = new Point(11, 17);
+            txtNombre.Margin = new Padding(2);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(324, 30);
+            txtNombre.Size = new Size(227, 20);
             txtNombre.TabIndex = 1;
             // 
             // label2
@@ -414,9 +452,10 @@
             label2.BackColor = Color.FromArgb(4, 79, 86);
             label2.Font = new Font("Calibri", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(4, 79, 86);
-            label2.Location = new Point(56, 52);
+            label2.Location = new Point(39, 31);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(10, 42);
+            label2.Size = new Size(7, 25);
             label2.TabIndex = 3;
             // 
             // label1
@@ -424,9 +463,10 @@
             label1.AutoSize = true;
             label1.Font = new Font("Calibri", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(4, 79, 86);
-            label1.Location = new Point(71, 52);
+            label1.Location = new Point(50, 31);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(355, 39);
+            label1.Size = new Size(245, 27);
             label1.TabIndex = 2;
             label1.Text = "Detalles de Recepcionista";
             // 
@@ -434,18 +474,50 @@
             // 
             dgvRecepcionistas.BackgroundColor = Color.White;
             dgvRecepcionistas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvRecepcionistas.Location = new Point(951, 183);
+            dgvRecepcionistas.Columns.AddRange(new DataGridViewColumn[] { RecepcionistaId, Nombre, Apellido, Area, UsuarioId, Estado });
+            dgvRecepcionistas.Location = new Point(666, 110);
+            dgvRecepcionistas.Margin = new Padding(2);
             dgvRecepcionistas.Name = "dgvRecepcionistas";
             dgvRecepcionistas.RowHeadersWidth = 62;
-            dgvRecepcionistas.Size = new Size(471, 593);
+            dgvRecepcionistas.Size = new Size(330, 356);
             dgvRecepcionistas.TabIndex = 43;
+            // 
+            // RecepcionistaId
+            // 
+            RecepcionistaId.HeaderText = "RecepcionistaId";
+            RecepcionistaId.Name = "RecepcionistaId";
+            // 
+            // Nombre
+            // 
+            Nombre.HeaderText = "Nombre";
+            Nombre.Name = "Nombre";
+            // 
+            // Apellido
+            // 
+            Apellido.HeaderText = "Apellido";
+            Apellido.Name = "Apellido";
+            // 
+            // Area
+            // 
+            Area.HeaderText = "Area";
+            Area.Name = "Area";
+            // 
+            // UsuarioId
+            // 
+            UsuarioId.HeaderText = "UsuarioId";
+            UsuarioId.Name = "UsuarioId";
+            // 
+            // Estado
+            // 
+            Estado.HeaderText = "Estado";
+            Estado.Name = "Estado";
             // 
             // FormRegistroRecepcionista
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(218, 248, 226);
-            ClientSize = new Size(1454, 1050);
+            ClientSize = new Size(1018, 630);
             Controls.Add(dgvRecepcionistas);
             Controls.Add(BuDesactivar);
             Controls.Add(BuEditar);
@@ -453,6 +525,7 @@
             Controls.Add(foreverGroupBox1);
             Controls.Add(label7);
             Controls.Add(label6);
+            Margin = new Padding(2);
             Name = "FormRegistroRecepcionista";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Registro de Usuarios";
@@ -481,8 +554,8 @@
         private Krypton.Toolkit.KryptonButton BuCrear;
         private ReaLTaiizor.Controls.ForeverGroupBox foreverGroupBox1;
         private ReaLTaiizor.Controls.ParrotGroupBox parrotGroupBox5;
-        private TextBox textBox2;
-        private ReaLTaiizor.Controls.PoisonComboBox poisonComboBox1;
+        private TextBox txtConfirmarPass;
+        private ReaLTaiizor.Controls.PoisonComboBox cmbEstados;
         private Label label4;
         private ReaLTaiizor.Controls.PoisonComboBox cmbRol;
         private Label label5;
@@ -501,5 +574,11 @@
         private Label label2;
         private Label label1;
         private DataGridView dgvRecepcionistas;
+        private DataGridViewTextBoxColumn RecepcionistaId;
+        private DataGridViewTextBoxColumn Nombre;
+        private DataGridViewTextBoxColumn Apellido;
+        private DataGridViewTextBoxColumn Area;
+        private DataGridViewTextBoxColumn UsuarioId;
+        private DataGridViewTextBoxColumn Estado;
     }
 }

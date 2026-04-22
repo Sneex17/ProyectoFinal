@@ -1,5 +1,6 @@
 using CAccesoDatos.RepositoryPattern;
 using CEntidades.Models;
+using CNegocio;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -8,12 +9,10 @@ namespace CPresentacion
 {
     public partial class FormHistorialDeTurno : Form
     {
-        private readonly TurnoRepository _turnoRepo;
 
         public FormHistorialDeTurno()
         {
             InitializeComponent();
-            _turnoRepo = new TurnoRepository();
             Load += FormHistorialDeTurno_Load;
         }
 
@@ -30,7 +29,7 @@ namespace CPresentacion
 
                 if (SesionUsuario.EsPaciente && SesionUsuario.IdRelacionado.HasValue)
                 {
-                    turnos = _turnoRepo.HistorialPaciente(SesionUsuario.IdRelacionado.Value);
+                    turnos = ServiciosTurnos.HistorialPaciente(SesionUsuario.IdRelacionado.Value);
                 }
                 else
                 {

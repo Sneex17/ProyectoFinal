@@ -17,8 +17,21 @@ namespace CAccesoDatos.RepositoryPattern
 
         public void Actualizar(Recepcionista tabla)
         {
-            _context.Recepcionistas.Update(tabla);
-            _context.SaveChanges();
+            var recepcionistaExistente = _context.Recepcionistas.Include(u => u.Usuario)
+                .FirstOrDefault(m => m.RecepcionistaId == tabla.RecepcionistaId);
+            if (recepcionistaExistente != null)
+            {
+                if(string.IsNullOrWhiteSpace(recepcionistaExistente.Usuario.Contrasena))
+                {
+                    UsuarioRepository.ActualizarUsuario(recepcionistaExistente.Usuario);
+                }
+
+                recepcionistaExistente.Nombre = tabla.Nombre;
+                recepcionistaExistente.Apellido = tabla.Apellido;
+                recepcionistaExistente.AreaId = tabla.AreaId;
+                recepcionistaExistente.EstadoId = tabla.EstadoId;
+                _context.SaveChanges();
+            }
         }
 
         public void Agregar(Recepcionista tabla)
@@ -29,13 +42,24 @@ namespace CAccesoDatos.RepositoryPattern
 
         public void Eliminar(Recepcionista tabla)
         {
-            _context.Recepcionistas.Remove(tabla);
-            _context.SaveChanges();
+            var medicoExistente = _context.Recepcionistas.Include(u => u.Usuario)
+                .FirstOrDefault(m => m.RecepcionistaId == tabla.RecepcionistaId);
+            if (medicoExistente != null)
+            {
+                medicoExistente.Usuario.EstadoId = 3;
+                UsuarioRepository.DesactivarUsuario(medicoExistente.Usuario);
+
+                medicoExistente.EstadoId = tabla.EstadoId;
+                _context.SaveChanges();
+            }
         }
 
         public IList<Recepcionista> Listar()
         {
-            return _context.Recepcionistas.ToList();
+            return _context.Recepcionistas
+                .Include(a => a.Area)
+                .Include(u => u.Usuario)
+                .Include(e => e.Estado).ToList();
         }
 
         public Recepcionista? ObtenerPorUsuarioId(int usuarioId)
