@@ -65,6 +65,7 @@ wwwroot\lib\jquery\LICENSE.txt
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\wwwroot\css\site.css
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\wwwroot\favicon.ico
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\wwwroot\js\site.js
+C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\wwwroot\js\tailwindcss.js
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -124,4 +125,3 @@ C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web Ap
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\wwwroot\lib\jquery\LICENSE.txt
-C:\Users\User\Desktop\Proyecto Final Pro Avan\ProyectoFinal\ProyectoFinal Web App Turnos\WebApplication\wwwroot\js\tailwindcss.js

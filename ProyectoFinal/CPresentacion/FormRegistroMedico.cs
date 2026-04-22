@@ -147,6 +147,14 @@ namespace CPresentacion
                     Nombre = txtNombre.Text,
                     Apellido = txtApellido.Text,
                     EspecialidadId = Convert.ToInt32(cmbEspecialidades.SelectedValue),
+                    Usuario = new Usuario()
+                    {
+                        Usuario1 = txtUsuario.Text,
+                        Contrasena = Hast.HashPassword(txtContrasena.Text),
+                        FechaCreacion = DateTime.Now,
+                        EstadoId = Convert.ToInt32(cmbEstados.SelectedValue),
+                        RolId = Convert.ToInt32(cmbRol.SelectedValue)
+                    },
 
                     EstadoId = Convert.ToInt32(cmbEstados.SelectedValue)
                 };

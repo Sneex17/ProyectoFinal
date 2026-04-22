@@ -3,6 +3,50 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CNegocio.Tests\\CNegocio.Tests.csproj|c:\\users\\user\\desktop\\proyecto final pro avan\\proyectofinal\\proyectofinal\\cnegocio.tests\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CNegocio.Tests\\CNegocio.Tests.csproj|solutionrelative:cnegocio.tests\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CNegocio.Tests\\CNegocio.Tests.csproj|c:\\users\\user\\desktop\\proyecto final pro avan\\proyectofinal\\proyectofinal\\cnegocio.tests\\validators\\validacionmedicotests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CNegocio.Tests\\CNegocio.Tests.csproj|solutionrelative:cnegocio.tests\\validators\\validacionmedicotests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CNegocio.Tests\\CNegocio.Tests.csproj|c:\\users\\user\\desktop\\proyecto final pro avan\\proyectofinal\\proyectofinal\\cnegocio.tests\\validators\\validacionespecialidadestests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CNegocio.Tests\\CNegocio.Tests.csproj|solutionrelative:cnegocio.tests\\validators\\validacionespecialidadestests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CNegocio.Tests\\CNegocio.Tests.csproj|c:\\users\\user\\desktop\\proyecto final pro avan\\proyectofinal\\proyectofinal\\cnegocio.tests\\statepattern\\estadoturnocontextotests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CNegocio.Tests\\CNegocio.Tests.csproj|solutionrelative:cnegocio.tests\\statepattern\\estadoturnocontextotests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|c:\\users\\user\\desktop\\proyecto final pro avan\\proyectofinal\\proyectofinal\\cpresentacion\\formcolaturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formcolaturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\cpresentacion\\formregistromedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formregistromedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\cpresentacion\\formregistrousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formregistrousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\cpresentacion\\formobservacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formobservacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\cpresentacion\\formregistroespecialidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formregistroespecialidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45EA65C8-A62A-436A-A71F-A2A92EF0AD6B}|CAccesoDatos\\CAccesoDatos.csproj|c:\\users\\user\\desktop\\proyecto final pro avan\\proyectofinal\\proyectofinal\\caccesodatos\\repositorypattern\\medicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45EA65C8-A62A-436A-A71F-A2A92EF0AD6B}|CAccesoDatos\\CAccesoDatos.csproj|solutionrelative:caccesodatos\\repositorypattern\\medicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|c:\\users\\user\\desktop\\proyecto final pro avan\\proyectofinal\\proyectofinal\\cpresentacion\\formregistromedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formregistromedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{45EA65C8-A62A-436A-A71F-A2A92EF0AD6B}|CAccesoDatos\\CAccesoDatos.csproj|c:\\users\\user\\desktop\\proyecto final pro avan\\proyectofinal\\proyectofinal\\caccesodatos\\conexionappdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45EA65C8-A62A-436A-A71F-A2A92EF0AD6B}|CAccesoDatos\\CAccesoDatos.csproj|solutionrelative:caccesodatos\\conexionappdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,16 +63,8 @@
       "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formhistorialdeturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|c:\\users\\user\\desktop\\proyecto final pro avan\\proyectofinal\\proyectofinal\\cpresentacion\\formcolaturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formcolaturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|c:\\users\\user\\desktop\\proyecto final pro avan\\proyectofinal\\proyectofinal\\cpresentacion\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\cpresentacion\\formregistrousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formregistrousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\cpresentacion\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -55,14 +91,6 @@
       "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formregistrorecepcionista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\cpresentacion\\formregistromedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formregistromedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\cpresentacion\\formregistroespecialidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formregistroespecialidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|c:\\users\\user\\desktop\\proyecto final pro avan\\proyectofinal\\proyectofinal\\cpresentacion\\formregistroespecialidades.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formregistroespecialidades.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -81,10 +109,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|c:\\users\\user\\desktop\\proyecto final pro avan\\proyectofinal\\proyectofinal\\cpresentacion\\formhistorialdepacientes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formhistorialdepacientes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|c:\\users\\user\\desktop\\proyecto final pro avan\\proyectofinal\\proyectofinal\\cpresentacion\\formregistromedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|solutionrelative:cpresentacion\\formregistromedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D2539EA9-F3B0-4F68-B3D5-1B442754C384}|CPresentacion\\CPresentacion.csproj|c:\\users\\user\\desktop\\proyecto final pro avan\\proyectofinal\\proyectofinal\\cpresentacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -114,7 +138,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -169,20 +193,60 @@
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GlobalUsings.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CNegocio.Tests\\GlobalUsings.cs",
+              "RelativeDocumentMoniker": "CNegocio.Tests\\GlobalUsings.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CNegocio.Tests\\GlobalUsings.cs",
+              "RelativeToolTip": "CNegocio.Tests\\GlobalUsings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T01:34:49.945Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "ValidacionEspecialidadesTests.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CNegocio.Tests\\Validators\\ValidacionEspecialidadesTests.cs",
+              "RelativeDocumentMoniker": "CNegocio.Tests\\Validators\\ValidacionEspecialidadesTests.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CNegocio.Tests\\Validators\\ValidacionEspecialidadesTests.cs",
+              "RelativeToolTip": "CNegocio.Tests\\Validators\\ValidacionEspecialidadesTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T01:34:20.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ValidacionMedicoTests.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CNegocio.Tests\\Validators\\ValidacionMedicoTests.cs",
+              "RelativeDocumentMoniker": "CNegocio.Tests\\Validators\\ValidacionMedicoTests.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CNegocio.Tests\\Validators\\ValidacionMedicoTests.cs",
+              "RelativeToolTip": "CNegocio.Tests\\Validators\\ValidacionMedicoTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T01:34:18.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EstadoTurnoContextoTests.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CNegocio.Tests\\StatePattern\\EstadoTurnoContextoTests.cs",
+              "RelativeDocumentMoniker": "CNegocio.Tests\\StatePattern\\EstadoTurnoContextoTests.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CNegocio.Tests\\StatePattern\\EstadoTurnoContextoTests.cs",
+              "RelativeToolTip": "CNegocio.Tests\\StatePattern\\EstadoTurnoContextoTests.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAAsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T01:33:45.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "ConexionAppDB.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CAccesoDatos\\ConexionAppDB.cs",
               "RelativeDocumentMoniker": "CAccesoDatos\\ConexionAppDB.cs",
@@ -190,46 +254,7 @@
               "RelativeToolTip": "CAccesoDatos\\ConexionAppDB.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T15:22:24.262Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ServiciosTurnos.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CNegocio\\ServiciosTurnos.cs",
-              "RelativeDocumentMoniker": "CNegocio\\ServiciosTurnos.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CNegocio\\ServiciosTurnos.cs",
-              "RelativeToolTip": "CNegocio\\ServiciosTurnos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T15:15:27.926Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormColaTurno.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormColaTurno.cs",
-              "RelativeDocumentMoniker": "CPresentacion\\FormColaTurno.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormColaTurno.cs",
-              "RelativeToolTip": "CPresentacion\\FormColaTurno.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T14:56:20.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormHistorialDeTurno.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormHistorialDeTurno.cs",
-              "RelativeDocumentMoniker": "CPresentacion\\FormHistorialDeTurno.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormHistorialDeTurno.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CPresentacion\\FormHistorialDeTurno.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T14:32:12.286Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-04-21T15:22:24.262Z"
             },
             {
               "$type": "Document",
@@ -245,20 +270,68 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
+              "Title": "FormRegistroMedico.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroMedico.cs",
+              "RelativeDocumentMoniker": "CPresentacion\\FormRegistroMedico.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroMedico.cs",
+              "RelativeToolTip": "CPresentacion\\FormRegistroMedico.cs",
+              "ViewState": "AgIAAJMAAAAACAAAAAAUwK4AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T18:53:17.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MedicoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CAccesoDatos\\RepositoryPattern\\MedicoRepository.cs",
+              "RelativeDocumentMoniker": "CAccesoDatos\\RepositoryPattern\\MedicoRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CAccesoDatos\\RepositoryPattern\\MedicoRepository.cs",
+              "RelativeToolTip": "CAccesoDatos\\RepositoryPattern\\MedicoRepository.cs",
+              "ViewState": "AgIAABAAAADAaWZmZmYuwB4AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T17:58:47.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ServiciosTurnos.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CNegocio\\ServiciosTurnos.cs",
+              "RelativeDocumentMoniker": "CNegocio\\ServiciosTurnos.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CNegocio\\ServiciosTurnos.cs",
+              "RelativeToolTip": "CNegocio\\ServiciosTurnos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T15:15:27.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormColaTurno.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormColaTurno.cs",
+              "RelativeDocumentMoniker": "CPresentacion\\FormColaTurno.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormColaTurno.cs",
+              "RelativeToolTip": "CPresentacion\\FormColaTurno.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwA4AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T14:56:20.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "FormHistorialDeTurno.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormHistorialDeTurno.cs",
               "RelativeDocumentMoniker": "CPresentacion\\FormHistorialDeTurno.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormHistorialDeTurno.cs",
               "RelativeToolTip": "CPresentacion\\FormHistorialDeTurno.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-21T14:32:14.622Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\appsettings.json",
               "RelativeDocumentMoniker": "CPresentacion\\appsettings.json",
@@ -270,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 19,
               "Title": "Validaciones.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CNegocio\\Validaciones.cs",
               "RelativeDocumentMoniker": "CNegocio\\Validaciones.cs",
@@ -282,20 +355,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "FormRegistroRecepcionista.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroRecepcionista.cs",
               "RelativeDocumentMoniker": "CPresentacion\\FormRegistroRecepcionista.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroRecepcionista.cs",
               "RelativeToolTip": "CPresentacion\\FormRegistroRecepcionista.cs",
-              "ViewState": "AgIAAO8AAAAAAAAAAAAAAP0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAOwAAAAAAAAAAIBJwPwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-21T14:21:24.684Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 28,
               "Title": "CPresentacion.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\CPresentacion.csproj",
               "RelativeDocumentMoniker": "CPresentacion\\CPresentacion.csproj",
@@ -307,31 +380,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "FormRegistroEspecialidades.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroEspecialidades.Designer.cs",
               "RelativeDocumentMoniker": "CPresentacion\\FormRegistroEspecialidades.Designer.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroEspecialidades.Designer.cs",
               "RelativeToolTip": "CPresentacion\\FormRegistroEspecialidades.Designer.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAIwCIAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAIwBYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-10T21:17:38.162Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "FormHistorialDePacientes.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormHistorialDePacientes.Designer.cs",
               "RelativeDocumentMoniker": "CPresentacion\\FormHistorialDePacientes.Designer.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormHistorialDePacientes.Designer.cs",
               "RelativeToolTip": "CPresentacion\\FormHistorialDePacientes.Designer.cs",
-              "ViewState": "AgIAAFUBAAAAAAAAAAAAAGQBAABGAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAIBJwBYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-10T19:24:03.563Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "FormEstadisticas.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormEstadisticas.cs",
               "RelativeDocumentMoniker": "CPresentacion\\FormEstadisticas.cs",
@@ -344,19 +417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "FormRegistroMedico.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroMedico.cs",
-              "RelativeDocumentMoniker": "CPresentacion\\FormRegistroMedico.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroMedico.cs",
-              "RelativeToolTip": "CPresentacion\\FormRegistroMedico.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T18:53:17.88Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 27,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\Program.cs",
               "RelativeDocumentMoniker": "CPresentacion\\Program.cs",
@@ -368,19 +429,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 30,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CAccesoDatos\\Class1.cs",
               "RelativeDocumentMoniker": "CAccesoDatos\\Class1.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CAccesoDatos\\Class1.cs",
               "RelativeToolTip": "CAccesoDatos\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-07T19:07:20.113Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "FormRegistroUsuario.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroUsuario.cs",
               "RelativeDocumentMoniker": "CPresentacion\\FormRegistroUsuario.cs",
@@ -392,26 +452,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 31,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CNegocio\\Class1.cs",
               "RelativeDocumentMoniker": "CNegocio\\Class1.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CNegocio\\Class1.cs",
               "RelativeToolTip": "CNegocio\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-07T19:07:20.304Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FormLogIn.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormLogIn.cs",
-              "RelativeDocumentMoniker": "CPresentacion\\FormLogIn.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormLogIn.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CPresentacion\\FormLogIn.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T14:32:22.675Z"
             },
             {
               "$type": "Document",
@@ -426,29 +474,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FormHistorialDePacientes.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormHistorialDePacientes.cs",
-              "RelativeDocumentMoniker": "CPresentacion\\FormHistorialDePacientes.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormHistorialDePacientes.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CPresentacion\\FormHistorialDePacientes.cs [Dise\u00F1o]",
+              "DocumentIndex": 5,
+              "Title": "FormRegistroMedico.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroMedico.cs",
+              "RelativeDocumentMoniker": "CPresentacion\\FormRegistroMedico.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroMedico.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CPresentacion\\FormRegistroMedico.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T19:08:24.107Z"
+              "WhenOpened": "2026-04-10T18:52:48.189Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FormRegistroRecepcionista.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroRecepcionista.cs",
-              "RelativeDocumentMoniker": "CPresentacion\\FormRegistroRecepcionista.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroRecepcionista.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CPresentacion\\FormRegistroRecepcionista.cs [Dise\u00F1o]",
+              "DocumentIndex": 7,
+              "Title": "FormObservacion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormObservacion.cs",
+              "RelativeDocumentMoniker": "CPresentacion\\FormObservacion.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormObservacion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CPresentacion\\FormObservacion.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T14:21:21.309Z"
+              "WhenOpened": "2026-04-21T18:26:47.14Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 8,
               "Title": "FormRegistroEspecialidades.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroEspecialidades.cs",
               "RelativeDocumentMoniker": "CPresentacion\\FormRegistroEspecialidades.cs",
@@ -459,18 +519,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "FormRegistroMedico.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroMedico.cs",
-              "RelativeDocumentMoniker": "CPresentacion\\FormRegistroMedico.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroMedico.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CPresentacion\\FormRegistroMedico.cs [Dise\u00F1o]",
+              "DocumentIndex": 14,
+              "Title": "FormHistorialDeTurno.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormHistorialDeTurno.cs",
+              "RelativeDocumentMoniker": "CPresentacion\\FormHistorialDeTurno.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormHistorialDeTurno.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CPresentacion\\FormHistorialDeTurno.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T18:52:48.189Z"
+              "WhenOpened": "2026-04-21T14:32:12.286Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
+              "Title": "FormLogIn.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormLogIn.cs",
+              "RelativeDocumentMoniker": "CPresentacion\\FormLogIn.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormLogIn.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CPresentacion\\FormLogIn.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T14:32:22.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FormHistorialDePacientes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormHistorialDePacientes.cs",
+              "RelativeDocumentMoniker": "CPresentacion\\FormHistorialDePacientes.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormHistorialDePacientes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CPresentacion\\FormHistorialDePacientes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T19:08:24.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "FormRegistroRecepcionista.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroRecepcionista.cs",
+              "RelativeDocumentMoniker": "CPresentacion\\FormRegistroRecepcionista.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormRegistroRecepcionista.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CPresentacion\\FormRegistroRecepcionista.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T14:21:21.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "FormEstadisticas.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormEstadisticas.cs",
               "RelativeDocumentMoniker": "CPresentacion\\FormEstadisticas.cs",
@@ -481,7 +574,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "FormAtencion.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto Final Pro Avan\\ProyectoFinal\\ProyectoFinal\\CPresentacion\\FormAtencion.cs",
               "RelativeDocumentMoniker": "CPresentacion\\FormAtencion.cs",

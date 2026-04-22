@@ -15,13 +15,13 @@ namespace CAccesoDatos.RepositoryPattern
 
         public void Actualizar(Medico tabla)
         {
-            var medicoExistente = _context.Medicos.Include(u => u.Usuario)
-                .FirstOrDefault(m => m.MedicoId == tabla.MedicoId);
-            if (medicoExistente != null)
+            if (tabla != null)
             {
-                if(string.IsNullOrWhiteSpace(medicoExistente.Usuario.Contrasena))
+            var medicoExistente = _context.Medicos.Include(u => u.Usuario)
+                        .FirstOrDefault(m => m.MedicoId == tabla.MedicoId);
+                if (!string.IsNullOrWhiteSpace(tabla.Usuario.Contrasena))
                 {
-                    UsuarioRepository.ActualizarUsuario(medicoExistente.Usuario);
+                    UsuarioRepository.ActualizarUsuario(tabla.Usuario);
                 }
 
                 medicoExistente.Nlicencia = tabla.Nlicencia;
@@ -29,6 +29,8 @@ namespace CAccesoDatos.RepositoryPattern
                 medicoExistente.Apellido = tabla.Apellido;
                 medicoExistente.EspecialidadId = tabla.EspecialidadId;
                 medicoExistente.EstadoId = tabla.EstadoId;
+                medicoExistente.Usuario = tabla.Usuario;
+                
                 _context.SaveChanges();
             }
         }
