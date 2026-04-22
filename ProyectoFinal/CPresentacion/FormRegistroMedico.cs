@@ -65,6 +65,7 @@ namespace CPresentacion
                     idUsuario = medico.UsuarioId;
                 }
             }
+            BuCrear.Enabled = false;
         }
         private void CargarDatos()
         {
@@ -188,17 +189,20 @@ namespace CPresentacion
 
                     LimpiarTextBox();
                     DatosGridView();
+                    BuCrear.Enabled = true;
                 }
             }
             catch (ControlExcepciones error)
             {
                 MessageBox.Show($"{error.Message}", "Error en la operación",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                BuCrear.Enabled = true;
             }
             catch (Exception error)
             {
                 MessageBox.Show($"{error.Message}", "Error en la operación",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                BuCrear.Enabled = true;
             }
         }
         private int CrearUsuario()
@@ -257,17 +261,20 @@ namespace CPresentacion
 
                     LimpiarTextBox();
                     DatosGridView();
+                    BuCrear.Enabled = true;
                 }
             }
             catch (ControlExcepciones error)
             {
                 MessageBox.Show($"{error.Message}", "Error en la operación",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                BuCrear.Enabled = true;
             }
             catch (Exception error)
             {
                 MessageBox.Show($"{error.Message}", "Error en la operación",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                BuCrear.Enabled = true;
             }
         }
     }

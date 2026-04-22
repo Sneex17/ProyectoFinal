@@ -41,9 +41,10 @@ namespace CPresentacion
             label6.AutoSize = true;
             label6.Font = new Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(0, 54, 60);
-            label6.Location = new Point(51, 14);
+            label6.Location = new Point(36, 8);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(440, 59);
+            label6.Size = new Size(292, 39);
             label6.TabIndex = 27;
             label6.Text = "Gestión de Pacientes";
             // 
@@ -52,9 +53,10 @@ namespace CPresentacion
             label7.AutoSize = true;
             label7.Font = new Font("Calibri", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.FromArgb(95, 154, 162);
-            label7.Location = new Point(71, 80);
+            label7.Location = new Point(50, 48);
+            label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(293, 27);
+            label7.Size = new Size(197, 18);
             label7.TabIndex = 26;
             label7.Text = "CRUD de pacientes registrados";
             // 
@@ -77,19 +79,22 @@ namespace CPresentacion
             foreverGroupBox1.Controls.Add(label1);
             foreverGroupBox1.Controls.Add(dataGridView1);
             foreverGroupBox1.Font = new Font("Segoe UI", 10F);
-            foreverGroupBox1.Location = new Point(71, 110);
+            foreverGroupBox1.Location = new Point(50, 66);
+            foreverGroupBox1.Margin = new Padding(2, 2, 2, 2);
             foreverGroupBox1.Name = "foreverGroupBox1";
             foreverGroupBox1.ShowArrow = true;
             foreverGroupBox1.ShowText = true;
-            foreverGroupBox1.Size = new Size(1200, 850);
+            foreverGroupBox1.Size = new Size(840, 510);
             foreverGroupBox1.TabIndex = 16;
             foreverGroupBox1.TextColor = Color.Transparent;
             // 
             // btnNuevo
             // 
-            btnNuevo.Location = new Point(45, 58);
+            btnNuevo.Cursor = Cursors.Hand;
+            btnNuevo.Location = new Point(32, 35);
+            btnNuevo.Margin = new Padding(2, 2, 2, 2);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(150, 55);
+            btnNuevo.Size = new Size(105, 33);
             btnNuevo.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
             btnNuevo.StateCommon.Back.Color2 = Color.FromArgb(23, 74, 111);
             btnNuevo.StateCommon.Back.ColorAngle = -2F;
@@ -107,9 +112,11 @@ namespace CPresentacion
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(205, 58);
+            btnEditar.Cursor = Cursors.Hand;
+            btnEditar.Location = new Point(144, 35);
+            btnEditar.Margin = new Padding(2, 2, 2, 2);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(150, 55);
+            btnEditar.Size = new Size(105, 33);
             btnEditar.StateCommon.Back.Color1 = Color.FromArgb(254, 219, 151);
             btnEditar.StateCommon.Back.Color2 = Color.FromArgb(254, 219, 151);
             btnEditar.StateCommon.Back.ColorAngle = -2F;
@@ -127,9 +134,11 @@ namespace CPresentacion
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(365, 58);
+            btnEliminar.Cursor = Cursors.Hand;
+            btnEliminar.Location = new Point(256, 35);
+            btnEliminar.Margin = new Padding(2, 2, 2, 2);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(150, 55);
+            btnEliminar.Size = new Size(105, 33);
             btnEliminar.StateCommon.Back.Color1 = Color.IndianRed;
             btnEliminar.StateCommon.Back.Color2 = Color.Brown;
             btnEliminar.StateCommon.Back.ColorAngle = -2F;
@@ -147,9 +156,11 @@ namespace CPresentacion
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(980, 58);
+            btnBuscar.Cursor = Cursors.Hand;
+            btnBuscar.Location = new Point(686, 35);
+            btnBuscar.Margin = new Padding(2, 2, 2, 2);
             btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(120, 55);
+            btnBuscar.Size = new Size(84, 33);
             btnBuscar.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
             btnBuscar.StateCommon.Back.Color2 = Color.FromArgb(0, 54, 60);
             btnBuscar.StateCommon.Back.ColorAngle = -2F;
@@ -167,9 +178,11 @@ namespace CPresentacion
             // 
             // btnPrimero
             // 
-            btnPrimero.Location = new Point(45, 780);
+            btnPrimero.Cursor = Cursors.Hand;
+            btnPrimero.Location = new Point(32, 468);
+            btnPrimero.Margin = new Padding(2, 2, 2, 2);
             btnPrimero.Name = "btnPrimero";
-            btnPrimero.Size = new Size(80, 40);
+            btnPrimero.Size = new Size(56, 24);
             btnPrimero.StateCommon.Back.Color1 = Color.FromArgb(218, 248, 226);
             btnPrimero.StateCommon.Back.Color2 = Color.FromArgb(218, 248, 226);
             btnPrimero.StateCommon.Back.ColorAngle = -2F;
@@ -187,9 +200,11 @@ namespace CPresentacion
             // 
             // btnAnterior
             // 
-            btnAnterior.Location = new Point(135, 780);
+            btnAnterior.Cursor = Cursors.Hand;
+            btnAnterior.Location = new Point(94, 468);
+            btnAnterior.Margin = new Padding(2, 2, 2, 2);
             btnAnterior.Name = "btnAnterior";
-            btnAnterior.Size = new Size(80, 40);
+            btnAnterior.Size = new Size(56, 24);
             btnAnterior.StateCommon.Back.Color1 = Color.FromArgb(218, 248, 226);
             btnAnterior.StateCommon.Back.Color2 = Color.FromArgb(218, 248, 226);
             btnAnterior.StateCommon.Back.ColorAngle = -2F;
@@ -207,9 +222,11 @@ namespace CPresentacion
             // 
             // btnSiguiente
             // 
-            btnSiguiente.Location = new Point(960, 780);
+            btnSiguiente.Cursor = Cursors.Hand;
+            btnSiguiente.Location = new Point(672, 468);
+            btnSiguiente.Margin = new Padding(2, 2, 2, 2);
             btnSiguiente.Name = "btnSiguiente";
-            btnSiguiente.Size = new Size(80, 40);
+            btnSiguiente.Size = new Size(56, 24);
             btnSiguiente.StateCommon.Back.Color1 = Color.FromArgb(218, 248, 226);
             btnSiguiente.StateCommon.Back.Color2 = Color.FromArgb(218, 248, 226);
             btnSiguiente.StateCommon.Back.ColorAngle = -2F;
@@ -227,9 +244,11 @@ namespace CPresentacion
             // 
             // btnUltimo
             // 
-            btnUltimo.Location = new Point(1050, 780);
+            btnUltimo.Cursor = Cursors.Hand;
+            btnUltimo.Location = new Point(735, 468);
+            btnUltimo.Margin = new Padding(2, 2, 2, 2);
             btnUltimo.Name = "btnUltimo";
-            btnUltimo.Size = new Size(80, 40);
+            btnUltimo.Size = new Size(56, 24);
             btnUltimo.StateCommon.Back.Color1 = Color.FromArgb(218, 248, 226);
             btnUltimo.StateCommon.Back.Color2 = Color.FromArgb(218, 248, 226);
             btnUltimo.StateCommon.Back.ColorAngle = -2F;
@@ -250,19 +269,21 @@ namespace CPresentacion
             lblPagina.AutoSize = true;
             lblPagina.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblPagina.ForeColor = Color.FromArgb(0, 54, 60);
-            lblPagina.Location = new Point(540, 790);
+            lblPagina.Location = new Point(378, 474);
+            lblPagina.Margin = new Padding(2, 0, 2, 0);
             lblPagina.Name = "lblPagina";
-            lblPagina.Size = new Size(141, 28);
+            lblPagina.Size = new Size(100, 19);
             lblPagina.TabIndex = 48;
             lblPagina.Text = "Página 1 de 1";
             // 
             // txtBuscar
             // 
             txtBuscar.Font = new Font("Corbel", 11F);
-            txtBuscar.Location = new Point(765, 72);
+            txtBuscar.Location = new Point(536, 43);
+            txtBuscar.Margin = new Padding(2, 2, 2, 2);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar por nombre o cedula...";
-            txtBuscar.Size = new Size(205, 34);
+            txtBuscar.Size = new Size(145, 25);
             txtBuscar.TabIndex = 49;
             // 
             // label1
@@ -270,9 +291,10 @@ namespace CPresentacion
             label1.AutoSize = true;
             label1.Font = new Font("Calibri", 11F, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(4, 79, 86);
-            label1.Location = new Point(765, 42);
+            label1.Location = new Point(536, 25);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(85, 27);
+            label1.Size = new Size(58, 18);
             label1.TabIndex = 50;
             label1.Text = "BUSCAR";
             // 
@@ -284,24 +306,26 @@ namespace CPresentacion
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(45, 130);
+            dataGridView1.Location = new Point(32, 78);
+            dataGridView1.Margin = new Padding(2, 2, 2, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(1110, 630);
+            dataGridView1.Size = new Size(777, 378);
             dataGridView1.TabIndex = 51;
             // 
             // FormGestionPacientes
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(218, 248, 226);
-            ClientSize = new Size(1403, 1050);
+            ClientSize = new Size(982, 630);
             Controls.Add(foreverGroupBox1);
             Controls.Add(label7);
             Controls.Add(label6);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "FormGestionPacientes";
             Text = "Gestión de Pacientes";
             foreverGroupBox1.ResumeLayout(false);

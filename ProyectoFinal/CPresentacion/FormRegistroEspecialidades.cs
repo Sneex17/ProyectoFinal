@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CAccesoDatos.RepositoryPattern;
+using CEntidades.Models;
+using CNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,9 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CAccesoDatos.RepositoryPattern;
-using CEntidades.Models;
-using CNegocio;
+using static ReaLTaiizor.Controls.PoisonTextBox;
 
 namespace CPresentacion
 {
@@ -51,6 +52,7 @@ namespace CPresentacion
                 txtNombreEspecialidad.Text = filaSeleccionada.Cells["Especialidad"].Value.ToString();
                 txtDescripcion.Text = filaSeleccionada.Cells["Descripcion"].Value.ToString();
             }
+            btnCrear.Enabled = false;
         }
         private void LimpiarTextBox()
         {
@@ -135,17 +137,20 @@ namespace CPresentacion
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CargarDatos();
                     LimpiarTextBox();
+                    btnCrear.Enabled = true;
                 }
             }
             catch (ControlExcepciones error)
             {
                 MessageBox.Show($"{error.Message}", "Error en la operación",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnCrear.Enabled = true;
             }
             catch (Exception error)
             {
                 MessageBox.Show($"{error.Message}", "Error en la operación",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnCrear.Enabled = true;
             }
         }
         private void btnEliminar_Click(object sender, EventArgs e)

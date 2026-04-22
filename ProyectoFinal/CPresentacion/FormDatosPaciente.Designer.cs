@@ -42,9 +42,10 @@ namespace CPresentacion
             label1.AutoSize = true;
             label1.Font = new Font("Calibri", 12F, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(4, 79, 86);
-            label1.Location = new Point(30, 30);
+            label1.Location = new Point(21, 18);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(94, 29);
+            label1.Size = new Size(62, 19);
             label1.TabIndex = 0;
             label1.Text = "CÉDULA";
             // 
@@ -53,9 +54,10 @@ namespace CPresentacion
             label2.AutoSize = true;
             label2.Font = new Font("Calibri", 12F, FontStyle.Bold);
             label2.ForeColor = Color.FromArgb(4, 79, 86);
-            label2.Location = new Point(30, 95);
+            label2.Location = new Point(21, 57);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(105, 29);
+            label2.Size = new Size(71, 19);
             label2.TabIndex = 2;
             label2.Text = "NOMBRE";
             // 
@@ -64,9 +66,10 @@ namespace CPresentacion
             label3.AutoSize = true;
             label3.Font = new Font("Calibri", 12F, FontStyle.Bold);
             label3.ForeColor = Color.FromArgb(4, 79, 86);
-            label3.Location = new Point(30, 160);
+            label3.Location = new Point(21, 96);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(110, 29);
+            label3.Size = new Size(75, 19);
             label3.TabIndex = 4;
             label3.Text = "APELLIDO";
             // 
@@ -75,9 +78,10 @@ namespace CPresentacion
             label4.AutoSize = true;
             label4.Font = new Font("Calibri", 12F, FontStyle.Bold);
             label4.ForeColor = Color.FromArgb(4, 79, 86);
-            label4.Location = new Point(30, 225);
+            label4.Location = new Point(21, 135);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(216, 29);
+            label4.Size = new Size(145, 19);
             label4.TabIndex = 6;
             label4.Text = "FECHA NACIMIENTO";
             // 
@@ -86,9 +90,10 @@ namespace CPresentacion
             label5.AutoSize = true;
             label5.Font = new Font("Calibri", 12F, FontStyle.Bold);
             label5.ForeColor = Color.FromArgb(4, 79, 86);
-            label5.Location = new Point(30, 295);
+            label5.Location = new Point(21, 177);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(64, 29);
+            label5.Size = new Size(44, 19);
             label5.TabIndex = 8;
             label5.Text = "SEXO";
             // 
@@ -97,9 +102,10 @@ namespace CPresentacion
             label6.AutoSize = true;
             label6.Font = new Font("Calibri", 12F, FontStyle.Bold);
             label6.ForeColor = Color.FromArgb(4, 79, 86);
-            label6.Location = new Point(30, 370);
+            label6.Location = new Point(21, 222);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(124, 29);
+            label6.Size = new Size(82, 19);
             label6.TabIndex = 10;
             label6.Text = "DIRECCIÓN";
             // 
@@ -108,9 +114,10 @@ namespace CPresentacion
             label7.AutoSize = true;
             label7.Font = new Font("Calibri", 12F, FontStyle.Bold);
             label7.ForeColor = Color.FromArgb(4, 79, 86);
-            label7.Location = new Point(30, 435);
+            label7.Location = new Point(21, 261);
+            label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(97, 29);
+            label7.Size = new Size(65, 19);
             label7.TabIndex = 12;
             label7.Text = "SEGURO";
             // 
@@ -119,34 +126,38 @@ namespace CPresentacion
             label8.AutoSize = true;
             label8.Font = new Font("Calibri", 12F, FontStyle.Bold);
             label8.ForeColor = Color.FromArgb(4, 79, 86);
-            label8.Location = new Point(30, 500);
+            label8.Location = new Point(21, 300);
+            label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
-            label8.Size = new Size(98, 29);
+            label8.Size = new Size(65, 19);
             label8.TabIndex = 14;
             label8.Text = "CORREO";
             // 
             // txtCedula
             // 
             txtCedula.Font = new Font("Corbel", 11F);
-            txtCedula.Location = new Point(30, 55);
+            txtCedula.Location = new Point(21, 33);
+            txtCedula.Margin = new Padding(2, 2, 2, 2);
             txtCedula.Name = "txtCedula";
-            txtCedula.Size = new Size(300, 34);
+            txtCedula.Size = new Size(211, 25);
             txtCedula.TabIndex = 1;
             // 
             // txtNombre
             // 
             txtNombre.Font = new Font("Corbel", 11F);
-            txtNombre.Location = new Point(30, 120);
+            txtNombre.Location = new Point(21, 72);
+            txtNombre.Margin = new Padding(2, 2, 2, 2);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(300, 34);
+            txtNombre.Size = new Size(211, 25);
             txtNombre.TabIndex = 3;
             // 
             // txtApellido
             // 
             txtApellido.Font = new Font("Corbel", 11F);
-            txtApellido.Location = new Point(30, 185);
+            txtApellido.Location = new Point(21, 111);
+            txtApellido.Margin = new Padding(2, 2, 2, 2);
             txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(300, 34);
+            txtApellido.Size = new Size(211, 25);
             txtApellido.TabIndex = 5;
             // 
             // dtpFechaNacimiento
@@ -154,10 +165,11 @@ namespace CPresentacion
             dtpFechaNacimiento.BackColor = Color.FromArgb(218, 248, 226);
             dtpFechaNacimiento.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             dtpFechaNacimiento.FontSize = ReaLTaiizor.Extension.Poison.PoisonDateTimeSize.Medium;
-            dtpFechaNacimiento.Location = new Point(30, 250);
+            dtpFechaNacimiento.Location = new Point(21, 150);
+            dtpFechaNacimiento.Margin = new Padding(2, 2, 2, 2);
             dtpFechaNacimiento.MinimumSize = new Size(0, 29);
             dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            dtpFechaNacimiento.Size = new Size(200, 34);
+            dtpFechaNacimiento.Size = new Size(141, 29);
             dtpFechaNacimiento.TabIndex = 7;
             dtpFechaNacimiento.UseCustomBackColor = true;
             // 
@@ -169,9 +181,10 @@ namespace CPresentacion
             cmbSexo.FormattingEnabled = true;
             cmbSexo.ItemHeight = 23;
             cmbSexo.Items.AddRange(new object[] { "M", "F" });
-            cmbSexo.Location = new Point(30, 320);
+            cmbSexo.Location = new Point(21, 192);
+            cmbSexo.Margin = new Padding(2, 2, 2, 2);
             cmbSexo.Name = "cmbSexo";
-            cmbSexo.Size = new Size(100, 29);
+            cmbSexo.Size = new Size(71, 29);
             cmbSexo.TabIndex = 9;
             cmbSexo.UseCustomBackColor = true;
             cmbSexo.UseSelectable = true;
@@ -179,32 +192,37 @@ namespace CPresentacion
             // txtDireccion
             // 
             txtDireccion.Font = new Font("Corbel", 11F);
-            txtDireccion.Location = new Point(30, 395);
+            txtDireccion.Location = new Point(21, 237);
+            txtDireccion.Margin = new Padding(2, 2, 2, 2);
             txtDireccion.Name = "txtDireccion";
-            txtDireccion.Size = new Size(300, 34);
+            txtDireccion.Size = new Size(211, 25);
             txtDireccion.TabIndex = 11;
             // 
             // txtSeguro
             // 
             txtSeguro.Font = new Font("Corbel", 11F);
-            txtSeguro.Location = new Point(30, 460);
+            txtSeguro.Location = new Point(21, 276);
+            txtSeguro.Margin = new Padding(2, 2, 2, 2);
             txtSeguro.Name = "txtSeguro";
-            txtSeguro.Size = new Size(300, 34);
+            txtSeguro.Size = new Size(211, 25);
             txtSeguro.TabIndex = 13;
             // 
             // txtCorreo
             // 
             txtCorreo.Font = new Font("Corbel", 11F);
-            txtCorreo.Location = new Point(30, 525);
+            txtCorreo.Location = new Point(21, 315);
+            txtCorreo.Margin = new Padding(2, 2, 2, 2);
             txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(300, 34);
+            txtCorreo.Size = new Size(211, 25);
             txtCorreo.TabIndex = 15;
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(80, 580);
+            btnGuardar.Cursor = Cursors.Hand;
+            btnGuardar.Location = new Point(56, 348);
+            btnGuardar.Margin = new Padding(2, 2, 2, 2);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(120, 45);
+            btnGuardar.Size = new Size(84, 27);
             btnGuardar.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
             btnGuardar.StateCommon.Back.Color2 = Color.FromArgb(23, 74, 111);
             btnGuardar.StateCommon.Content.ShortText.Color1 = Color.White;
@@ -216,9 +234,11 @@ namespace CPresentacion
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(220, 580);
+            btnCancelar.Cursor = Cursors.Hand;
+            btnCancelar.Location = new Point(154, 348);
+            btnCancelar.Margin = new Padding(2, 2, 2, 2);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(120, 45);
+            btnCancelar.Size = new Size(84, 27);
             btnCancelar.StateCommon.Back.Color1 = Color.IndianRed;
             btnCancelar.StateCommon.Back.Color2 = Color.Brown;
             btnCancelar.StateCommon.Content.ShortText.Color1 = Color.White;
@@ -230,10 +250,10 @@ namespace CPresentacion
             // 
             // FormDatosPaciente
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(218, 248, 226);
-            ClientSize = new Size(370, 650);
+            ClientSize = new Size(259, 390);
             Controls.Add(btnCancelar);
             Controls.Add(btnGuardar);
             Controls.Add(txtCorreo);
@@ -253,6 +273,7 @@ namespace CPresentacion
             Controls.Add(txtCedula);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(2, 2, 2, 2);
             MaximizeBox = false;
             Name = "FormDatosPaciente";
             StartPosition = FormStartPosition.CenterParent;

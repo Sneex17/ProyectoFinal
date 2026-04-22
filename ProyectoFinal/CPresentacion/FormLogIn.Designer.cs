@@ -54,21 +54,24 @@
             grpbLogIn.Controls.Add(parrotGroupBox3);
             grpbLogIn.Controls.Add(label11);
             grpbLogIn.Font = new Font("Segoe UI", 10F);
-            grpbLogIn.Location = new Point(67, 105);
+            grpbLogIn.Location = new Point(47, 63);
+            grpbLogIn.Margin = new Padding(2, 2, 2, 2);
             grpbLogIn.Name = "grpbLogIn";
             grpbLogIn.ShowArrow = true;
             grpbLogIn.ShowText = true;
-            grpbLogIn.Size = new Size(647, 530);
+            grpbLogIn.Size = new Size(453, 318);
             grpbLogIn.TabIndex = 49;
             grpbLogIn.TextColor = Color.Transparent;
             // 
             // kryptonButton1
             // 
-            kryptonButton1.Location = new Point(236, 330);
+            kryptonButton1.Cursor = Cursors.Hand;
+            kryptonButton1.Location = new Point(165, 198);
+            kryptonButton1.Margin = new Padding(2, 2, 2, 2);
             kryptonButton1.Name = "kryptonButton1";
             kryptonButton1.OverrideDefault.Back.Color1 = Color.FromArgb(0, 51, 82);
             kryptonButton1.OverrideDefault.Back.Color2 = Color.FromArgb(23, 74, 111);
-            kryptonButton1.Size = new Size(143, 85);
+            kryptonButton1.Size = new Size(100, 51);
             kryptonButton1.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
             kryptonButton1.StateCommon.Back.Color2 = Color.FromArgb(23, 74, 111);
             kryptonButton1.StateCommon.Back.ColorAngle = -2F;
@@ -93,10 +96,12 @@
             parrotGroupBox1.Controls.Add(txtNombreEspecialidad);
             parrotGroupBox1.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             parrotGroupBox1.ForeColor = Color.FromArgb(4, 79, 86);
-            parrotGroupBox1.Location = new Point(121, 125);
+            parrotGroupBox1.Location = new Point(85, 75);
+            parrotGroupBox1.Margin = new Padding(2, 2, 2, 2);
             parrotGroupBox1.Name = "parrotGroupBox1";
+            parrotGroupBox1.Padding = new Padding(2, 2, 2, 2);
             parrotGroupBox1.ShowText = true;
-            parrotGroupBox1.Size = new Size(393, 68);
+            parrotGroupBox1.Size = new Size(275, 41);
             parrotGroupBox1.TabIndex = 51;
             parrotGroupBox1.TabStop = false;
             parrotGroupBox1.Text = "USUARIO";
@@ -108,10 +113,11 @@
             txtNombreEspecialidad.BorderStyle = BorderStyle.None;
             txtNombreEspecialidad.Font = new Font("Corbel", 12F);
             txtNombreEspecialidad.ForeColor = Color.FromArgb(4, 79, 86);
-            txtNombreEspecialidad.Location = new Point(16, 28);
+            txtNombreEspecialidad.Location = new Point(11, 17);
+            txtNombreEspecialidad.Margin = new Padding(2, 2, 2, 2);
             txtNombreEspecialidad.Name = "txtNombreEspecialidad";
             txtNombreEspecialidad.PlaceholderText = "Ej: Manuel aka Fransisco";
-            txtNombreEspecialidad.Size = new Size(363, 30);
+            txtNombreEspecialidad.Size = new Size(254, 20);
             txtNombreEspecialidad.TabIndex = 39;
             // 
             // parrotGroupBox3
@@ -121,10 +127,12 @@
             parrotGroupBox3.Controls.Add(txtDescripcion);
             parrotGroupBox3.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             parrotGroupBox3.ForeColor = Color.FromArgb(4, 79, 86);
-            parrotGroupBox3.Location = new Point(121, 217);
+            parrotGroupBox3.Location = new Point(85, 130);
+            parrotGroupBox3.Margin = new Padding(2, 2, 2, 2);
             parrotGroupBox3.Name = "parrotGroupBox3";
+            parrotGroupBox3.Padding = new Padding(2, 2, 2, 2);
             parrotGroupBox3.ShowText = true;
-            parrotGroupBox3.Size = new Size(393, 75);
+            parrotGroupBox3.Size = new Size(275, 45);
             parrotGroupBox3.TabIndex = 52;
             parrotGroupBox3.TabStop = false;
             parrotGroupBox3.Text = "CONTRASEÑA";
@@ -135,11 +143,12 @@
             txtDescripcion.BorderStyle = BorderStyle.None;
             txtDescripcion.Font = new Font("Corbel", 12F);
             txtDescripcion.ForeColor = Color.FromArgb(4, 79, 86);
-            txtDescripcion.Location = new Point(16, 28);
+            txtDescripcion.Location = new Point(11, 17);
+            txtDescripcion.Margin = new Padding(2, 2, 2, 2);
             txtDescripcion.Multiline = true;
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.PasswordChar = '*';
-            txtDescripcion.Size = new Size(363, 40);
+            txtDescripcion.Size = new Size(254, 24);
             txtDescripcion.TabIndex = 40;
             txtDescripcion.UseSystemPasswordChar = true;
             // 
@@ -148,9 +157,10 @@
             label11.AutoSize = true;
             label11.Font = new Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label11.ForeColor = Color.FromArgb(95, 154, 162);
-            label11.Location = new Point(223, 38);
+            label11.Location = new Point(156, 23);
+            label11.Margin = new Padding(2, 0, 2, 0);
             label11.Name = "label11";
-            label11.Size = new Size(163, 59);
+            label11.Size = new Size(109, 39);
             label11.TabIndex = 30;
             label11.Text = "LOG IN";
             // 
@@ -159,9 +169,10 @@
             label6.AutoSize = true;
             label6.Font = new Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(0, 54, 60);
-            label6.Location = new Point(240, 37);
+            label6.Location = new Point(168, 22);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(297, 59);
+            label6.Size = new Size(201, 39);
             label6.TabIndex = 50;
             label6.Text = "UCE MEDICAL";
             label6.Click += label6_Click;
@@ -175,23 +186,23 @@
             foreverGroupBox1.Controls.Add(grpbLogIn);
             foreverGroupBox1.Controls.Add(label6);
             foreverGroupBox1.Font = new Font("Segoe UI", 10F);
-            foreverGroupBox1.Location = new Point(169, 18);
+            foreverGroupBox1.Location = new Point(118, 11);
+            foreverGroupBox1.Margin = new Padding(2, 2, 2, 2);
             foreverGroupBox1.Name = "foreverGroupBox1";
             foreverGroupBox1.ShowArrow = true;
             foreverGroupBox1.ShowText = true;
-            foreverGroupBox1.Size = new Size(777, 703);
+            foreverGroupBox1.Size = new Size(544, 422);
             foreverGroupBox1.TabIndex = 54;
             foreverGroupBox1.TextColor = Color.Transparent;
             // 
             // FormLogIn
             // 
             AcceptButton = kryptonButton1;
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(218, 248, 226);
-            ClientSize = new Size(1143, 750);
+            ClientSize = new Size(800, 450);
             Controls.Add(foreverGroupBox1);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "FormLogIn";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormLogIn";

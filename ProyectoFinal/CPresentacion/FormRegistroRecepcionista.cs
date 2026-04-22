@@ -56,6 +56,7 @@ namespace CPresentacion
                     idUsuario = recepcionista.UsuarioId;
                 }
             }
+            BuCrear.Enabled = false;
         }
 
         private void LimpiarTextBox()
@@ -212,17 +213,20 @@ namespace CPresentacion
 
                     LimpiarTextBox();
                     DatosGridView();
+                    BuCrear.Enabled = true;
                 }
             }
             catch (ControlExcepciones error)
             {
                 MessageBox.Show($"{error.Message}", "Error en la operación",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                BuCrear.Enabled = true;
             }
             catch (Exception error)
             {
                 MessageBox.Show($"{error.Message}", "Error en la operación",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                BuCrear.Enabled = true;
             }
         }
 
@@ -253,17 +257,20 @@ namespace CPresentacion
 
                     LimpiarTextBox();
                     DatosGridView();
+                    BuCrear.Enabled = true;
                 }
             }
             catch (ControlExcepciones error)
             {
                 MessageBox.Show($"{error.Message}", "Error en la operación",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                BuCrear.Enabled = true;
             }
             catch (Exception error)
             {
                 MessageBox.Show($"{error.Message}", "Error en la operación",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                BuCrear.Enabled = true;
             }
         }
     }

@@ -46,11 +46,13 @@ namespace CPresentacion
             // 
             // BuDesactivar
             // 
-            BuDesactivar.Location = new Point(485, 883);
+            BuDesactivar.Cursor = Cursors.Hand;
+            BuDesactivar.Location = new Point(340, 530);
+            BuDesactivar.Margin = new Padding(2, 2, 2, 2);
             BuDesactivar.Name = "BuDesactivar";
             BuDesactivar.OverrideDefault.Back.Color1 = Color.IndianRed;
             BuDesactivar.OverrideDefault.Back.Color2 = Color.Brown;
-            BuDesactivar.Size = new Size(143, 85);
+            BuDesactivar.Size = new Size(100, 51);
             BuDesactivar.StateCommon.Back.Color1 = Color.IndianRed;
             BuDesactivar.StateCommon.Back.Color2 = Color.Brown;
             BuDesactivar.StateCommon.Back.ColorAngle = -2F;
@@ -67,11 +69,13 @@ namespace CPresentacion
             // 
             // BuEditar
             // 
-            BuEditar.Location = new Point(645, 883);
+            BuEditar.Cursor = Cursors.Hand;
+            BuEditar.Location = new Point(452, 530);
+            BuEditar.Margin = new Padding(2, 2, 2, 2);
             BuEditar.Name = "BuEditar";
             BuEditar.OverrideDefault.Back.Color1 = Color.FromArgb(254, 219, 151);
             BuEditar.OverrideDefault.Back.Color2 = Color.FromArgb(254, 219, 151);
-            BuEditar.Size = new Size(143, 85);
+            BuEditar.Size = new Size(100, 51);
             BuEditar.StateCommon.Back.Color1 = Color.FromArgb(254, 219, 151);
             BuEditar.StateCommon.Back.Color2 = Color.FromArgb(254, 219, 151);
             BuEditar.StateCommon.Back.ColorAngle = -2F;
@@ -88,11 +92,13 @@ namespace CPresentacion
             // 
             // BuCrear
             // 
-            BuCrear.Location = new Point(806, 883);
+            BuCrear.Cursor = Cursors.Hand;
+            BuCrear.Location = new Point(564, 530);
+            BuCrear.Margin = new Padding(2, 2, 2, 2);
             BuCrear.Name = "BuCrear";
             BuCrear.OverrideDefault.Back.Color1 = Color.FromArgb(0, 51, 82);
             BuCrear.OverrideDefault.Back.Color2 = Color.FromArgb(23, 74, 111);
-            BuCrear.Size = new Size(143, 85);
+            BuCrear.Size = new Size(100, 51);
             BuCrear.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
             BuCrear.StateCommon.Back.Color2 = Color.FromArgb(23, 74, 111);
             BuCrear.StateCommon.Back.ColorAngle = -2F;
@@ -130,11 +136,12 @@ namespace CPresentacion
             foreverGroupBox1.Controls.Add(label2);
             foreverGroupBox1.Controls.Add(label1);
             foreverGroupBox1.Font = new Font("Segoe UI", 10F);
-            foreverGroupBox1.Location = new Point(127, 109);
+            foreverGroupBox1.Location = new Point(89, 65);
+            foreverGroupBox1.Margin = new Padding(2, 2, 2, 2);
             foreverGroupBox1.Name = "foreverGroupBox1";
             foreverGroupBox1.ShowArrow = true;
             foreverGroupBox1.ShowText = true;
-            foreverGroupBox1.Size = new Size(1187, 768);
+            foreverGroupBox1.Size = new Size(831, 461);
             foreverGroupBox1.TabIndex = 16;
             foreverGroupBox1.TextColor = Color.Transparent;
             // 
@@ -145,10 +152,12 @@ namespace CPresentacion
             parrotGroupBox1.Controls.Add(txtNombrePaciente);
             parrotGroupBox1.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             parrotGroupBox1.ForeColor = Color.FromArgb(4, 79, 86);
-            parrotGroupBox1.Location = new Point(64, 189);
+            parrotGroupBox1.Location = new Point(45, 113);
+            parrotGroupBox1.Margin = new Padding(2, 2, 2, 2);
             parrotGroupBox1.Name = "parrotGroupBox1";
+            parrotGroupBox1.Padding = new Padding(2, 2, 2, 2);
             parrotGroupBox1.ShowText = true;
-            parrotGroupBox1.Size = new Size(302, 58);
+            parrotGroupBox1.Size = new Size(211, 35);
             parrotGroupBox1.TabIndex = 31;
             parrotGroupBox1.TabStop = false;
             parrotGroupBox1.Text = "NOMBRE";
@@ -159,17 +168,19 @@ namespace CPresentacion
             txtNombrePaciente.BorderStyle = BorderStyle.None;
             txtNombrePaciente.Font = new Font("Corbel", 12F);
             txtNombrePaciente.ForeColor = Color.FromArgb(4, 79, 86);
-            txtNombrePaciente.Location = new Point(7, 22);
+            txtNombrePaciente.Location = new Point(5, 13);
+            txtNombrePaciente.Margin = new Padding(2, 2, 2, 2);
             txtNombrePaciente.Name = "txtNombrePaciente";
             txtNombrePaciente.PlaceholderText = "Ej: Manuel Ozuna";
-            txtNombrePaciente.Size = new Size(289, 30);
+            txtNombrePaciente.Size = new Size(202, 20);
             txtNombrePaciente.TabIndex = 39;
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(372, 189);
+            btnBuscar.Location = new Point(260, 113);
+            btnBuscar.Margin = new Padding(2, 2, 2, 2);
             btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(129, 58);
+            btnBuscar.Size = new Size(90, 35);
             btnBuscar.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
             btnBuscar.StateCommon.Back.Color2 = Color.FromArgb(0, 54, 60);
             btnBuscar.StateCommon.Back.ColorAngle = -2F;
@@ -187,13 +198,15 @@ namespace CPresentacion
             // 
             // btnUrgente
             // 
-            btnUrgente.Location = new Point(872, 584);
+            btnUrgente.Cursor = Cursors.Hand;
+            btnUrgente.Location = new Point(610, 350);
+            btnUrgente.Margin = new Padding(2, 2, 2, 2);
             btnUrgente.Name = "btnUrgente";
             btnUrgente.OverrideDefault.Back.Color1 = Color.FromArgb(248, 232, 232);
             btnUrgente.OverrideDefault.Back.Color2 = Color.FromArgb(248, 232, 232);
             btnUrgente.OverrideFocus.Back.Color1 = Color.Transparent;
             btnUrgente.OverrideFocus.Back.Color2 = Color.Transparent;
-            btnUrgente.Size = new Size(261, 137);
+            btnUrgente.Size = new Size(183, 82);
             btnUrgente.StateCommon.Back.Color1 = Color.White;
             btnUrgente.StateCommon.Back.Color2 = Color.White;
             btnUrgente.StateCommon.Back.ColorAngle = -2F;
@@ -218,10 +231,12 @@ namespace CPresentacion
             parrotGroupBox3.Controls.Add(txtDescripcion);
             parrotGroupBox3.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             parrotGroupBox3.ForeColor = Color.FromArgb(4, 79, 86);
-            parrotGroupBox3.Location = new Point(607, 204);
+            parrotGroupBox3.Location = new Point(425, 122);
+            parrotGroupBox3.Margin = new Padding(2, 2, 2, 2);
             parrotGroupBox3.Name = "parrotGroupBox3";
+            parrotGroupBox3.Padding = new Padding(2, 2, 2, 2);
             parrotGroupBox3.ShowText = true;
-            parrotGroupBox3.Size = new Size(516, 254);
+            parrotGroupBox3.Size = new Size(361, 152);
             parrotGroupBox3.TabIndex = 24;
             parrotGroupBox3.TabStop = false;
             parrotGroupBox3.Text = "DESCRIPCIÓN";
@@ -232,11 +247,12 @@ namespace CPresentacion
             txtDescripcion.BorderStyle = BorderStyle.None;
             txtDescripcion.Font = new Font("Corbel", 12F);
             txtDescripcion.ForeColor = Color.FromArgb(4, 79, 86);
-            txtDescripcion.Location = new Point(24, 28);
+            txtDescripcion.Location = new Point(17, 17);
+            txtDescripcion.Margin = new Padding(2, 2, 2, 2);
             txtDescripcion.Multiline = true;
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.PlaceholderText = "Describa lo que siente el paciente";
-            txtDescripcion.Size = new Size(475, 206);
+            txtDescripcion.Size = new Size(332, 124);
             txtDescripcion.TabIndex = 40;
             // 
             // label7
@@ -244,21 +260,24 @@ namespace CPresentacion
             label7.AutoSize = true;
             label7.Font = new Font("Calibri", 11F, FontStyle.Bold);
             label7.ForeColor = Color.FromArgb(4, 79, 86);
-            label7.Location = new Point(607, 159);
+            label7.Location = new Point(425, 95);
+            label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(165, 27);
+            label7.Size = new Size(111, 18);
             label7.TabIndex = 23;
             label7.Text = "OBSERVACIONES";
             // 
             // btnAlta
             // 
-            btnAlta.Location = new Point(596, 584);
+            btnAlta.Cursor = Cursors.Hand;
+            btnAlta.Location = new Point(417, 350);
+            btnAlta.Margin = new Padding(2, 2, 2, 2);
             btnAlta.Name = "btnAlta";
             btnAlta.OverrideDefault.Back.Color1 = Color.FromArgb(255, 248, 234);
             btnAlta.OverrideDefault.Back.Color2 = Color.FromArgb(255, 248, 234);
             btnAlta.OverrideFocus.Back.Color1 = Color.Transparent;
             btnAlta.OverrideFocus.Back.Color2 = Color.Transparent;
-            btnAlta.Size = new Size(261, 137);
+            btnAlta.Size = new Size(183, 82);
             btnAlta.StateCommon.Back.Color1 = Color.White;
             btnAlta.StateCommon.Back.Color2 = Color.White;
             btnAlta.StateCommon.Back.ColorAngle = -2F;
@@ -278,13 +297,15 @@ namespace CPresentacion
             // 
             // btnMedia
             // 
-            btnMedia.Location = new Point(318, 584);
+            btnMedia.Cursor = Cursors.Hand;
+            btnMedia.Location = new Point(223, 350);
+            btnMedia.Margin = new Padding(2, 2, 2, 2);
             btnMedia.Name = "btnMedia";
             btnMedia.OverrideDefault.Back.Color1 = Color.Honeydew;
             btnMedia.OverrideDefault.Back.Color2 = Color.Honeydew;
             btnMedia.OverrideFocus.Back.Color1 = Color.Transparent;
             btnMedia.OverrideFocus.Back.Color2 = Color.Transparent;
-            btnMedia.Size = new Size(261, 137);
+            btnMedia.Size = new Size(183, 82);
             btnMedia.StateCommon.Back.Color1 = Color.White;
             btnMedia.StateCommon.Back.Color2 = Color.White;
             btnMedia.StateCommon.Back.ColorAngle = -2F;
@@ -304,11 +325,13 @@ namespace CPresentacion
             // 
             // btnBaja
             // 
-            btnBaja.Location = new Point(42, 584);
+            btnBaja.Cursor = Cursors.Hand;
+            btnBaja.Location = new Point(29, 350);
+            btnBaja.Margin = new Padding(2, 2, 2, 2);
             btnBaja.Name = "btnBaja";
             btnBaja.OverrideDefault.Back.Color1 = Color.WhiteSmoke;
             btnBaja.OverrideDefault.Back.Color2 = Color.WhiteSmoke;
-            btnBaja.Size = new Size(261, 137);
+            btnBaja.Size = new Size(183, 82);
             btnBaja.StateCommon.Back.Color1 = Color.White;
             btnBaja.StateCommon.Back.Color2 = Color.White;
             btnBaja.StateCommon.Back.ColorAngle = -2F;
@@ -331,9 +354,10 @@ namespace CPresentacion
             label6.AutoSize = true;
             label6.Font = new Font("Calibri", 11F, FontStyle.Bold);
             label6.ForeColor = Color.FromArgb(4, 79, 86);
-            label6.Location = new Point(64, 520);
+            label6.Location = new Point(45, 312);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(115, 27);
+            label6.Size = new Size(77, 18);
             label6.TabIndex = 10;
             label6.Text = "PRIORIDAD";
             // 
@@ -343,10 +367,11 @@ namespace CPresentacion
             cmbRecepcionista.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbRecepcionista.ForeColor = Color.Black;
             cmbRecepcionista.FormattingEnabled = true;
-            cmbRecepcionista.ItemHeight = 31;
-            cmbRecepcionista.Location = new Point(64, 401);
+            cmbRecepcionista.ItemHeight = 22;
+            cmbRecepcionista.Location = new Point(45, 241);
+            cmbRecepcionista.Margin = new Padding(2, 2, 2, 2);
             cmbRecepcionista.Name = "cmbRecepcionista";
-            cmbRecepcionista.Size = new Size(405, 37);
+            cmbRecepcionista.Size = new Size(285, 28);
             cmbRecepcionista.TabIndex = 9;
             cmbRecepcionista.UseCustomBackColor = true;
             cmbRecepcionista.UseCustomFont = true;
@@ -358,9 +383,10 @@ namespace CPresentacion
             label5.AutoSize = true;
             label5.Font = new Font("Calibri", 11F, FontStyle.Bold);
             label5.ForeColor = Color.FromArgb(4, 79, 86);
-            label5.Location = new Point(64, 356);
+            label5.Location = new Point(45, 214);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(259, 27);
+            label5.Size = new Size(175, 18);
             label5.TabIndex = 8;
             label5.Text = "RECEPCIONISTA ASIGNADO";
             // 
@@ -370,10 +396,11 @@ namespace CPresentacion
             cmbMedico.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbMedico.ForeColor = Color.Black;
             cmbMedico.FormattingEnabled = true;
-            cmbMedico.ItemHeight = 31;
-            cmbMedico.Location = new Point(64, 302);
+            cmbMedico.ItemHeight = 22;
+            cmbMedico.Location = new Point(45, 181);
+            cmbMedico.Margin = new Padding(2, 2, 2, 2);
             cmbMedico.Name = "cmbMedico";
-            cmbMedico.Size = new Size(405, 37);
+            cmbMedico.Size = new Size(285, 28);
             cmbMedico.TabIndex = 7;
             cmbMedico.UseCustomBackColor = true;
             cmbMedico.UseCustomFont = true;
@@ -385,9 +412,10 @@ namespace CPresentacion
             label4.AutoSize = true;
             label4.Font = new Font("Calibri", 11F, FontStyle.Bold);
             label4.ForeColor = Color.FromArgb(4, 79, 86);
-            label4.Location = new Point(64, 257);
+            label4.Location = new Point(45, 154);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(193, 27);
+            label4.Size = new Size(130, 18);
             label4.TabIndex = 6;
             label4.Text = "MÉDICO ASIGNADO";
             // 
@@ -396,9 +424,10 @@ namespace CPresentacion
             label3.AutoSize = true;
             label3.Font = new Font("Calibri", 11F, FontStyle.Bold);
             label3.ForeColor = Color.FromArgb(4, 79, 86);
-            label3.Location = new Point(64, 159);
+            label3.Location = new Point(45, 95);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(101, 27);
+            label3.Size = new Size(67, 18);
             label3.TabIndex = 4;
             label3.Text = "PACIENTE";
             // 
@@ -407,9 +436,10 @@ namespace CPresentacion
             label2.BackColor = Color.FromArgb(4, 79, 86);
             label2.Font = new Font("Calibri", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(4, 79, 86);
-            label2.Location = new Point(56, 52);
+            label2.Location = new Point(39, 31);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(10, 42);
+            label2.Size = new Size(7, 25);
             label2.TabIndex = 3;
             // 
             // label1
@@ -417,22 +447,24 @@ namespace CPresentacion
             label1.AutoSize = true;
             label1.Font = new Font("Calibri", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(4, 79, 86);
-            label1.Location = new Point(71, 52);
+            label1.Location = new Point(50, 31);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(256, 39);
+            label1.Size = new Size(178, 27);
             label1.TabIndex = 2;
             label1.Text = "Detalles del Turno";
             // 
             // FormRegistroTurno
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(218, 248, 226);
-            ClientSize = new Size(1454, 1050);
+            ClientSize = new Size(1018, 630);
             Controls.Add(BuDesactivar);
             Controls.Add(BuEditar);
             Controls.Add(BuCrear);
             Controls.Add(foreverGroupBox1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "FormRegistroTurno";
             Text = "FormRegistroTurno";
             foreverGroupBox1.ResumeLayout(false);

@@ -55,10 +55,10 @@
             label7.AutoSize = true;
             label7.Font = new Font("Calibri", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.FromArgb(95, 154, 162);
-            label7.Location = new Point(62, 103);
+            label7.Location = new Point(54, 77);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(415, 23);
+            label7.Size = new Size(323, 18);
             label7.TabIndex = 24;
             label7.Text = "Registro y consulta de especialidades en el sistema";
             // 
@@ -67,19 +67,20 @@
             label6.AutoSize = true;
             label6.Font = new Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(0, 54, 60);
-            label6.Location = new Point(53, 49);
+            label6.Location = new Point(46, 37);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(460, 49);
+            label6.Size = new Size(367, 39);
             label6.TabIndex = 25;
             label6.Text = "Registro de Especialidades";
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(62, 723);
-            btnEliminar.Margin = new Padding(2, 3, 2, 3);
+            btnEliminar.Cursor = Cursors.Hand;
+            btnEliminar.Location = new Point(54, 542);
+            btnEliminar.Margin = new Padding(2, 2, 2, 2);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(114, 68);
+            btnEliminar.Size = new Size(100, 51);
             btnEliminar.StateCommon.Back.Color1 = Color.IndianRed;
             btnEliminar.StateCommon.Back.Color2 = Color.Brown;
             btnEliminar.StateCommon.Back.ColorAngle = -2F;
@@ -96,10 +97,11 @@
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(197, 723);
-            btnEditar.Margin = new Padding(2, 3, 2, 3);
+            btnEditar.Cursor = Cursors.Hand;
+            btnEditar.Location = new Point(172, 542);
+            btnEditar.Margin = new Padding(2, 2, 2, 2);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(114, 68);
+            btnEditar.Size = new Size(100, 51);
             btnEditar.StateCommon.Back.Color1 = Color.FromArgb(254, 219, 151);
             btnEditar.StateCommon.Back.Color2 = Color.FromArgb(254, 219, 151);
             btnEditar.StateCommon.Back.ColorAngle = -2F;
@@ -116,10 +118,11 @@
             // 
             // btnCrear
             // 
-            btnCrear.Location = new Point(330, 723);
-            btnCrear.Margin = new Padding(2, 3, 2, 3);
+            btnCrear.Cursor = Cursors.Hand;
+            btnCrear.Location = new Point(289, 542);
+            btnCrear.Margin = new Padding(2, 2, 2, 2);
             btnCrear.Name = "btnCrear";
-            btnCrear.Size = new Size(114, 68);
+            btnCrear.Size = new Size(100, 51);
             btnCrear.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
             btnCrear.StateCommon.Back.Color2 = Color.FromArgb(23, 74, 111);
             btnCrear.StateCommon.Back.ColorAngle = -2F;
@@ -145,12 +148,12 @@
             foreverGroupBox1.Controls.Add(label2);
             foreverGroupBox1.Controls.Add(label1);
             foreverGroupBox1.Font = new Font("Segoe UI", 10F);
-            foreverGroupBox1.Location = new Point(53, 157);
-            foreverGroupBox1.Margin = new Padding(2, 3, 2, 3);
+            foreverGroupBox1.Location = new Point(46, 118);
+            foreverGroupBox1.Margin = new Padding(2, 2, 2, 2);
             foreverGroupBox1.Name = "foreverGroupBox1";
             foreverGroupBox1.ShowArrow = true;
             foreverGroupBox1.ShowText = true;
-            foreverGroupBox1.Size = new Size(407, 561);
+            foreverGroupBox1.Size = new Size(356, 421);
             foreverGroupBox1.TabIndex = 19;
             foreverGroupBox1.TextColor = Color.Transparent;
             // 
@@ -161,12 +164,12 @@
             parrotGroupBox3.Controls.Add(txtDescripcion);
             parrotGroupBox3.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             parrotGroupBox3.ForeColor = Color.FromArgb(4, 79, 86);
-            parrotGroupBox3.Location = new Point(45, 185);
-            parrotGroupBox3.Margin = new Padding(2, 3, 2, 3);
+            parrotGroupBox3.Location = new Point(39, 139);
+            parrotGroupBox3.Margin = new Padding(2, 2, 2, 2);
             parrotGroupBox3.Name = "parrotGroupBox3";
-            parrotGroupBox3.Padding = new Padding(2, 3, 2, 3);
+            parrotGroupBox3.Padding = new Padding(2, 2, 2, 2);
             parrotGroupBox3.ShowText = true;
-            parrotGroupBox3.Size = new Size(314, 352);
+            parrotGroupBox3.Size = new Size(275, 264);
             parrotGroupBox3.TabIndex = 10;
             parrotGroupBox3.TabStop = false;
             parrotGroupBox3.Text = "DESCRIPCIÓN";
@@ -177,12 +180,12 @@
             txtDescripcion.BorderStyle = BorderStyle.None;
             txtDescripcion.Font = new Font("Corbel", 12F);
             txtDescripcion.ForeColor = Color.FromArgb(4, 79, 86);
-            txtDescripcion.Location = new Point(13, 23);
-            txtDescripcion.Margin = new Padding(2, 3, 2, 3);
+            txtDescripcion.Location = new Point(11, 17);
+            txtDescripcion.Margin = new Padding(2, 2, 2, 2);
             txtDescripcion.Multiline = true;
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.PlaceholderText = "Describa la especialidad médica";
-            txtDescripcion.Size = new Size(290, 317);
+            txtDescripcion.Size = new Size(254, 238);
             txtDescripcion.TabIndex = 40;
             // 
             // parrotGroupBox1
@@ -192,12 +195,12 @@
             parrotGroupBox1.Controls.Add(txtNombreEspecialidad);
             parrotGroupBox1.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             parrotGroupBox1.ForeColor = Color.FromArgb(4, 79, 86);
-            parrotGroupBox1.Location = new Point(45, 107);
-            parrotGroupBox1.Margin = new Padding(2, 3, 2, 3);
+            parrotGroupBox1.Location = new Point(39, 80);
+            parrotGroupBox1.Margin = new Padding(2, 2, 2, 2);
             parrotGroupBox1.Name = "parrotGroupBox1";
-            parrotGroupBox1.Padding = new Padding(2, 3, 2, 3);
+            parrotGroupBox1.Padding = new Padding(2, 2, 2, 2);
             parrotGroupBox1.ShowText = true;
-            parrotGroupBox1.Size = new Size(314, 55);
+            parrotGroupBox1.Size = new Size(275, 41);
             parrotGroupBox1.TabIndex = 1;
             parrotGroupBox1.TabStop = false;
             parrotGroupBox1.Text = "NOMBRE";
@@ -208,11 +211,11 @@
             txtNombreEspecialidad.BorderStyle = BorderStyle.None;
             txtNombreEspecialidad.Font = new Font("Corbel", 12F);
             txtNombreEspecialidad.ForeColor = Color.FromArgb(4, 79, 86);
-            txtNombreEspecialidad.Location = new Point(13, 23);
-            txtNombreEspecialidad.Margin = new Padding(2, 3, 2, 3);
+            txtNombreEspecialidad.Location = new Point(11, 17);
+            txtNombreEspecialidad.Margin = new Padding(2, 2, 2, 2);
             txtNombreEspecialidad.Name = "txtNombreEspecialidad";
             txtNombreEspecialidad.PlaceholderText = "Ej: cardiología";
-            txtNombreEspecialidad.Size = new Size(290, 25);
+            txtNombreEspecialidad.Size = new Size(254, 20);
             txtNombreEspecialidad.TabIndex = 39;
             // 
             // label2
@@ -220,10 +223,10 @@
             label2.BackColor = Color.FromArgb(4, 79, 86);
             label2.Font = new Font("Calibri", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(4, 79, 86);
-            label2.Location = new Point(45, 41);
+            label2.Location = new Point(39, 31);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(8, 33);
+            label2.Size = new Size(7, 25);
             label2.TabIndex = 3;
             // 
             // label1
@@ -231,10 +234,10 @@
             label1.AutoSize = true;
             label1.Font = new Font("Calibri", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(4, 79, 86);
-            label1.Location = new Point(57, 41);
+            label1.Location = new Point(50, 31);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(285, 33);
+            label1.Size = new Size(232, 27);
             label1.TabIndex = 2;
             label1.Text = "Detalles de Especialidad";
             // 
@@ -244,11 +247,11 @@
             dgvEspecialidades.BackgroundColor = Color.White;
             dgvEspecialidades.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvEspecialidades.Columns.AddRange(new DataGridViewColumn[] { EspecialidadId, Especialidad, Descripcion });
-            dgvEspecialidades.Location = new Point(477, 157);
-            dgvEspecialidades.Margin = new Padding(2, 3, 2, 3);
+            dgvEspecialidades.Location = new Point(417, 118);
+            dgvEspecialidades.Margin = new Padding(2, 2, 2, 2);
             dgvEspecialidades.Name = "dgvEspecialidades";
             dgvEspecialidades.RowHeadersWidth = 62;
-            dgvEspecialidades.Size = new Size(437, 561);
+            dgvEspecialidades.Size = new Size(382, 421);
             dgvEspecialidades.TabIndex = 41;
             // 
             // EspecialidadId
@@ -271,10 +274,10 @@
             // 
             // FormRegistroEspecialidades
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(218, 248, 226);
-            ClientSize = new Size(965, 832);
+            ClientSize = new Size(844, 624);
             Controls.Add(dgvEspecialidades);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -282,7 +285,7 @@
             Controls.Add(btnEditar);
             Controls.Add(btnCrear);
             Controls.Add(foreverGroupBox1);
-            Margin = new Padding(2, 3, 2, 3);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "FormRegistroEspecialidades";
             Text = "FormRegistroEspecialidades";
             foreverGroupBox1.ResumeLayout(false);

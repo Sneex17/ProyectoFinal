@@ -32,6 +32,8 @@
             iconButton2 = new FontAwesome.Sharp.IconButton();
             btnExportar = new Krypton.Toolkit.KryptonButton();
             foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
+            btnLimpiar = new Krypton.Toolkit.KryptonButton();
+            iconButton3 = new FontAwesome.Sharp.IconButton();
             btnBuscar = new Krypton.Toolkit.KryptonButton();
             foreverGroupBox2 = new ReaLTaiizor.Controls.ForeverGroupBox();
             txtFiltro = new TextBox();
@@ -39,13 +41,11 @@
             label4 = new Label();
             label3 = new Label();
             cmbEspecialidades = new ReaLTaiizor.Controls.PoisonComboBox();
+            label2 = new Label();
             label1 = new Label();
             dtpFechaConsulta = new ReaLTaiizor.Controls.PoisonDateTime();
             label6 = new Label();
             label7 = new Label();
-            label2 = new Label();
-            iconButton3 = new FontAwesome.Sharp.IconButton();
-            btnLimpiar = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)dgvTurnos).BeginInit();
             foreverGroupBox1.SuspendLayout();
             foreverGroupBox2.SuspendLayout();
@@ -125,8 +125,47 @@
             foreverGroupBox1.TabIndex = 43;
             foreverGroupBox1.TextColor = Color.Transparent;
             // 
+            // btnLimpiar
+            // 
+            btnLimpiar.Cursor = Cursors.Hand;
+            btnLimpiar.Location = new Point(436, 49);
+            btnLimpiar.Margin = new Padding(2);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(116, 34);
+            btnLimpiar.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
+            btnLimpiar.StateCommon.Back.Color2 = Color.FromArgb(0, 54, 60);
+            btnLimpiar.StateCommon.Back.ColorAngle = -2F;
+            btnLimpiar.StateCommon.Border.Color1 = Color.Transparent;
+            btnLimpiar.StateCommon.Border.Color2 = Color.Transparent;
+            btnLimpiar.StateCommon.Border.Rounding = 20F;
+            btnLimpiar.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLimpiar.StateCommon.Content.ShortText.Color1 = Color.White;
+            btnLimpiar.StateCommon.Content.ShortText.Color2 = Color.White;
+            btnLimpiar.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLimpiar.TabIndex = 48;
+            btnLimpiar.Values.DropDownArrowColor = Color.Empty;
+            btnLimpiar.Values.Text = "Limpiar";
+            // 
+            // iconButton3
+            // 
+            iconButton3.BackColor = Color.FromArgb(204, 234, 212);
+            iconButton3.Enabled = false;
+            iconButton3.FlatAppearance.BorderSize = 0;
+            iconButton3.FlatStyle = FlatStyle.Flat;
+            iconButton3.IconChar = FontAwesome.Sharp.IconChar.Filter;
+            iconButton3.IconColor = Color.FromArgb(0, 54, 60);
+            iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton3.IconSize = 26;
+            iconButton3.Location = new Point(40, 56);
+            iconButton3.Margin = new Padding(2);
+            iconButton3.Name = "iconButton3";
+            iconButton3.Size = new Size(25, 13);
+            iconButton3.TabIndex = 48;
+            iconButton3.UseVisualStyleBackColor = false;
+            // 
             // btnBuscar
             // 
+            btnBuscar.Cursor = Cursors.Hand;
             btnBuscar.Location = new Point(556, 114);
             btnBuscar.Margin = new Padding(2);
             btnBuscar.Name = "btnBuscar";
@@ -234,6 +273,18 @@
             cmbEspecialidades.UseSelectable = true;
             cmbEspecialidades.SelectedIndexChanged += cmbEspecialidades_SelectedIndexChanged;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Calibri", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(95, 154, 162);
+            label2.Location = new Point(61, 56);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(42, 13);
+            label2.TabIndex = 30;
+            label2.Text = "FILTRO: ";
+            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -284,55 +335,6 @@
             label7.Size = new Size(284, 18);
             label7.TabIndex = 47;
             label7.Text = "Visualización de turnos pasados del paciente";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Calibri", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(95, 154, 162);
-            label2.Location = new Point(61, 56);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(42, 13);
-            label2.TabIndex = 30;
-            label2.Text = "FILTRO: ";
-            // 
-            // iconButton3
-            // 
-            iconButton3.BackColor = Color.FromArgb(204, 234, 212);
-            iconButton3.Enabled = false;
-            iconButton3.FlatAppearance.BorderSize = 0;
-            iconButton3.FlatStyle = FlatStyle.Flat;
-            iconButton3.IconChar = FontAwesome.Sharp.IconChar.Filter;
-            iconButton3.IconColor = Color.FromArgb(0, 54, 60);
-            iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton3.IconSize = 26;
-            iconButton3.Location = new Point(40, 56);
-            iconButton3.Margin = new Padding(2);
-            iconButton3.Name = "iconButton3";
-            iconButton3.Size = new Size(25, 13);
-            iconButton3.TabIndex = 48;
-            iconButton3.UseVisualStyleBackColor = false;
-            // 
-            // btnLimpiar
-            // 
-            btnLimpiar.Location = new Point(436, 49);
-            btnLimpiar.Margin = new Padding(2);
-            btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(116, 34);
-            btnLimpiar.StateCommon.Back.Color1 = Color.FromArgb(0, 51, 82);
-            btnLimpiar.StateCommon.Back.Color2 = Color.FromArgb(0, 54, 60);
-            btnLimpiar.StateCommon.Back.ColorAngle = -2F;
-            btnLimpiar.StateCommon.Border.Color1 = Color.Transparent;
-            btnLimpiar.StateCommon.Border.Color2 = Color.Transparent;
-            btnLimpiar.StateCommon.Border.Rounding = 20F;
-            btnLimpiar.StateCommon.Content.LongText.Font = new Font("Corbel", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLimpiar.StateCommon.Content.ShortText.Color1 = Color.White;
-            btnLimpiar.StateCommon.Content.ShortText.Color2 = Color.White;
-            btnLimpiar.StateCommon.Content.ShortText.Font = new Font("Corbel", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLimpiar.TabIndex = 48;
-            btnLimpiar.Values.DropDownArrowColor = Color.Empty;
-            btnLimpiar.Values.Text = "Limpiar";
             // 
             // FormHistorialDeTurno
             // 
