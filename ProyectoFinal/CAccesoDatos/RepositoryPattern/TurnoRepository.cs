@@ -7,6 +7,10 @@ using System.Data;
 
 namespace CAccesoDatos.RepositoryPattern
 {
+    /// <summary>
+    /// Repositorio para la gestión de turnos en la base de datos.
+    /// Implementa el patrón Repository para aislar la capa de acceso a datos.
+    /// </summary>
     public class TurnoRepository
     {
         private readonly string _connectionString;

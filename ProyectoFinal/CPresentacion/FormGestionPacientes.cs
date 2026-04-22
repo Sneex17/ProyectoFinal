@@ -6,6 +6,9 @@ using CNegocio;
 
 namespace CPresentacion
 {
+    /// <summary>
+    /// Formulario para la gestión de pacientes (CRUD).
+    /// </summary>
     public partial class FormGestionPacientes : Form
     {
         private readonly PacienteRepository _pacienteRepo;
@@ -20,6 +23,9 @@ namespace CPresentacion
             CargarPacientes();
         }
 
+        /// <summary>
+        /// Carga la lista de pacientes con paginación.
+        /// </summary>
         private void CargarPacientes()
         {
             try
@@ -44,6 +50,9 @@ namespace CPresentacion
             }
         }
 
+        /// <summary>
+        /// Configura los encabezados y anchos de las columnas del DataGridView.
+        /// </summary>
         private void ConfigurarColumnas()
         {
             if (dataGridView1.Columns.Count > 0)

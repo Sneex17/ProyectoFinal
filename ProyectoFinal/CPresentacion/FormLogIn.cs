@@ -5,6 +5,9 @@ using CEntidades.Models;
 
 namespace CPresentacion
 {
+    /// <summary>
+    /// Formulario de inicio de sesión para autenticación de usuarios.
+    /// </summary>
     public partial class FormLogIn : Form
     {
         public FormLogIn()
@@ -13,6 +16,10 @@ namespace CPresentacion
             kryptonButton1.Click += btnIngresar_Click;
         }
 
+        /// <summary>
+        /// Maneja el evento de clic en el botón de ingreso.
+        /// Valida credenciales y autenticación del usuario.
+        /// </summary>
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             try
@@ -63,6 +70,9 @@ namespace CPresentacion
             }
         }
 
+        /// <summary>
+        /// Genera el hash SHA-256 de una contraseña.
+        /// </summary>
         private static string HashPassword(string password)
         {
             using var sha256 = SHA256.Create();

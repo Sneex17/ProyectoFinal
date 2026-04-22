@@ -4,6 +4,9 @@ using CEntidades.Models;
 
 namespace CAccesoDatos.RepositoryPattern
 {
+    /// <summary>
+    /// Repositorio para la gestión de pacientes en la base de datos.
+    /// </summary>
     public class PacienteRepository
     {
         private static readonly string _connectionString;

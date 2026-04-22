@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace CPresentacion
 {
+    /// <summary>
+    /// Formulario para visualizar y gestionar la cola de turnos.
+    /// </summary>
     public partial class FormColaTurno : Form
     {
         private readonly ServiciosTurnos _turnoServicio = new ServiciosTurnos();
@@ -27,6 +30,10 @@ namespace CPresentacion
             btnCambiarPrioridad.Click += btnCambiarPrioridad_Click;
         }
 
+        /// <summary>
+        /// Maneja el evento de carga del formulario.
+        /// Inicializa los filtros y carga la cola de turnos.
+        /// </summary>
         private void FormColaTurno_Load(object sender, EventArgs e)
         {
             CargarEspecialidades();
@@ -35,6 +42,9 @@ namespace CPresentacion
             CargarColaTurnos();
         }
 
+        /// <summary>
+        /// Muestra u oculta el panel de cambio de prioridad según el rol del usuario.
+        /// </summary>
         private void MostrarPanelPrioridad()
         {
             if (SesionUsuario.EsRecepcionista || SesionUsuario.EsAdmin)
@@ -81,6 +91,10 @@ namespace CPresentacion
             }
         }
 
+        /// <summary>
+        /// Maneja el clic en el botón de cambio de prioridad.
+        /// Actualiza la prioridad del turno seleccionado.
+        /// </summary>
         private void btnCambiarPrioridad_Click(object sender, EventArgs e)
         {
             if (!_turnoIdSeleccionado.HasValue)
@@ -123,6 +137,9 @@ namespace CPresentacion
             }
         }
 
+        /// <summary>
+        /// Carga las especialidades en el combobox.
+        /// </summary>
         private void CargarEspecialidades()
         {
             try

@@ -1,7 +1,11 @@
 ﻿using CEntidades.Models;
 using Microsoft.EntityFrameworkCore;
+
 namespace CAccesoDatos.RepositoryPattern
 {
+    /// <summary>
+    /// Repositorio para la gestión de estados usando Entity Framework Core.
+    /// </summary>
     public class EstadoRepository : IRepositoryGeneral<Estado>
     {
         private readonly GestionTurnosHospitalDbContext _context;

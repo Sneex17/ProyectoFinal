@@ -2,8 +2,12 @@
 using CEntidades.Models;
 using FluentValidation;
 using System.Data;
+
 namespace CNegocio
 {
+    /// <summary>
+    /// Validador de especialidades usando FluentValidation.
+    /// </summary>
     public class ValidacionEspecialidades : AbstractValidator<Especialidade>
     {
         public ValidacionEspecialidades()
@@ -12,6 +16,9 @@ namespace CNegocio
         }
     }
 
+    /// <summary>
+    /// Validador de médicos usando FluentValidation.
+    /// </summary>
     public class ValidacionMedico : AbstractValidator<Medico>
     {
         public ValidacionMedico()
@@ -22,6 +29,9 @@ namespace CNegocio
         }
     }
 
+    /// <summary>
+    /// Validador de usuarios usando FluentValidation.
+    /// </summary>
     public class ValidacionUsuario : AbstractValidator<Usuario>
     {
         public ValidacionUsuario()
@@ -31,6 +41,9 @@ namespace CNegocio
         }
     }
 
+    /// <summary>
+    /// Validador de recepcionistas usando FluentValidation.
+    /// </summary>
     public class ValidacionRecepcionista : AbstractValidator<Recepcionista>
     {
         public ValidacionRecepcionista()

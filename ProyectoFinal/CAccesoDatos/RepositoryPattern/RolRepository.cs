@@ -1,7 +1,11 @@
 ﻿using CEntidades.Models;
 using Microsoft.EntityFrameworkCore;
+
 namespace CAccesoDatos.RepositoryPattern
 {
+    /// <summary>
+    /// Repositorio para la gestión de roles usando Entity Framework Core.
+    /// </summary>
     public class RolRepository : IRepositoryGeneral<Role>
     {
         private readonly GestionTurnosHospitalDbContext _context;

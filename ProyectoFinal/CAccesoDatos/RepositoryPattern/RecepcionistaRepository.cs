@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CAccesoDatos.RepositoryPattern
 {
+    /// <summary>
+    /// Repositorio para la gestión de recepcionistas usando Entity Framework Core.
+    /// </summary>
     public class RecepcionistaRepository : IRepositoryGeneral<Recepcionista>
     {
         private readonly GestionTurnosHospitalDbContext _context;

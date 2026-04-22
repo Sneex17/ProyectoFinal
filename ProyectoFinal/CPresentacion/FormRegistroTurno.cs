@@ -7,6 +7,9 @@ using CNegocio;
 
 namespace CPresentacion
 {
+    /// <summary>
+    /// Formulario para el registro de nuevos turnos.
+    /// </summary>
     public partial class FormRegistroTurno : Form
     {
         private readonly PacienteRepository _pacienteRepo;
@@ -28,6 +31,9 @@ namespace CPresentacion
             BuCrear.Click += btnAceptar_Click;
         }
 
+        /// <summary>
+        /// Inicializa los campos según el rol del usuario logueado.
+        /// </summary>
         private void InicializarPorRol()
         {
             if (SesionUsuario.EsPaciente && SesionUsuario.IdRelacionado.HasValue)
@@ -47,6 +53,9 @@ namespace CPresentacion
             CargarRecepcionistas();
         }
 
+        /// <summary>
+        /// Carga la lista de recepcionistas en el combobox.
+        /// </summary>
         private void CargarRecepcionistas()
         {
             try
@@ -167,8 +176,12 @@ namespace CPresentacion
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-        }
-
+}
+        
+        /// <summary>
+        /// Maneja el clic en el botón de crear turno.
+        /// Valida los datos y crea el turno en la base de datos.
+        /// </summary>
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             try

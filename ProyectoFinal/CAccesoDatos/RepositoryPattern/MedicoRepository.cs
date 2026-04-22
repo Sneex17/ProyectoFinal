@@ -1,7 +1,11 @@
 ﻿using CEntidades.Models;
 using Microsoft.EntityFrameworkCore;
+
 namespace CAccesoDatos.RepositoryPattern
 {
+    /// <summary>
+    /// Repositorio para la gestión de médicos usando Entity Framework Core.
+    /// </summary>
     public class MedicoRepository : IRepositoryGeneral<Medico>
     {
         private readonly GestionTurnosHospitalDbContext _context;

@@ -2,8 +2,12 @@
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
+
 namespace CAccesoDatos.RepositoryPattern
 {
+    /// <summary>
+    /// Repositorio para la gestión de especialidades médicas.
+    /// </summary>
     public class EspecialidadesRepositoty : IRepositoryGeneral<Especialidade>
     {
         private readonly GestionTurnosHospitalDbContext _context;

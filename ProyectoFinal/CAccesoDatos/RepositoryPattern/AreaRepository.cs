@@ -1,7 +1,11 @@
 ﻿using CEntidades.Models;
 using Microsoft.EntityFrameworkCore;
+
 namespace CAccesoDatos.RepositoryPattern
 {
+    /// <summary>
+    /// Repositorio para la gestión de áreas usando Entity Framework Core.
+    /// </summary>
     public class AreaRepository : IRepositoryGeneral<Area>
     {
         private readonly GestionTurnosHospitalDbContext _context;
